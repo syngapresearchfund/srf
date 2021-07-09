@@ -125,24 +125,6 @@ if ( ! function_exists( 'srf_home_loop_welcome' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'srf_cta_create' ) ) :
-	/**
-	 * Prints HTML for CTA in home page post loop
-	 */
-	function srf_cta_create() {
-		if ( is_in_english() || time() >= strtotime( '2021-06-28' ) ) {
-			$cta_content  = '<h2 class="no-widows">' . esc_html__( 'Let our experts build your custom WordPress.com website.' ) . '</h2>';
-			$cta_content .= '<p class="text__cta no-widows">' . esc_html__( 'Whether you need a landing page or a full ecommerce site, an online learning academy or an interactive informational site for your business, we can build it for you.' ) . '</p>';
-			$cta_content .= '<a class="button__cta" href="' . esc_url( home_url( '/built-by-wordpress-com/' ) ) . '">' . esc_html__( 'Apply now' ) . '</a>';
-		} else {
-			$cta_content  = '<h2 class="no-widows">' . esc_html__( 'WordPress.com Courses make it easy to start that blog, website or podcast.' ) . '</h2>';
-			$cta_content .= '<p class="text__cta no-widows">' . esc_html__( 'Build, publish and grow your blog, website or podcast with on-demand go-at-your-own pace courses taught by WordPress experts.' ) . '</p>';
-			$cta_content .= '<a class="button__cta" href="' . esc_url( 'https://wpcourses.com/' ) . '">' . esc_html__( 'Browse courses' ) . '</a>';
-		}
-		printf( ( is_singular() ? '<div class="go-cta__create">%1$s</div>' : '<article class="go-cta__create">%1$s</article>' ), $cta_content );
-	}
-endif;
-
 if ( ! function_exists( 'srf_excerpt' ) ) :
 	/**
 	 * Prints HTML for post excerpt to force "Read more"

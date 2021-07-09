@@ -16,7 +16,7 @@ namespace SRF;
 
 	</main><!-- #content -->
 
-	<?php get_template_part( 'content', 'subfooter' ); ?>
+	<?php get_template_part( 'template-parts/content', 'subfooter' ); ?>
 
 	<footer class="wpcom-go-footer site-footer">
 		<nav class="footer-navigation">

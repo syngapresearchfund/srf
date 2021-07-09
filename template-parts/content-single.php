@@ -56,8 +56,6 @@ namespace SRF;
 	<div class="entry-content-wrapper">
 		<?php srf_tldr(); ?>
 		<div class="entry-content">
-			<?php the_toc(); ?>
-
 			<?php
 			the_content( sprintf(
 			wp_kses(
@@ -78,7 +76,6 @@ namespace SRF;
 				) );
 			?>
 		</div>
-		<?php srf_cta_create(); ?>
 		<?php srf_author_bio(); ?>
 		<?php the_related_posts(); ?>
 	</div><!-- .entry-content -->

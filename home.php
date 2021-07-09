@@ -28,25 +28,12 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			/*
+				/*
 				* Include the Post-Type-specific template for the content.
 				* If you want to override this in a child theme, then include a file
 				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				*/
-			if ( 1 === $post_count && 1 === $current_page ) :
-				get_template_part( 'content', 'featured' );
-			elseif ( 2 === $post_count && 1 === $current_page ) :
-				srf_home_loop_welcome();
-			elseif ( 8 === $post_count && 1 === $current_page ) :
-				srf_cta_create();
-			else :
-				if ( 1 === $post_count && 1 < $current_page ) :
-					echo '<!-- Begin post grid for remaining items --><div id="grid-container" class="post-grid">';
-				endif;
-				get_template_part( 'content', get_post_type() );
-			endif;
-
-			$post_count++;
+				get_template_part( 'template-parts/content', get_post_type() );
 
 		endwhile; ?>
 		
@@ -55,7 +42,7 @@ get_header();
 	<?php
 	else :
 
-		get_template_part( 'content', 'none' );
+		get_template_part( 'template-parts/content', 'none' );
 
 	endif;
 	?>
