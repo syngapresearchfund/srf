@@ -64,4 +64,4 @@ namespace SRF;
 		<div class="wpcom-go-search"><?php get_search_form(); ?></div>
 	</header><!-- #masthead -->
 
-	<main id="content" class="site-content site-main">
+	<main id="content" class="site-content site-main container mx-auto px-8">
