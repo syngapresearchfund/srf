@@ -4,7 +4,9 @@
   "description": "Custom theme design for the SRF site.",
   "main": "index.php",
   "scripts": {
-    "start": "tailwindcss -i assets/css/tailwind.css -o style.css -w"
+    "start": "tailwindcss -i assets/css/tailwind.css -o style.css -w",
+	"build": "NODE_ENV=production tailwindcss -i assets/css/tailwind.css -o style.css",
+	"build:min": "NODE_ENV=production tailwindcss -i assets/css/tailwind.css -o style.css --minify"
   },
   "keywords": [
     "SYNGAP",
