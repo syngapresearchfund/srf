@@ -16,17 +16,58 @@ namespace SRF;
 
 	</main><!-- #content -->
 
-	<?php get_template_part( 'template-parts/content', 'subfooter' ); ?>
+	<footer class="py-24 bg-gradient-to-br from-gray-100 to-gray-300 text-gray-600">
+		<div class="container mx-auto px-6 lg:px-0">
+			<!-- top footer -->
+			<div class="flex justify-between">
+				<!-- newsletter -->
+				<div class="flex flex-col justify-center">
+					<h4 class="mb-4 font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get the latest updates!</h4>
+					<form action="" method="POST" class="flex">
+						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-gray-400 focus:border-purple-400 placeholder-gray-300">
+						<button class="p-3 bg-purple-400 text-purple-100 rounded-r">Submit</button>
+					</form>
+				</div>
+				<!-- links -->
+				<div class="text-right flex space-x-10">
+					<div class="space-y-2">
+						<p class="mb-3 font-bold text-gray-400 uppercase tracking-widest">Families</p>
+						<a href="" class="block hover:text-gray-900 hover:underline">About</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Blog</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Careers</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Events</a>
+					</div>
+					<div class="space-y-2">
+						<p class="mb-3 font-bold text-gray-400 uppercase tracking-widest">Professionals</p>
+						<a href="" class="block hover:text-gray-900 hover:underline">About</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Blog</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Careers</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Events</a>
+					</div>
+					<div class="space-y-2">
+						<p class="mb-3 font-bold text-gray-400 uppercase tracking-widest">Organization</p>
+						<a href="" class="block hover:text-gray-900 hover:underline">About</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Blog</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Careers</a>
+						<a href="" class="block hover:text-gray-900 hover:underline">Events</a>
+					</div>
+				</div>
+			</div>
 
-	<footer class="wpcom-go-footer site-footer">
-		<nav class="footer-navigation">
-			<ul class="wpcom-go-footer__nav">
-				<li>Test link</li>
-				<li>Test link</li>
-				<li>Test link</li>
-			</ul>
-			<p class="wpcom-go-footer__credits">an <a class="wpcom-go-footer__automattic" href="https://automattic.com/">Automattic</a> mambo</p>
-		</nav>
+			<!-- bottom footer -->
+			<div class="pt-4 mt-16 flex justify-between border-t border-gray-200 text-sm">
+				<!-- copyright -->
+				<div>Copyright &copy; 2021</div>
+				<!-- links -->
+				<div class="space-x-4">
+					<a href="#">Twitter</a>
+					<a href="#">Instagram</a>
+					<a href="#">Facebook</a>
+					<a href="#">LinkedIn</a>
+					<a href="#">YouTube</a>
+				</div>
+			</div>
+		</div>
 	</footer>
 </div><!-- #page -->
 

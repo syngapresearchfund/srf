@@ -17,13 +17,6 @@ get_header();
 		<div class="archive-header-wrapper">
 			<header class="archive-header">
 				<?php
-				if ( is_category() ) {
-					$categories            = get_the_category();
-					$primary_category      = reset( $categories );
-					$primary_category_icon = $primary_category instanceof \WP_Term ? $primary_category->slug : '';
-
-					srf_cat_icons( $primary_category_icon );
-				}
 				the_archive_title( '<h1 class="archive-title no-widows">', '</h1>' );
 				the_archive_description( '<div class="archive-description"><h2 class="no-widows">', '</h2></div>' );
 				?>

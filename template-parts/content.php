@@ -22,16 +22,6 @@ namespace SRF;
 
 		<header class="entry-header">
 			<?php
-			$categories            = get_the_category();
-			$primary_category      = reset( $categories );
-			$primary_category_icon = $primary_category instanceof \WP_Term ? $primary_category->slug : '';
-
-			if ( $categories ) {
-				echo '<div class="post-category">';
-				srf_cat_icons( $primary_category_icon );
-				echo '<span class="cat-links">' . $primary_category->name . '</span>'; // phpcs:ignore -- XSS OK.
-				echo '</div>';
-			}
 			the_title( '<h2 class="entry-title no-widows">', '</h2>' );
 			?>
 		</header><!-- .entry-header -->

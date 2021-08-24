@@ -22,17 +22,6 @@ namespace SRF;
 	<header class="entry-header">
 		<div class="featured-title">
 			<?php
-			$categories_list       = get_the_category_list( esc_html__( ', ' ) );
-			$categories            = get_the_category();
-			$primary_category      = reset( $categories );
-			$primary_category_icon = $primary_category instanceof \WP_Term ? $primary_category->slug : '';
-
-			if ( $categories_list ) {
-				echo '<div class="post-category">';
-				srf_cat_icons( $primary_category_icon );
-				echo '<span class="cat-links">' . $categories_list . '</span>'; // phpcs:ignore -- XSS OK.
-				echo '</div>';
-			}
 			the_title( '<h2 class="entry-title no-widows"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			?>
 		</div>
