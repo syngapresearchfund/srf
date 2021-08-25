@@ -12,7 +12,7 @@ namespace SRF;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0' ); ?>>
 	<div class="single-header-wrapper">
 		<div class="featured-image">
 			<?php srf_post_thumbnail(); ?>

@@ -12,7 +12,7 @@ namespace SRF;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0' ); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title no-widows">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

@@ -23,7 +23,7 @@ namespace SRF;
 	</header><!-- .page-header -->
 </div>
 
-<div class="page-content no-results not-found">
+<div class="page-content no-results not-found container mx-auto px-6 lg:px-0">
 	<?php
 	if ( is_home() && current_user_can( 'publish_posts' ) ) :
 

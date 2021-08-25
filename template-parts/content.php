@@ -12,7 +12,7 @@ namespace SRF;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0' ); ?>>
 	<a class="post-card" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<div class="featured-image">
 			<div class="post-thumbnail">
