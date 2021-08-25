@@ -22,7 +22,7 @@ namespace SRF;
 			<div class="lg:flex justify-between space-y-12 lg:space-y-0">
 				<!-- newsletter -->
 				<div class="flex flex-col justify-center">
-					<h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get updates on this course!</h4>
+					<h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get the latest updates!</h4>
 					<form action="" method="POST" class="flex">
 						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-gray-400 focus:border-purple-400 placeholder-gray-300">
 						<button class="p-3 bg-purple-400 text-purple-100 rounded-r">Submit</button>
