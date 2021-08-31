@@ -49,8 +49,10 @@ namespace SRF;
 			<a href="#" class="hidden lg:inline-block hover:text-gray-900">Families</a>
 			<a href="#" class="hidden lg:inline-block hover:text-gray-900">Professionals</a>
 			<a href="#" class="hidden lg:inline hover:text-gray-900">Cart</a>
-			<a href="#" class="p-3 bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white rounded shadow transition duration-500">Donate</a>
 		</nav>
+
+		<!-- donate button -->
+		<a href="#" class="p-3 bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white rounded shadow transition duration-500">Donate</a>
 	</header>
 
 	<main id="content" class="site-content site-main">
