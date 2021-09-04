@@ -63,7 +63,7 @@ function srf_scripts() {
 	// Theme styles
 	wp_enqueue_style( 'srf-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 	// Navigation scripts
-	wp_enqueue_script( 'srf-navigation-js', get_template_directory_uri() . '/assets/js/navigation.js', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'alpinejs', get_template_directory_uri() . '/assets/js/alpinejs-3.3.1.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
 

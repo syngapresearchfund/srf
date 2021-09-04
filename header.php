@@ -31,7 +31,7 @@ namespace SRF;
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text hidden" href="#content"><?php esc_html_e( 'Skip to content' ); ?></a>
 
-	<header id="masthead" class="site-header px-6 lg:px-0 py-6 text-gray-600">
+	<header id="masthead" class="site-header px-6 lg:px-0 py-6 text-gray-600" x-data={ open: false }>
 		<?php get_template_part('template-parts/content', 'header') ?>
 	</header>
 

@@ -28,7 +28,7 @@ namespace SRF;
 	<a href="#" class="hidden lg:inline-block p-3 ml-auto bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white rounded shadow transition duration-500">Donate</a>
 
 	<!-- mobile menu toggle -->
-	<button class="lg:hidden navbar-burger flex items-center p-3">
+	<button class="lg:hidden navbar-burger flex items-center p-3" @click="open = ! open">
 		<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 			<title>Mobile menu</title>
 			<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -45,11 +45,11 @@ namespace SRF;
 </nav>
 
 <!-- mobile navigation -->
-<div class="navbar-menu relative z-50 hidden">
+<div class="navbar-menu relative z-50 hidden" x-show="open" @click.outside="open = false">
 	<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
 	<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
 		<!-- <div class="flex items-center mb-8"> -->
-		<button class="navbar-close ml-auto mb-2">
+		<button class="navbar-close ml-auto mb-2" @click="open = ! open">
 			<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
 			</svg>
