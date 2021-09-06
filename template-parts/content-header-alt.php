@@ -12,7 +12,7 @@ namespace SRF;
 
 ?>
 
-<div class="relative bg-white" x-data="{ open: false, openSolutions: false, openMore: false }">
+<div class="relative bg-white" x-data="{ open: false, openSolutions: false, openPricing: false, openMore: false }">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
       <div class="flex justify-start lg:w-0 lg:flex-1">
@@ -55,7 +55,44 @@ namespace SRF;
               From: "opacity-100 translate-y-0"
               To: "opacity-0 translate-y-1"
           -->
-          <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openSolutions">
+          <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openSolutions">
+            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Analytics</a>
+                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Engagement</a>
+                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Security</a>
+                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Integrations</a>
+                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Automations</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @click="openPricing = ! openPricing"  @click.outside="openPricing = false">
+            <span>Pricing</span>
+            <!--
+              Heroicon name: solid/chevron-down
+
+              Item active: "text-gray-600", Item inactive: "text-gray-400"
+            -->
+            <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <!--
+            'Solutions' flyout menu, show/hide based on flyout menu state.
+
+            Entering: "transition ease-out duration-200"
+              From: "opacity-0 translate-y-1"
+              To: "opacity-100 translate-y-0"
+            Leaving: "transition ease-in duration-150"
+              From: "opacity-100 translate-y-0"
+              To: "opacity-0 translate-y-1"
+          -->
+          <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openPricing">
             <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                 <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Analytics</a>
@@ -69,7 +106,7 @@ namespace SRF;
         </div>
 
         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-          Pricing
+          Policy
         </a>
         <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
           Docs
@@ -99,7 +136,8 @@ namespace SRF;
               From: "opacity-100 translate-y-0"
               To: "opacity-0 translate-y-1"
           -->
-          <div class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0" x-show="openMore">
+          <div class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-sm sm:px-0" x-show="openMore">
+          <!-- <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openMore"> -->
             <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                 <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Analytics</a>
