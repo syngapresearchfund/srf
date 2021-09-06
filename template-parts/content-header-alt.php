@@ -33,7 +33,7 @@ namespace SRF;
       <nav class="hidden md:flex space-x-10">
         <div class="relative">
           <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @mouseover="openSolutions = true" @mouseout="openSolutions = false">
+          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @click="openSolutions = ! openSolutions"  @click.outside="openSolutions = false">
             <span>Solutions</span>
             <!--
               Heroicon name: solid/chevron-down
@@ -77,7 +77,7 @@ namespace SRF;
 
         <div class="relative">
           <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @mouseover="openMore = true" @mouseout="openMore = false">
+          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @click="openMore = ! openMore"  @click.outside="openMore = false">
             <span>More</span>
             <!--
               Heroicon name: solid/chevron-down
