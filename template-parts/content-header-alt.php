@@ -14,7 +14,7 @@ namespace SRF;
 
 <div class="relative bg-white" x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
   <div class="container mx-auto px-6 lg:px-0">
-    <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-9">
+    <div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-9 <?php echo is_front_page() ? '' : 'border-b-2 border-gray-100'; ?>">
       <div class="flex justify-start lg:w-0 lg:flex-1">
         <a href="<?php echo home_url(); ?>">
           <span class="sr-only">SynGap Research Fund</span>
