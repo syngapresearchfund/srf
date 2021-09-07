@@ -12,16 +12,16 @@ namespace SRF;
 
 ?>
 
-<div class="relative bg-white" x-data="{ open: false, openSolutions: false, openPricing: false, openMore: false }">
+<div class="relative bg-white" x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+    <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-10">
       <div class="flex justify-start lg:w-0 lg:flex-1">
         <a href="#">
           <span class="sr-only">SynGap Research Fund</span>
           <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
         </a>
       </div>
-      <div class="-mr-2 -my-2 md:hidden">
+      <div class="-mr-2 -my-2 lg:hidden">
         <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" @click="open = true">
           <span class="sr-only">Open menu</span>
           <!-- Heroicon name: outline/menu -->
@@ -30,132 +30,114 @@ namespace SRF;
           </svg>
         </button>
       </div>
-      <nav class="hidden md:flex space-x-10">
-        <div class="relative">
-          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @click="openSolutions = ! openSolutions"  @click.outside="openSolutions = false">
-            <span>Solutions</span>
-            <!--
-              Heroicon name: solid/chevron-down
+      <nav class="hidden lg:block">
+		<ul class="flex space-x-10">
+			<li class="relative py-2 cursor-pointer" @click="openFirst = ! openFirst" @click.outside="openFirst = false">
+				<div class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					<span>Solutions</span>
+					<!--
+					Heroicon name: solid/chevron-down
 
-              Item active: "text-gray-600", Item inactive: "text-gray-400"
-            -->
-            <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
+					Item active: "text-gray-600", Item inactive: "text-gray-400"
+					-->
+					<svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</div>
 
-          <!--
-            'Solutions' flyout menu, show/hide based on flyout menu state.
+				<!--
+					'Solutions' flyout menu, show/hide based on flyout menu state.
 
-            Entering: "transition ease-out duration-200"
-              From: "opacity-0 translate-y-1"
-              To: "opacity-100 translate-y-0"
-            Leaving: "transition ease-in duration-150"
-              From: "opacity-100 translate-y-0"
-              To: "opacity-0 translate-y-1"
-          -->
-          <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openSolutions">
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Analytics</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Engagement</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Security</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Integrations</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Automations</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative">
-          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @click="openPricing = ! openPricing"  @click.outside="openPricing = false">
-            <span>Pricing</span>
-            <!--
-              Heroicon name: solid/chevron-down
-
-              Item active: "text-gray-600", Item inactive: "text-gray-400"
-            -->
-            <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
-
-          <!--
-            'Solutions' flyout menu, show/hide based on flyout menu state.
-
-            Entering: "transition ease-out duration-200"
-              From: "opacity-0 translate-y-1"
-              To: "opacity-100 translate-y-0"
-            Leaving: "transition ease-in duration-150"
-              From: "opacity-100 translate-y-0"
-              To: "opacity-0 translate-y-1"
-          -->
-          <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openPricing">
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Analytics</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Engagement</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Security</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Integrations</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Automations</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-          Policy
-        </a>
-        <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
-          Docs
-        </a>
-
-        <div class="relative">
-          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button type="button" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-expanded="false" @click="openMore = ! openMore"  @click.outside="openMore = false">
-            <span>More</span>
-            <!--
-              Heroicon name: solid/chevron-down
-
-              Item active: "text-gray-600", Item inactive: "text-gray-400"
-            -->
-            <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
-
-          <!--
-            'More' flyout menu, show/hide based on flyout menu state.
-
-            Entering: "transition ease-out duration-200"
-              From: "opacity-0 translate-y-1"
-              To: "opacity-100 translate-y-0"
-            Leaving: "transition ease-in duration-150"
-              From: "opacity-100 translate-y-0"
-              To: "opacity-0 translate-y-1"
-          -->
-          <div class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-sm sm:px-0" x-show="openMore">
-          <!-- <div class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-sm sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openMore"> -->
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Analytics</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Engagement</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Security</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Integrations</a>
-                <a href="#" class="p-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50">Automations</a>
-              </div>
-            </div>
-          </div>
-        </div>
+					Entering: "transition ease-out duration-200"
+					From: "opacity-0 translate-y-1"
+					To: "opacity-100 translate-y-0"
+					Leaving: "transition ease-in duration-150"
+					From: "opacity-100 translate-y-0"
+					To: "opacity-0 translate-y-1"
+				-->
+				<div class="absolute z-10 -ml-4 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openFirst">
+					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="relative py-2 cursor-pointer" @click="openSecond = ! openSecond" @click.outside="openSecond = false">
+				<div class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					<span>Pricing</span>
+					<svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="absolute z-10 -ml-4 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openSecond">
+					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="relative py-2 cursor-pointer" @click="openThird = ! openThird" @click.outside="openThird = false">
+				<div class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					<span>Privacy Policy</span>
+					<svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="absolute z-10 -ml-4 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openThird">
+					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="relative py-2 cursor-pointer" @click="openFourth = ! openFourth" @click.outside="openFourth = false">
+				<div class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					<span>Docs</span>
+					<svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="absolute z-10 left-1/2 transform -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" x-show="openFourth">
+					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="relative py-2 cursor-pointer" @click="openLast = ! openLast" @click.outside="openLast = false">
+				<div class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					<span>More</span>
+					<svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="absolute z-10 left-1/2 transform -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" x-show="openLast">
+					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
+						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
       </nav>
-      <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-        <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-          Sign in
-        </a>
+      <div class="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
         <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-          Sign up
+			Donate
         </a>
       </div>
     </div>
@@ -171,7 +153,7 @@ namespace SRF;
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   -->
-  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-show="open">
+  <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="open">
     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
