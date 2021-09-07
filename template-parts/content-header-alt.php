@@ -14,11 +14,11 @@ namespace SRF;
 
 <div class="relative bg-white" x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-10">
+    <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-9">
       <div class="flex justify-start lg:w-0 lg:flex-1">
         <a href="#">
           <span class="sr-only">SynGap Research Fund</span>
-          <img class="h-8 w-auto sm:h-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/srf-logo.svg" alt="">
+          <img class="w-auto h-9 sm:h-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/srf-logo.svg" alt="">
         </a>
       </div>
       <div class="-mr-2 -my-2 lg:hidden">
@@ -31,7 +31,7 @@ namespace SRF;
         </button>
       </div>
       <nav class="hidden lg:block">
-		<ul class="flex space-x-10">
+		<ul class="flex space-x-9">
 			<li class="relative py-2 cursor-pointer" @click="openFirst = ! openFirst" @click.outside="openFirst = false">
 				<div class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 					<span>Solutions</span>
@@ -135,11 +135,9 @@ namespace SRF;
 			</li>
 		</ul>
       </nav>
-      <div class="hidden lg:flex items-center justify-end lg:flex-1 lg:w-0">
-        <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+		<a href="#" class="hidden lg:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
 			Donate
-        </a>
-      </div>
+		</a>
     </div>
   </div>
 
@@ -158,7 +156,7 @@ namespace SRF;
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
           <div>
-            <img class="h-8 w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/srf-logo.svg" alt="Workflow">
+            <img class="w-auto h-9" src="<?php echo get_template_directory_uri(); ?>/assets/images/srf-logo.svg" alt="Workflow">
           </div>
           <div class="-mr-2">
             <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="open = false">
