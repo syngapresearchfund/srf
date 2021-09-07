@@ -55,7 +55,7 @@ namespace SRF;
 					From: "opacity-100 translate-y-0"
 					To: "opacity-0 translate-y-1"
 				-->
-				<div class="absolute z-10 -ml-4 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openFirst">
+				<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openFirst ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
@@ -72,7 +72,7 @@ namespace SRF;
 						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 					</svg>
 				</div>
-				<div class="absolute z-10 -ml-4 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openSecond">
+				<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openSecond ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
@@ -89,7 +89,7 @@ namespace SRF;
 						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 					</svg>
 				</div>
-				<div class="absolute z-10 -ml-4 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-show="openThird">
+				<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openThird ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
@@ -106,7 +106,7 @@ namespace SRF;
 						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 					</svg>
 				</div>
-				<div class="absolute z-10 left-1/2 transform -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" x-show="openFourth">
+				<div class="absolute z-10 left-1/2 transform transition duration-150 ease-in-out -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" :class="openFourth ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
@@ -123,7 +123,7 @@ namespace SRF;
 						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 					</svg>
 				</div>
-				<div class="absolute z-10 left-1/2 transform -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" x-show="openLast">
+				<div class="absolute z-10 left-1/2 transform transition duration-150 ease-in-out -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" :class="openLast ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
 						<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
@@ -151,7 +151,7 @@ namespace SRF;
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   -->
-  <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="open">
+  <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="open" x-transition>
     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
