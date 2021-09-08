@@ -27,7 +27,48 @@ get_header();
 			<!-- big button / cta -->
 			<a href="https://syngapresearchfund.org" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-blue-500 to-blue-700 hover:to-blue-600 text-blue-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
 		</div>
-	</section>		<!-- header + hero bg wrapper -->
+	</section>
+	
+	<!-- ========================= -->
+	<!-- upcoming events section -->
+	<!-- ========================= -->
+	<section class="py-32 bg-gradient-to-b from-gray-700 to-gray-800">
+		<div class="container mx-auto px-10">
+			<div class="mb-10 text-center space-y-4"><h2 class="text-4xl lg:text-6xl text-center text-gray-100">Upcoming events</h2><p class="text-2xl text-gray-100">Mark your calendars, don't miss out!</p></div>
+			<!-- events grid -->
+			<!-- NOTE: replace the items below with dynamic posts from a news post type -->
+			<div class="lg:grid grid-cols-3 gap-1 space-y-8 lg:space-y-0">
+				<div class="border border-gray-700 bg-gray-300 rounded text-gray-700">
+					<h3 class="py-2 px-4 border-b border-gray-700 text-gray-900 font-bold text-lg">SRF | Grandparents Chat</h3>
+					<div class="p-6 space-y-3 bg-white border-b border-gray-700">
+						<h4 class="font-bold">When?</h4>
+						<p>3rd Tuesday of every month - 5pm PT/ 8pm ET</p>
+						<h4 class="font-bold">Details</h4>
+						<p>Join us <a href="#" class="text-blue-500 hover:underline">on Zoom</a> for a casual chat to learn about each-other's journeys!</p>
+					</div>
+				</div>
+				<div class="border border-gray-700 bg-gray-300 rounded text-gray-700">
+					<h3 class="py-2 px-4 border-b border-gray-700 text-gray-900 font-bold text-lg">Interpretation of SYNGAP1 Variants</h3>
+					<div class="p-6 space-y-3 bg-white border-b border-gray-700">
+						<h4 class="font-bold">When?</h4>
+						<p>Thurs., August 19th @ 10 am Pacific/1 pm Chile</p>
+						<h4 class="font-bold">Details</h4>
+						<p>Join us <a href="#" class="text-blue-500 hover:underline">on Zoom</a> for a casual chat to learn about each-other's journeys!</p>
+					</div>
+				</div>
+				<div class="border border-gray-700 bg-gray-300 rounded text-gray-700">
+					<h3 class="py-2 px-4 border-b border-gray-700 text-gray-900 font-bold text-lg">SRF | Grandparents Chat</h3>
+					<div class="p-6 space-y-3 bg-white border-b border-gray-700">
+						<h4 class="font-bold">When?</h4>
+						<p>3rd Tuesday of every month - 5pm PT/ 8pm ET</p>
+						<h4 class="font-bold">Details</h4>
+						<p>Join us <a href="#" class="text-blue-500 hover:underline">on Zoom</a> for a casual chat to learn about each-other's journeys!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
 	<?php
 	if ( have_posts() ) :
