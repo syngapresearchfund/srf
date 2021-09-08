@@ -45,6 +45,18 @@ add_action( 'wp_head', __NAMESPACE__ . '\\srf_pingback_header' );
  * @param array $tax Taxonomy related to current nav item
  * @return boolean
  */
+function srf_container_classes() {
+	$container_classes = ! is_front_page() ? 'container mx-auto px-6 lg:px-0 py-16' : '';
+
+	return $container_classes;
+}
+
+/**
+ * Adds custom classes to the navigation item based on current taxonomy
+ *
+ * @param array $tax Taxonomy related to current nav item
+ * @return boolean
+ */
 function srf_current_menu_item( $tax ) {
 	if ( is_singular() ) {
 		$menu_item_class = in_category( $tax ) || has_tag( $tax ) ? ' current-menu-item' : '';
@@ -54,4 +66,3 @@ function srf_current_menu_item( $tax ) {
 
 	return $menu_item_class;
 }
-
