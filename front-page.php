@@ -13,7 +13,7 @@ get_header();
 	<!-- ========================= -->
 	<!-- hero section -->
 	<!-- ========================= -->
-	<section class="bg-gradient-to-br from-gray-100 to-gray-300">
+	<section class="bg-gradient-to-b from-gray-100 to-gray-300">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 			<!-- heading -->
 			<h2 class="mb-6 text-4xl lg:text-5xl font-extrabold">

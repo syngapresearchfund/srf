@@ -16,7 +16,7 @@ namespace SRF;
 
 	</main><!-- #content -->
 
-	<footer class="py-24 bg-gradient-to-br from-gray-100 to-gray-300 text-gray-600">
+	<footer class="py-24 bg-gradient-to-b from-gray-100 to-gray-300 text-gray-600">
 		<div class="container mx-auto px-6 lg:px-0">
 			<!-- top footer -->
 			<div class="lg:flex justify-between space-y-12 lg:space-y-0">
