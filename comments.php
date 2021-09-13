@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area border-t border-gray-200 <?php echo srf_container_classes(); ?>">
 
 	<?php
 	// You can start editing here -- including this comment!
