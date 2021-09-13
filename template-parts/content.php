@@ -10,9 +10,10 @@
 
 namespace SRF;
 
+$container_classes = srf_container_classes();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $container_classes ); ?>>
 	<a class="post-card" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<div class="featured-image">
 			<div class="post-thumbnail">

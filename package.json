@@ -5,8 +5,8 @@
   "main": "index.php",
   "scripts": {
     "start": "tailwindcss -i assets/css/tailwind.css -o style.css -w",
-	"build": "NODE_ENV=production tailwindcss -i assets/css/tailwind.css -o style.css",
-	"build:min": "NODE_ENV=production tailwindcss -i assets/css/tailwind.css -o style.css --minify"
+    "build": "NODE_ENV=production tailwindcss -i assets/css/tailwind.css -o style.css",
+    "build:min": "NODE_ENV=production tailwindcss -i assets/css/tailwind.css -o style.css --minify"
   },
   "keywords": [
     "SYNGAP",
@@ -27,5 +27,8 @@
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.1"
   }
 }
