@@ -46,7 +46,7 @@ add_action( 'wp_head', __NAMESPACE__ . '\\srf_pingback_header' );
  * @return boolean
  */
 function srf_container_classes() {
-	$container_classes = ! is_front_page() ? 'container mx-auto px-6 lg:px-0 py-16 prose lg:prose-xl' : '';
+	$container_classes = ! is_front_page() ? 'container mx-auto px-6 lg:px-0 py-16 prose lg:prose-xl' : 'prose lg:prose-xl';
 
 	return $container_classes;
 }
