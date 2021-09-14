@@ -62,6 +62,8 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
 function srf_scripts() {
 	// Theme styles
 	wp_enqueue_style( 'srf-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	// WooCommerce style overrides
+	wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/assets/css/woocommerce.css', array(), wp_get_theme()->get( 'Version' ) );
 	// Navigation scripts
 	wp_enqueue_script( 'alpinejs', get_template_directory_uri() . '/assets/js/alpinejs-3.3.1.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
