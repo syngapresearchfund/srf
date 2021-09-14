@@ -20,16 +20,3 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-@layer base {
-	/* Override the li bullets on Store items */
-	.prose ul.page-numbers > li::before,
-	.prose ul.products > li::before {
-		content: none;
-	}
-	.prose ul.wc-tabs > li::before {
-		background-color: transparent;
-		border-radius: 0;
-		top: initial;
-	}
-}
