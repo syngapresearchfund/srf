@@ -23,7 +23,7 @@ $container_classes = srf_container_classes();
 
 		<header class="entry-header">
 			<?php
-			the_title( '<h2 class="entry-title no-widows">', '</h2>' );
+			the_title( '<h1 class="entry-title no-widows">', '</h1>' );
 			?>
 		</header><!-- .entry-header -->
 	</a>

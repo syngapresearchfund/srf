@@ -22,7 +22,7 @@ $container_classes = srf_container_classes();
 		<header class="entry-header">
 			<div class="entry-header-text">
 				<?php
-				the_title( '<h2 class="entry-title no-widows">', '</h2>' );
+				the_title( '<h1 class="entry-title no-widows">', '</h1>' );
 				srf_posted_on();
 				?>
 			</div>

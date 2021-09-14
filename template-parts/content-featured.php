@@ -22,7 +22,7 @@ namespace SRF;
 	<header class="entry-header">
 		<div class="featured-title">
 			<?php
-			the_title( '<h2 class="entry-title no-widows"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h1 class="entry-title no-widows"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			?>
 		</div>
 	</header><!-- .entry-header -->
