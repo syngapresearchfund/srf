@@ -1,0 +1,10 @@
+.git
+.DS_Store
+_resources
+node_modules
+error_log
+package.json
+package-lock.json
+postcss.config.js
+tailwind.config.js
+dist-exclude.txt
