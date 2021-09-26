@@ -30,7 +30,6 @@ $container_classes = srf_container_classes();
 
 		<div class="entry-meta">
 			<?php
-			srf_posted_by();
 
 			$tags_list = get_the_tag_list( '', ', ' );
 			if ( $tags_list ) {
@@ -66,8 +65,6 @@ $container_classes = srf_container_classes();
 				) );
 			?>
 		</div>
-		<?php srf_author_bio(); ?>
-		<?php the_related_posts(); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
