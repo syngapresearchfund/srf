@@ -2,38 +2,61 @@
 
 require_once '../../../wp-load.php';
 
-// $wf_items = file_get_contents( '_resources/webflow-collections/JSON/SRF-Blog-Categories.json' );
-$wf_items = file_get_contents( '_resources/webflow-collections/JSON/SRF-Blog-Posts.json' );
-$item_array = json_decode( $wf_items, true);
+$post_categories = json_decode( file_get_contents( '_resources/webflow-collections/JSON/SRF-Blog-Categories.json' ), true );
+$posts           = json_decode( file_get_contents( '_resources/webflow-collections/JSON/SRF-Blog-Posts.json' ), true );
+$warriors        = json_decode( file_get_contents( '_resources/webflow-collections/JSON/SRF-Warriors.json' ), true );
 
-// var_dump( $item_array );
+// Post Categories:
+foreach ( $post_categories as $key => $value ) {
+	// echo $post_categories[$key]['Name'] . "\n";
 
-foreach ( $item_array as $key => $value ) {
-	// echo $item_array[$key]['Name'] . "\n";
+	wp_insert_term(
+		$post_categories[$key]['Name'],
+		'category',
+		array(
+			'description' => $post_categories[$key]['Description'],
+			'slug' => $post_categories[$key]['Slug'],
+		)
+	);
+}
 
-	// wp_insert_term(
-	// 	$item_array[$key]['Name'],
-	// 	'category',
-	// 	array(
-	// 		'description' => $item_array[$key]['Description'],
-	// 		'slug' => $item_array[$key]['Slug'],
-	// 	)
-	// );
-
-	$formatted_date = strtotime( substr( $item_array[$key]['Published On'], 0, -29 ) );
+// Posts:
+foreach ( $posts as $key => $value ) {
+	// echo $posts[$key]['Name'] . "\n";
+	$formatted_date_posts = strtotime( substr( $posts[$key]['Published On'], 0, -29 ) );
 
 	$post_args = array(
 		'post_author'   => 1,
-		'post_date' => date( 'Y-m-d H:i:s', $formatted_date ),
-		'post_title'    => $item_array[$key]['Name'],
-		'post_name'    => $item_array[$key]['Slug'],
-		'post_content'  => $item_array[$key]['Post Body'],
+		'post_date' => date( 'Y-m-d H:i:s', $formatted_date_posts ),
+		'post_title'    => $posts[$key]['Name'],
+		'post_name'    => $posts[$key]['Slug'],
+		'post_content'  => $posts[$key]['Post Body'],
 		// 'post_category' => array( 5 ),
 		'comment_status' => 'closed',
 		'ping_status' => 'closed',
 		'post_status' => 'publish',
 		'post_type' => 'post',
 	);
-
 	wp_insert_post( $post_args );
+}
+
+// Warriors:
+foreach ( $warriors as $key => $value ) {
+	// echo $warriors[$key]['Title'] . "\n";
+	$formatted_date_warriors = strtotime( substr( $warriors[$key]['Published On'], 0, -29 ) );
+
+	$warrior_args = array(
+		'post_author'   => 1,
+		'post_date' => date( 'Y-m-d H:i:s', $formatted_date_warriors ),
+		'post_title'    => $warriors[$key]['Title'],
+		'post_name'    => $warriors[$key]['Slug'],
+		'post_content'  => $warriors[$key]['Full Story'],
+		'post_category' => array( 2 ),
+		'comment_status' => 'closed',
+		'ping_status' => 'closed',
+		'post_status' => 'publish',
+		'post_type' => 'srf-people',
+	);
+
+	wp_insert_post( $warrior_args );
 }
