@@ -1,7 +1,7 @@
 <?php
 
 function download_warrior_images() {
-	$warriors = json_decode( file_get_contents( 'webflow-json/SRF-Warriors-Test.json' ), true );
+	$warriors = json_decode( file_get_contents( 'webflow-json/SRF-Warriors.json' ), true );
 
 	if( ! ini_get( 'allow_url_fopen' ) ) {
 		// exit early
