@@ -15,16 +15,13 @@ $container_classes = srf_container_classes();
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $container_classes ); ?>>
 	<div class="single-header-wrapper">
-		<div class="featured-image">
-			<?php srf_post_thumbnail(); ?>
-		</div>
-
 		<header class="entry-header">
 			<div class="entry-header-text">
-				<?php
-				the_title( '<h1 class="entry-title no-widows">', '</h1>' );
-				srf_posted_on();
-				?>
+				<?php the_title( '<h1 class="entry-title no-widows">', '</h1>' ); ?>
+			</div>
+
+			<div class="featured-image">
+				<?php srf_post_thumbnail(); ?>
 			</div>
 		</header><!-- .entry-header -->
 
