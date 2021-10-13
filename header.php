@@ -21,8 +21,6 @@ namespace SRF;
 	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-	<title><?php echo esc_html( the_title() ); ?></title>
-
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
