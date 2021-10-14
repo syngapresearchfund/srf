@@ -9,21 +9,17 @@
  */
 
 namespace SRF;
-
-$container_classes = srf_container_classes();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $container_classes ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'border-2 border-gray-500 rounded-lg' ); ?>>
 	<a class="post-card" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<div class="featured-image">
-			<div class="post-thumbnail">
-				<?php srf_post_thumbnail(); ?>
-			</div>
+			<?php srf_post_thumbnail( 'rounded-t' ); ?>
 		</div>
 
-		<header class="entry-header">
+		<header class="entry-header px-6 pb-8">
 			<?php
-			the_title( '<h1 class="entry-title no-widows">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 			?>
 		</header><!-- .entry-header -->
 	</a>

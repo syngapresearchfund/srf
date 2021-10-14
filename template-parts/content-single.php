@@ -20,12 +20,10 @@ $container_classes = srf_container_classes();
 		</div>
 
 		<header class="entry-header">
-			<div class="entry-header-text">
-				<?php
-				the_title( '<h1 class="entry-title no-widows">', '</h1>' );
+			<?php
+				the_title( '<h1 class="entry-title">', '</h1>' );
 				srf_posted_on();
-				?>
-			</div>
+			?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-meta">
