@@ -40,7 +40,6 @@ $container_classes = srf_container_classes();
 	</div>
 
 	<div class="entry-content-wrapper">
-		<?php srf_tldr(); ?>
 		<div class="entry-content">
 			<?php
 			the_content( sprintf(

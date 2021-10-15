@@ -106,7 +106,7 @@ if ( ! function_exists( 'srf_post_thumbnail' ) ) :
 		}
 
 		// $img_classes = $classes ?: '';
-		$srf_thumbnail_url = get_the_post_thumbnail_url();
+		$srf_thumbnail_url = get_the_post_thumbnail_url( 'featured-image' );
 
 		echo '<img class="' . $img_classes . '" src="' . esc_url( $srf_thumbnail_url ) . '" alt="' . esc_attr( get_the_title() ) . '" srcset="' . esc_url( add_query_arg( 'w', 660, $srf_thumbnail_url ) ) . ' 660w, ' . esc_url( add_query_arg( 'w', 960, $srf_thumbnail_url ) ) . ' 960w, ' . esc_url( $srf_thumbnail_url ) . ' 1280w" sizes="(max-width: 768px) 100vw, 100vw"/>';
 	}
@@ -127,21 +127,6 @@ if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
 	}
 endif;
 
-
-if ( ! function_exists( 'srf_home_loop_welcome' ) ) :
-	/**
-	 * Prints HTML for Welcome grid item in home page post loop
-	 */
-	function srf_home_loop_welcome() {
-		?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid-item__welcome' ); ?>>
-			<h2 class="no-widows"><?php echo esc_html__( 'Welcome to Go by WordPress.com' ); ?></h2>
-			<p class="text__cta no-widows"><?php echo esc_html__( 'This is where experts share their knowledge on building and growing a successful web presence.' ); ?></p>
-		</article>
-		<?php
-	}
-endif;
-
 if ( ! function_exists( 'srf_excerpt' ) ) :
 	/**
 	 * Prints HTML for post excerpt to force "Read more"
@@ -154,76 +139,6 @@ if ( ! function_exists( 'srf_excerpt' ) ) :
 			echo '<p><a class="link__more" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Read more' ) . '</a></p>';
 		} else {
 			the_excerpt();
-		}
-	}
-endif;
-
-if ( ! function_exists( 'srf_author_bio' ) ) :
-	function srf_author_bio() {
-		global $post;
-
-		// Exit early if not in proper context
-		if ( ! is_single() && ! isset( $post->post_author ) ) {
-			return;
-		}
-
-		// Get author's display name
-		$author_name = get_the_author_meta( 'display_name', $post->post_author );
-		// Get author's avatar image
-		$author_avatar = get_avatar( get_the_author_meta( 'user_email' ), 150, 'mysteryman' );
-		// Get author's bio
-		$author_desc = get_the_author_meta( 'user_description', $post->post_author );
-		// Get a link to the author's archive page
-		$author_archive = get_author_posts_url( get_the_author_meta( 'ID', $post->post_author ) );
-		// If display name is not available then use nickname as display name
-		if ( empty( $author_name ) ) {
-			$author_name = get_the_author_meta( 'nickname', $post->post_author );
-		}
-
-		$author_bio = sprintf(
-			'<div class="about-the-author"><h4><span>%1$s</span></h4><div class="author-bio">',
-			esc_html__( 'ABOUT THE AUTHOR' )
-		);
-
-		if ( ! empty( $author_avatar ) ) {
-			$author_bio .= '<div class="author-avatar">' . $author_avatar . '</div>';
-		}
-
-		if ( is_single() ) {
-			$author_bio .= '<div class="author-details"><h4>' . esc_html( $author_name ) . '</h4>';
-		} else {
-			$author_bio .= '<div class="author-details"><h1>' . esc_html( $author_name ) . '</h1>';
-		}
-
-		if ( ! empty( $author_desc ) ) {
-			$author_bio .= '<p class="author-description">' . esc_html( $author_desc ) . '</p>';
-		}
-
-		if ( is_single() ) {
-			$author_bio .= sprintf(
-				'<p class="author-archive"><a class="link__more" href="%1$s">%2$s %3$s</a></p>',
-				esc_attr( $author_archive ),
-				esc_html__( 'More by' ),
-				esc_html( $author_name )
-			);
-		}
-
-		$author_bio .= '</div><!-- .author-details --></div><!-- .author-bio --></div><!-- .about-the-author -->';
-
-		echo $author_bio; // phpcs:ignore -- XSS OK
-	}
-endif;
-
-
-if ( ! function_exists( 'srf_tldr' ) ) :
-	/**
-	 * Outputs TL;DR section at the beginning of posts, when set.
-	 */
-	function srf_tldr() {
-		$tldr = get_post_meta( get_the_ID(), '_tldr', true );
-
-		if ( ! empty( $tldr ) ) {
-			echo '<div class="tldr"><p>' . esc_html( $tldr ) . '</p></div>';
 		}
 	}
 endif;
