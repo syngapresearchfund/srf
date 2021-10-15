@@ -21,8 +21,22 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/*
+Adjustments and Overrides
+=========================
+*/
+
 /**
- * Adjustments and Overrides
+ * Images Adjustments
+ */
+.container .featured-image img,
+.tiled-gallery__item.tiled-gallery__item {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/**
+ * WooCommerce Adjustments
  */
 .wp-block-gallery .blocks-gallery-item::before,
 .woocommerce .woocommerce-pagination ul.page-numbers li::before,
