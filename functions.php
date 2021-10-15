@@ -55,7 +55,7 @@ function srf_setup() : void {
 	add_theme_support( 'editor-styles' );
 
 	// Add featured image size.
-	add_image_size( 'featured-image', 925, 1440, false );
+	add_image_size( 'featured-image', 925, 1440 );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
 
