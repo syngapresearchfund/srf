@@ -12,14 +12,14 @@ namespace SRF;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'border-2 border-gray-500 rounded-lg' ); ?>>
-	<a class="post-card" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<div class="featured-image">
-			<?php srf_post_thumbnail( 'rounded-t' ); ?>
+			<?php srf_post_thumbnail( 'rounded-t h-64 w-full object-cover object-center' ); ?>
 		</div>
 
-		<header class="entry-header px-6 pb-8">
+		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-800 bg-opacity-50">
 			<?php
-			the_title( '<h2 class="entry-title">', '</h2>' );
+			the_title( '<h2 class="entry-title text-2xl font-bold">', '</h2>' );
 			?>
 		</header><!-- .entry-header -->
 	</a>

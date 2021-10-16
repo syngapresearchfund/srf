@@ -33,4 +33,4 @@ namespace SRF;
 		<?php get_template_part('template-parts/content', 'header') ?>
 	</header>
 
-	<main id="content" class="site-content site-main <?php echo is_front_page() ? '' : 'bg-gray-50'; ?>">
+	<main id="content" class="site-content site-main <?php echo is_front_page() ? '' : 'bg-gray-100'; ?>">

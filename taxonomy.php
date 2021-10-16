@@ -16,11 +16,17 @@
 namespace SRF;
 
 $container_classes = srf_container_classes();
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 get_header();
 ?>
 
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo $container_classes; ?>">
+			<header class="entry-header relative">
+				<h1 class="entry-title text-4xl lg:text-5xl text-center font-extrabold mb-10"><?= $term->name; ?></h1>
+				<div class="absolute inset-x-1/2 -bottom-6 w-1/4 lg:w-1/6 h-0.5 bg-gradient-to-r from-purple-400 via-green-400 to-blue-400 rounded transform -translate-x-1/2"></div>
+			</header><!-- .entry-header -->
+
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 				<?php
 				/* Start the Loop */
