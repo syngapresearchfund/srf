@@ -15,7 +15,7 @@ get_header();
 
 	<?php
 	while ( have_posts() ) :
-		$current_post_type = get_post_type($post);
+		$current_post_type = get_post_type( $post );
 		the_post();
 
 		get_template_part( 'template-parts/content', 'single-' . $current_post_type );
