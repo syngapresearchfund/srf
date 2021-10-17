@@ -50,6 +50,17 @@ Adjustments and Overrides
 	border-radius: 0;
 	top: initial;
 }
+.woocommerce div.product div.images .flex-control-thumbs li {
+	padding-left: 0;
+}
+@media (min-width: 640px) {
+	.woocommerce div.product div.images .flex-control-thumbs li {
+		padding-left: 0;
+	}
+}
+.woocommerce div.product div.images .flex-control-thumbs li::before {
+	content: none;
+}
 .woocommerce #masthead img,
 .woocommerce-page #masthead img {
 	height: 2.25rem;

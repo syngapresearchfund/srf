@@ -8,6 +8,8 @@
 
 namespace SRF;
 
+use WP_Query;
+
 get_header();
 ?>
 	<!-- ========================= -->
@@ -28,6 +30,102 @@ get_header();
 			<a href="https://syngapresearchfund.org" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-blue-500 to-blue-700 hover:to-blue-600 text-blue-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
+
+	<!-- ========================= -->
+	<!-- News section -->
+	<!-- ========================= -->
+	<section class="bg-gradient-to-b from-gray-100 to-gray-300">
+		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+			<h2 class="mb-5 text-3xl lg:text-4xl font-extrabold">Latest News</h2>
+
+			<?php
+			$args = array( 'posts_per_page' => 4 );
+			$news_query = new WP_Query( $args );
+
+
+			if ( $news_query->have_posts() ) : ?>
+			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+				<?php
+				/* Start the Loop */
+				while ( $news_query->have_posts() ) :
+					$news_query->the_post();
+
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', get_post_type() );
+
+				endwhile;
+				?>
+			</div>
+
+			<?php
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+
+			/* Restore original Post Data */
+			wp_reset_postdata();
+			?>
+
+			<!-- big button / cta -->
+			<a href="<?= site_url( '/news/' ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all News articles →</a>
+		</div>
+	</section>		<!-- header + hero bg wrapper -->
+
+	<!-- ========================= -->
+	<!-- Warriors section -->
+	<!-- ========================= -->
+	<section class="bg-gradient-to-b from-gray-100 to-gray-300">
+		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+			<h2 class="mb-5 text-3xl lg:text-4xl font-extrabold">Meet Our Warriors</h2>
+
+			<?php
+			$args = array(
+				'posts_per_page' => 4,
+				'post_type'      => 'srf-warriors',
+			);
+			$news_query = new WP_Query( $args );
+
+
+			if ( $news_query->have_posts() ) : ?>
+			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+				<?php
+				/* Start the Loop */
+				while ( $news_query->have_posts() ) :
+					$news_query->the_post();
+
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', get_post_type() );
+
+				endwhile;
+				?>
+			</div>
+
+			<?php
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+
+			/* Restore original Post Data */
+			wp_reset_postdata();
+			?>
+
+			<!-- big button / cta -->
+			<a href="<?= site_url( '/warriors/' ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-teal-500 to-teal-700 hover:to-teal-600 text-teal-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all Warriors →</a>
+		</div>
+	</section>		<!-- header + hero bg wrapper -->
+
 
 
 <?php get_footer(); ?>
