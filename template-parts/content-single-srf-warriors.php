@@ -21,7 +21,7 @@ $container_classes = srf_container_classes();
 			</div>
 
 			<div class="featured-image">
-				<?php srf_post_thumbnail( 'lg:max-w-xs rounded border-2 border-gray-500' ); ?>
+				<?php srf_post_thumbnail( 'lg:max-w-xs rounded border border-gray-500' ); ?>
 			</div>
 		</header><!-- .entry-header -->
 
@@ -42,29 +42,28 @@ $container_classes = srf_container_classes();
 	<div class="entry-content-wrapper">
 		<div class="entry-content">
 			<?php
-			the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>' ),
-				array(
-					'span' => array(
-						'class' => array(),
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
 					),
-					)
-				),
-				get_the_title()
-				) );
+					get_the_title()
+				)
+			);
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:' ),
-				'after'  => '</div>',
-				) );
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:' ),
+					'after'  => '</div>',
+				)
+			);
 			?>
 		</div>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php // srf_entry_footer(); ?>
-		<!-- Add Related Posts here. -->
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

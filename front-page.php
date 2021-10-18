@@ -34,9 +34,9 @@ get_header();
 	<!-- ========================= -->
 	<!-- News section -->
 	<!-- ========================= -->
-	<section class="bg-gray-200">
+	<section class="bg-purple-600">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-5 text-3xl lg:text-4xl font-extrabold">Latest News</h2>
+			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-purple-100">Latest News</h2>
 
 			<?php
 			$args       = array( 'posts_per_page' => 4 );
@@ -44,7 +44,7 @@ get_header();
 
 
 			if ( $news_query->have_posts() ) : ?>
-			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 				<?php
 				/* Start the Loop */
 				while ( $news_query->have_posts() ) :
@@ -73,16 +73,16 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all News articles →</a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="inline-block border border-purple-100 hover:border-purple-300 rounded py-3 px-8 text-purple-100 hover:text-purple-300 transition duration-500 font-bold">View all News articles →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
 	<!-- ========================= -->
 	<!-- Warriors section -->
 	<!-- ========================= -->
-	<section class="bg-gray-200">
+	<section class="bg-gray-600">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-5 text-3xl lg:text-4xl font-extrabold">Meet Our Warriors</h2>
+			<h2 class="mb-10 text-3xl lg:text-4xl text-gray-100 font-extrabold">Meet Our Warriors</h2>
 
 			<?php
 			$args = array(
@@ -93,7 +93,7 @@ get_header();
 
 
 			if ( $news_query->have_posts() ) : ?>
-			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 				<?php
 				/* Start the Loop */
 				while ( $news_query->have_posts() ) :
@@ -122,7 +122,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-teal-500 to-teal-700 hover:to-teal-600 text-teal-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all Warriors →</a>
+			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="inline-block border border-gray-100 hover:border-gray-300 rounded py-3 px-8 text-gray-100 hover:text-gray-300 transition duration-500 font-bold">View all Warriors →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 

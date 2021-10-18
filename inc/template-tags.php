@@ -99,16 +99,17 @@ endif;
 if ( ! function_exists( 'srf_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
+	 *
+	 * @param $image_classes String
 	 */
-	function srf_post_thumbnail( $img_classes='' ) {
+	function srf_post_thumbnail( $img_classes = '' ) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
 
-		// $img_classes = $classes ?: '';
 		$srf_thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'featured-image' );
 
-		echo '<img class="' . $img_classes . '" src="' . esc_url( $srf_thumbnail_url ) . '" alt="' . esc_attr( get_the_title() ) . '" srcset="' . esc_url( add_query_arg( 'w', 660, $srf_thumbnail_url ) ) . ' 660w, ' . esc_url( add_query_arg( 'w', 960, $srf_thumbnail_url ) ) . ' 960w, ' . esc_url( $srf_thumbnail_url ) . ' 1280w" sizes="(max-width: 768px) 100vw, 100vw"/>';
+		echo '<img class="' . esc_attr( $img_classes ) . '" src="' . esc_url( $srf_thumbnail_url ) . '" alt="' . esc_attr( get_the_title() ) . '" srcset="' . esc_url( add_query_arg( 'w', 660, $srf_thumbnail_url ) ) . ' 660w, ' . esc_url( add_query_arg( 'w', 960, $srf_thumbnail_url ) ) . ' 960w, ' . esc_url( $srf_thumbnail_url ) . ' 1280w" sizes="(max-width: 768px) 100vw, 100vw"/>';
 	}
 endif;
 
@@ -120,10 +121,10 @@ if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
-		
+
 		$srf_thumbnail_url = get_the_post_thumbnail_url();
 
-		echo '<img class="w-3/4 sm:w-56 h-80 sm:h-56 object-cover rounded" src="' . esc_url( $srf_thumbnail_url ) . '" alt="' . esc_attr( get_the_title() ) . '" srcset="' . esc_url( add_query_arg( 'w', 660, $srf_thumbnail_url ) ) . ' 660w, ' . esc_url( add_query_arg( 'w', 960, $srf_thumbnail_url ) ) . ' 960w, ' . esc_url( $srf_thumbnail_url ) . ' 1280w" sizes="(max-width: 768px) 100vw, 100vw" />';
+		echo '<img class="w-3/4 sm:w-56 h-80 sm:h-56 object-cover rounded border border-gray-500" src="' . esc_url( $srf_thumbnail_url ) . '" alt="' . esc_attr( get_the_title() ) . '" srcset="' . esc_url( add_query_arg( 'w', 660, $srf_thumbnail_url ) ) . ' 660w, ' . esc_url( add_query_arg( 'w', 960, $srf_thumbnail_url ) ) . ' 960w, ' . esc_url( $srf_thumbnail_url ) . ' 1280w" sizes="(max-width: 768px) 100vw, 100vw" />';
 	}
 endif;
 

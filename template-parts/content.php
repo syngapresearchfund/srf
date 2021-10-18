@@ -9,9 +9,11 @@
  */
 
 namespace SRF;
+
+$card_classes = ! is_front_page() ? 'border border-gray-500 rounded' : 'border border-purple-100 rounded';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'border-2 border-gray-500 rounded-lg' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $card_classes ); ?>>
 	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<div class="featured-image">
 			<?php srf_post_thumbnail( 'rounded-t h-64 w-full object-cover object-center' ); ?>

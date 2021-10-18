@@ -20,9 +20,9 @@ get_header();
 ?>
 
 	<?php if ( have_posts() ) : ?>
-		<div class="<?php echo $container_classes; ?>">
+		<div class="<?php echo esc_attr( $container_classes ); ?>">
 			<header class="entry-header relative">
-				<h1 class="entry-title relative text-4xl lg:text-5xl text-center font-extrabold mb-14"><?= post_type_archive_title( '', false ); ?></h1>
+				<h1 class="entry-title relative text-4xl lg:text-5xl text-center font-extrabold mb-14"><?php echo post_type_archive_title( '', false ); ?></h1>
 				<div class="absolute inset-x-1/2 -bottom-6 w-1/4 lg:w-1/6 h-0.5 bg-gradient-to-r from-purple-400 via-green-400 to-blue-400 rounded transform -translate-x-1/2"></div>
 			</header><!-- .entry-header -->
 
