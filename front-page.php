@@ -34,12 +34,12 @@ get_header();
 	<!-- ========================= -->
 	<!-- News section -->
 	<!-- ========================= -->
-	<section class="bg-gradient-to-b from-gray-100 to-gray-300">
+	<section class="bg-gray-200">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 			<h2 class="mb-5 text-3xl lg:text-4xl font-extrabold">Latest News</h2>
 
 			<?php
-			$args = array( 'posts_per_page' => 4 );
+			$args       = array( 'posts_per_page' => 4 );
 			$news_query = new WP_Query( $args );
 
 
@@ -73,14 +73,14 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?= site_url( '/news/' ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all News articles →</a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-purple-500 to-purple-700 hover:to-purple-600 text-purple-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all News articles →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
 	<!-- ========================= -->
 	<!-- Warriors section -->
 	<!-- ========================= -->
-	<section class="bg-gradient-to-b from-gray-100 to-gray-300">
+	<section class="bg-gray-200">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 			<h2 class="mb-5 text-3xl lg:text-4xl font-extrabold">Meet Our Warriors</h2>
 
@@ -122,7 +122,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?= site_url( '/warriors/' ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-teal-500 to-teal-700 hover:to-teal-600 text-teal-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all Warriors →</a>
+			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-teal-500 to-teal-700 hover:to-teal-600 text-teal-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">View all Warriors →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
