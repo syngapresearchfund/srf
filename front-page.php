@@ -15,7 +15,7 @@ get_header();
 	<!-- ========================= -->
 	<!-- hero section -->
 	<!-- ========================= -->
-	<section class="bg-gradient-to-b from-gray-100 to-gray-300">
+	<section class="bg-white">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 			<!-- heading -->
 			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
@@ -25,7 +25,7 @@ get_header();
 			</h1>
 			<!-- paragraphs -->
 			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg text-gray-500">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SynGAP & to supporting each other.</p>
-	
+
 			<!-- big button / cta -->
 			<a href="https://syngapresearchfund.org" class="inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-gradient-to-br from-blue-500 to-blue-700 hover:to-blue-600 text-blue-100 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
 		</div>
@@ -34,9 +34,9 @@ get_header();
 	<!-- ========================= -->
 	<!-- News section -->
 	<!-- ========================= -->
-	<section class="bg-purple-600">
+	<section class="bg-gray-200">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-purple-100">Latest News</h2>
+			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News</h2>
 
 			<?php
 			$args       = array( 'posts_per_page' => 4 );
@@ -73,16 +73,16 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="inline-block border border-purple-100 hover:border-purple-300 rounded py-3 px-8 text-purple-100 hover:text-purple-300 transition duration-500 font-bold">View all News articles →</a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="inline-block border border-gray-600 hover:bg-gray-600 rounded py-3 px-8 text-gray-600 hover:text-gray-100 transition duration-500 font-bold">View all News articles →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
 	<!-- ========================= -->
 	<!-- Warriors section -->
 	<!-- ========================= -->
-	<section class="bg-gray-600">
+	<section class="bg-gray-300">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-10 text-3xl lg:text-4xl text-gray-100 font-extrabold">Meet Our Warriors</h2>
+			<h2 class="mb-10 text-3xl lg:text-4xl text-gray-700 font-extrabold">Meet Our Warriors</h2>
 
 			<?php
 			$args = array(
@@ -122,7 +122,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="inline-block border border-gray-100 hover:border-gray-300 rounded py-3 px-8 text-gray-100 hover:text-gray-300 transition duration-500 font-bold">View all Warriors →</a>
+			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="inline-block border border-gray-700 hover:bg-gray-700 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 

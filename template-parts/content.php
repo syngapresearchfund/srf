@@ -10,13 +10,13 @@
 
 namespace SRF;
 
-$card_classes = ! is_front_page() ? 'border border-gray-500 rounded' : 'border border-purple-100 rounded';
+$card_classes = ( is_front_page() && 'srf-warriors' === get_post_type() ) ? 'border-gray-700' : 'border-gray-500';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $card_classes ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'rounded border ' . $card_classes ); ?>>
 	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<div class="featured-image">
-			<?php srf_post_thumbnail( 'rounded-t h-64 w-full object-cover object-center' ); ?>
+			<?php srf_post_thumbnail( 'rounded h-64 w-full object-cover object-center' ); ?>
 		</div>
 
 		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-800 bg-opacity-50">
