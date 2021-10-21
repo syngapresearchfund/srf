@@ -13,7 +13,7 @@ namespace SRF;
 ?>
 
 <div class="relative bg-white" x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
-	<div class="container mx-auto px-6 lg:px-0">
+	<div class="container mx-auto">
 		<div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-9">
 			<div class="flex justify-start lg:w-0 lg:flex-1">
 				<a href="<?php echo esc_url( home_url() ); ?>">
@@ -151,7 +151,7 @@ namespace SRF;
 		From: "opacity-100 scale-100"
 		To: "opacity-0 scale-95"
 	-->
-	<div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="open" x-transition>
+	<div class="absolute z-10 top-0 -inset-x-4 p-2 transition transform origin-top-right lg:hidden" x-show="open" x-transition>
 		<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
 			<div class="pt-5 pb-6 px-5">
 				<div class="flex items-center justify-between">
