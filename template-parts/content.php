@@ -20,7 +20,7 @@ $card_classes = ( is_front_page() && 'srf-warriors' === get_post_type() ) ? 'bor
 		</div>
 
 		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-800 bg-opacity-50">
-			<?php the_title( '<h2 class="entry-title text-2xl font-bold">', '</h2>' ); ?>
+			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
 		</header><!-- .entry-header -->
 	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
