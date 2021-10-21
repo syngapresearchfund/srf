@@ -27,8 +27,8 @@ namespace SRF;
 					<!-- <h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get the latest updates!</h4> -->
 					<h4 class="mb-4 font-bold text-2xl lg:text-5xl">Get the latest updates!</h4>
 					<form action="" method="POST" class="flex">
-						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-purple-600 focus:border-purple-700 placeholder-purple-300">
-						<button class="p-3 bg-purple-600 hover:bg-purple-700 text-purple-200 rounded-r">Submit</button>
+						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-purple-500 focus:border-purple-600 placeholder-purple-400 text-purple-900">
+						<button class="p-3 bg-purple-500 hover:bg-purple-600 text-purple-100 rounded-r">Submit</button>
 					</form>
 				</div>
 				<!-- links -->
