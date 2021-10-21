@@ -36,7 +36,7 @@ get_header();
 	<!-- ========================= -->
 	<section class="bg-gray-200">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News</h2>
+			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
 
 			<?php
 			$args       = array( 'posts_per_page' => 4 );

@@ -30,7 +30,7 @@ namespace SRF;
 	<a class="skip-link screen-reader-text hidden" href="#content"><?php esc_html_e( 'Skip to content' ); ?></a>
 
 	<header id="masthead" class="site-header px-6 lg:px-0 text-gray-600" x-data="{ open: false }">
-		<?php get_template_part('template-parts/content', 'header') ?>
+		<?php get_template_part( 'template-parts/content', 'header' ); ?>
 	</header>
 
 	<main id="content" class="site-content site-main <?php echo is_front_page() ? '' : 'bg-gray-100'; ?>">

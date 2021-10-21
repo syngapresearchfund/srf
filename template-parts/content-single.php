@@ -15,12 +15,9 @@ $container_classes = srf_container_classes();
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $container_classes ); ?>>
 	<div class="single-header-wrapper">
-		<div class="featured-image">
-			<?php srf_post_thumbnail(); ?>
-		</div>
-
 		<header class="entry-header">
 			<?php
+				srf_post_thumbnail( 'rounded border border-gray-500' );
 				the_title( '<h1 class="entry-title">', '</h1>' );
 				srf_posted_on();
 			?>
