@@ -15,11 +15,15 @@ $card_classes = ( is_front_page() && 'srf-warriors' === get_post_type() ) ? 'bor
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'rounded border ' . $card_classes ); ?>>
 	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-		<div class="featured-image">
-			<?php srf_post_thumbnail( 'rounded h-64 w-full object-cover object-center' ); ?>
-		</div>
+		<?php
+		if ( has_post_thumbnail() ) {
+			srf_post_thumbnail( 'rounded h-64 w-full object-cover object-center' );
+		} else {
+			echo '<div class="rounded h-64 w-full bg-gradient-to-b from-blue-500 via-purple-500 to-teal-400 "></div>';
+		}
+		?>
 
-		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-800 bg-opacity-50">
+		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-50">
 			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
 		</header><!-- .entry-header -->
 	</a>

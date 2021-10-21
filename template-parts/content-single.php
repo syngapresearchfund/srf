@@ -10,10 +10,9 @@
 
 namespace SRF;
 
-$container_classes = srf_container_classes();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $container_classes ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( srf_container_classes() ); ?>>
 	<div class="single-header-wrapper">
 		<header class="entry-header">
 			<?php
