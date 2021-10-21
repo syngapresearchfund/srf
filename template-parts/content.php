@@ -19,7 +19,7 @@ $card_classes = ( is_front_page() && 'srf-warriors' === get_post_type() ) ? 'bor
 		if ( has_post_thumbnail() ) {
 			srf_post_thumbnail( 'rounded h-64 w-full object-cover object-center' );
 		} else {
-			echo '<div class="rounded h-64 w-full bg-gradient-to-b from-blue-500 via-purple-500 to-teal-400 "></div>';
+			echo '<div class="rounded h-64 w-full bg-gradient-to-br from-blue-500 via-purple-600 to-teal-600"></div>';
 		}
 		?>
 
