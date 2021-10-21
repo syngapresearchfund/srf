@@ -43,7 +43,8 @@ get_header();
 			$news_query = new WP_Query( $args );
 
 
-			if ( $news_query->have_posts() ) : ?>
+			if ( $news_query->have_posts() ) :
+				?>
 			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 				<?php
 				/* Start the Loop */
@@ -61,7 +62,7 @@ get_header();
 				?>
 			</div>
 
-			<?php
+				<?php
 			else :
 
 				get_template_part( 'template-parts/content', 'none' );
@@ -85,14 +86,15 @@ get_header();
 			<h2 class="mb-10 text-3xl lg:text-4xl text-gray-700 font-extrabold">Meet Our Warriors</h2>
 
 			<?php
-			$args = array(
+			$args       = array(
 				'posts_per_page' => 4,
 				'post_type'      => 'srf-warriors',
 			);
 			$news_query = new WP_Query( $args );
 
 
-			if ( $news_query->have_posts() ) : ?>
+			if ( $news_query->have_posts() ) :
+				?>
 			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
 				<?php
 				/* Start the Loop */
@@ -110,7 +112,7 @@ get_header();
 				?>
 			</div>
 
-			<?php
+				<?php
 			else :
 
 				get_template_part( 'template-parts/content', 'none' );

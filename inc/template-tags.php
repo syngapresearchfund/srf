@@ -100,7 +100,7 @@ if ( ! function_exists( 'srf_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 *
-	 * @param $image_classes String
+	 * @param string $img_classes Optional classes for image.
 	 */
 	function srf_post_thumbnail( $img_classes = '' ) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
