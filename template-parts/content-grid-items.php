@@ -1,0 +1,35 @@
+<?php
+/**
+ * Template part for displaying posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @since 2019-05-19 First docBlock
+ * @package SRF
+ */
+
+namespace SRF;
+
+$card_classes  = ( is_front_page() && 'srf-warriors' === get_post_type() ) ? 'border-gray-700' : 'border-gray-600';
+$srf_bg_colors = array(
+	'bg-blue-500',
+	'bg-purple-600',
+	'bg-teal-600',
+);
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'rounded border ' . $card_classes ); ?>>
+	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+		<?php
+		if ( has_post_thumbnail() ) {
+			srf_post_thumbnail( 'rounded h-64 w-full object-cover object-center' );
+		} else {
+			echo '<div class="rounded h-64 w-full ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) . '"></div>';
+		}
+		?>
+
+		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-50">
+			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
+		</header><!-- .entry-header -->
+	</a>
+</article><!-- #post-<?php the_ID(); ?> -->

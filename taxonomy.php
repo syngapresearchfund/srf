@@ -23,7 +23,7 @@ get_header();
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo esc_attr( $container_classes ); ?>">
 			<header class="entry-header relative">
-				<h1 class="entry-title text-4xl lg:text-5xl text-center font-extrabold mb-14"><?php echo esc_html( $current_term->name ); ?></h1>
+				<h1 class="entry-title text-4xl lg:text-6xl text-center font-extrabold mb-14"><?php echo esc_html( $current_term->name ); ?></h1>
 				<div class="absolute inset-x-1/2 -bottom-6 w-1/4 lg:w-1/6 h-1 bg-gradient-to-r from-purple-400 via-green-400 to-blue-400 rounded transform -translate-x-1/2"></div>
 			</header><!-- .entry-header -->
 
@@ -38,7 +38,7 @@ get_header();
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'template-parts/content', 'grid-items' );
 
 				endwhile;
 				?>

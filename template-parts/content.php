@@ -10,21 +10,22 @@
 
 namespace SRF;
 
-$card_classes = ( is_front_page() && 'srf-warriors' === get_post_type() ) ? 'border-gray-700' : 'border-gray-600';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'rounded border ' . $card_classes ); ?>>
-	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-		<?php
-		if ( has_post_thumbnail() ) {
-			srf_post_thumbnail( 'rounded h-64 w-full object-cover object-center' );
-		} else {
-			echo '<div class="rounded h-64 w-full bg-gradient-to-br from-blue-500 via-purple-600 to-teal-600"></div>';
-		}
-		?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( ' relative mb-24' ); ?>>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+			<?php srf_post_thumbnail( 'mb-2 border border-gray-500' ); ?>
+		</a>
+	<?php endif; ?>
 
-		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-50">
-			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
-		</header><!-- .entry-header -->
-	</a>
+	<header class="entry-header">
+		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+			<?php the_title( '<h2 class="entry-title line-clamp-2">', '</h2>' ); ?>
+		</a>
+	</header><!-- .entry-header -->
+
+	<?php the_excerpt(); ?>
+
+	<div class="absolute inset-x-1/2 -bottom-10 w-1/4 lg:w-1/4 h-0.5 bg-gray-300 rounded transform -translate-x-1/2"></div>
 </article><!-- #post-<?php the_ID(); ?> -->
