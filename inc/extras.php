@@ -20,7 +20,7 @@ function srf_remove_thumbnail_dimensions( $html ) {
 add_filter( 'post_thumbnail_html', __NAMESPACE__ . '\\srf_remove_thumbnail_dimensions', 10 );
 add_filter( 'image_send_to_editor', __NAMESPACE__ . '\\srf_remove_thumbnail_dimensions', 10 );
 
-/*
+/**
  * Let's customize our excerpt a bit, so it looks better
  * First we decrease the default excerpt length, then
  * we give it a proper hellip for the more text.
@@ -30,10 +30,13 @@ function srf_custom_excerpt_length() {
 }
 add_filter( 'excerpt_length', __NAMESPACE__ . '\\srf_custom_excerpt_length', 999 );
 
+/**
+ * Customize the "Read more" markup
+ */
 function srf_excerpt_more( $more ) {
 	global $post;
 
-	return '</p><p><a class="link__more" href="'. esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Read more' ) . '</a></p>';
+	return '</p><p><a class="link__more" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Read more →' ) . '</a></p>';
 }
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\srf_excerpt_more' );
 

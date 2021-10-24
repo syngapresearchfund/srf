@@ -45,7 +45,8 @@ get_header();
 
 			if ( $news_query->have_posts() ) :
 				?>
-			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+			<!-- <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10"> -->
+			<div class="lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php
 				/* Start the Loop */
 				while ( $news_query->have_posts() ) :
@@ -56,7 +57,7 @@ get_header();
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'template-parts/content', 'front-news' );
 
 				endwhile;
 				?>
