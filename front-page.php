@@ -39,8 +39,9 @@ get_header();
 			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
 
 			<?php
-			$args       = array( 'posts_per_page' => 4 );
+			$args       = array( 'posts_per_page' => 5 );
 			$news_query = new WP_Query( $args );
+			$post_count = 1;
 
 
 			if ( $news_query->have_posts() ) :
@@ -57,7 +58,8 @@ get_header();
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', 'front-news' );
+					get_template_part( 'template-parts/content', 'front-news', array( 'post_count' => $post_count ) );
+					$post_count++;
 
 				endwhile;
 				?>
@@ -75,7 +77,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="inline-block border border-gray-600 hover:bg-gray-600 rounded py-3 px-8 text-gray-600 hover:text-gray-100 transition duration-500 font-bold">View all News articles →</a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="inline-block bg-gray-500 hover:bg-gray-600 rounded py-3 px-8 text-gray-100 transition duration-500 font-bold">View all News articles →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
@@ -125,7 +127,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="inline-block border border-gray-700 hover:bg-gray-700 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors →</a>
+			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="inline-block border border-gray-700 hover:border-transparent hover:bg-gray-600 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 

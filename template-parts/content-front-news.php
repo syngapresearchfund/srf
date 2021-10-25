@@ -10,18 +10,26 @@
 
 namespace SRF;
 
+$col_span = ' col-span-2';
+
+if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] || 2 === $args['post_count'] ) ) {
+	$col_span = ' col-span-3';
+}
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( ' col-span-2 border border-gray-700 rounded shadow-lg' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $col_span . ' border border-gray-700 rounded shadow-lg' ); ?>>
 	<header class="entry-header p-4 flex items-center justify-between border-b border-gray-700">
-		<?php the_title( '<h2 class="entry-title font-bold text-lg text-gray-700 line-clamp-1"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-
-		<div class="flex space-x-2">
-			<div class="w-3 h-3 rounded-full bg-red-500"></div>
-			<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+		<div class="flex space-x-2 mr-10">
+			<div class="w-3 h-3 rounded-full bg-blue-500"></div>
+			<div class="w-3 h-3 rounded-full bg-purple-500"></div>
 			<div class="w-3 h-3 rounded-full bg-green-500"></div>
 		</div>
+		<h3 class="font-semibold text-sm text-gray-600"><?php echo get_the_date( 'F j, Y' ); ?></h3>
 	</header><!-- .entry-header -->
 
-	<div class="p-4 text-gray-700"><?php the_excerpt(); ?></div>
+	<div class="p-4 text-gray-600">
+		<?php the_title( '<h2 class="entry-title mb-2 font-bold text-lg text-gray-700"><a class="hover:underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		<?php the_excerpt(); ?>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->

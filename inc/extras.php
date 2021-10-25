@@ -36,7 +36,7 @@ add_filter( 'excerpt_length', __NAMESPACE__ . '\\srf_custom_excerpt_length', 999
 function srf_excerpt_more( $more ) {
 	global $post;
 
-	return '</p><p><a class="link__more" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Read more →' ) . '</a></p>';
+	return '...</p><p class="mt-4"><a class="link__more font-semibold hover:underline" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Read more →' ) . '</a></p>';
 }
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\srf_excerpt_more' );
 
