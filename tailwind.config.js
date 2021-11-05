@@ -17,7 +17,10 @@ module.exports = {
 		},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			backgroundOpacity: ['even'],
+			borderRadius: ['first', 'last'],
+		},
 	},
 	plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp')],
 };
