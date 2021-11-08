@@ -73,14 +73,5 @@ module.exports = {
 				body: { fontFamily: theme('fontFamily.serif') },
 			});
 		}),
-		plugin(function ({ addComponents, theme }) {
-			const buttons = {
-				'.btn': {
-					fontFamily: theme('fontFamily.sans'),
-				},
-			};
-
-			addComponents(buttons);
-		}),
 	],
 };

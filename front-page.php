@@ -27,7 +27,7 @@ get_header();
 			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg text-gray-500">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SynGAP & to supporting each other.</p>
 
 			<!-- big button / cta -->
-			<a href="https://syngapresearchfund.org" class="btn inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-srf-blue-500 hover:bg-srf-blue-600 text-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
+			<a href="https://syngapresearchfund.org" class="font-sans inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-srf-blue-500 hover:bg-srf-blue-600 text-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
@@ -77,7 +77,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="btn inline-block bg-gray-500 hover:bg-gray-600 rounded py-3 px-8 text-gray-100 transition duration-500 font-bold">View all News articles →</a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="font-sans inline-block bg-gray-500 hover:bg-gray-600 rounded py-3 px-8 text-gray-100 transition duration-500 font-bold">View all News articles →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
@@ -127,7 +127,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="btn inline-block border border-gray-700 hover:border-transparent hover:bg-gray-600 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors →</a>
+			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="font-sans inline-block border border-gray-700 hover:border-transparent hover:bg-gray-600 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors →</a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
@@ -176,7 +176,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="btn inline-block border border-gray-300 hover:border-transparent hover:bg-gray-700 rounded py-3 px-8 text-gray-300 transition duration-500 font-bold">View all Events →</a>
+			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="font-sans inline-block border border-gray-300 hover:border-transparent hover:bg-gray-700 rounded py-3 px-8 text-gray-300 transition duration-500 font-bold">View all Events →</a>
 		</div>
 	</section>
 
