@@ -30,7 +30,7 @@ namespace SRF;
 					</svg>
 				</button>
 			</div>
-			<nav class="hidden lg:block">
+			<nav class="hidden lg:block font-sans">
 				<ul class="flex space-x-9">
 					<li class="relative py-2 cursor-pointer" @click="openFirst = ! openFirst" @click.outside="openFirst = false">
 						<div class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

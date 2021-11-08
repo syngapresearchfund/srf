@@ -34,21 +34,21 @@ namespace SRF;
 				<!-- links -->
 				<div class="text-center lg:text-right md:flex md:justify-center md:space-x-8 space-y-8 md:space-y-0">
 					<div class="space-y-2">
-						<p class="mb-3 font-bold uppercase tracking-widest">Families</p>
+						<h4 class="mb-3 font-bold uppercase tracking-widest">Families</h4>
 						<a href="" class="block hover:text-purple-200 hover:underline">About</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Careers</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Events</a>
 					</div>
 					<div class="space-y-2">
-						<p class="mb-3 font-bold uppercase tracking-widest">Professionals</p>
+						<h4 class="mb-3 font-bold uppercase tracking-widest">Professionals</h4>
 						<a href="" class="block hover:text-purple-200 hover:underline">About</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Careers</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Events</a>
 					</div>
 					<div class="space-y-2">
-						<p class="mb-3 font-bold uppercase tracking-widest">Organization</p>
+						<h4 class="mb-3 font-bold uppercase tracking-widest">Organization</h4>
 						<a href="" class="block hover:text-purple-200 hover:underline">About</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Careers</a>
