@@ -21,9 +21,9 @@ if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] || 2 === $args[
 <article id="post-<?php the_ID(); ?>" <?php post_class( $col_span . ' border border-gray-700 rounded shadow-lg' ); ?>>
 	<header class="entry-header p-4 flex items-center justify-between border-b border-gray-700">
 		<div class="flex space-x-2 mr-10">
-			<div class="w-3 h-3 rounded-full bg-blue-500"></div>
-			<div class="w-3 h-3 rounded-full bg-purple-500"></div>
-			<div class="w-3 h-3 rounded-full bg-green-500"></div>
+			<div class="w-3 h-3 rounded-full bg-srf-blue-500"></div>
+			<div class="w-3 h-3 rounded-full bg-srf-purple-500"></div>
+			<div class="w-3 h-3 rounded-full bg-srf-green-500"></div>
 		</div>
 		<h3 class="font-semibold text-sm text-gray-600"><?php echo get_the_date( 'F j, Y' ); ?></h3>
 	</header><!-- .entry-header -->

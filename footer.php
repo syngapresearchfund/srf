@@ -18,7 +18,7 @@ namespace SRF;
 
 	<!-- <footer class="bg-gradient-to-b from-gray-100 to-gray-300 text-purple-100"> -->
 	<!-- <footer class="bg-gradient-to-b from-purple-500 to-purple-900 text-purple-100"> -->
-	<footer class="bg-purple-800 text-purple-100">
+	<footer class="bg-srf-purple-500 text-white">
 		<div class="container mx-auto px-6 lg:px-0 py-24">
 			<!-- top footer -->
 			<div class="lg:flex justify-between space-y-12 lg:space-y-0">
@@ -27,8 +27,8 @@ namespace SRF;
 					<!-- <h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get the latest updates!</h4> -->
 					<h4 class="mb-4 font-bold text-2xl lg:text-5xl">Get the latest updates!</h4>
 					<form action="" method="POST" class="flex">
-						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-purple-500 focus:border-purple-600 placeholder-purple-400 text-purple-900">
-						<button class="p-3 bg-purple-500 hover:bg-purple-600 text-purple-100 rounded-r">Submit</button>
+						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
+						<button class="p-3 bg-srf-purple-700 hover:bg-srf-purple-800 text-white rounded-r">Submit</button>
 					</form>
 				</div>
 				<!-- links -->

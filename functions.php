@@ -68,8 +68,7 @@ function srf_scripts() {
 	// Navigation scripts.
 	wp_enqueue_script( 'alpinejs', get_template_directory_uri() . '/assets/js/alpinejs-3.3.1.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	// Google Font scripts.
-	wp_enqueue_script( 'srf-fonts', 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@400;600;700&display=swap', array(), wp_get_theme()->get( 'Version' ) );
-	// wp_enqueue_script( 'srf-fonts', 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Oswald:wght@400;600;700&display=swap', array(), wp_get_theme()->get( 'Version' ) );
+	// wp_enqueue_script( 'srf-fonts', 'https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:wght@400;500;600;700;800&display=swap', array(), wp_get_theme()->get( 'Version' ), false );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
 

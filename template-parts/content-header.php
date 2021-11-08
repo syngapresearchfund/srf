@@ -135,7 +135,7 @@ namespace SRF;
 					</li>
 				</ul>
 			</nav>
-			<a href="#" class="hidden lg:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+			<a href="#" class="btn hidden lg:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold text-white bg-srf-purple-500 hover:bg-srf-purple-700">
 				Donate
 			</a>
 		</div>
