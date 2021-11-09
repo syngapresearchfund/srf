@@ -23,7 +23,6 @@ namespace SRF;
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
@@ -33,7 +32,7 @@ namespace SRF;
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text hidden" href="#content"><?php esc_html_e( 'Skip to content' ); ?></a>
 
-	<header id="masthead" class="site-header px-6 lg:px-0 text-gray-600" x-data="{ open: false }">
+	<header id="masthead" class="site-header px-6 lg:px-0 text-gray-600 border-b border-grey-600" x-data="{ open: false }">
 		<?php get_template_part( 'template-parts/content', 'header' ); ?>
 	</header>
 

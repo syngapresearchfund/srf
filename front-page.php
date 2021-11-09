@@ -77,7 +77,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="font-sans inline-block bg-gray-500 hover:bg-gray-600 rounded py-3 px-8 text-gray-100 transition duration-500 font-bold">View all News articles →</a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="font-sans inline-flex bg-gray-500 hover:bg-gray-600 rounded py-3 px-8 text-gray-100 transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
@@ -127,7 +127,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="font-sans inline-block border border-gray-700 hover:border-transparent hover:bg-gray-600 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors →</a>
+			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="font-sans inline-flex border border-gray-700 hover:border-transparent hover:bg-gray-600 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
@@ -176,7 +176,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="font-sans inline-block border border-gray-300 hover:border-transparent hover:bg-gray-700 rounded py-3 px-8 text-gray-300 transition duration-500 font-bold">View all Events →</a>
+			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="font-sans inline-flex border border-gray-300 hover:border-transparent hover:bg-gray-700 rounded py-3 px-8 text-gray-300 transition duration-500 font-bold">View all Events <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>
 

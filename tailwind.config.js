@@ -47,8 +47,8 @@ module.exports = {
 			},
 			fontFamily: {
 				ebg: ['EB Garamond', 'serif'],
-				montserrat: ['Montserrat', 'sans-serif'],
-				sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+				poppins: ['Poppins', 'sans-serif'],
+				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
 				serif: ['"EB Garamond"', ...defaultTheme.fontFamily.serif],
 			},
 		},
