@@ -81,8 +81,6 @@ module.exports = {
 					fontWeight: theme('fontWeight.semibold'),
 					color: theme('colors.white'),
 					backgroundColor: theme('colors.srf-blue.500'),
-					// fontSize: '80%',
-					// fontWeight: '600',
 				},
 			};
 
