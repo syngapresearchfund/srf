@@ -73,5 +73,20 @@ module.exports = {
 				body: { fontFamily: theme('fontFamily.serif') },
 			});
 		}),
+		plugin(function ({ addComponents, theme }) {
+			const buttons = {
+				'.woocommerce a.button': {
+					fontFamily: theme('fontFamily.sans'),
+					fontSize: theme('fontSize.sm'),
+					fontWeight: theme('fontWeight.semibold'),
+					color: theme('colors.white'),
+					backgroundColor: theme('colors.srf-blue.500'),
+					// fontSize: '80%',
+					// fontWeight: '600',
+				},
+			};
+
+			addComponents(buttons);
+		}),
 	],
 };
