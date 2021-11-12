@@ -16,7 +16,7 @@ get_header();
 	<!-- hero section -->
 	<!-- ========================= -->
 	<section class="bg-white">
-		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+		<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center">
 			<!-- heading -->
 			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 				<span class="text-transparent bg-clip-text bg-gradient-to-r from-srf-green-500 to-srf-blue-500">Collaboration.</span>
