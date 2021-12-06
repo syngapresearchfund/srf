@@ -18,7 +18,7 @@ namespace SRF;
 
 	<!-- <footer class="bg-gradient-to-b from-gray-100 to-gray-300 text-purple-100"> -->
 	<!-- <footer class="bg-gradient-to-b from-purple-500 to-purple-900 text-purple-100"> -->
-	<footer class="bg-srf-purple-500 text-white">
+	<footer class="bg-srf-purple-500 text-white border-t-4 border-srf-purple-light">
 		<div class="container mx-auto px-6 lg:px-0 py-24">
 			<!-- top footer -->
 			<div class="lg:flex justify-between space-y-12 lg:space-y-0">

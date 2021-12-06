@@ -12,17 +12,17 @@ namespace SRF;
 
 ?>
 
-<div class="relative bg-white px-6 lg:px-0" x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
+<div class="relative bg-srf-purple-500 px-6 lg:px-0" x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
 	<div class="container mx-auto">
-		<div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-9">
+		<div class="flex justify-between items-center py-5 lg:justify-start lg:space-x-9">
 			<div class="flex justify-start lg:w-0 lg:flex-1">
 				<a href="<?php echo esc_url( home_url() ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
-					<img class="w-auto h-9 sm:h-10" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
+					<img class="w-auto h-9 sm:h-10" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo-white.svg" alt="">
 				</a>
 			</div>
 			<div class="-mr-2 -my-2 lg:hidden">
-				<button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" @click="open = true">
+				<button type="button" class="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-srf-purple-500 hover:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" @click="open = true">
 					<span class="sr-only">Open menu</span>
 					<!-- Heroicon name: outline/menu -->
 					<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -33,14 +33,14 @@ namespace SRF;
 			<nav class="hidden lg:block font-sans">
 				<ul class="flex space-x-9">
 					<li class="relative py-2 cursor-pointer" @click="openFirst = ! openFirst" @click.outside="openFirst = false">
-						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+						<div class="text-white group rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 							<span>Solutions</span>
 							<!--
 							Heroicon name: solid/chevron-down
 
 							Item active: "text-gray-600", Item inactive: "text-gray-400"
 							-->
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<svg class="text-white ml-2 h-5 w-5 group-hover:text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -66,9 +66,9 @@ namespace SRF;
 						</div>
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openSecond = ! openSecond" @click.outside="openSecond = false">
-						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+						<div class="text-white group rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 							<span>Pricing</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<svg class="text-white ml-2 h-5 w-5 group-hover:text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -83,9 +83,9 @@ namespace SRF;
 						</div>
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openThird = ! openThird" @click.outside="openThird = false">
-						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+						<div class="text-white group rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 							<span>Privacy Policy</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<svg class="text-white ml-2 h-5 w-5 group-hover:text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -100,9 +100,9 @@ namespace SRF;
 						</div>
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openFourth = ! openFourth" @click.outside="openFourth = false">
-						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+						<div class="text-white group rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 							<span>Docs</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<svg class="text-white ml-2 h-5 w-5 group-hover:text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -117,9 +117,9 @@ namespace SRF;
 						</div>
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openLast = ! openLast" @click.outside="openLast = false">
-						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+						<div class="text-white group rounded-md inline-flex items-center text-base font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 							<span>More</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<svg class="text-white ml-2 h-5 w-5 group-hover:text-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -135,7 +135,7 @@ namespace SRF;
 					</li>
 				</ul>
 			</nav>
-			<a href="#" class="hidden lg:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
+			<a href="#" class="hidden lg:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-white rounded-md shadow-sm text-base font-semibold font-sans text-white hover:text-srf-purple-500 bg-srf-purple-500 hover:bg-white">
 				Donate
 			</a>
 		</div>
