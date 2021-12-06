@@ -21,6 +21,7 @@ module.exports = {
 					700: '#53276d',
 					800: '#44215a',
 					900: '#361a47',
+					light: '#d4cae1',
 				},
 				'srf-blue': {
 					100: '#d0dcef',
@@ -32,6 +33,7 @@ module.exports = {
 					700: '#31558f',
 					800: '#2a4a7c',
 					900: '#243f69',
+					light: '#d0ddee',
 				},
 				'srf-green': {
 					100: '#a1f2cc',
@@ -43,6 +45,7 @@ module.exports = {
 					700: '#13814e',
 					800: '#0f6b41',
 					900: '#0c5533',
+					light: '#cbe7d4',
 				},
 			},
 			fontFamily: {

@@ -15,26 +15,35 @@ get_header();
 	<!-- ========================= -->
 	<!-- hero section -->
 	<!-- ========================= -->
-	<section class="bg-white">
+	<!-- <section class="bg-white">
 		<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center">
-			<!-- heading -->
 			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 				<span class="text-transparent bg-clip-text bg-gradient-to-r from-srf-green-500 to-srf-blue-500">Collaboration.</span>
 				<span class="block md:inline text-transparent bg-clip-text bg-gradient-to-r from-srf-blue-500 to-srf-purple-500">Transparency.</span>
 				<span class="block md:inline text-transparent bg-clip-text bg-gradient-to-r from-srf-purple-500 to-srf-purple-600">Urgency.</span>
 			</h1>
-			<!-- paragraphs -->
 			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg text-gray-500">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SynGAP & to supporting each other.</p>
-
-			<!-- big button / cta -->
 			<a href="https://syngapresearchfund.org" class="font-sans inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-srf-blue-500 hover:bg-srf-blue-600 text-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
 		</div>
-	</section>		<!-- header + hero bg wrapper -->
+	</section>	 -->
+
+	<!-- ========================= -->
+	<!-- hero section ALT -->
+	<!-- ========================= -->
+	<section class="bg-gradient-to-br from-srf-blue-500 via-srf-purple-500 to-srf-green-500">
+		<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white">
+			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
+				Collaboration. Transparency. Urgency.
+			</h1>
+			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SynGAP & to supporting each other.</p>
+			<a href="https://syngapresearchfund.org" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
+		</div>
+	</section>	
 
 	<!-- ========================= -->
 	<!-- News section -->
 	<!-- ========================= -->
-	<section class="bg-gray-200">
+	<section class="bg-gray-100">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
 
@@ -77,14 +86,14 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="font-sans inline-flex bg-gray-500 hover:bg-gray-600 rounded py-3 px-8 text-gray-100 transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
 	<!-- ========================= -->
 	<!-- Warriors section -->
 	<!-- ========================= -->
-	<section class="bg-gray-300">
+	<section class="bg-white">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 			<h2 class="mb-10 text-3xl lg:text-4xl text-gray-700 font-extrabold">Meet Our Warriors</h2>
 
@@ -127,16 +136,16 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="font-sans inline-flex border border-gray-700 hover:border-transparent hover:bg-gray-600 rounded py-3 px-8 text-gray-700 hover:text-gray-100 transition duration-500 font-bold">View all Warriors <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+			<a href="<?php echo esc_url( site_url( '/warriors/' ) ); ?>" class="font-sans inline-flex border border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View all Warriors <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
 	<!-- ========================= -->
 	<!-- Events section -->
 	<!-- ========================= -->
-	<section class="relative py-32 bg-gradient-to-b from-gray-700 to-gray-800">
+	<section class="relative py-32 bg-gray-100">
 		<div class="container mx-auto px-10 text-center">
-			<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-white">Upcoming Events</h2>
+			<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events</h2>
 
 			<?php
 			$args         = array(
@@ -147,7 +156,7 @@ get_header();
 
 			if ( $events_query->have_posts() ) :
 				?>
-			<div class="max-w-5xl mx-auto mb-10 text-gray-400 text-left">
+			<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left">
 				<?php
 				/* Start the Loop */
 				while ( $events_query->have_posts() ) :
@@ -176,7 +185,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="font-sans inline-flex border border-gray-300 hover:border-transparent hover:bg-gray-700 rounded py-3 px-8 text-gray-300 transition duration-500 font-bold">View all Events <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all Events <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>
 
