@@ -34,7 +34,7 @@ get_header();
 	<!-- ========================= -->
 	<!-- News section -->
 	<!-- ========================= -->
-	<section class="bg-gray-200">
+	<section class="bg-gray-100">
 		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
 
@@ -77,7 +77,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="font-sans inline-flex bg-gray-500 hover:bg-gray-600 rounded py-3 px-8 text-gray-100 transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+			<a href="<?php echo esc_url( site_url( '/news/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
@@ -134,9 +134,9 @@ get_header();
 	<!-- ========================= -->
 	<!-- Events section -->
 	<!-- ========================= -->
-	<section class="relative py-32 bg-gradient-to-b from-gray-700 to-gray-800">
+	<section class="relative py-32 bg-gray-100">
 		<div class="container mx-auto px-10 text-center">
-			<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-white">Upcoming Events</h2>
+			<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events</h2>
 
 			<?php
 			$args         = array(
@@ -147,7 +147,7 @@ get_header();
 
 			if ( $events_query->have_posts() ) :
 				?>
-			<div class="max-w-5xl mx-auto mb-10 text-gray-400 text-left">
+			<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left">
 				<?php
 				/* Start the Loop */
 				while ( $events_query->have_posts() ) :
@@ -176,7 +176,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="font-sans inline-flex border border-gray-300 hover:border-transparent hover:bg-gray-700 rounded py-3 px-8 text-gray-300 transition duration-500 font-bold">View all Events <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+			<a href="<?php echo esc_url( site_url( '/events/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all Events <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>
 
