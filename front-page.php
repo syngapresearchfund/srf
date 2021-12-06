@@ -15,21 +15,30 @@ get_header();
 	<!-- ========================= -->
 	<!-- hero section -->
 	<!-- ========================= -->
-	<section class="bg-white">
+	<!-- <section class="bg-white">
 		<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center">
-			<!-- heading -->
 			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 				<span class="text-transparent bg-clip-text bg-gradient-to-r from-srf-green-500 to-srf-blue-500">Collaboration.</span>
 				<span class="block md:inline text-transparent bg-clip-text bg-gradient-to-r from-srf-blue-500 to-srf-purple-500">Transparency.</span>
 				<span class="block md:inline text-transparent bg-clip-text bg-gradient-to-r from-srf-purple-500 to-srf-purple-600">Urgency.</span>
 			</h1>
-			<!-- paragraphs -->
 			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg text-gray-500">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SynGAP & to supporting each other.</p>
-
-			<!-- big button / cta -->
 			<a href="https://syngapresearchfund.org" class="font-sans inline-block py-3 px-12 rounded shadow-lg hover:shadow-2xl bg-srf-blue-500 hover:bg-srf-blue-600 text-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
 		</div>
-	</section>		<!-- header + hero bg wrapper -->
+	</section>	 -->
+
+	<!-- ========================= -->
+	<!-- hero section ALT -->
+	<!-- ========================= -->
+	<section class="bg-gradient-to-br from-srf-blue-500 via-srf-purple-500 to-srf-green-500">
+		<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white">
+			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
+				Collaboration. Transparency. Urgency.
+			</h1>
+			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SynGAP & to supporting each other.</p>
+			<a href="https://syngapresearchfund.org" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Learn about SYNGAP1</a>
+		</div>
+	</section>	
 
 	<!-- ========================= -->
 	<!-- News section -->
