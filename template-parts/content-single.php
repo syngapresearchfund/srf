@@ -12,12 +12,12 @@ namespace SRF;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( srf_container_classes() ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'max-w-5xl mx-auto px-6 lg:px-0 py-16' ); ?>>
 	<div class="single-header-wrapper">
 		<header class="entry-header">
 			<?php
-				srf_post_thumbnail( 'rounded border border-gray-500' );
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				srf_post_thumbnail( 'block mx-auto mb-6 rounded border border-gray-300 shadow' );
+				the_title( '<h1 class="entry-title text-4xl lg:text-5xl font-extrabold">', '</h1>' );
 				srf_posted_on();
 			?>
 		</header><!-- .entry-header -->
@@ -36,7 +36,7 @@ namespace SRF;
 		</div><!-- .entry-meta -->
 	</div>
 
-	<div class="entry-content-wrapper">
+	<div class="entry-content-wrapper container mx-auto prose lg:prose-xl">
 		<div class="entry-content">
 			<?php
 			the_content(
