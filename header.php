@@ -33,7 +33,6 @@ namespace SRF;
 	<a class="skip-link screen-reader-text hidden" href="#content"><?php esc_html_e( 'Skip to content' ); ?></a>
 
 	<header id="masthead" class="site-header text-gray-600 border-b border-gray-300" x-data="{ open: false }">
-		<?php //get_template_part( 'template-parts/content', 'header-dark' ); ?>
 		<?php get_template_part( 'template-parts/content', 'header' ); ?>
 	</header>
 
