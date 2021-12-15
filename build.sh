@@ -17,6 +17,8 @@ if [ ! -f ./dist-exclude.txt ]; then
 fi
 
 echo "${GREEN}Syncing dist files...${NOCOLOR}"
+rm -r ./dist/*
+rm ./srf-theme.zip
 rsync -avzu --delete --progress -h --exclude-from="dist-exclude.txt" ./* ./dist
 
 echo "${GREEN}Syncing complete.${NOCOLOR}"
