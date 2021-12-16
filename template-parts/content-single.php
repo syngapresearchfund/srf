@@ -13,22 +13,22 @@ namespace SRF;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'max-w-7xl mx-auto px-6 lg:px-0 py-16' ); ?>>
-	<div class="single-header-wrapper">
+	<div class="single-header-wrapper pb-10 mb-10 border-b">
 		<header class="entry-header">
 			<?php
+				the_title( '<h1 class="entry-title mb-6 text-center text-4xl lg:text-5xl font-extrabold">', '</h1>' );
 				srf_post_thumbnail( 'block mx-auto mb-6 rounded border border-gray-300 shadow' );
-				the_title( '<h1 class="entry-title text-4xl lg:text-5xl font-extrabold">', '</h1>' );
-				srf_posted_on();
 			?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-meta">
 			<?php
+			srf_posted_on();
 
 			$tags_list = get_the_tag_list( '', ', ' );
 			if ( $tags_list ) {
-				echo '<div class="post-tags">';
-				echo '<svg class="go-tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"/><g><path d="M20 2.007h-7.087c-.53 0-1.04.21-1.414.586L2.592 11.5c-.78.78-.78 2.046 0 2.827l7.086 7.086c.78.78 2.046.78 2.827 0l8.906-8.906c.376-.374.587-.883.587-1.413V4.007c0-1.105-.895-2-2-2zM17.007 9c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z"/></g></svg>';
+				echo '<div class="post-tags flex justify-items-start items-center">';
+				echo '<svg class="h-4 w-4 mr-2 text-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"/><g><path d="M20 2.007h-7.087c-.53 0-1.04.21-1.414.586L2.592 11.5c-.78.78-.78 2.046 0 2.827l7.086 7.086c.78.78 2.046.78 2.827 0l8.906-8.906c.376-.374.587-.883.587-1.413V4.007c0-1.105-.895-2-2-2zM17.007 9c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z"/></g></svg>';
 				echo '<span class="tags-links">' . $tags_list . '</span>'; // phpcs:ignore -- XSS OK.
 				echo '</div>';
 			}
