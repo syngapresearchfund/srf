@@ -12,31 +12,32 @@ namespace SRF;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( srf_container_classes() ); ?>>
-	<div class="single-header-wrapper">
-		<header class="entry-header">
-			<?php
-				srf_post_thumbnail( 'rounded border border-gray-500' );
-				the_title( '<h1 class="entry-title">', '</h1>' );
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'pb-16' ); ?>>
+	<header class="entry-header p-6 sm:p-0 sm:flex bg-srf-purple-500">
+		<?php srf_post_thumbnail( 'hidden sm:block sm:w-1/3' ); ?>
+
+		<div class="sm:px-10 sm:py-12 text-center sm:text-left text-white flex flex-col justify-center">
+			<?php the_title( '<h1 class="entry-title mb-4 text-4xl lg:text-5xl font-extrabold">', '</h1>' ); ?>
+
+			<div class="text-sm">
+				<?php
 				srf_posted_on();
-			?>
-		</header><!-- .entry-header -->
 
-		<div class="entry-meta">
-			<?php
-
-			$tags_list = get_the_tag_list( '', ', ' );
-			if ( $tags_list ) {
-				echo '<div class="post-tags">';
-				echo '<svg class="go-tag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"/><g><path d="M20 2.007h-7.087c-.53 0-1.04.21-1.414.586L2.592 11.5c-.78.78-.78 2.046 0 2.827l7.086 7.086c.78.78 2.046.78 2.827 0l8.906-8.906c.376-.374.587-.883.587-1.413V4.007c0-1.105-.895-2-2-2zM17.007 9c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z"/></g></svg>';
-				echo '<span class="tags-links">' . $tags_list . '</span>'; // phpcs:ignore -- XSS OK.
-				echo '</div>';
-			}
-			?>
+				$tags_list = get_the_tag_list( '', ', ' );
+				if ( $tags_list ) {
+					echo '<div class="post-tags flex justify-items-start items-center">';
+					echo '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+					<path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+				  </svg>';
+					echo '<span class="tags-links">' . $tags_list . '</span>'; // phpcs:ignore -- XSS OK.
+					echo '</div>';
+				}
+				?>
+			</div>
 		</div><!-- .entry-meta -->
-	</div>
+	</header><!-- .entry-header -->
 
-	<div class="entry-content-wrapper">
+	<div class="entry-content-wrapper container mx-auto prose lg:prose-xl px-6 lg:px-0 pt-8 pb-16">
 		<div class="entry-content">
 			<?php
 			the_content(
