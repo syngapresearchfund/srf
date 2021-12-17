@@ -10,17 +10,9 @@
 
 namespace SRF;
 
-$col_span = ' col-span-2';
-
-// if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] || 2 === $args['post_count'] ) ) {
-// if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] ) ) {
-	// $col_span = ' col-span-3';
-	// $col_span = ' col-span-6';
-// }
-
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $col_span . ' border border-gray-700 rounded shadow-lg' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-span-2 border border-gray-700 rounded shadow-lg' ); ?>>
 	<header class="entry-header p-4 flex items-center justify-between border-b border-gray-700">
 		<div class="flex space-x-2 mr-10">
 			<div class="w-3 h-3 rounded-full bg-srf-blue-500"></div>
