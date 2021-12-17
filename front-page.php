@@ -33,7 +33,7 @@ get_header();
 			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
 
 			<?php
-			$args       = array( 'posts_per_page' => 5 );
+			$args       = array( 'posts_per_page' => 6 );
 			$news_query = new WP_Query( $args );
 			$post_count = 1;
 
