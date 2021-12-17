@@ -26,7 +26,7 @@ add_filter( 'image_send_to_editor', __NAMESPACE__ . '\\srf_remove_thumbnail_dime
  * we give it a proper hellip for the more text.
  */
 function srf_custom_excerpt_length() {
-	return 20;
+	return 30;
 }
 add_filter( 'excerpt_length', __NAMESPACE__ . '\\srf_custom_excerpt_length', 999 );
 

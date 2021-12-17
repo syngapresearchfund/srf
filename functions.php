@@ -56,6 +56,7 @@ function srf_setup() : void {
 
 	// Add featured image size.
 	add_image_size( 'featured-image', 925, 1440 );
+	add_image_size( 'featured-thumbnail', 320, 320 );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
 

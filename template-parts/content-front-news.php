@@ -10,10 +10,12 @@
 
 namespace SRF;
 
-$col_span = ' col-span-2';
+$col_span = ' col-span-3';
 
-if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] || 2 === $args['post_count'] ) ) {
-	$col_span = ' col-span-3';
+// if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] || 2 === $args['post_count'] ) ) {
+if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] ) ) {
+	// $col_span = ' col-span-3';
+	$col_span = ' col-span-6';
 }
 
 ?>
@@ -28,8 +30,11 @@ if ( isset( $args['post_count'] ) && ( 1 === $args['post_count'] || 2 === $args[
 		<h3 class="font-semibold text-sm text-gray-600"><?php echo get_the_date( 'F j, Y' ); ?></h3>
 	</header><!-- .entry-header -->
 
-	<div class="p-4 text-gray-600">
-		<?php the_title( '<h2 class="entry-title mb-2 font-bold text-lg text-gray-700"><a class="hover:underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-		<?php the_excerpt(); ?>
+	<div class="md:flex text-gray-600">
+		<?php srf_post_thumbnail( 'w-5/12 object-cover block', 'medium' ); ?>
+		<div class="p-6">
+			<?php the_title( '<h2 class="entry-title mb-2 font-bold text-lg text-gray-700 lg:line-clamp-2"><a class="hover:underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+			<?php the_excerpt(); ?>
+		</div>
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
