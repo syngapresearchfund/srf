@@ -15,7 +15,7 @@ if ( ! function_exists( 'srf_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
 	function srf_posted_on() {
-		$posted_on = '<span class="posted-on text-sm">' . esc_html__( 'Posted on: ' );
+		$posted_on = '<span class="posted-on">' . esc_html__( 'Posted on: ' );
 
 		$posted_on .= ! is_singular() ? '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' : '';
 		$posted_on .= '<time class="entry-date published updated" datetime="' . esc_attr( get_the_date( DATE_W3C ) ) . '">' . esc_html( get_the_date() ) . '</time>';
