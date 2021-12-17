@@ -12,7 +12,7 @@ namespace SRF;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'max-w-7xl mx-auto px-6 lg:px-0 py-16' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'max-w-5xl mx-auto px-6 lg:px-0 py-16' ); ?>>
 	<div class="single-header-wrapper pb-10 mb-10 border-b">
 		<header class="entry-header">
 			<?php
