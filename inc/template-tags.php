@@ -102,12 +102,12 @@ if ( ! function_exists( 'srf_post_thumbnail' ) ) :
 	 *
 	 * @param string $img_classes Optional classes for image.
 	 */
-	function srf_post_thumbnail( $img_classes = '' ) {
+	function srf_post_thumbnail( $img_classes = '', $img_size = 'featured-image' ) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
 
-		$srf_thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'featured-image' );
+		$srf_thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), $img_size );
 
 		echo '<img class="' . esc_attr( $img_classes ) . '" src="' . esc_url( $srf_thumbnail_url ) . '" alt="' . esc_attr( get_the_title() ) . '" srcset="' . esc_url( add_query_arg( 'w', 660, $srf_thumbnail_url ) ) . ' 660w, ' . esc_url( add_query_arg( 'w', 960, $srf_thumbnail_url ) ) . ' 960w, ' . esc_url( $srf_thumbnail_url ) . ' 1280w" sizes="(max-width: 768px) 100vw, 100vw"/>';
 	}

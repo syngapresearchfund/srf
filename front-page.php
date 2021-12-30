@@ -33,7 +33,7 @@ get_header();
 			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
 
 			<?php
-			$args       = array( 'posts_per_page' => 5 );
+			$args       = array( 'posts_per_page' => 6 );
 			$news_query = new WP_Query( $args );
 			$post_count = 1;
 
@@ -41,7 +41,7 @@ get_header();
 			if ( $news_query->have_posts() ) :
 				?>
 			<!-- <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10"> -->
-			<div class="lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
+			<div class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php
 				/* Start the Loop */
 				while ( $news_query->have_posts() ) :
