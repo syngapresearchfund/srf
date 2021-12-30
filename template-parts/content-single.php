@@ -13,10 +13,10 @@ namespace SRF;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'pb-16' ); ?>>
-	<header class="entry-header p-6 sm:p-0 sm:flex bg-srf-purple-500">
-		<?php srf_post_thumbnail( 'hidden sm:block sm:w-1/3' ); ?>
+	<header class="entry-header sm:flex bg-srf-purple-500">
+		<?php srf_post_thumbnail( 'w-full sm:w-1/3' ); ?>
 
-		<div class="sm:px-10 sm:py-12 text-center sm:text-left text-white flex flex-col justify-center">
+		<div class="p-6 sm:px-10 sm:py-12 text-center sm:text-left text-white flex flex-col justify-center">
 			<?php the_title( '<h1 class="entry-title mb-4 text-4xl lg:text-5xl font-extrabold">', '</h1>' ); ?>
 
 			<div class="text-sm">
