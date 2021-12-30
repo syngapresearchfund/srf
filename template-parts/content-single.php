@@ -13,19 +13,19 @@ namespace SRF;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'pb-16' ); ?>>
-	<header class="entry-header sm:flex bg-srf-purple-500">
-		<?php srf_post_thumbnail( 'w-full sm:w-1/3' ); ?>
+	<header class="entry-header sm:flex sm:h-80 bg-srf-purple-500">
+		<?php srf_post_thumbnail( 'w-full sm:w-1/3 max-h-80 object-cover' ); ?>
 
 		<div class="p-6 sm:px-10 sm:py-12 text-center sm:text-left text-white flex flex-col justify-center">
 			<?php the_title( '<h1 class="entry-title mb-4 text-4xl lg:text-5xl font-extrabold">', '</h1>' ); ?>
 
 			<div class="text-sm">
 				<?php
-				srf_posted_on();
+				'post' === get_post_type() ? srf_posted_on() : '';
 
 				$tags_list = get_the_tag_list( '', ', ' );
 				if ( $tags_list ) {
-					echo '<div class="post-tags flex justify-items-start items-center">';
+					echo '<div class="post-tags flex justify-items-center justify-center sm:justify-start items-center">';
 					echo '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
 					<path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
 				  </svg>';
