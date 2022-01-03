@@ -84,7 +84,7 @@ get_header();
 
 			<?php
 			$args       = array(
-				'posts_per_page' => 4,
+				'posts_per_page' => 8,
 				'post_type'      => 'srf-warriors',
 			);
 			$news_query = new WP_Query( $args );
@@ -92,7 +92,7 @@ get_header();
 
 			if ( $news_query->have_posts() ) :
 				?>
-			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-2 mb-10">
 				<?php
 				/* Start the Loop */
 				while ( $news_query->have_posts() ) :
