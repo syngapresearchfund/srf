@@ -17,11 +17,17 @@ if ( 'post' === get_post_type() ) {
 } elseif ( 'srf-events' === get_post_type() ) {
 	$bg_header_color = 'bg-srf-green-500';
 }
+
+/**
+ * This logic is only needed because of the current thumbnail sizes. Once we get a good consistent size down, we can remove the max-w rule.
+ */
+$thumbnail_classes  = 'w-full sm:w-1/3 max-h-80 object-cover';
+$thumbnail_classes .= ( 'post' !== get_post_type() || 'srf-events' !== get_post_type() ) ? ' sm:max-w-xs' : '';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'pb-16' ); ?>>
 	<header class="entry-header sm:flex sm:h-80 <?php echo esc_attr( $bg_header_color ); ?>">
-		<?php srf_post_thumbnail( 'w-full sm:w-1/3 max-h-80 object-cover' ); ?>
+		<?php srf_post_thumbnail( $thumbnail_classes ); ?>
 
 		<div class="p-6 sm:px-10 sm:py-12 text-center sm:text-left text-white flex flex-col justify-center">
 			<?php
