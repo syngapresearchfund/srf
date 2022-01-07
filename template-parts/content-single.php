@@ -10,30 +10,29 @@
 
 namespace SRF;
 
+$bg_header_color = 'bg-srf-purple-500';
+
+if ( 'post' === get_post_type() ) {
+	$bg_header_color = 'bg-srf-blue-500';
+} elseif ( 'srf-events' === get_post_type() ) {
+	$bg_header_color = 'bg-srf-green-500';
+}
+
+/**
+ * This logic is only needed because of the current thumbnail sizes. Once we get a good consistent size down, we can remove the max-w rule.
+ */
+$thumbnail_classes = ( 'post' === get_post_type() || 'srf-events' === get_post_type() ) ? 'w-full sm:w-1/3 sm:max-w-xl max-h-80 object-cover' : 'w-full sm:w-1/3 sm:max-w-xs max-h-80 object-cover';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'pb-16' ); ?>>
-	<header class="entry-header sm:flex bg-srf-purple-500">
-		<?php srf_post_thumbnail( 'w-full sm:w-1/3' ); ?>
+	<header class="entry-header sm:flex sm:h-80 <?php echo esc_attr( $bg_header_color ); ?>">
+		<?php srf_post_thumbnail( $thumbnail_classes ); ?>
 
-		<div class="p-6 sm:px-10 sm:py-12 text-center sm:text-left text-white flex flex-col justify-center">
-			<?php the_title( '<h1 class="entry-title mb-4 text-4xl lg:text-5xl font-extrabold">', '</h1>' ); ?>
-
-			<div class="text-sm">
-				<?php
-				srf_posted_on();
-
-				$tags_list = get_the_tag_list( '', ', ' );
-				if ( $tags_list ) {
-					echo '<div class="post-tags flex justify-items-start items-center">';
-					echo '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-					<path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-				  </svg>';
-					echo '<span class="tags-links">' . $tags_list . '</span>'; // phpcs:ignore -- XSS OK.
-					echo '</div>';
-				}
-				?>
-			</div>
+		<div class="p-6 sm:px-24 sm:py-12 text-center sm:text-left text-white flex flex-col justify-center">
+			<?php
+				the_title( '<h1 class="entry-title mb-4 text-4xl lg:text-5xl font-extrabold">', '</h1>' );
+				srf_post_meta();
+			?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
