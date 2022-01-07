@@ -23,13 +23,11 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo esc_attr( srf_container_classes() ); ?>">
 			<header class="entry-header relative mb-14">
-				<!-- <h1 class="entry-title text-4xl lg:text-5xl text-center font-extrabold mb-14"><?php //echo esc_html( $posts_title ); ?></h1> -->
-				<h1 class="entry-title text-center"><?php echo esc_html( $posts_title ); ?></h1>
-				<div class="absolute inset-x-1/2 -bottom-6 w-1/4 lg:w-1/6 h-1 bg-gradient-to-r from-purple-400 via-green-400 to-blue-400 rounded transform -translate-x-1/2"></div>
+				<h1 class="entry-title mb-6 text-4xl lg:text-5xl text-gray-600 text-center font-extrabold"><?php echo esc_html( $posts_title ); ?></h1>
 			</header><!-- .entry-header -->
 
 			<!-- <div class="max-w-4xl mx-auto space-y-16"> -->
-			<div class="content">
+			<div class="content max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -40,7 +38,9 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', get_post_type() );
+					// get_template_part( 'template-parts/content', get_post_type() );
+					// get_template_part( 'template-parts/content', 'grid-items' );
+					get_template_part( 'template-parts/content', 'front-news' );
 
 				endwhile;
 				?>

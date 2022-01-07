@@ -54,7 +54,8 @@ function srf_container_classes() {
 	if ( ! is_front_page() ) {
 		$container_classes .= 'container mx-auto px-6 lg:px-0 py-16';
 	}
-	if ( is_singular() || is_home() ) {
+	// if ( is_singular() || is_home() ) {
+	if ( is_singular() ) {
 		$container_classes .= ' prose lg:prose-xl';
 	}
 
