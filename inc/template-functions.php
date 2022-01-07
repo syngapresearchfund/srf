@@ -42,19 +42,14 @@ add_action( 'wp_head', __NAMESPACE__ . '\\srf_pingback_header' );
 /**
  * Adds custom classes to the navigation item based on current taxonomy
  *
- * @param array $tax Taxonomy related to current nav item
  * @return boolean
  */
 function srf_container_classes() {
-	// $container_classes  = ! is_front_page() ? 'container mx-auto px-6 lg:px-0 py-16' : 'prose lg:prose-xl';
-	// $container_classes .= is_singular() ? 'prose lg:prose-xl' : '';
-
 	$container_classes = '';
 
 	if ( ! is_front_page() ) {
 		$container_classes .= 'container mx-auto px-6 lg:px-0 py-16';
 	}
-	// if ( is_singular() || is_home() ) {
 	if ( is_singular() ) {
 		$container_classes .= ' prose lg:prose-xl';
 	}
@@ -65,7 +60,7 @@ function srf_container_classes() {
 /**
  * Adds custom classes to the navigation item based on current taxonomy
  *
- * @param array $tax Taxonomy related to current nav item
+ * @param array $tax Taxonomy related to current nav item.
  * @return boolean
  */
 function srf_current_menu_item( $tax ) {
