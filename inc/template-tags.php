@@ -101,6 +101,7 @@ if ( ! function_exists( 'srf_post_thumbnail' ) ) :
 	 * Displays an optional post thumbnail.
 	 *
 	 * @param string $img_classes Optional classes for image.
+	 * @param string $img_size Optional image size for image.
 	 */
 	function srf_post_thumbnail( $img_classes = '', $img_size = 'featured-image' ) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
@@ -140,6 +141,36 @@ if ( ! function_exists( 'srf_excerpt' ) ) :
 			echo '<p><a class="link__more" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Read more' ) . '</a></p>';
 		} else {
 			the_excerpt();
+		}
+	}
+endif;
+
+if ( ! function_exists( 'srf_post_meta' ) ) :
+	/**
+	 * Prints HTML for post excerpt to force "Read more"
+	 */
+	function srf_post_meta() {
+		global $post;
+
+		if ( 'post' === get_post_type() ) {
+			echo '<div class="text-sm">';
+			srf_posted_on();
+
+			$tags_list = get_the_tag_list( '', ', ' );
+			if ( $tags_list ) {
+				echo '<div class="post-tags flex justify-items-center justify-center sm:justify-start items-center">';
+				echo '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+				<path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+				</svg>';
+				echo '<span class="tags-links">' . $tags_list . '</span>'; // phpcs:ignore -- XSS OK.
+				echo '</div>';
+			}
+			echo '</div>';
+		} elseif ( 'srf-warriors' === get_post_type() ) {
+			echo '<div class="text-sm">';
+			echo $post->warrior_age ? '<h4>' . esc_html( $post->warrior_age ) . ' years old</h4>' : '';
+			echo $post->warrior_location ? '<h4>' . esc_html( $post->warrior_location ) . '</h4>' : '';
+			echo '</div>';
 		}
 	}
 endif;

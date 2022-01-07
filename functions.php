@@ -34,13 +34,16 @@ function srf_setup() : void {
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
-	add_theme_support( 'html5', [
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	] );
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		)
+	);
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -55,7 +58,8 @@ function srf_setup() : void {
 	add_theme_support( 'editor-styles' );
 
 	// Add featured image size.
-	add_image_size( 'featured-image', 925, 1440 );
+	add_image_size( 'featured-image', 635, 320 );
+	add_image_size( 'featured-image-small', 475, 320 );
 	add_image_size( 'featured-thumbnail', 320, 320 );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
@@ -98,10 +102,3 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-// if ( defined( 'JETPACK__VERSION' ) ) {
-	// require get_template_directory() . '/inc/jetpack.php';
-// }
