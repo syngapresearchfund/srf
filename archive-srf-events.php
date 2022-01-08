@@ -20,7 +20,9 @@ get_header();
 
 	<?php if ( have_posts() ) : ?>
 		<div class="container mx-auto px-6 lg:px-0 py-16">
-			<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events</h2>
+			<header class="entry-header relative">
+				<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 text-center font-extrabold mb-14"><?php echo post_type_archive_title( '', false ); ?></h1>
+			</header><!-- .entry-header -->
 
 			<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left">
 				<?php
