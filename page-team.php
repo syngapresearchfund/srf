@@ -21,45 +21,25 @@ get_header();
 ?>
 
 <div class="container mx-auto px-6 lg:px-0 py-16">
-	<header class="entry-header relative">
-		<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 text-center font-extrabold mb-14">Team</h1>
+	<header class="entry-header mb-14">
+		<h1 class="entry-title text-4xl lg:text-5xl text-gray-600 text-center font-extrabold">Team</h1>
 	</header><!-- .entry-header -->
-		<?php
-		$args         = array(
-			'posts_per_page' => 100, // phpcs:ignore -- pagination limit ok.
-			'post_type'      => 'srf-team',
-		);
-		$events_query = new WP_Query( $args );
 
-		if ( $events_query->have_posts() ) :
-			?>
-		<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-			<?php
-			/* Start the Loop */
-			while ( $events_query->have_posts() ) :
-				$events_query->the_post();
+	<section class="board-members text-center mb-14">
+		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Board Members</h2>
+		<?php srf_board_grid(); ?>
+	</section>
 
-				/*
-				* Include the Post-Type-specific template for the content.
-				* If you want to override this in a child theme, then include a file
-				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				*/
-				get_template_part( 'template-parts/content', 'grid-items' );
+	<section class="volunteers text-center mb-14 py-14">
+		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Volunteers</h2>
+		<?php srf_volunteer_grid(); ?>
+	</section>
 
-			endwhile;
-			?>
-		</div>
+	<section class="researchers text-center mb-14">
+		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Researchers</h2>
+		<?php srf_researcher_grid(); ?>
+	</section>
 
-			<?php
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-
-		/* Restore original Post Data */
-		wp_reset_postdata();
-		?>
 </div>
 <?php
 get_footer();

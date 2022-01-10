@@ -21,9 +21,9 @@ get_header();
 ?>
 
 	<?php if ( have_posts() ) : ?>
-		<div class="<?php echo esc_attr( $container_classes ); ?>">
+		<div class="<?php echo esc_attr( $container_classes ); ?> text-center">
 			<header class="entry-header relative">
-				<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 text-center font-extrabold mb-14"><?php echo esc_html( $current_term->name ); ?></h1>
+				<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 font-extrabold mb-14"><?php echo esc_html( $current_term->name ); ?></h1>
 			</header><!-- .entry-header -->
 
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">

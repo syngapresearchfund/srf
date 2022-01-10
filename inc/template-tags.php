@@ -10,6 +10,8 @@
 
 namespace SRF;
 
+use WP_Query;
+
 if ( ! function_exists( 'srf_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
@@ -207,5 +209,155 @@ if ( ! function_exists( 'srf_cat_icons' ) ) :
 		$cat_icon .= '</g></svg>';
 
 		echo $cat_icon; // phpcs:ignore -- XSS ok
+	}
+endif;
+
+if ( ! function_exists( 'srf_board_grid' ) ) :
+	/**
+	 * Outputs the grid for SRF Board Members.
+	 */
+	function srf_board_grid() {
+		$args        = array(
+			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
+			'post_type'      => 'srf-team',
+			'tax_query'      => array( // phpcs:ignore -- tax_query ok.
+				array(
+					'taxonomy' => 'srf-team-category',
+					'field'    => 'slug',
+					'terms'    => 'board-members',
+				),
+			),
+		);
+		$board_query = new WP_Query( $args );
+
+		if ( $board_query->have_posts() ) :
+			?>
+		<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
+			<?php
+			/* Start the Loop */
+			while ( $board_query->have_posts() ) :
+				$board_query->the_post();
+
+				/*
+				* Include the Post-Type-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				*/
+				get_template_part( 'template-parts/content', 'grid-items' );
+
+			endwhile;
+			?>
+		</div>
+		<a href="<?php echo esc_url( site_url( '/team/board-members/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all board members <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+
+		<?php else : ?>
+
+		<p class="text-gray-700 text-center mb-7">No board members have been added yet!</p>
+
+			<?php
+		endif;
+
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	}
+endif;
+
+if ( ! function_exists( 'srf_volunteer_grid' ) ) :
+	/**
+	 * Outputs the grid for SRF Volunteers.
+	 */
+	function srf_volunteer_grid() {
+		$args        = array(
+			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
+			'post_type'      => 'srf-team',
+			'tax_query'      => array( // phpcs:ignore -- tax_query ok.
+				array(
+					'taxonomy' => 'srf-team-category',
+					'field'    => 'slug',
+					'terms'    => 'volunteers',
+				),
+			),
+		);
+		$board_query = new WP_Query( $args );
+
+		if ( $board_query->have_posts() ) :
+			?>
+		<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
+			<?php
+			/* Start the Loop */
+			while ( $board_query->have_posts() ) :
+				$board_query->the_post();
+
+				/*
+				* Include the Post-Type-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				*/
+				get_template_part( 'template-parts/content', 'grid-items' );
+
+			endwhile;
+			?>
+		</div>
+		<a href="<?php echo esc_url( site_url( '/team/volunteers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all volunteers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+
+		<?php else : ?>
+
+		<p class="text-gray-700 text-center mb-7">No volunteers have been added yet!</p>
+
+			<?php
+		endif;
+
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	}
+endif;
+
+if ( ! function_exists( 'srf_researcher_grid' ) ) :
+	/**
+	 * Outputs the grid for SRF Researchers.
+	 */
+	function srf_researcher_grid() {
+		$args        = array(
+			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
+			'post_type'      => 'srf-team',
+			'tax_query'      => array( // phpcs:ignore -- tax_query ok.
+				array(
+					'taxonomy' => 'srf-team-category',
+					'field'    => 'slug',
+					'terms'    => 'researchers',
+				),
+			),
+		);
+		$board_query = new WP_Query( $args );
+
+		if ( $board_query->have_posts() ) :
+			?>
+		<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
+			<?php
+			/* Start the Loop */
+			while ( $board_query->have_posts() ) :
+				$board_query->the_post();
+
+				/*
+				* Include the Post-Type-specific template for the content.
+				* If you want to override this in a child theme, then include a file
+				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				*/
+				get_template_part( 'template-parts/content', 'grid-items' );
+
+			endwhile;
+			?>
+		</div>
+		<a href="<?php echo esc_url( site_url( '/team/researchers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all researchers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+
+		<?php else : ?>
+
+		<p class="text-gray-700 text-center mb-7">No researchers have been added yet!</p>
+
+			<?php
+		endif;
+
+		/* Restore original Post Data */
+		wp_reset_postdata();
 	}
 endif;
