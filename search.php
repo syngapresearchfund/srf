@@ -43,7 +43,7 @@ get_header();
 			?>
 		</div> <!-- .post-grid -->
 
-	<?php
+			<?php
 
 	else :
 
@@ -51,4 +51,4 @@ get_header();
 
 	endif;
 
-get_footer();
+	get_footer();

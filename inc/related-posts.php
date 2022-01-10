@@ -20,14 +20,14 @@ function the_related_posts() : void {
 		return; // Not possible.
 	}
 
-	$related_post_ids = []; // Initialize.
+	$related_post_ids = array(); // Initialize.
 	$related_posts    = \Jetpack_RelatedPosts::init_raw()
 		->set_query_name( 'wpcom-h4-related-posts' )
 		->get_for_post_id(
 			get_the_ID(),
-			[ 'size' => 3 ]
+			array( 'size' => 3 )
 		);
-	foreach ( is_array( $related_posts ) ? $related_posts : [] as $_related_post ) {
+	foreach ( is_array( $related_posts ) ? $related_posts : array() as $_related_post ) {
 		$related_post_ids[] = absint( $_related_post['id'] );
 	}
 
@@ -36,14 +36,16 @@ function the_related_posts() : void {
 		echo '    <h4><span>' . esc_html__( 'RECOMMENDED ARTICLES' ) . '</span></h4>';
 		echo '    <div class="post-grid">';
 
-		$query = new \WP_Query( [
-			'ignore_sticky_posts' => true,
-			'post_type'           => 'post',
-			'post_status'         => 'publish',
-			'post__in'            => $related_post_ids,
-			'orderby'             => 'post__in',
-			'posts_per_page'      => 3,
-		] );
+		$query = new \WP_Query(
+			array(
+				'ignore_sticky_posts' => true,
+				'post_type'           => 'post',
+				'post_status'         => 'publish',
+				'post__in'            => $related_post_ids,
+				'orderby'             => 'post__in',
+				'posts_per_page'      => 3,
+			)
+		);
 
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) {

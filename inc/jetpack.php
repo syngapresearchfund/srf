@@ -11,7 +11,7 @@
 namespace SRF;
 
 // Constants array for setting custom SEO title and meta tags.
-require_once( ABSPATH . '.config/seo/wpgo-seo-constants.php' );
+require_once ABSPATH . '.config/seo/wpgo-seo-constants.php';
 
 /**
  * Jetpack setup function.
@@ -22,34 +22,40 @@ require_once( ABSPATH . '.config/seo/wpgo-seo-constants.php' );
  */
 function srf_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
-	add_theme_support( 'infinite-scroll', [
-		'type'           => 'click',
-		'container'      => 'grid-container',
-		'wrapper'        => false,
-		'render'         => __NAMESPACE__ . '\\srf_infinite_scroll_render',
-		'footer'         => false,
-		'posts_per_page' => 12,
-	] );
+	add_theme_support(
+		'infinite-scroll',
+		array(
+			'type'           => 'click',
+			'container'      => 'grid-container',
+			'wrapper'        => false,
+			'render'         => __NAMESPACE__ . '\\srf_infinite_scroll_render',
+			'footer'         => false,
+			'posts_per_page' => 12,
+		)
+	);
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
 	// Add theme support for Content Options.
-	add_theme_support( 'jetpack-content-options', [
-		'post-details'    => [
-			'stylesheet' => 'go-style',
-			'date'       => '.posted-on',
-			'categories' => '.cat-links',
-			'tags'       => '.tags-links',
-			'author'     => '.byline',
-			'comment'    => '.comments-link',
-		],
-		'featured-images' => [
-			'archive' => true,
-			'post'    => true,
-			'page'    => true,
-		],
-	] );
+	add_theme_support(
+		'jetpack-content-options',
+		array(
+			'post-details'    => array(
+				'stylesheet' => 'go-style',
+				'date'       => '.posted-on',
+				'categories' => '.cat-links',
+				'tags'       => '.tags-links',
+				'author'     => '.byline',
+				'comment'    => '.comments-link',
+			),
+			'featured-images' => array(
+				'archive' => true,
+				'post'    => true,
+				'page'    => true,
+			),
+		)
+	);
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_jetpack_setup' );
 
@@ -91,7 +97,7 @@ add_filter( 'infinite_scroll_ajax_url', __NAMESPACE__ . '\\srf_infinite_scroll_a
  * @return array           Filtered JS settings.
  */
 function srf_infinite_scroll_js_settings( $settings ) : array {
-	$settings = is_array( $settings ) ? $settings : [];
+	$settings = is_array( $settings ) ? $settings : array();
 
 	$settings['ajaxurl'] = srf_infinite_scroll_ajax_url( $settings['ajaxurl'] ?? '' );
 	$settings['text']    = __( 'Load more tips' );
@@ -146,15 +152,15 @@ add_filter( 'pre_get_document_title', __NAMESPACE__ . '\\srf_on_jetpack_seo_titl
  * @param  array $meta Passed in by filter.
  * @return array       Filtered meta.
  */
-function srf_on_jetpack_seo_meta_tags( $meta = [] ) : array {
-	$meta = is_array( $meta ) ? $meta : [];
+function srf_on_jetpack_seo_meta_tags( $meta = array() ) : array {
+	$meta = is_array( $meta ) ? $meta : array();
 
 	if ( ! defined( 'WPGO_SEO' ) ) {
 		return $meta; // exit early
 	}
 
-	$page_id = is_home() ? 0 : get_the_id();
-	$custom_title = WPGO_SEO[ $page_id ]['title'] ?? null;
+	$page_id            = is_home() ? 0 : get_the_id();
+	$custom_title       = WPGO_SEO[ $page_id ]['title'] ?? null;
 	$custom_description = WPGO_SEO[ $page_id ]['description'] ?? null;
 
 	if ( $custom_description ) {
@@ -167,7 +173,7 @@ function srf_on_jetpack_seo_meta_tags( $meta = [] ) : array {
 	}
 
 	if ( doing_filter( 'jetpack_open_graph_tags' ) && $custom_title ) {
-		$meta['og:title']      = $custom_title;
+		$meta['og:title']           = $custom_title;
 		$meta['twitter:text:title'] = $custom_title;
 	}
 
