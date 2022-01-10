@@ -40,6 +40,22 @@ get_header();
 				endwhile;
 				?>
 			</div>
+			<?php
+				the_posts_pagination(
+					array(
+						'mid_size'  => 2,
+						'prev_text' => sprintf(
+							'<span class="nav-prev-text">%s</span>',
+							__( 'Newer posts', 'srf' )
+						),
+						'next_text' => sprintf(
+							'<span class="nav-next-text">%s</span>',
+							__( 'Older posts', 'srf' ),
+						),
+					)
+				);
+
+			?>
 		</div> <!-- .post-grid -->
 
 		<?php
