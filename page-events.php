@@ -26,7 +26,7 @@ get_header();
 	</header><!-- .entry-header -->
 		<?php
 		$args         = array(
-			'posts_per_page' => 500,
+			'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-events',
 		);
 		$events_query = new WP_Query( $args );
