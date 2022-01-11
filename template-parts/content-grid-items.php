@@ -12,9 +12,9 @@ namespace SRF;
 
 $card_classes  = ( is_front_page() && 'srf-warriors' === get_post_type() ) ? 'border-gray-700' : 'border-gray-600';
 $srf_bg_colors = array(
-	'bg-blue-500',
-	'bg-purple-600',
-	'bg-teal-600',
+	'bg-srf-blue-500',
+	'bg-srf-purple-500',
+	'bg-srf-green-500',
 );
 ?>
 
