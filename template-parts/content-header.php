@@ -34,13 +34,13 @@ namespace SRF;
 				<ul class="flex space-x-9">
 					<li class="relative py-2 cursor-pointer" @click="openFirst = ! openFirst" @click.outside="openFirst = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>Solutions</span>
+							<span>What is SYNGAP1?</span>
 							<!--
 							Heroicon name: solid/chevron-down
 
 							Item active: "text-gray-600", Item inactive: "text-gray-400"
 							-->
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -67,8 +67,8 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openSecond = ! openSecond" @click.outside="openSecond = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>Pricing</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<span>Resources</span>
+							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -84,8 +84,8 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openThird = ! openThird" @click.outside="openThird = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>Privacy Policy</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<span>Families</span>
+							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -101,8 +101,8 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openFourth = ! openFourth" @click.outside="openFourth = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>Docs</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<span>Professionals</span>
+							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
@@ -118,16 +118,18 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openLast = ! openLast" @click.outside="openLast = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>More</span>
-							<svg class="text-gray-600 ml-2 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+							<span>About Us</span>
+							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
 						</div>
 						<div class="absolute z-10 left-1/2 transform transition duration-150 ease-in-out -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" :class="openLast ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 							<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
+								<h4 class="p-3 font-semibold text-srf-blue-500">Meet Our Team</h4>
+								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Board of Directors</a></li>
+								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Volunteers</a></li>
+								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Scientific Advisory Board</a></li>
+								<h4 class="p-3 mt-3 font-semibold text-srf-blue-500">About SRF</h4>
 								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
 								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
 							</ul>
