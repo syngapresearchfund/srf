@@ -21,7 +21,7 @@ namespace SRF;
 					<img class="w-auto h-9 sm:h-10" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
-			<div class="-mr-2 -my-2 lg:hidden">
+			<div class="-mr-2 -my-2 xl:hidden">
 				<button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" @click="open = true">
 					<span class="sr-only">Open menu</span>
 					<!-- Heroicon name: outline/menu -->
@@ -30,7 +30,7 @@ namespace SRF;
 					</svg>
 				</button>
 			</div>
-			<nav class="hidden lg:block font-sans">
+			<nav class="hidden xl:block font-sans">
 				<ul class="flex space-x-9">
 					<li class="relative py-2 cursor-pointer" @click="openFirst = ! openFirst" @click.outside="openFirst = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -67,7 +67,7 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openSecond = ! openSecond" @click.outside="openSecond = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>Resources</span>
+							<span>About Us</span>
 							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
@@ -84,7 +84,7 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openThird = ! openThird" @click.outside="openThird = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>Families</span>
+							<span>Patients & Caregivers</span>
 							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
@@ -101,7 +101,7 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openFourth = ! openFourth" @click.outside="openFourth = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>Professionals</span>
+							<span>Research</span>
 							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
@@ -118,7 +118,7 @@ namespace SRF;
 					</li>
 					<li class="relative py-2 cursor-pointer" @click="openLast = ! openLast" @click.outside="openLast = false">
 						<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-							<span>About Us</span>
+							<span>Resources</span>
 							<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 								<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
 							</svg>
@@ -137,7 +137,7 @@ namespace SRF;
 					</li>
 				</ul>
 			</nav>
-			<a href="#" class="hidden lg:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-blue-500 hover:bg-srf-blue-700">
+			<a href="#" class="hidden xl:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-blue-500 hover:bg-srf-blue-700">
 				Donate
 			</a>
 		</div>
@@ -181,15 +181,9 @@ namespace SRF;
 				</div>
 			</div>
 			<div class="py-6 px-5 space-y-6">
-				<a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-					Sign up
+				<a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-srf-purple-500 hover:bg-srf-purple-600">
+					Donate
 				</a>
-				<p class="mt-6 text-center text-base font-medium text-gray-500">
-					Existing customer?
-					<a href="#" class="text-indigo-600 hover:text-indigo-500">
-					Sign in
-					</a>
-				</p>
 			</div>
 		</div>
 	</div>
