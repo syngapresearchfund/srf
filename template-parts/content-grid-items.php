@@ -28,7 +28,7 @@ $srf_bg_colors = array(
 		}
 		?>
 
-		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-50">
+		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40">
 			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
 		</header><!-- .entry-header -->
 	</a>
