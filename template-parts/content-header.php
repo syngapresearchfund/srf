@@ -14,7 +14,7 @@ namespace SRF;
 
 <div class="relative bg-white px-6 lg:px-0" x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
 	<div class="container mx-auto">
-		<div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-9">
+		<div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-6">
 			<div class="flex justify-start lg:w-0 lg:flex-1">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
