@@ -57,11 +57,13 @@ namespace SRF;
 						-->
 						<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openFirst ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 							<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+								<?php
+									srf_subnav_item( 'Analytics', '#' );
+									srf_subnav_item( 'Engagement', '#' );
+									srf_subnav_item( 'Security', '#' );
+									srf_subnav_item( 'Integrations', '#' );
+									srf_subnav_item( 'Automations', '#' );
+								?>
 							</ul>
 						</div>
 					</li>
@@ -74,12 +76,14 @@ namespace SRF;
 						</div>
 						<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openSecond ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 							<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
-								<h4 class="p-3 font-semibold text-srf-blue-500">Our Team</h4>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="<?php echo esc_url( home_url( '/team/' ) ); ?>" class="text-base font-medium text-gray-900">Meet Our Team</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="<?php echo esc_url( home_url( '/warriors/' ) ); ?>" class="text-base font-medium text-gray-900">Meet Our Warriors</a></li>
-								<h4 class="p-3 mt-3 font-semibold text-srf-blue-500">About SRF</h4>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+								<?php
+									srf_subnav_heading( 'Our Team' );
+									srf_subnav_item( 'Meet Our Team', home_url( '/team/' ) );
+									srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) );
+									srf_subnav_heading( 'About SRF' );
+									srf_subnav_item( 'Integrations', '#' );
+									srf_subnav_item( 'Automations', '#' );
+								?>
 							</ul>
 						</div>
 					</li>
@@ -92,11 +96,13 @@ namespace SRF;
 						</div>
 						<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openThird ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 							<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+								<?php
+									srf_subnav_item( 'Analytics', '#' );
+									srf_subnav_item( 'Engagement', '#' );
+									srf_subnav_item( 'Security', '#' );
+									srf_subnav_item( 'Integrations', '#' );
+									srf_subnav_item( 'Automations', '#' );
+								?>
 							</ul>
 						</div>
 					</li>
@@ -109,11 +115,13 @@ namespace SRF;
 						</div>
 						<div class="absolute z-10 left-1/2 transform transition duration-150 ease-in-out -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" :class="openFourth ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 							<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Analytics</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Engagement</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Security</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Integrations</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Automations</a></li>
+								<?php
+									srf_subnav_item( 'Analytics', '#' );
+									srf_subnav_item( 'Engagement', '#' );
+									srf_subnav_item( 'Security', '#' );
+									srf_subnav_item( 'Integrations', '#' );
+									srf_subnav_item( 'Automations', '#' );
+								?>
 							</ul>
 						</div>
 					</li>
@@ -126,13 +134,15 @@ namespace SRF;
 						</div>
 						<div class="absolute z-10 left-1/2 transform transition duration-150 ease-in-out -translate-x-1/2 px-2 w-screen max-w-xs sm:px-0" :class="openLast ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 overflow-hidden -translate-y-2'">
 							<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="<?php echo esc_url( home_url( '/news/' ) ); ?>" class="text-base font-medium text-gray-900">News</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="<?php echo esc_url( home_url( '/events/webinars/' ) ); ?>" class="text-base font-medium text-gray-900">Webinars</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Movies</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Podcast</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Press Releases</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="#" class="text-base font-medium text-gray-900">Donation Matching</a></li>
-								<li class="p-3 rounded-lg hover:bg-gray-50"><a href="<?php echo esc_url( home_url( '/shop/' ) ); ?>" class="text-base font-medium text-gray-900">Shop</a></li>
+								<?php
+									srf_subnav_item( 'News', home_url( '/news/' ) );
+									srf_subnav_item( 'Webinars', home_url( '/events/webinars/' ) );
+									srf_subnav_item( 'Movies', '#' );
+									srf_subnav_item( 'Podcast', '#' );
+									srf_subnav_item( 'Press Releases', '#' );
+									srf_subnav_item( 'Donation Matching', '#' );
+									srf_subnav_item( 'Shop', home_url( '/shop/' ) );
+								?>
 							</ul>
 						</div>
 					</li>

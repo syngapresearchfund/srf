@@ -361,3 +361,59 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 		wp_reset_postdata();
 	}
 endif;
+
+if ( ! function_exists( 'srf_nav_item' ) ) :
+	/**
+	 * Outputs a link item for the main navigation.
+	 *
+	 * @param  string $name The name for the nav link.
+	 * @param  string $click_binder The variable name (JS) for the dropdown click binder - controlled by Alpine.
+	 * @param  array  $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
+	 *
+	 * TODO: Make this more flexible so we have the option to pass in a subnav or render as a single item.
+	 */
+	function srf_nav_item( $name, $click_binder, $subnav_items ) {
+		$output = sprintf(
+			'<li class="relative py-2 cursor-pointer" @click="%1$s = ! %1$s" @click.outside="%1$s = false">
+				<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					<span>%2$s</span>
+					<svg class="text-gray-600 ml-1 h-5 w-5 group-hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+						<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+					</svg>
+				</div>
+
+				<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openFirst ? \'opacity-100 h-auto translate-y-0\' : \'opacity-0 h-0 overflow-hidden -translate-y-2\'">
+					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">%3$s</ul>
+				</div>
+			</li>',
+			esc_attr( $click_binder ),
+			esc_html( $name ),
+			esc_html( implode( '', $subnav_items ) )
+		);
+
+		echo $output;
+	}
+endif;
+
+if ( ! function_exists( 'srf_subnav_item' ) ) :
+	/**
+	 * Outputs a link item for the main navigation.
+	 *
+	 * @param  string $name The name for the nav link.
+	 * @param  string $url The URL path for the nav link.
+	 */
+	function srf_subnav_item( $name, $url ) {
+		echo '<li class="p-3 rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="text-base font-medium text-gray-900">' . esc_html( $name ) . '</a></li>';
+	}
+endif;
+
+if ( ! function_exists( 'srf_subnav_heading' ) ) :
+	/**
+	 * Outputs a link item for the main navigation.
+	 *
+	 * @param  string $name The name for the nav link.
+	 */
+	function srf_subnav_heading( $name ) {
+		echo '<h4 class="p-3 font-semibold text-srf-blue-500">' . esc_html( $name ) . '</h4>';
+	}
+endif;
