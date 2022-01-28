@@ -8,3 +8,5 @@ package-lock.json
 postcss.config.js
 tailwind.config.js
 dist-exclude.txt
+build.sh
+dist/
