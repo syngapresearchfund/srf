@@ -370,7 +370,7 @@ if ( ! function_exists( 'srf_nav_item' ) ) :
 	 * @param  string $click_binder The variable name (JS) for the dropdown click binder - controlled by Alpine.
 	 * @param  array  $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
 	 *
-	 * TODO: Make this more flexible so we have the option to pass in a subnav or render as a single item.
+	 * TODO: Make this a little bit more flexible so we have the option to pass in a subnav or render as a single item.
 	 */
 	function srf_nav_item( $name, $click_binder, $subnav_items ) {
 		$output = sprintf(
@@ -382,16 +382,16 @@ if ( ! function_exists( 'srf_nav_item' ) ) :
 					</svg>
 				</div>
 
-				<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="openFirst ? \'opacity-100 h-auto translate-y-0\' : \'opacity-0 h-0 overflow-hidden -translate-y-2\'">
+				<div class="absolute z-10 -ml-4 transform transition duration-150 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="%1$s ? \'opacity-100 h-auto translate-y-0\' : \'opacity-0 h-0 overflow-hidden -translate-y-2\'">
 					<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">%3$s</ul>
 				</div>
 			</li>',
 			esc_attr( $click_binder ),
 			esc_html( $name ),
-			esc_html( implode( '', $subnav_items ) )
+			implode( '', $subnav_items )
 		);
 
-		echo $output;
+		echo $output; // phpcs:ignore -- XSS OK
 	}
 endif;
 
@@ -403,7 +403,7 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 	 * @param  string $url The URL path for the nav link.
 	 */
 	function srf_subnav_item( $name, $url ) {
-		echo '<li class="p-3 rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="text-base font-medium text-gray-900">' . esc_html( $name ) . '</a></li>';
+		return '<li class="p-3 rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900">' . esc_html( $name ) . '</a></li>';
 	}
 endif;
 
@@ -414,6 +414,6 @@ if ( ! function_exists( 'srf_subnav_heading' ) ) :
 	 * @param  string $name The name for the nav link.
 	 */
 	function srf_subnav_heading( $name ) {
-		echo '<h4 class="p-3 font-semibold text-srf-blue-500">' . esc_html( $name ) . '</h4>';
+		return '<h4 class="p-3 font-semibold text-srf-blue-500">' . esc_html( $name ) . '</h4>';
 	}
 endif;
