@@ -10,17 +10,17 @@
 
 namespace SRF;
 
-$container_classes = srf_container_classes();
+$srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto prose lg:prose-xl';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $container_classes ); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0 py-16' ); ?>>
+	<header class="entry-header relative">
+		<?php the_title( '<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 text-center font-extrabold mb-14">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php srf_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content <?php echo esc_attr( $srf_content_classes ); ?>">
 		<?php
 		the_content();
 
