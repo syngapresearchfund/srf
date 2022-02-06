@@ -63,12 +63,14 @@ namespace SRF;
 				<!-- copyright -->
 				<div>Copyright &copy; 2021</div>
 				<!-- links -->
-				<div class="space-x-4">
-					<a href="#">Twitter</a>
-					<a href="#">Instagram</a>
-					<a href="#">Facebook</a>
-					<a href="#">LinkedIn</a>
-					<a href="#">YouTube</a>
+				<div class="flex space-x-5">
+					<a class="block" href="#"><?php esc_html( srf_social_icon( 'twitter' ) ); ?></a>
+					<a class="block" href="#"><?php esc_html( srf_social_icon( 'facebook' ) ); ?></a>
+					<a class="block" href="#"><?php esc_html( srf_social_icon( 'instagram' ) ); ?></a>
+					<a class="block" href="#"><?php esc_html( srf_social_icon( 'linkedin' ) ); ?></a>
+					<a class="block" href="#"><?php esc_html( srf_social_icon( 'youtube' ) ); ?></a>
+					<a class="block" href="#"><?php esc_html( srf_social_icon( 'tiktok' ) ); ?></a>
+					<a class="block" href="#"><?php esc_html( srf_social_icon( 'amazon' ) ); ?></a>
 				</div>
 			</div>
 		</div>
