@@ -6,6 +6,10 @@ module.exports = {
 	purge: ['./**.php', './**/**.php'],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
+		screens: {
+			xs: '475px',
+			...defaultTheme.screens,
+		},
 		extend: {
 			colors: {
 				orange: colors.orange,
