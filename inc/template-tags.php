@@ -183,8 +183,8 @@ if ( ! function_exists( 'srf_social_icon' ) ) :
 	 *
 	 * @param  string $cat Current category.
 	 */
-	function srf_social_icon( $icon ) {
-		$social_icon = '<svg role="img" class="srf-social-icon fill-current text-white w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"/><g>';
+	function srf_social_icon( $icon, $url ) {
+		$social_icon = '<a class="block" href="' . esc_url( $url ) . '"><svg role="img" class="srf-social-icon fill-current text-gray-100 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"/><g>';
 
 		switch ( $icon ) {
 			case 'twitter':
@@ -212,7 +212,7 @@ if ( ! function_exists( 'srf_social_icon' ) ) :
 				$social_icon .= '<path d="M18 19H6c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2h7c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2z"/>';
 		}
 
-		$social_icon .= '</g></svg>';
+		$social_icon .= '</g></svg></a>';
 
 		echo $social_icon; // phpcs:ignore -- XSS ok
 	}
