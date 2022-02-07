@@ -179,9 +179,10 @@ endif;
 
 if ( ! function_exists( 'srf_social_icon' ) ) :
 	/**
-	 * Outputs SVG icons for categories
+	 * Outputs SVG icons for social icons.
 	 *
-	 * @param  string $cat Current category.
+	 * @param  string $icon Social icon.
+	 * @param  string $url Social icon URL.
 	 */
 	function srf_social_icon( $icon, $url ) {
 		$social_icon = '<a class="block" href="' . esc_url( $url ) . '"><svg role="img" class="srf-social-icon fill-current text-gray-100 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"/><g>';
