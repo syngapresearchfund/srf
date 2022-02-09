@@ -14,7 +14,7 @@ $srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0 py-16' ); ?>>
-	<header class="entry-header relative">
+	<header class="entry-header relative max-w-3xl mx-auto">
 		<?php the_title( '<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 text-center font-extrabold mb-14">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
@@ -34,13 +34,13 @@ $srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto 
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer my-8 mx-auto max-w-3xl">
 			<?php
 			edit_post_link(
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>' ),
+						__( 'Edit this page.<span class="screen-reader-text">%s</span>' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -49,7 +49,7 @@ $srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto 
 					),
 					get_the_title()
 				),
-				'<span class="edit-link">',
+				'<span class="edit-link hover:underline">',
 				'</span>'
 			);
 			?>
