@@ -34,7 +34,7 @@ $srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto 
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer my-8 mx-auto max-w-3xl">
+		<footer class="entry-footer mt-8 mx-auto max-w-3xl pt-8 border-t border-gray-200">
 			<?php
 			edit_post_link(
 				sprintf(
