@@ -48,9 +48,9 @@ get_header();
 				:style="handleToggle()"
 				class="border-l-2 border-srf-purple-500 overflow-hidden max-h-0 duration-500 transition-all"
 				>
-					<p class="p-3 text-gray-900">
-						Shipping time is set by our delivery partners, according to the delivery method chosen by you. Additional details can be found in the order confirmation
-					</p>
+					<p class="p-3 text-gray-900">Donor Advised Funds (DAFs)</p>
+					<script type = "text/javascript">_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
+					<script type = "text/javascript" src = "https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
 				</div>
 			</li>
 			<li class="bg-white border border-b-0" x-data="accordion(2)">
