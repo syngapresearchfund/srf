@@ -34,7 +34,7 @@ get_header();
 		<p class="text-center">Your contribution is tax-deductible as described on your receipt and to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN 83-1200789. In addition to credit card above, you can donate via the following:</p>
 		<ul class="flex flex-col">
 			<li class="bg-white border border-b-0" x-data="accordion(1)">
-				<h2
+				<h3
 				@click="handleClick()"
 				class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
 					>
@@ -42,7 +42,7 @@ get_header();
 					<svg xmlns="http://www.w3.org/2000/svg" :class="handleRotate()" class="h-6 w-6 text-srf-purple-500 transform transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 					</svg>
-				</h2>
+				</h3>
 				<div
 				x-ref="tab"
 				:style="handleToggle()"
@@ -54,7 +54,7 @@ get_header();
 				</div>
 			</li>
 			<li class="bg-white border border-b-0" x-data="accordion(2)">
-				<h2
+				<h3
 				@click="handleClick()"
 				class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
 				>
@@ -74,7 +74,7 @@ get_header();
 				</div>
 			</li>
 			<li class="bg-white border" x-data="accordion(3)">
-				<h2
+				<h3
 				@click="handleClick()"
 				class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
 				>
@@ -82,7 +82,7 @@ get_header();
 					<svg xmlns="http://www.w3.org/2000/svg" :class="handleRotate()" class="h-6 w-6 text-srf-purple-500 transform transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 					</svg>
-				</h2>
+				</h3>
 				<div
 				class="border-l-2 border-srf-purple-500 overflow-hidden max-h-0 duration-500 transition-all"
 				x-ref="tab"
@@ -102,10 +102,10 @@ get_header();
 		});
 
 		Alpine.data('accordion', (xid) => ({
+			xid: null,
 			init() {
 				this.xid = xid;
 			},
-			xid: -1,
 			handleClick() {
 				this.$store.accordion.tab = this.$store.accordion.tab === this.xid ? 0 : this.xid;
 			},
