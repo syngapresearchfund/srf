@@ -29,14 +29,14 @@ get_header();
 	<script>gl=document.createElement('script');gl.src='https://secure.givelively.org/widgets/branded_donation/syngap-research-fund-incorporated.js';document.getElementsByTagName('head')[0].appendChild(gl);</script><div data-widget-src='https://secure.givelively.org/donate/syngap-research-fund-incorporated?ref=sd_widget' id="give-lively-widget" class="gl-branded-donation-widget"></div>
 	<!-- End Give Lively Fundraising Widget -->
 
-	<div class="w-full lg:w-1/2 space-y-4 mt-10 mx-auto">
-		<h2 class="text-xl font-semibold text-gray-600 text-center">Other Ways to Donate</h2>
-		<p class="text-center">Your contribution is tax-deductible as described on your receipt and to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN 83-1200789. In addition to credit card above, you can donate via the following:</p>
+	<div class="w-full lg:w-2/3 space-y-4 mt-14 mx-auto">
+		<h2 class="text-2xl font-semibold text-gray-600 text-center">Other Ways to Donate</h2>
+		<p class="text-center lg:w-4/6 mx-auto">Your contribution is tax-deductible as described on your receipt and to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN 83-1200789. In addition to credit card above, you can donate via the following:</p>
 		<ul class="flex flex-col">
-			<li class="bg-white border border-b-0" x-data="accordion(1)">
+			<li class="bg-white border border-b-0 rounded-t-md" x-data="accordion(1)">
 				<h3
 				@click="handleClick()"
-				class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+				class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
 					>
 					<span>Unites States</span>
 					<svg xmlns="http://www.w3.org/2000/svg" :class="handleRotate()" class="h-6 w-6 text-srf-purple-500 transform transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,17 +46,19 @@ get_header();
 				<div
 				x-ref="tab"
 				:style="handleToggle()"
-				class="border-l-2 border-srf-purple-500 overflow-hidden max-h-0 duration-500 transition-all"
+				class="overflow-hidden max-h-0 duration-500 transition-all"
 				>
-					<p class="p-3 text-gray-900">Donor Advised Funds (DAFs)</p>
-					<script type = "text/javascript">_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
-					<script type = "text/javascript" src = "https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
+					<div class="p-6 bg-gray-50 border-l-2 border-srf-purple-500">
+						<p class="mb-3 text-gray-900">Donor Advised Funds (DAFs)</p>
+						<script type = "text/javascript">_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
+						<script type = "text/javascript" src = "https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
+					</div>
 				</div>
 			</li>
 			<li class="bg-white border border-b-0" x-data="accordion(2)">
 				<h3
 				@click="handleClick()"
-				class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+				class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
 				>
 					<span>United Kingdom</span>
 					<svg xmlns="http://www.w3.org/2000/svg" :class="handleRotate()" class="h-6 w-6 text-srf-purple-500 transform transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,19 +66,19 @@ get_header();
 					</svg>
 				</h2>
 				<div
-				class="border-l-2 border-srf-purple-500 overflow-hidden max-h-0 duration-500 transition-all"
 				x-ref="tab"
 				:style="handleToggle()"
-					>
-						<p class="p-3 text-gray-900">
-						Once shipped, you’ll get a confirmation email that includes a tracking number and additional information regarding tracking your order.
-					</p>
+				class="overflow-hidden max-h-0 duration-500 transition-all"
+				>
+					<div class="p-6 bg-gray-50 border-l-2 border-srf-purple-500">
+						<p class="text-gray-900">Once shipped, you’ll get a confirmation email that includes a tracking number and additional information regarding tracking your order.</p>
+					</div>
 				</div>
 			</li>
-			<li class="bg-white border" x-data="accordion(3)">
+			<li class="bg-white border rounded-b-md" x-data="accordion(3)">
 				<h3
 				@click="handleClick()"
-				class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+				class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
 				>
 					<span>Crypto</span>
 					<svg xmlns="http://www.w3.org/2000/svg" :class="handleRotate()" class="h-6 w-6 text-srf-purple-500 transform transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,11 +86,13 @@ get_header();
 					</svg>
 				</h3>
 				<div
-				class="border-l-2 border-srf-purple-500 overflow-hidden max-h-0 duration-500 transition-all"
 				x-ref="tab"
 				:style="handleToggle()"
+				class="overflow-hidden max-h-0 duration-500 transition-all"
 				>
-					<script id="tgb-widget-script"> !function(t,e,i,n,o,c,d,s){t.tgbWidgetOptions={id:o,domain:n},(d=e.createElement(i)).src=[n,"widget/script.js"].join(""),d.async=1,(s=e.getElementById(c)).parentNode.insertBefore(d,s)}(window,document,"script","https://tgbwidget.com/","831200789","tgb-widget-script"); </script>
+					<div class="p-6 bg-gray-50 border-l-2 border-srf-purple-500">
+						<script id="tgb-widget-script"> !function(t,e,i,n,o,c,d,s){t.tgbWidgetOptions={id:o,domain:n},(d=e.createElement(i)).src=[n,"widget/script.js"].join(""),d.async=1,(s=e.getElementById(c)).parentNode.insertBefore(d,s)}(window,document,"script","https://tgbwidget.com/","831200789","tgb-widget-script"); </script>
+					</div>
 				</div>
 			</li>
 		</ul>
