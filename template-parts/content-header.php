@@ -38,11 +38,11 @@ namespace SRF;
 						'What is SYNGAP1?',
 						'openFirst',
 						array(
-							srf_subnav_item( 'Analytics', '#' ),
-							srf_subnav_item( 'Engagement', '#' ),
-							srf_subnav_item( 'Security', '#' ),
-							srf_subnav_item( 'Integrations', '#' ),
-							srf_subnav_item( 'Automations', '#' ),
+							srf_subnav_item( 'What is SYNGAP1?', '#' ),
+							srf_subnav_item( 'SYNGAP1 Treatment', '#' ),
+							srf_subnav_item( 'Syngap1 Epilepsy', '#' ),
+							srf_subnav_item( 'Life Expectancy', '#' ),
+							srf_subnav_item( 'SYNGAP1 & Autism', '#' ),
 						)
 					);
 					srf_nav_item(
@@ -53,41 +53,56 @@ namespace SRF;
 							srf_subnav_item( 'Meet Our Team', home_url( '/team/' ) ),
 							srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
 							srf_subnav_heading( 'About SRF' ),
-							srf_subnav_item( 'Integrations', '#' ),
-							srf_subnav_item( 'Automations', '#' ),
+							srf_subnav_item( 'Mission & Values', '#' ),
+							srf_subnav_item( 'Finances', '#' ),
+							srf_subnav_item( 'Documents', '#' ),
+							srf_subnav_item( 'Partners', '#' ),
 						)
 					);
 					srf_nav_item(
 						'Patients & Caregivers',
 						'openThird',
 						array(
-							srf_subnav_item( 'Analytics', '#' ),
-							srf_subnav_item( 'Engagement', '#' ),
-							srf_subnav_item( 'Security', '#' ),
-							srf_subnav_item( 'Integrations', '#' ),
-							srf_subnav_item( 'Automations', '#' ),
+							srf_subnav_heading( 'Start Here' ),
+							srf_subnav_item( 'Connect With Us', '#' ),
+							srf_subnav_item( 'Join The Registry (Ciitizen)', '#' ),
+							srf_subnav_item( 'Doctors', '#' ),
+							srf_subnav_item( 'Newsletter', '#' ),
+							srf_subnav_item( 'Could it be SYNGAP1?', '#' ),
+							srf_subnav_heading( 'Support' ),
+							srf_subnav_item( 'Newly Diagnosed', '#' ),
+							srf_subnav_item( 'Insurance', '#' ),
+							srf_subnav_heading( 'Fundraising' ),
+							srf_subnav_item( 'Sprint4Syngap', '#' ),
 						)
 					);
 					srf_nav_item(
 						'Professionals',
 						'openFourth',
 						array(
-							srf_subnav_item( 'Analytics', '#' ),
-							srf_subnav_item( 'Engagement', '#' ),
-							srf_subnav_item( 'Security', '#' ),
-							srf_subnav_item( 'Integrations', '#' ),
-							srf_subnav_item( 'Automations', '#' ),
+							srf_subnav_heading( 'Research' ),
+							srf_subnav_item( 'Roadmap', '#' ),
+							srf_subnav_item( 'Request NHS Data', '#' ),
+							srf_subnav_heading( 'Grants' ),
+							srf_subnav_item( 'Current Grants', '#' ),
+							srf_subnav_item( 'How to Apply', '#' ),
+							srf_subnav_heading( 'Roundtables' ),
+							srf_subnav_item( '2021 Feb en español', '#' ),
+							srf_subnav_item( '2020', '#' ),
+							srf_subnav_item( '2019', '#' ),
 						)
 					);
 					srf_nav_item(
 						'Resources',
 						'openLast',
 						array(
-							srf_subnav_item( 'Analytics', '#' ),
-							srf_subnav_item( 'Engagement', '#' ),
-							srf_subnav_item( 'Security', '#' ),
-							srf_subnav_item( 'Integrations', '#' ),
-							srf_subnav_item( 'Automations', '#' ),
+							srf_subnav_item( 'News', home_url( '/news/' ) ),
+							srf_subnav_item( 'Webinars', '#' ),
+							srf_subnav_item( 'Meet Our Warriors', '#' ),
+							srf_subnav_item( 'Movies', '#' ),
+							srf_subnav_item( 'Podcast', '#' ),
+							srf_subnav_item( 'Press Releases', '#' ),
+							srf_subnav_item( 'Shop', '#' ),
 						)
 					);
 					?>
