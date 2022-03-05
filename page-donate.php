@@ -61,9 +61,36 @@ get_header();
 				class="overflow-hidden max-h-0 duration-500 transition-all"
 				>
 					<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
-						<div class="flex justify-between p-4 border rounded-md"><h4>Paypal</h4><a href="https://www.paypal.com/us/fundraiser/charity/3573999">Continue?</a></div>
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Paypal</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://www.paypal.com/us/fundraiser/charity/3573999">Continue</a>
+						</div>
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Just Giving</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://justgiving.com/syngapresearchfund">Continue</a>
+						</div>
 						<div class="p-4 border rounded-md">
-							<h4 class="mb-3 text-gray-900">Donor Advised Funds (DAFs)</h4>
+							<h4 class="font-semibold">Check Donations</h4>
+							<p>Make payable to <strong>Syngap Research Fund</strong> and send to 1270 Lincoln Ave, Palo Alto, CA, 94301.</p>
+						</div>
+						<div class="p-4 border rounded-md">
+							<h4 class="font-semibold">Bank Deposits</h4>
+							<ul>
+								<li>Domestic Wire / ACH Instructions.</li>
+								<li>Wire / Credit Funds To:</li>
+								<li>First Republic Bank.</li>
+								<li>111 Pine Street.</li>
+								<li>San Francisco, CA 94111.</li>
+								<li class="mt-4">ABA / Routing Number: 321081669.</li>
+								<li>SWIFT Code: FRBBUS6S</li>
+							</ul>
+						</div>
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Wires, stock transfers & requests</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://www.syngapresearchfund.org/contact-us">Continue</a>
+						</div>
+						<div class="p-4 border rounded-md">
+							<h4 class="mb-3 text-gray-900 font-semibold">Donor Advised Funds (DAFs)</h4>
 							<script type = "text/javascript">_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
 							<script type = "text/javascript" src = "https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
 						</div>
@@ -94,10 +121,23 @@ get_header();
 				:style="handleToggle()"
 				class="overflow-hidden max-h-0 duration-500 transition-all"
 				>
-					<div class="p-6 bg-gray-50 border-l-2 border-srf-purple-500">
-
+					<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Paypal</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://www.paypal.com/donate/?hosted_button_id=GHANS83MZPCUN">Continue</a>
+						</div>
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Just Giving</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://justgiving.com/syngap-researchfund">Continue</a>
+						</div>
 						<div class="p-4 border rounded-md">
-							<p class="text-gray-900">Once shipped, you’ll get a confirmation email that includes a tracking number and additional information regarding tracking your order.</p>
+							<h4 class="font-semibold">Bank Deposits</h4>
+							<ul>
+								<li>Metro Bank, account in name of:</li>
+								<li>‍<strong>Syngap Research Fund, UK</strong></li>
+								<li>Account Number: 39953692. Sort Code: 23-05-80.</li>
+								<li>IBAN: GB14MYMB23058039953692. SWIFT Code: MYMBGB2L.</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -125,8 +165,15 @@ get_header();
 				:style="handleToggle()"
 				class="overflow-hidden max-h-0 duration-500 transition-all"
 				>
-					<div class="p-6 bg-gray-50 border-l-2 border-srf-purple-500">
-						<script id="tgb-widget-script"> !function(t,e,i,n,o,c,d,s){t.tgbWidgetOptions={id:o,domain:n},(d=e.createElement(i)).src=[n,"widget/script.js"].join(""),d.async=1,(s=e.getElementById(c)).parentNode.insertBefore(d,s)}(window,document,"script","https://tgbwidget.com/","831200789","tgb-widget-script"); </script>
+					<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Donate with Coinbase</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://commerce.coinbase.com/checkout/8e5f5ef9-a979-4efe-a18e-7d026997f03a">Continue</a>
+						</div>
+						<div class="p-4 border rounded-md">
+							<h4 class="mb-3 text-gray-900 font-semibold">Giving Block</h4>
+							<script id="tgb-widget-script"> !function(t,e,i,n,o,c,d,s){t.tgbWidgetOptions={id:o,domain:n},(d=e.createElement(i)).src=[n,"widget/script.js"].join(""),d.async=1,(s=e.getElementById(c)).parentNode.insertBefore(d,s)}(window,document,"script","https://tgbwidget.com/","831200789","tgb-widget-script"); </script>
+						</div>
 					</div>
 				</div>
 			</li>
