@@ -402,6 +402,45 @@ if ( ! function_exists( 'srf_nav_item' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'srf_mobile_nav_item' ) ) :
+	/**
+	 * Outputs a link item for the main navigation.
+	 *
+	 * @param  string $name The name for the nav link.
+	 * @param  string $data_item The variable name (JS) for the dropdown click binder - controlled by Alpine.
+	 * @param  array  $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
+	 *
+	 * TODO: Make this a little bit more flexible so we have the option to pass in a subnav or render as a single item.
+	 */
+	function srf_mobile_nav_item( $name, $data_item, $subnav_items ) {
+		$output = sprintf(
+			'<li class="bg-white" x-data="mobileDropdown(%1$s)">
+				<h3
+				@click="handleClick()"
+				class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
+					>
+					<span>%2$s</span>
+					<svg xmlns="http://www.w3.org/2000/svg" :class="handleRotate()" class="h-6 w-6 text-srf-purple-500 transform transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+					</svg>
+				</h3>
+				<ul
+				x-ref="tab"
+				:style="handleToggle()"
+				class="overflow-hidden ml-4 max-h-0 duration-500 transition-all"
+				>
+					%3$s
+				</ul>
+			</li>',
+			esc_attr( $data_item ),
+			esc_html( $name ),
+			implode( '', $subnav_items )
+		);
+
+		echo $output; // phpcs:ignore -- XSS OK
+	}
+endif;
+
 if ( ! function_exists( 'srf_subnav_item' ) ) :
 	/**
 	 * Outputs a link item for the main navigation.
@@ -409,8 +448,9 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 	 * @param  string $name The name for the nav link.
 	 * @param  string $url The URL path for the nav link.
 	 */
-	function srf_subnav_item( $name, $url ) {
-		return '<li class="p-3 rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900">' . esc_html( $name ) . '</a></li>';
+	function srf_subnav_item( $name, $url, $is_mobile = false ) {
+		$padding_classes = $is_mobile ? 'px-3 py-2' : 'p-3';
+		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900">' . esc_html( $name ) . '</a></li>';
 	}
 endif;
 

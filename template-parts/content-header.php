@@ -136,11 +136,77 @@ namespace SRF;
 					<nav class="grid gap-y-8 font-sans">
 						<ul>
 							<?php
-							echo srf_subnav_item( 'Analytics', '#' );  // phpcs:ignore -- XSS OK
-							echo srf_subnav_item( 'Engagement', '#' );  // phpcs:ignore -- XSS OK
-							echo srf_subnav_item( 'Security', '#' );  // phpcs:ignore -- XSS OK
-							echo srf_subnav_item( 'Integrations', '#' );  // phpcs:ignore -- XSS OK
-							echo srf_subnav_item( 'Automations', '#' );  // phpcs:ignore -- XSS OK
+							echo srf_mobile_nav_item(
+								'What is SYNGAP1?',
+								'1',
+								array(
+									srf_subnav_item( 'What is SYNGAP1?', '#', true ),
+									srf_subnav_item( 'SYNGAP1 Treatment', '#', true ),
+									srf_subnav_item( 'Syngap1 Epilepsy', '#', true ),
+									srf_subnav_item( 'Life Expectancy', '#', true ),
+									srf_subnav_item( 'SYNGAP1 & Autism', '#', true ),
+								)
+							);  // phpcs:ignore -- XSS OK
+							echo srf_mobile_nav_item(
+								'About Us',
+								'2',
+								array(
+									srf_subnav_heading( 'Our Team' ),
+									srf_subnav_item( 'Meet Our Team', home_url( '/team/' ), true ),
+									srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ), true ),
+									srf_subnav_heading( 'About SRF' ),
+									srf_subnav_item( 'Mission & Values', '#', true ),
+									srf_subnav_item( 'Finances', '#', true ),
+									srf_subnav_item( 'Documents', '#', true ),
+									srf_subnav_item( 'Partners', '#', true ),
+								)
+							);  // phpcs:ignore -- XSS OK
+							echo srf_mobile_nav_item(
+								'Patients & Caregivers',
+								'3',
+								array(
+									srf_subnav_heading( 'Start Here' ),
+									srf_subnav_item( 'Connect With Us', '#', true ),
+									srf_subnav_item( 'Join The Registry (Ciitizen)', '#', true ),
+									srf_subnav_item( 'Doctors', '#', true ),
+									srf_subnav_item( 'Newsletter', '#', true ),
+									srf_subnav_item( 'Could it be SYNGAP1?', '#', true ),
+									srf_subnav_heading( 'Support' ),
+									srf_subnav_item( 'Newly Diagnosed', '#', true ),
+									srf_subnav_item( 'Insurance', '#', true ),
+									srf_subnav_heading( 'Fundraising' ),
+									srf_subnav_item( 'Sprint4Syngap', '#', true ),
+								)
+							);  // phpcs:ignore -- XSS OK
+							echo srf_mobile_nav_item(
+								'Professionals',
+								'4',
+								array(
+									srf_subnav_heading( 'Research' ),
+									srf_subnav_item( 'Roadmap', '#', true ),
+									srf_subnav_item( 'Request NHS Data', '#', true ),
+									srf_subnav_heading( 'Grants' ),
+									srf_subnav_item( 'Current Grants', '#', true ),
+									srf_subnav_item( 'How to Apply', '#', true ),
+									srf_subnav_heading( 'Roundtables' ),
+									srf_subnav_item( '2021 Feb en español', '#', true ),
+									srf_subnav_item( '2020', '#', true ),
+									srf_subnav_item( '2019', '#', true ),
+								)
+							);  // phpcs:ignore -- XSS OK
+							echo srf_mobile_nav_item(
+								'Resources',
+								'5',
+								array(
+									srf_subnav_item( 'News', home_url( '/news/' ), true ),
+									srf_subnav_item( 'Webinars', '#', true ),
+									srf_subnav_item( 'Meet Our Warriors', '#', true ),
+									srf_subnav_item( 'Movies', '#', true ),
+									srf_subnav_item( 'Podcast', '#', true ),
+									srf_subnav_item( 'Press Releases', '#', true ),
+									srf_subnav_item( 'Shop', '#', true ),
+								)
+							);  // phpcs:ignore -- XSS OK
 							?>
 						</ul>
 					</nav>

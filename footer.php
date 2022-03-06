@@ -79,6 +79,32 @@ namespace SRF;
 	</footer>
 </div><!-- #page -->
 
+<script>
+	document.addEventListener('alpine:init', () => {
+		Alpine.store('mobileDropdown', {
+			tab: 0,
+		});
+
+		Alpine.data('mobileDropdown', (xid) => ({
+			xid: null,
+			init() {
+				this.xid = xid;
+			},
+			handleClick() {
+				this.$store.mobileDropdown.tab = this.$store.mobileDropdown.tab === this.xid ? 0 : this.xid;
+			},
+			handleRotate() {
+				return this.$store.mobileDropdown.tab === this.xid ? 'rotate-180' : '';
+			},
+			handleToggle() {
+				return this.$store.mobileDropdown.tab === this.xid
+					? `max-height: ${this.$refs.tab.scrollHeight}px`
+					: '';
+			},
+		}));
+	});
+</script>
+
 <?php wp_footer(); ?>
 
 </body>
