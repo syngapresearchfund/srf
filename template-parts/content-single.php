@@ -20,6 +20,8 @@ if ( 'post' === get_post_type() ) {
 
 /**
  * This logic is only needed because of the current thumbnail sizes. Once we get a good consistent size down, we can remove the max-w rule.
+ * 
+ * TODO: Adjust the featured image to be based on an aspect ratio size.
  */
 $thumbnail_classes = ( 'post' === get_post_type() || 'srf-events' === get_post_type() ) ? 'w-full sm:w-1/3 sm:max-w-xl max-h-80 object-cover' : 'w-full sm:w-1/3 sm:max-w-xs max-h-80 object-cover';
 ?>

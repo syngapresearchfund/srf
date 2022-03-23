@@ -66,9 +66,13 @@ module.exports = {
 			borderRadius: ['first', 'last'],
 		},
 	},
+	corePlugins: {
+		aspectRatio: false,
+	},
 	plugins: [
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/line-clamp'),
+		require('@tailwindcss/aspect-ratio'),
 		plugin(function ({ addBase, theme }) {
 			addBase({
 				h1: { fontFamily: theme('fontFamily.sans') },
