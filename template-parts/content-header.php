@@ -18,7 +18,7 @@ namespace SRF;
 			<div class="flex justify-start lg:w-0 lg:flex-1">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
-					<img class="w-auto h-9 sm:h-10" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
+					<img class="w-auto h-9 sm:h-14" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
 			<div class="-mr-2 -my-2 xl:hidden">

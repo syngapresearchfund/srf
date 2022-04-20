@@ -38,7 +38,7 @@ $thumbnail_classes = ( 'post' === get_post_type() || 'srf-events' === get_post_t
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div class="entry-content container mx-auto prose lg:prose-xl px-6 lg:px-0 pt-8 pb-16">
+	<div class="entry-content mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg px-6 lg:px-0 pt-8 pb-16">
 		<?php
 		the_content(
 			sprintf(
