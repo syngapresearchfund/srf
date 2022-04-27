@@ -18,7 +18,7 @@ $srf_bg_colors = array(
 );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'rounded border ' . $card_classes ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'rounded bg-white' ); ?>>
 	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<?php
 		if ( has_post_thumbnail() ) {
@@ -28,7 +28,7 @@ $srf_bg_colors = array(
 		}
 		?>
 
-		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40">
+		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40 rounded-b">
 			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
 		</header><!-- .entry-header -->
 	</a>
