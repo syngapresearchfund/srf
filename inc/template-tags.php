@@ -155,7 +155,7 @@ if ( ! function_exists( 'srf_post_meta' ) ) :
 		global $post;
 
 		if ( 'post' === get_post_type() ) {
-			echo '<div class="text-sm text-center">';
+			echo '<div class="mt-4 text-sm text-center">';
 			srf_posted_on();
 
 			$tags_list = get_the_tag_list( '', ', ' );
@@ -169,7 +169,7 @@ if ( ! function_exists( 'srf_post_meta' ) ) :
 			}
 			echo '</div>';
 		} elseif ( 'srf-warriors' === get_post_type() ) {
-			echo '<div class="text-sm">';
+			echo '<div class="mt-4 text-sm">';
 			echo $post->warrior_age ? '<h4>' . esc_html( $post->warrior_age ) . ' years old</h4>' : '';
 			echo $post->warrior_location ? '<h4>' . esc_html( $post->warrior_location ) . '</h4>' : '';
 			echo '</div>';

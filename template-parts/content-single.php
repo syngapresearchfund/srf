@@ -33,7 +33,7 @@ $header_classes    = 'post' === get_post_type() ? $bg_header_color . ' sm:h-60' 
 
 		<div class="max-w-7xl mx-auto p-6 sm:px-24 sm:py-12 sm:text-left text-white flex flex-col justify-center">
 			<?php
-				the_title( '<h1 class="entry-title mb-4 text-4xl lg:text-5xl font-extrabold text-center">', '</h1>' );
+				the_title( '<h1 class="entry-title text-4xl lg:text-5xl font-extrabold text-center">', '</h1>' );
 				srf_post_meta();
 			?>
 		</div><!-- .entry-meta -->
