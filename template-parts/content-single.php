@@ -23,7 +23,7 @@ if ( 'post' === get_post_type() ) {
  * 
  * TODO: Adjust the featured image to be based on an aspect ratio size.
  */
-$thumbnail_classes = 'srf-events' === get_post_type() ? 'w-full sm:w-1/3 sm:max-w-xl max-h-80 object-cover' : 'w-2/3 sm:w-1/3 max-h-80 object-cover';
+$thumbnail_classes = 'srf-events' === get_post_type() ? 'w-full sm:w-1/3 sm:max-w-xl max-h-80 object-cover' : 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-10';
 $header_classes    = 'post' === get_post_type() ? $bg_header_color . ' sm:h-60' : $bg_header_color;
 ?>
 
