@@ -21,9 +21,9 @@ namespace SRF;
 	<footer class="bg-srf-purple-500 text-white border-t-4 border-srf-purple-light">
 		<div class="container mx-auto px-6 lg:px-0 py-24">
 			<!-- top footer -->
-			<div class="lg:flex justify-between space-y-12 lg:space-y-0">
+			<div class="lg:flex justify-between gap-x-28 space-y-12 lg:space-y-0">
 				<!-- newsletter -->
-				<div class="flex flex-col justify-center">
+				<div class="flex flex-col flex-1 justify-center">
 					<!-- <h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get the latest updates!</h4> -->
 					<h4 class="mb-4 font-bold text-2xl lg:text-5xl">Get the latest updates!</h4>
 					<form action="" method="POST" class="flex">
@@ -32,8 +32,9 @@ namespace SRF;
 					</form>
 				</div>
 				<!-- links -->
-				<div class="text-center lg:text-right md:flex md:justify-center md:space-x-8 space-y-8 md:space-y-0">
-					<div class="space-y-2">
+				<div class="flex-1 text-center lg:text-right">
+					<p class="text-lg">The Syngap Research fund is a 501(c)(3) public charity (EIN <a class="hover:underline text-srf-purple-100" href="https://assets-global.website-files.com/5fa7dd05e1f1150d732ae83b/5ff33f567179375818886d63_SRF%2B501c3%2BRuling.pdf">83-1200789</a>) headquartered in California.</p>
+					<!-- <div class="space-y-2">
 						<h4 class="mb-3 font-bold uppercase tracking-widest">Families</h4>
 						<a href="" class="block hover:text-purple-200 hover:underline">About</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
@@ -53,7 +54,7 @@ namespace SRF;
 						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Careers</a>
 						<a href="" class="block hover:text-purple-200 hover:underline">Events</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
