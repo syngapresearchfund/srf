@@ -41,7 +41,7 @@ $header_classes    = 'post' === get_post_type() ? $bg_header_color . ' sm:h-60' 
 
 	<div class="entry-content mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg px-6 lg:px-0 pt-12 pb-16">
 		<?php
-		if ( 'post' !== get_post_type() ) {
+		if ( 'post' !== get_post_type() && 'product' !== get_post_type() ) {
 			srf_post_thumbnail( $thumbnail_classes );
 		}
 		the_content(
