@@ -102,7 +102,7 @@ namespace SRF;
 							srf_subnav_item( 'Movies', '#' ),
 							srf_subnav_item( 'Podcast', '#' ),
 							srf_subnav_item( 'Press Releases', '#' ),
-							srf_subnav_item( 'Shop', '#' ),
+							srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 						)
 					);
 					?>
