@@ -64,6 +64,7 @@ Adjustments and Overrides
 
 .woocommerce span.onsale {
 	background-color: #6f3592;
+	border: 2px solid white;
 	padding: 0.25rem 0.5rem;
 }
 .woocommerce ul.products li.product .onsale {
@@ -93,4 +94,8 @@ Adjustments and Overrides
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
 	background-color: #6f3592;
+}
+
+.wp-block-button__link {
+	background-color: #3e6cb5;
 }

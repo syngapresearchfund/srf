@@ -25,7 +25,7 @@ namespace SRF;
 				<!-- newsletter -->
 				<div class="flex flex-col flex-1 justify-center">
 					<!-- <h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get the latest updates!</h4> -->
-					<h4 class="mb-4 font-bold text-2xl lg:text-5xl">Get the latest updates!</h4>
+					<h4 class="mb-4 font-bold text-2xl lg:text-5xl">Join our newsletter!</h4>
 					<form action="" method="POST" class="flex">
 						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
 						<button class="p-3 bg-srf-purple-700 hover:bg-srf-purple-800 text-white rounded-r">Submit</button>
