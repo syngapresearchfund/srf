@@ -34,7 +34,7 @@ namespace SRF;
 			<nav class="hidden xl:block font-sans">
 				<ul class="flex space-x-6">
 					<?php
-					srf_nav_item(
+					srf_nav_item_dropdown(
 						'What is SYNGAP1?',
 						'openFirst',
 						array(
@@ -45,7 +45,7 @@ namespace SRF;
 							srf_subnav_item( 'SYNGAP1 & Autism', '#' ),
 						)
 					);
-					srf_nav_item(
+					srf_nav_item_dropdown(
 						'About Us',
 						'openSecond',
 						array(
@@ -59,7 +59,7 @@ namespace SRF;
 							srf_subnav_item( 'Partners', '#' ),
 						)
 					);
-					srf_nav_item(
+					srf_nav_item_dropdown(
 						'Patients & Caregivers',
 						'openThird',
 						array(
@@ -76,7 +76,7 @@ namespace SRF;
 							srf_subnav_item( 'Sprint4Syngap', '#' ),
 						)
 					);
-					srf_nav_item(
+					srf_nav_item_dropdown(
 						'Professionals',
 						'openFourth',
 						array(
@@ -92,7 +92,7 @@ namespace SRF;
 							srf_subnav_item( '2019', '#' ),
 						)
 					);
-					srf_nav_item(
+					srf_nav_item_dropdown(
 						'Resources',
 						'openLast',
 						array(
@@ -115,7 +115,7 @@ namespace SRF;
 	</div>
 
 	<!-- Mobile menu, show/hide based on mobile menu state. -->
-	<div class="absolute z-10 top-0 -inset-x-0 p-2 transition transform origin-top-right lg:hidden" x-show="open" x-transition>
+	<div class="absolute z-10 top-0 -inset-x-0 p-2 transition transform origin-top-right xl:hidden" x-show="open" x-transition>
 		<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
 			<div class="pt-5 pb-6 px-5">
 				<div class="flex items-center justify-between">
