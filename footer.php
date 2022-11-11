@@ -26,6 +26,7 @@ namespace SRF;
 				<div class="flex flex-col flex-1 justify-center">
 					<!-- <h4 class="mb-4 font-bold text-2xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500">Get the latest updates!</h4> -->
 					<h4 class="mb-4 font-bold text-2xl lg:text-5xl">Join our newsletter!</h4>
+					<p class="mb-3">Get helpful resources, inspiring stories, and the latest SRF news delivered to your inbox.</p>
 					<form action="" method="POST" class="flex">
 						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
 						<button class="p-3 bg-srf-purple-700 hover:bg-srf-purple-800 text-white rounded-r">Submit</button>
@@ -33,28 +34,13 @@ namespace SRF;
 				</div>
 				<!-- links -->
 				<div class="flex-1 text-center lg:text-right">
-					<p class="text-lg">The Syngap Research fund is a 501(c)(3) public charity (EIN <a class="hover:underline text-srf-purple-100" href="https://assets-global.website-files.com/5fa7dd05e1f1150d732ae83b/5ff33f567179375818886d63_SRF%2B501c3%2BRuling.pdf">83-1200789</a>) headquartered in California.</p>
-					<!-- <div class="space-y-2">
-						<h4 class="mb-3 font-bold uppercase tracking-widest">Families</h4>
-						<a href="" class="block hover:text-purple-200 hover:underline">About</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Careers</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Events</a>
-					</div>
-					<div class="space-y-2">
-						<h4 class="mb-3 font-bold uppercase tracking-widest">Professionals</h4>
-						<a href="" class="block hover:text-purple-200 hover:underline">About</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Careers</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Events</a>
-					</div>
-					<div class="space-y-2">
-						<h4 class="mb-3 font-bold uppercase tracking-widest">Organization</h4>
-						<a href="" class="block hover:text-purple-200 hover:underline">About</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Blog</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Careers</a>
-						<a href="" class="block hover:text-purple-200 hover:underline">Events</a>
-					</div> -->
+					<p class="text-lg m-3">The Syngap Research fund is a 501(c)(3) public charity (EIN <a class="hover:underline text-srf-purple-100" href="<?php echo esc_url( get_theme_file_uri( 'assets/files/SRF-501c3-Ruling.pdf' ) ); ?>">83-1200789</a>) headquartered in California.</p>
+					<ul class="flex space-x-2 justify-end place-items-center">
+						<li class="w-32"><a href="<?php echo esc_url( site_url( '/syngap10-podcast/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/tdc-badge-podcast.png' ) ); ?>" alt="The Best RARE Podcasts"></a></li>
+						<li class="w-32"><a href="https://globalgenes.org/"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/global-advocacy-alliance-founding-member-badge.png' ) ); ?>" alt="Global Advocacy Alliance Founding Member"></a></li>
+						<li class="w-24"><a href="https://www.guidestar.org/profile/83-1200789"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2020.png' ) ); ?>" alt="Guidestar Platinum Symbol of Transparency 2020"></a></li>
+						<li class="w-32"><a href="<?php echo esc_url( site_url( '/gnp/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2022-top-rated-awards-badge.png' ) ); ?>" alt="2022 Top Rated Awards"></a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
