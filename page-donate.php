@@ -21,9 +21,10 @@ get_header();
 ?>
 
 <div class="container mx-auto px-6 lg:px-0 py-16">
-	<header class="entry-header relative">
-		<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 text-center font-extrabold mb-14">Donate</h1>
-	</header><!-- .entry-header -->
+	<header class="entry-header max-w-3xl mx-auto mb-16 text-center">
+		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold">Donate</h1>
+		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+	</header>
 
 	<!-- Begin Give Lively Fundraising Widget -->
 	<script>gl=document.createElement('script');gl.src='https://secure.givelively.org/widgets/branded_donation/syngap-research-fund-incorporated.js';document.getElementsByTagName('head')[0].appendChild(gl);</script><div data-widget-src='https://secure.givelively.org/donate/syngap-research-fund-incorporated?ref=sd_widget' id="give-lively-widget" class="gl-branded-donation-widget"></div>

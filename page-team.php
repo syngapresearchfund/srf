@@ -21,9 +21,10 @@ get_header();
 ?>
 
 <div class="container mx-auto px-6 lg:px-0 py-16">
-	<header class="entry-header mb-14">
-		<h1 class="entry-title text-4xl lg:text-5xl text-gray-600 text-center font-extrabold">Team</h1>
-	</header><!-- .entry-header -->
+	<header class="entry-header max-w-3xl mx-auto mb-16 text-center">
+		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold">SRF Team</h1>
+		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+	</header>
 
 	<section class="board-members text-center mb-14">
 		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Board Members</h2>
