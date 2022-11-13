@@ -153,7 +153,7 @@ if ( ! function_exists( 'srf_post_meta' ) ) :
 	 */
 	function srf_post_meta() {
 		if ( 'post' === get_post_type() ) {
-			echo '<div class="mt-4 text-sm text-center">';
+			echo '<div class="mt-6 text-sm text-center">';
 			srf_posted_on();
 
 			$tags_list = get_the_tag_list( '', ', ' );
@@ -248,7 +248,7 @@ if ( ! function_exists( 'srf_board_grid' ) ) :
 			endwhile;
 			?>
 		</div>
-		<a href="<?php echo esc_url( site_url( '/team/board-members/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all board members <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+		<a href="<?php echo esc_url( home_url( '/team/board-members/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all board members <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 
 		<?php else : ?>
 
@@ -298,7 +298,7 @@ if ( ! function_exists( 'srf_volunteer_grid' ) ) :
 			endwhile;
 			?>
 		</div>
-		<a href="<?php echo esc_url( site_url( '/team/volunteers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all volunteers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+		<a href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all volunteers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 
 		<?php else : ?>
 
@@ -348,7 +348,7 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 			endwhile;
 			?>
 		</div>
-		<a href="<?php echo esc_url( site_url( '/team/researchers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all researchers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+		<a href="<?php echo esc_url( home_url( '/team/researchers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all researchers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 
 		<?php else : ?>
 
@@ -367,12 +367,36 @@ if ( ! function_exists( 'srf_nav_item' ) ) :
 	 * Outputs a link item for the main navigation.
 	 *
 	 * @param  string $name The name for the nav link.
-	 * @param  string $click_binder The variable name (JS) for the dropdown click binder - controlled by Alpine.
+	 * @param  string $url The variable name (JS) for the dropdown click binder - controlled by Alpine.
+	 *
+	 * TODO: Make this a little bit more flexible so we have the option to pass in a subnav or render as a single item.
+	 */
+	function srf_nav_item( $name, $url ) {
+		$output = sprintf(
+			'<li>
+				<a href="%2$s" class="block py-2 text-gray-600 group rounded-md text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+					%1$s
+				</a>
+			</li>',
+			esc_html( $name ),
+			esc_url( $url ),
+		);
+
+		echo $output; // phpcs:ignore -- XSS OK
+	}
+endif;
+
+if ( ! function_exists( 'srf_nav_item_dropdown' ) ) :
+	/**
+	 * Outputs a link item for the main navigation.
+	 *
+	 * @param  string $name The name for the nav link.
+	 * @param  string $event_binder The variable name (JS) for the dropdown click binder - controlled by Alpine.
 	 * @param  array  $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
 	 *
 	 * TODO: Make this a little bit more flexible so we have the option to pass in a subnav or render as a single item.
 	 */
-	function srf_nav_item_dropdown( $name, $click_binder, $subnav_items ) {
+	function srf_nav_item_dropdown( $name, $event_binder, $subnav_items ) {
 		$output = sprintf(
 			'<li class="relative py-2 cursor-pointer" @mouseleave="%1$s = false">
 				<div @mouseover="%1$s = true">
@@ -388,7 +412,7 @@ if ( ! function_exists( 'srf_nav_item' ) ) :
 					</div>
 				</div>
 			</li>',
-			esc_attr( $click_binder ),
+			esc_attr( $event_binder ),
 			esc_html( $name ),
 			implode( '', $subnav_items )
 		);
@@ -440,8 +464,9 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 	/**
 	 * Outputs a link item for the main navigation.
 	 *
-	 * @param  string $name The name for the nav link.
-	 * @param  string $url The URL path for the nav link.
+	 * @param  string  $name The name for the nav link.
+	 * @param  string  $url The URL path for the nav link.
+	 * @param  boolean $is_mobile If the link is contained within the mobile nav.
 	 */
 	function srf_subnav_item( $name, $url, $is_mobile = false ) {
 		$padding_classes = $is_mobile ? 'px-3 py-2' : 'p-3';

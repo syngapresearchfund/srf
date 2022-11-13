@@ -22,9 +22,10 @@ get_header();
 
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo esc_attr( $container_classes ); ?> text-center">
-			<header class="entry-header relative">
-				<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 font-extrabold mb-14"><?php echo esc_html( $current_term->name ); ?></h1>
-			</header><!-- .entry-header -->
+			<header class="entry-header max-w-3xl mx-auto mb-16">
+				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?></h1>
+				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+			</header>
 
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
 				<?php
@@ -42,7 +43,7 @@ get_header();
 				endwhile;
 				?>
 			</div>
-		</div> <!-- .post-grid -->
+		</div>
 
 		<?php
 	else :
