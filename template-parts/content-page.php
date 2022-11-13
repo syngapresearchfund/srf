@@ -14,9 +14,10 @@ $srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0 py-16' ); ?>>
-	<header class="entry-header relative max-w-3xl mx-auto">
-		<?php the_title( '<h1 class="entry-title relative text-4xl lg:text-5xl text-gray-600 text-center font-extrabold mb-14">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<header class="entry-header max-w-3xl mx-auto mb-16 text-center">
+		<?php the_title( '<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold">', '</h1>' ); ?>
+		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+	</header>
 
 	<?php srf_post_thumbnail(); ?>
 
