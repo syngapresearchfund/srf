@@ -13,7 +13,7 @@ namespace SRF;
 ?>
 
 <!-- Main top-level menu, show/hide based on mobile menu state. -->
-<div class="bg-white px-6 lg:px-0">
+<div class="relative bg-white px-6 lg:px-0 z-10 xl:shadow">
 	<div class="container mx-auto">
 		<div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-9">
 			<div class="flex justify-start lg:w-0 lg:flex-1 hover:opacity-80">
