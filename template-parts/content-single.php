@@ -37,6 +37,8 @@ $thumbnail_classes = 'srf-events' === get_post_type() ? 'w-full sm:w-1/3 sm:max-
 		<?php
 		if ( 'post' !== get_post_type() && 'product' !== get_post_type() ) {
 			srf_post_thumbnail( $thumbnail_classes );
+		} else {
+			the_post_thumbnail( 'full', array( 'class' => 'block mx-auto mb-0' ) );
 		}
 		the_content(
 			sprintf(
