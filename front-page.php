@@ -166,13 +166,15 @@ get_header();
 				?>
 			</div>
 
+			<?php else : ?>
+
+			<div class="no-results max-w-6xl mx-auto mb-10 text-center text-lg">
+				<p>There are no upcoming events on the current schedule.</p>
+				<p>Please check back soon!</p>
+			</div>
+
 				<?php
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
 			endif;
-
 			/* Restore original Post Data */
 			wp_reset_postdata();
 			?>
