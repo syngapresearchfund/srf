@@ -79,14 +79,14 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
 
 /**
  * Temporary redirect to COMING SOON page.
- * 
+ *
  * Only allow logged-in users to view the full site.
  */
 function coming_soon_redirect() {
-	if( ! is_user_logged_in() && ! is_page( 'coming-soon' ) ){
-		wp_redirect( site_url( 'coming-soon' ) );
+	if ( ! is_user_logged_in() && ! is_page( 'coming-soon' ) ) {
+		wp_safe_redirect( site_url( 'coming-soon' ) );
 		exit();
-   }
+	}
 }
 add_action( 'template_redirect', __NAMESPACE__ . '\\coming_soon_redirect' );
 

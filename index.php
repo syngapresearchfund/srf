@@ -22,9 +22,10 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo esc_attr( srf_container_classes() ); ?>">
-			<header class="entry-header relative mb-14">
-				<h1 class="entry-title mb-6 text-4xl lg:text-5xl text-gray-600 text-center font-extrabold"><?php echo esc_html( $posts_title ); ?></h1>
-			</header><!-- .entry-header -->
+			<header class="entry-header max-w-3xl mx-auto mb-16 text-center">
+				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $posts_title ); ?></h1>
+				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+			</header>
 
 			<!-- <div class="max-w-4xl mx-auto space-y-16"> -->
 			<div class="content max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">

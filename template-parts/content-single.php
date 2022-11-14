@@ -10,20 +10,8 @@
 
 namespace SRF;
 
-$bg_header_color = 'bg-srf-purple-500';
-
-if ( 'post' === get_post_type() ) {
-	$bg_header_color = 'bg-srf-blue-500';
-} elseif ( 'srf-events' === get_post_type() ) {
-	$bg_header_color = 'bg-srf-green-500';
-}
-
-/**
- * This logic is only needed because of the current thumbnail sizes. Once we get a good consistent size down, we can remove the max-w rule.
- *
- * TODO: Adjust the featured image to be based on an aspect ratio size.
- */
-$thumbnail_classes = 'srf-events' === get_post_type() ? 'w-full sm:w-1/3 sm:max-w-xl max-h-80 object-cover' : 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-10';
+// TODO: Adjust the featured image to be based on an aspect ratio size.
+$thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-10';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'py-16' ); ?>>
@@ -35,7 +23,7 @@ $thumbnail_classes = 'srf-events' === get_post_type() ? 'w-full sm:w-1/3 sm:max-
 
 	<div class="entry-content mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg px-6 lg:px-0">
 		<?php
-		if ( 'post' !== get_post_type() && 'product' !== get_post_type() ) {
+		if ( 'post' !== get_post_type() && 'product' !== get_post_type() && 'srf-events' !== get_post_type() ) {
 			srf_post_thumbnail( $thumbnail_classes );
 		} else {
 			the_post_thumbnail( 'full', array( 'class' => 'block mx-auto mb-0' ) );
