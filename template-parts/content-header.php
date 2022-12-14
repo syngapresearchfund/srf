@@ -61,7 +61,7 @@ namespace SRF;
 					'openFirst',
 					array(
 						srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
-						srf_subnav_item( 'SYNGAP1 Treatment', '#' ),
+						srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
 						srf_subnav_item( 'Syngap1 Epilepsy', '#' ),
 						srf_subnav_item( 'Life Expectancy', '#' ),
 						srf_subnav_item( 'SYNGAP1 & Autism', '#' ),
