@@ -60,7 +60,7 @@ namespace SRF;
 					'What is SYNGAP1?',
 					'openFirst',
 					array(
-						srf_subnav_item( 'What is SYNGAP1?', '#' ),
+						srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 						srf_subnav_item( 'SYNGAP1 Treatment', '#' ),
 						srf_subnav_item( 'Syngap1 Epilepsy', '#' ),
 						srf_subnav_item( 'Life Expectancy', '#' ),
