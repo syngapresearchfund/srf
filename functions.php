@@ -83,7 +83,9 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
  * Only allow logged-in users to view the full site.
  */
 function coming_soon_redirect() {
-	if ( ! is_user_logged_in() && ! is_page( 'coming-soon' ) && get_current_blog_id() === 1 ) {
+	$user_id = get_current_user_id();
+	$blog_id = 1;
+	if ( ! is_user_logged_in() && is_user_member_of_blog( $user_id, $blog_id ) && ! is_page( 'coming-soon' ) ) {
 		wp_safe_redirect( site_url( 'coming-soon' ) );
 		exit();
 	}
