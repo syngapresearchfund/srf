@@ -50,5 +50,6 @@ $thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-1
 			)
 		);
 		?>
+		<p class="clear-both"></p>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

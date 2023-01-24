@@ -41,22 +41,24 @@ get_header();
 				endwhile;
 				?>
 			</div>
-			<?php
-				the_posts_pagination(
-					array(
-						'mid_size'  => 2,
-						'prev_text' => sprintf(
-							'<span class="nav-prev-text">%s</span>',
-							__( 'Newer posts', 'srf' )
-						),
-						'next_text' => sprintf(
-							'<span class="nav-next-text">%s</span>',
-							__( 'Older posts', 'srf' ),
-						),
-					)
-				);
-
-			?>
+			<div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
+				<?php
+					// the_posts_pagination(
+					// array(
+					// 'mid_size'  => 2,
+					// 'prev_text' => sprintf(
+					// '<span class="nav-prev-text">%s</span>',
+					// __( 'Newer posts', 'srf' )
+					// ),
+					// 'next_text' => sprintf(
+					// '<span class="nav-next-text">%s</span>',
+					// __( 'Older posts', 'srf' ),
+					// ),
+					// )
+					// );
+					posts_nav_link();
+				?>
+			</div>
 		</div> <!-- .post-grid -->
 
 		<?php

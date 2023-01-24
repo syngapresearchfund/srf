@@ -316,7 +316,7 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 	/**
 	 * Outputs the grid for SRF Researchers.
 	 */
-	function srf_researcher_grid() {
+	function srf_leadership_grid() {
 		$args        = array(
 			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-team',
@@ -324,7 +324,7 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 				array(
 					'taxonomy' => 'srf-team-category',
 					'field'    => 'slug',
-					'terms'    => 'researchers',
+					'terms'    => 'us-leadership-team',
 				),
 			),
 		);
@@ -348,11 +348,11 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 			endwhile;
 			?>
 		</div>
-		<a href="<?php echo esc_url( home_url( '/team/researchers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all researchers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+		<a href="<?php echo esc_url( home_url( '/team/us-leadership-team/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View full leadership team <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 
 		<?php else : ?>
 
-		<p class="text-gray-700 text-center mb-7">No researchers have been added yet!</p>
+		<p class="text-gray-700 text-center mb-7">No team members have been added yet!</p>
 
 			<?php
 		endif;

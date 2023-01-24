@@ -28,7 +28,7 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 			</header>
 
 			<!-- <div class="max-w-4xl mx-auto space-y-16"> -->
-			<div class="content max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
+			<div id="post-list" class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -44,22 +44,24 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 				endwhile;
 				?>
 			</div>
-			<?php
-				the_posts_pagination(
-					array(
-						'mid_size'  => 2,
-						'prev_text' => sprintf(
-							'<span class="nav-prev-text">%s</span>',
-							__( 'Newer posts', 'srf' )
-						),
-						'next_text' => sprintf(
-							'<span class="nav-next-text">%s</span>',
-							__( 'Older posts', 'srf' ),
-						),
-					)
-				);
-
-			?>
+			<div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
+				<?php
+					// the_posts_pagination(
+					// array(
+					// 'mid_size'  => 2,
+					// 'prev_text' => sprintf(
+					// '<span class="nav-prev-text">%s</span>',
+					// __( 'Newer posts', 'srf' )
+					// ),
+					// 'next_text' => sprintf(
+					// '<span class="nav-next-text">%s</span>',
+					// __( 'Older posts', 'srf' ),
+					// ),
+					// )
+					// );
+					posts_nav_link();
+				?>
+			</div>
 		</div> <!-- .post-grid -->
 
 		<?php

@@ -31,15 +31,16 @@ get_header();
 		<?php srf_board_grid(); ?>
 	</section>
 
+	<section class="researchers text-center mb-14">
+		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Leadership Team</h2>
+		<?php srf_leadership_grid(); ?>
+	</section>
+
 	<section class="volunteers text-center mb-14 py-14">
 		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Volunteers</h2>
 		<?php srf_volunteer_grid(); ?>
 	</section>
 
-	<section class="researchers text-center mb-14">
-		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Researchers</h2>
-		<?php srf_researcher_grid(); ?>
-	</section>
 
 </div>
 <?php

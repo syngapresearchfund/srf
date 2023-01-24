@@ -1030,6 +1030,10 @@ body {
   grid-column: span 2 / span 2;
 }
 
+.clear-both {
+  clear: both;
+}
+
 .m-3 {
   margin: 0.75rem;
 }
