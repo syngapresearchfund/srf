@@ -28,7 +28,7 @@ namespace SRF;
 					<h4 class="mb-4 font-bold text-2xl lg:text-5xl">Join our newsletter!</h4>
 					<p class="mb-3">Get helpful resources, inspiring stories, and the latest SRF news delivered to your inbox.</p>
 					<form action="" method="POST" class="flex">
-						<input type="email" name="email" placeholder="super@secret.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
+						<input type="email" name="email" placeholder="email@example.com" class="w-full p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
 						<button class="p-3 bg-srf-purple-700 hover:bg-srf-purple-800 text-white rounded-r">Submit</button>
 					</form>
 				</div>
