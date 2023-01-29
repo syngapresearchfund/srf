@@ -79,4 +79,4 @@ function srf_posts_per_page( $query ) {
 		$query->set( 'posts_per_page', 9 );
 	}
 }
-add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_posts_per_page', 99 );
+// add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_posts_per_page', 99 );
