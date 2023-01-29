@@ -133,15 +133,13 @@ get_header();
 			$args         = array(
 				'posts_per_page' => 8,
 				'post_type'      => 'srf-events',
-				'post_status'    => array(
-					'future',
-					'publish',
-				),
-				'date_query'     => array(
+				'orderby'        => 'menu_order',
+				'order'          => 'ASC',
+				'tax_query'      => array(
 					array(
-						'year'  => gmdate( 'Y' ),
-						'month' => gmdate( 'M' ),
-						'day'   => gmdate( 'D' ),
+						'taxonomy' => 'srf-events-category',
+						'field'    => 'slug',
+						'terms'    => 'upcoming-events',
 					),
 				),
 			);

@@ -22,15 +22,13 @@ get_header();
 $upcoming_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
 	'post_type'      => 'srf-events',
-	'post_status'    => array(
-		'future',
-		'publish',
-	),
-	'date_query'     => array(
+	'orderby'        => 'menu_order',
+	'order'          => 'ASC',
+	'tax_query'      => array(
 		array(
-			'year'  => gmdate( 'Y' ),
-			'month' => gmdate( 'M' ),
-			'day'   => gmdate( 'D' ),
+			'taxonomy' => 'srf-events-category',
+			'field'    => 'slug',
+			'terms'    => 'upcoming-events',
 		),
 	),
 );
@@ -39,12 +37,12 @@ $upcoming_events_query = new WP_Query( $upcoming_args );
 $past_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
 	'post_type'      => 'srf-events',
-	'post_status'    => array(
-		'publish',
-	),
-	'date_query'     => array(
+	'tax_query'      => array(
 		array(
-			'before' => gmdate( 'F j, Y' ),
+			'taxonomy' => 'srf-events-category',
+			'field'    => 'slug',
+			'terms'    => 'upcoming-events',
+			'operator' => 'NOT IN',
 		),
 	),
 );
