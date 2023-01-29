@@ -643,6 +643,14 @@ body {
   max-width: 65ch;
 }
 
+.prose [class~="lead"] {
+  color: #4b5563;
+  font-size: 1.25em;
+  line-height: 1.6;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
 .prose a {
   color: #111827;
   text-decoration: underline;
@@ -1202,6 +1210,10 @@ body {
 
 .h-auto {
   height: auto;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .max-h-0 {
@@ -2203,6 +2215,13 @@ body {
   -webkit-line-clamp: 2;
 }
 
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
 /*
 Adjustments and Overrides
 =========================
@@ -2229,6 +2248,15 @@ Adjustments and Overrides
 .is-type-video .wp-block-embed__wrapper iframe {
   width: 100%;
   height: 100%;
+}
+
+/**
+ * Post Navigation Adjustments
+ */
+
+.posts-navigation .nav-links {
+  display: flex;
+  justify-content: space-between;
 }
 
 /**
@@ -2439,6 +2467,13 @@ Adjustments and Overrides
   .lg\:prose-xl p {
     margin-top: 1.2em;
     margin-bottom: 1.2em;
+  }
+
+  .lg\:prose-xl [class~="lead"] {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   .lg\:prose-xl blockquote {

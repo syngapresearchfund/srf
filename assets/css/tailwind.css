@@ -48,6 +48,14 @@ Adjustments and Overrides
 }
 
 /**
+ * Post Navigation Adjustments
+ */
+.posts-navigation .nav-links {
+	display: flex;
+	justify-content: space-between;
+}
+
+/**
  * WooCommerce Adjustments
  */
 .wp-block-gallery .blocks-gallery-item::before,
