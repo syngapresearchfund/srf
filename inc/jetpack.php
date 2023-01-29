@@ -22,11 +22,12 @@ function srf_jetpack_setup() {
 	add_theme_support(
 		'infinite-scroll',
 		array(
-			// 'type'           => 'click',
-			'container'      => 'post-list',
+			'type'           => 'click',
+			'container'      => 'new-posts',
 			'wrapper'        => false,
 			'footer'         => false,
-			'posts_per_page' => 15,
+			'render'         => 'srf_infinite_scroll_render',
+			'posts_per_page' => get_option( 'posts_per_page' ),
 		)
 	);
 
@@ -58,9 +59,9 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_jetpack_setup' );
 /**
  * Renders content on infinite scroll.
  */
-// function srf_infinite_scroll_render() : void {
-// while ( have_posts() ) {
-// the_post();
-// get_template_part( 'landing/marketing/go/template-parts/content', get_post_type() );
-// }
-// }
+function srf_infinite_scroll_render() : void {
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', get_post_type() );
+	}
+}
