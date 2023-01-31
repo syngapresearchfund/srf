@@ -10,8 +10,7 @@ namespace SRF;
 
 ?>
 
-<form class="search-form" method="get" action="<?php echo esc_url( 'https://wordpress.com/go/' ); ?>">
-	<input type="text" class="wpcom-h4-go-search-field" name="s1" placeholder="<?php esc_attr_e( 'Search tips' ); ?>" value="<?php the_search_query(); ?>">
-	<input type="submit" value="Search" aria-hidden="true">
+<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET" class="flex justify-center">
+	<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search tips' ); ?>" value="<?php the_search_query(); ?>" class="p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
+	<button class="p-3 bg-srf-purple-700 hover:bg-srf-purple-800 text-white rounded-r">Submit</button>
 </form>
-

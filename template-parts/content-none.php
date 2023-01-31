@@ -12,23 +12,16 @@ namespace SRF;
 
 ?>
 
-<div class="search-header-wrapper">
-	<header class="search-header">
-		<h1 class="search-title no-widows">
-			<?php
-			/* translators: %s: search query. */
-			printf( esc_html__( 'Results for: %s' ), '<span>' . get_search_query() . '</span>' );
-			?>
-		</h1>
-	</header><!-- .page-header -->
-</div>
-
-<div class="page-content no-results not-found container mx-auto px-6 lg:px-0">
+<div class="container mx-auto px-6 lg:px-0 py-16">
+	<header class="entry-header max-w-3xl mx-auto mb-16 text-center">
+		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php printf( esc_html__( 'Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+	</header>
 	<?php
 	if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
 		printf(
-			'<p class="no-widows">' . wp_kses(
+			'<p">' . wp_kses(
 				/* translators: 1: link to WP admin new post page. */
 				__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.' ),
 				array(
@@ -43,14 +36,14 @@ namespace SRF;
 	elseif ( is_search() ) :
 		?>
 
-		<p class="no-widows"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords:' ); ?></p>
+		<p"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords:' ); ?></p>
 		<?php
 		get_search_form();
 
 	else :
 		?>
 
-		<p class="no-widows"><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching will help:' ); ?></p>
+		<p"><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching will help:' ); ?></p>
 		<?php
 		get_search_form();
 

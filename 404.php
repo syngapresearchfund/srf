@@ -13,18 +13,18 @@ namespace SRF;
 get_header();
 ?>
 
-<div class="error-404-header-wrapper">
-	<header class="error-404-header no-widows">
-		<h1 class="error-404-title">
-			<?php esc_html_e( 'Oops! That page can’t be found.' ); ?>
-		</h1>
-	</header><!-- .page-header -->
-</div>
 
-<div class="page-content error-404 not-found">
-	<p class="no-widows"><?php esc_html_e( 'It looks like nothing was found at this location. Perhaps searching will help:' ); ?></p>
-	<?php get_search_form(); ?>
-</div><!-- .page-content -->
+<div class="container mx-auto px-6 lg:px-0 py-16">
+	<header class="entry-header max-w-3xl mx-auto mb-16 text-center">
+		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php esc_html_e( 'Oops! That page can’t be found.' ); ?></h1>
+		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+	</header>
+
+	<div class="text-center">
+		<p class="mb-4 text-lg"><?php esc_html_e( 'It looks like nothing was found at this location. Perhaps searching will help:' ); ?></p>
+		<?php get_search_form(); ?>
+	</div>
+</div>
 
 <?php
 get_footer();
