@@ -11,7 +11,7 @@
 namespace SRF;
 
 // TODO: Adjust the featured image to be based on an aspect ratio size.
-$thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-10';
+// $thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-10';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'py-16' ); ?>>
@@ -23,11 +23,7 @@ $thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-1
 
 	<div class="entry-content mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg px-6 lg:px-0">
 		<?php
-		if ( 'post' !== get_post_type() && 'product' !== get_post_type() && 'srf-events' !== get_post_type() ) {
-			srf_post_thumbnail( $thumbnail_classes );
-		} else {
-			the_post_thumbnail( 'full', array( 'class' => 'block mx-auto mb-0' ) );
-		}
+		srf_single_featured_image();
 		the_content(
 			sprintf(
 				wp_kses(

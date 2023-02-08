@@ -120,14 +120,22 @@ if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 */
-	function srf_profile_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-			return;
+	function srf_single_featured_image() {
+		global $post;
+
+		// TODO: Adjust the featured image to be based on an aspect ratio size - maybe.
+		$thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-10';
+		$current_terms     = wp_get_post_terms( $post->ID, 'srf-resources-category', array( 'fields' => 'slugs' ) );
+
+		if ( in_array( 'movies', $current_terms, true ) ) {
+			return; // exit early - no featured images on these pages.
 		}
 
-		$srf_thumbnail_url = get_the_post_thumbnail_url();
-
-		echo '<img class="w-3/4 sm:w-56 h-80 sm:h-56 object-cover rounded border border-gray-500" src="' . esc_url( $srf_thumbnail_url ) . '" alt="' . esc_attr( get_the_title() ) . '" srcset="' . esc_url( add_query_arg( 'w', 660, $srf_thumbnail_url ) ) . ' 660w, ' . esc_url( add_query_arg( 'w', 960, $srf_thumbnail_url ) ) . ' 960w, ' . esc_url( $srf_thumbnail_url ) . ' 1280w" sizes="(max-width: 768px) 100vw, 100vw" />';
+		if ( 'post' !== get_post_type() && 'product' !== get_post_type() && 'srf-events' !== get_post_type() ) {
+			srf_post_thumbnail( $thumbnail_classes );
+		} else {
+			the_post_thumbnail( 'full', array( 'class' => 'block mx-auto mb-0' ) );
+		}
 	}
 endif;
 
