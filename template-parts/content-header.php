@@ -75,10 +75,12 @@ namespace SRF;
 						srf_subnav_item( 'Meet Our Team', home_url( '/team/' ) ),
 						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
 						srf_subnav_heading( 'About SRF' ),
-						srf_subnav_item( 'Mission & Values', '#' ),
-						srf_subnav_item( 'Finances', '#' ),
-						srf_subnav_item( 'Documents', '#' ),
-						srf_subnav_item( 'Partners', '#' ),
+						srf_subnav_item( 'Mission & Values', '/mission-values/' ),
+						srf_subnav_item( 'Finances', '/finances/' ),
+						srf_subnav_item( 'Documents', '/documents/' ),
+						srf_subnav_item( 'Partners', '/partners/' ),
+						srf_subnav_item( 'Sponsors', '/sponsors/' ),
+						srf_subnav_item( 'Style Guide', '/style-guide/' ),
 					)
 				);
 				srf_nav_item_dropdown(
