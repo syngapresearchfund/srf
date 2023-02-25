@@ -82,7 +82,7 @@ namespace SRF;
 					)
 				);
 				srf_nav_item_dropdown(
-					'Patients & Caregivers',
+					'For Families',
 					'openThird',
 					array(
 						srf_subnav_heading( 'Start Here' ),
