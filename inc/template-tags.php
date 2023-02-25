@@ -105,7 +105,7 @@ if ( ! function_exists( 'srf_post_thumbnail' ) ) :
 	 * @param string $img_classes Optional classes for image.
 	 * @param string $img_size Optional image size for image.
 	 */
-	function srf_post_thumbnail( $img_classes = '', $img_size = 'featured-image' ) {
+	function srf_post_thumbnail( $img_classes = 'mx-auto mb-10', $img_size = 'featured-image' ) {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -124,7 +124,7 @@ if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
 		global $post;
 
 		// TODO: Adjust the featured image to be based on an aspect ratio size - maybe.
-		$thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 object-cover sm:float-left sm:mr-10';
+		$thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 sm:float-left sm:mr-10';
 		$current_terms     = wp_get_post_terms( $post->ID, 'srf-resources-category', array( 'fields' => 'slugs' ) );
 
 		if ( in_array( 'movies', $current_terms, true ) ) {

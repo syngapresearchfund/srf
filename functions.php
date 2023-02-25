@@ -90,7 +90,7 @@ function coming_soon_redirect() {
 		exit();
 	}
 }
-add_action( 'template_redirect', __NAMESPACE__ . '\\coming_soon_redirect' );
+// add_action( 'template_redirect', __NAMESPACE__ . '\\coming_soon_redirect' );
 
 /**
  * Custom template tags for this theme.

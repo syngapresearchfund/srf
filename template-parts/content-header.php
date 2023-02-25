@@ -62,9 +62,9 @@ namespace SRF;
 					array(
 						srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 						srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
-						srf_subnav_item( 'Syngap1 Epilepsy', '#' ),
-						srf_subnav_item( 'Life Expectancy', '#' ),
-						srf_subnav_item( 'SYNGAP1 & Autism', '#' ),
+						srf_subnav_item( 'Syngap1 Epilepsy', '/syngap1-epilepsy/' ),
+						srf_subnav_item( 'Life Expectancy', '/whats-the-life-expectancy-of-someone-with-syngap1/' ),
+						srf_subnav_item( 'SYNGAP1 & Autism', '/does-my-syngap1-child-have-autism/' ),
 					)
 				);
 				srf_nav_item_dropdown(
