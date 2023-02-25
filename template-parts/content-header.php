@@ -73,7 +73,6 @@ namespace SRF;
 					array(
 						srf_subnav_heading( 'Our Team' ),
 						srf_subnav_item( 'Meet Our Team', home_url( '/team/' ) ),
-						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
 						srf_subnav_heading( 'About SRF' ),
 						srf_subnav_item( 'Mission & Values', '/mission-values/' ),
 						srf_subnav_item( 'Finances', '/finances/' ),
@@ -89,6 +88,7 @@ namespace SRF;
 					array(
 						srf_subnav_heading( 'Start Here' ),
 						srf_subnav_item( 'Connect With Us', '#' ),
+						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
 						srf_subnav_item( 'Join The Registry (Ciitizen)', '#' ),
 						srf_subnav_item( 'Doctors', '#' ),
 						srf_subnav_item( 'Newsletter', '#' ),
@@ -121,9 +121,8 @@ namespace SRF;
 					'openLast',
 					array(
 						srf_subnav_item( 'News', home_url( '/news/' ) ),
-						srf_subnav_item( 'Webinars', '#' ),
-						srf_subnav_item( 'Meet Our Warriors', '#' ),
-						srf_subnav_item( 'Movies', '#' ),
+						srf_subnav_item( 'Webinars', '/resources/webinars/' ),
+						srf_subnav_item( 'Movies', '/resources/movies/' ),
 						srf_subnav_item( 'Podcast', '#' ),
 						srf_subnav_item( 'Press Releases', '#' ),
 						srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
