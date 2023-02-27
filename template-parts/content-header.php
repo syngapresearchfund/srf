@@ -87,17 +87,16 @@ namespace SRF;
 					'openThird',
 					array(
 						srf_subnav_heading( 'Start Here' ),
-						srf_subnav_item( 'Connect With Us', '#' ),
+						srf_subnav_item( 'Connect With Us', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
 						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
-						srf_subnav_item( 'Join The Registry (Ciitizen)', '#' ),
-						srf_subnav_item( 'Doctors', '#' ),
-						srf_subnav_item( 'Newsletter', '#' ),
-						srf_subnav_item( 'Could it be SYNGAP1?', '#' ),
+						srf_subnav_item( 'Join The Registry (Ciitizen)', '/join-the-ciitizen-registry/' ),
+						srf_subnav_item( 'Doctors', '/doctors/' ),
+						srf_subnav_item( 'Newsletter', '/newsletter/' ),
+						srf_subnav_item( 'Could it be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
 						srf_subnav_heading( 'Support' ),
 						srf_subnav_item( 'Newly Diagnosed', '#' ),
-						srf_subnav_item( 'Insurance', '#' ),
-						srf_subnav_heading( 'Fundraising' ),
-						srf_subnav_item( 'Sprint4Syngap', '#' ),
+						srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
+						srf_subnav_item( 'Fundraising', '/events/fundraisers/' ),
 					)
 				);
 				srf_nav_item_dropdown(
