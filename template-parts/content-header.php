@@ -93,8 +93,11 @@ namespace SRF;
 						srf_subnav_item( 'Doctors', '/doctors/' ),
 						srf_subnav_item( 'Newsletter', '/newsletter/' ),
 						srf_subnav_item( 'Could it be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
+						srf_subnav_item( 'Studies', '/studies/' ),
+						srf_subnav_item( 'Clinical Trials', '/clinical-trials/' ),
+						srf_subnav_item( 'RARE Bears', '/rare-bears/' ),
 						srf_subnav_heading( 'Support' ),
-						srf_subnav_item( 'Newly Diagnosed', '#' ),
+						srf_subnav_item( 'Newly Diagnosed', '/welcome-pack/' ),
 						srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
 						srf_subnav_item( 'Fundraising', '/events/fundraisers/' ),
 					)
