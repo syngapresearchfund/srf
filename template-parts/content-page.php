@@ -10,7 +10,7 @@
 
 namespace SRF;
 
-$srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg';
+$srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg break-all';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'container mx-auto px-6 lg:px-0 py-16' ); ?>>
