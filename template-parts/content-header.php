@@ -103,7 +103,7 @@ namespace SRF;
 					)
 				);
 				srf_nav_item_dropdown(
-					'Professionals',
+					'For Professionals',
 					'openFourth',
 					array(
 						srf_subnav_heading( 'Research' ),
