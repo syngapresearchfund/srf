@@ -114,10 +114,6 @@ namespace SRF;
 						srf_subnav_item( 'How to Apply', '/srf-grant-application/' ),
 						srf_subnav_heading( 'Models' ),
 						srf_subnav_item( 'iPS Cell Models', '/ips-cell-models/' ),
-						srf_subnav_heading( 'Roundtables' ),
-						srf_subnav_item( '2021 Feb en español', 'https://www.youtube.com/playlist?list=PLjpr3a14_ls2oLRUlk5nQH65QfkTcvzbF' ),
-						srf_subnav_item( '2020', '#' ),
-						srf_subnav_item( '2019', '#' ),
 					)
 				);
 				srf_nav_item_dropdown(
@@ -126,9 +122,10 @@ namespace SRF;
 					array(
 						srf_subnav_item( 'News', home_url( '/news/' ) ),
 						srf_subnav_item( 'Webinars', '/resources/webinars/' ),
+						srf_subnav_item( 'Roundtables', '/category/roundtables/' ),
 						srf_subnav_item( 'Movies', '/resources/movies/' ),
 						srf_subnav_item( 'Podcast', '#' ),
-						srf_subnav_item( 'Press Releases', '#' ),
+						srf_subnav_item( 'Press Releases', '/category/press-releases/' ),
 						srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 					)
 				);

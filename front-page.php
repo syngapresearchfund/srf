@@ -15,7 +15,7 @@ get_header();
 	<!-- ========================= -->
 	<!-- hero section -->
 	<!-- ========================= -->
-	<section class="bg-gradient-to-br from-srf-blue-500 via-srf-purple-500 to-srf-green-500">
+	<section class="bg-gradient-to-br from-srf-purple-500 via-srf-blue-500 to-srf-green-500">
 		<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white">
 			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 				Collaboration. Transparency. Urgency.

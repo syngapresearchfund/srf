@@ -166,7 +166,7 @@ if ( ! function_exists( 'srf_post_meta' ) ) :
 
 			$tags_list = get_the_tag_list( '', ', ' );
 			if ( $tags_list ) {
-				echo '<div class="post-tags flex justify-items-center justify-center sm:justify-start items-center">';
+				echo '<div class="post-tags mt-2 flex justify-items-center justify-center items-center">';
 				echo '<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
 				<path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
 				</svg>';
