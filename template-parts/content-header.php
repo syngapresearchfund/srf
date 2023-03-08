@@ -35,14 +35,13 @@ namespace SRF;
 			<nav class="hidden xl:block font-sans">
 				<ul class="flex space-x-6">
 					<?php
-					srf_nav_item( 'About', home_url( '/about/' ) );
-					srf_nav_item( 'Blog', home_url( '/news/' ) );
+					srf_nav_item( 'News', home_url( '/news/' ) );
 					srf_nav_item( 'Shop', home_url( '/shop/' ) );
 					srf_nav_item( 'Contact', home_url( '/contact/' ) );
 					?>
 				</ul>
 			</nav>
-			<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-blue-500 hover:bg-srf-blue-700">
+			<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
 				Donate
 			</a>
 		</div>
@@ -120,13 +119,11 @@ namespace SRF;
 					'Resources',
 					'openLast',
 					array(
-						srf_subnav_item( 'News', home_url( '/news/' ) ),
 						srf_subnav_item( 'Webinars', '/resources/webinars/' ),
 						srf_subnav_item( 'Roundtables', '/category/roundtables/' ),
 						srf_subnav_item( 'Movies', '/resources/movies/' ),
 						srf_subnav_item( 'Podcast', '#' ),
 						srf_subnav_item( 'Press Releases', '/category/press-releases/' ),
-						srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 					)
 				);
 				?>
