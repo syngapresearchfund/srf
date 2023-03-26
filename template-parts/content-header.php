@@ -34,29 +34,9 @@ namespace SRF;
 			<!-- Desktop menu, show/hide dropdown items on item state. -->
 			<nav class="hidden xl:block font-sans">
 				<ul class="flex space-x-6">
-					<?php
-					srf_nav_item( 'News', home_url( '/news/' ) );
-					srf_nav_item( 'Shop', home_url( '/shop/' ) );
-					srf_nav_item( 'Contact', home_url( '/contact/' ) );
-					?>
-				</ul>
-			</nav>
-			<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
-				Donate
-			</a>
-		</div>
-	</div>
-</div>
-
-<!-- Main secondary menu, show/hide based on mobile menu state. -->
-<div class="hidden xl:block relative bg-gray-200 px-6 lg:px-0">
-	<div class="container mx-auto py-2 flex items-center lg:justify-center">
-		<!-- Desktop menu, show/hide dropdown items on item state. -->
-		<nav class="hidden xl:block font-sans">
-			<ul class="flex space-x-6">
 				<?php
 				srf_nav_item_dropdown(
-					'What is SYNGAP1?',
+					'About SYNGAP1?',
 					'openFirst',
 					array(
 						srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
@@ -67,12 +47,16 @@ namespace SRF;
 					)
 				);
 				srf_nav_item_dropdown(
-					'About Us',
+					'About SRF',
 					'openSecond',
 					array(
 						srf_subnav_heading( 'Our Team' ),
-						srf_subnav_item( 'Meet Our Team', home_url( '/team/' ) ),
-						srf_subnav_heading( 'About SRF' ),
+						srf_subnav_item( 'Board Members', home_url( '/team/board-members' ) ),
+						srf_subnav_item( 'Leadership Team', home_url( '/team/leadership-team' ) ),
+						srf_subnav_item( 'Volunteers', home_url( '/team/volunteers' ) ),
+						srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk' ) ),
+						srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu' ) ),
+						srf_subnav_heading( 'About Us' ),
 						srf_subnav_item( 'Mission & Values', '/mission-values/' ),
 						srf_subnav_item( 'Finances', '/finances/' ),
 						srf_subnav_item( 'Documents', '/documents/' ),
@@ -82,28 +66,8 @@ namespace SRF;
 					)
 				);
 				srf_nav_item_dropdown(
-					'For Families',
+					'Professionals',
 					'openThird',
-					array(
-						srf_subnav_heading( 'Start Here' ),
-						srf_subnav_item( 'Connect With Us', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
-						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
-						srf_subnav_item( 'Join The Registry (Ciitizen)', '/join-the-ciitizen-registry/' ),
-						srf_subnav_item( 'Doctors', '/doctors/' ),
-						srf_subnav_item( 'Newsletter', '/newsletter/' ),
-						srf_subnav_item( 'Could it be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
-						srf_subnav_item( 'Studies', '/studies/' ),
-						srf_subnav_item( 'Clinical Trials', '/clinical-trials/' ),
-						srf_subnav_item( 'RARE Bears', '/rare-bears/' ),
-						srf_subnav_heading( 'Support' ),
-						srf_subnav_item( 'Newly Diagnosed', '/welcome-pack/' ),
-						srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
-						srf_subnav_item( 'Fundraising', '/events/fundraisers/' ),
-					)
-				);
-				srf_nav_item_dropdown(
-					'For Professionals',
-					'openFourth',
 					array(
 						srf_subnav_heading( 'Research' ),
 						srf_subnav_item( 'Roadmap', '/roadmap/' ),
@@ -116,19 +80,47 @@ namespace SRF;
 					)
 				);
 				srf_nav_item_dropdown(
-					'Resources',
+					'Families',
+					'openFourth',
+					array(
+						srf_subnav_heading( 'Connections' ),
+						srf_subnav_item( 'Register with SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
+						srf_subnav_item( 'Join The Registry (Ciitizen)', '/join-the-ciitizen-registry/' ),
+						srf_subnav_item( 'Doctors', '/doctors/' ),
+						srf_subnav_item( 'Could it be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
+						srf_subnav_item( 'Studies', '/studies/' ),
+						srf_subnav_item( 'Clinical Trials', '/clinical-trials/' ),
+						srf_subnav_item( 'RARE Bears', '/rare-bears/' ),
+						srf_subnav_heading( 'Support' ),
+						srf_subnav_item( 'Newly Diagnosed', '/welcome-pack/' ),
+						srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
+						srf_subnav_item( 'Fundraising', '/events/fundraisers/' ),
+					)
+				);
+				srf_nav_item_dropdown(
+					'News & Events',
 					'openLast',
 					array(
-						srf_subnav_item( 'Webinars', '/resources/webinars/' ),
-						srf_subnav_item( 'Roundtables', '/category/roundtables/' ),
+						srf_subnav_heading( 'Our Warriors' ),
+						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
 						srf_subnav_item( 'Movies', '/resources/movies/' ),
+						srf_subnav_heading( 'Learn' ),
+						srf_subnav_item( 'Webinars', '/resources/webinars/' ),
+						srf_subnav_item( 'SRF in the News', '/category/press-releases/' ),
+						srf_subnav_item( 'Newsletter', '/newsletter/' ),
+						srf_subnav_heading( 'Events' ),
+						srf_subnav_item( 'Roundtables', '/category/roundtables/' ),
+						srf_subnav_heading( 'Podcasts' ),
 						srf_subnav_item( 'Podcast', '#' ),
-						srf_subnav_item( 'Press Releases', '/category/press-releases/' ),
 					)
 				);
 				?>
-			</ul>
-		</nav>
+				</ul>
+			</nav>
+			<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
+				Donate
+			</a>
+		</div>
 	</div>
 </div>
 
