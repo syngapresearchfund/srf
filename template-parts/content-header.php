@@ -101,11 +101,12 @@ namespace SRF;
 					'News & Events',
 					'openLast',
 					array(
-						srf_subnav_heading( 'Our Warriors' ),
+						srf_subnav_heading( 'Warrior Stories' ),
 						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
 						srf_subnav_item( 'Movies', '/resources/movies/' ),
 						srf_subnav_heading( 'Learn' ),
 						srf_subnav_item( 'Webinars', '/resources/webinars/' ),
+						srf_subnav_item( 'Blog', '/blog/' ),
 						srf_subnav_item( 'SRF in the News', '/category/press-releases/' ),
 						srf_subnav_item( 'Newsletter', '/newsletter/' ),
 						srf_subnav_heading( 'Events' ),
