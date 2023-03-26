@@ -101,7 +101,7 @@ namespace SRF;
 					'News & Events',
 					'openLast',
 					array(
-						srf_subnav_heading( 'Warrior Stories' ),
+						srf_subnav_heading( 'Stories' ),
 						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
 						srf_subnav_item( 'Movies', '/resources/movies/' ),
 						srf_subnav_heading( 'Learn' ),
