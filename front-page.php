@@ -51,19 +51,26 @@ get_header();
 
 			if ( $events_query->have_posts() ) :
 				?>
-			<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left">
+			<!-- <div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left"> -->
+			<div class="xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 				<?php
+				// set the item count to keep track of the current item.
+				$item_count = 0;
+
 				/* Start the Loop */
 				while ( $events_query->have_posts() ) :
 					$events_query->the_post();
+					$args = array( 'current_item' => $item_count );
 
 					/*
 					* Include the Post-Type-specific template for the content.
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', 'events' );
+					get_template_part( 'template-parts/content', 'events', $args );
 
+					// increment the item count.
+					$item_count++;
 				endwhile;
 				?>
 			</div>
