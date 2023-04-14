@@ -20,8 +20,8 @@ get_header();
 			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 				Collaboration. Transparency. Urgency.
 			</h1>
-			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SynGAP & to supporting each other.</p>
-			<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="mb-3 sm:mb-0 sm:mr-3 font-sans inline-block py-3 px-12 rounded bg-white hover:bg-gray-200 text-srf-blue-500 hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Join our registry</a>
+			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
+			<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="mb-5 sm:mb-0 sm:mr-3 font-sans inline-block py-3 px-12 rounded bg-white hover:bg-gray-200 text-srf-blue-500 hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Join our registry</a>
 			<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Get involved</a>
 		</div>
 	</section>	
@@ -37,8 +37,7 @@ get_header();
 			$args         = array(
 				'posts_per_page' => 8,
 				'post_type'      => 'srf-events',
-				'orderby'        => 'menu_order',
-				'order'          => 'ASC',
+				'order'          => 'DESC',
 				'tax_query'      => array(
 					array(
 						'taxonomy' => 'srf-events-category',
@@ -144,12 +143,12 @@ get_header();
 	<!-- Warriors section -->
 	<!-- ========================= -->
 	<section class="bg-gray-100">
-		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+		<div class="px-6 lg:px-0 py-24 text-center">
 			<h2 class="mb-10 text-3xl lg:text-4xl text-gray-700 font-extrabold">Meet Our Warriors</h2>
 
 			<?php
 			$args       = array(
-				'posts_per_page' => 8,
+				'posts_per_page' => 10,
 				'post_type'      => 'srf-warriors',
 			);
 			$news_query = new WP_Query( $args );
@@ -157,7 +156,7 @@ get_header();
 
 			if ( $news_query->have_posts() ) :
 				?>
-			<div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-2 mb-10">
+			<div class="max-w-screen-2xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-1 mb-10">
 				<?php
 				/* Start the Loop */
 				while ( $news_query->have_posts() ) :
