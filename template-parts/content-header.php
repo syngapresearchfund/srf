@@ -36,14 +36,14 @@ namespace SRF;
 				<ul class="flex space-x-6">
 				<?php
 				srf_nav_item_dropdown(
-					'About SYNGAP1?',
+					'About SYNGAP1',
 					'openFirst',
 					array(
 						srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 						srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
-						srf_subnav_item( 'Syngap1 Epilepsy', '/syngap1-epilepsy/' ),
-						srf_subnav_item( 'Life Expectancy', '/whats-the-life-expectancy-of-someone-with-syngap1/' ),
-						srf_subnav_item( 'SYNGAP1 & Autism', '/does-my-syngap1-child-have-autism/' ),
+						srf_subnav_item( 'Syngap1 Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
+						srf_subnav_item( 'Life Expectancy', home_url( '/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
+						srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/does-my-syngap1-child-have-autism/' ) ),
 					)
 				);
 				srf_nav_item_dropdown(
@@ -57,12 +57,12 @@ namespace SRF;
 						srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk' ) ),
 						srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu' ) ),
 						srf_subnav_heading( 'About Us' ),
-						srf_subnav_item( 'Mission & Values', '/mission-values/' ),
-						srf_subnav_item( 'Finances', '/finances/' ),
-						srf_subnav_item( 'Documents', '/documents/' ),
-						srf_subnav_item( 'Partners', '/partners/' ),
-						srf_subnav_item( 'Sponsors', '/sponsors/' ),
-						srf_subnav_item( 'Style Guide', '/style-guide/' ),
+						srf_subnav_item( 'Mission & Values', home_url( '/mission-values/' ) ),
+						srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
+						srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
+						srf_subnav_item( 'Partners', home_url( '/partners/' ) ),
+						srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
+						srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
 					)
 				);
 				srf_nav_item_dropdown(
@@ -70,13 +70,13 @@ namespace SRF;
 					'openThird',
 					array(
 						srf_subnav_heading( 'Research' ),
-						srf_subnav_item( 'Roadmap', '/roadmap/' ),
-						srf_subnav_item( 'Request NHS Data', '/request-nhs-data/' ),
+						srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
+						srf_subnav_item( 'Request NHS Data', home_url( '/request-nhs-data/' ) ),
 						srf_subnav_heading( 'Grants' ),
-						srf_subnav_item( 'Current Grants', '/resources/grants/' ),
-						srf_subnav_item( 'How to Apply', '/srf-grant-application/' ),
+						srf_subnav_item( 'Current Grants', home_url( '/resources/grants/' ) ),
+						srf_subnav_item( 'How to Apply', home_url( '/srf-grant-application/' ) ),
 						srf_subnav_heading( 'Models' ),
-						srf_subnav_item( 'iPS Cell Models', '/ips-cell-models/' ),
+						srf_subnav_item( 'iPS Cell Models', home_url( '/ips-cell-models/' ) ),
 					)
 				);
 				srf_nav_item_dropdown(
@@ -85,16 +85,16 @@ namespace SRF;
 					array(
 						srf_subnav_heading( 'Connections' ),
 						srf_subnav_item( 'Register with SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
-						srf_subnav_item( 'Join The Registry (Ciitizen)', '/join-the-ciitizen-registry/' ),
-						srf_subnav_item( 'Doctors', '/doctors/' ),
+						srf_subnav_item( 'Join The Registry (Ciitizen)', home_url( '/join-the-ciitizen-registry/' ) ),
+						srf_subnav_item( 'Doctors', home_url( '/doctors/' ) ),
 						srf_subnav_item( 'Could it be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
-						srf_subnav_item( 'Studies', '/studies/' ),
-						srf_subnav_item( 'Clinical Trials', '/clinical-trials/' ),
-						srf_subnav_item( 'RARE Bears', '/rare-bears/' ),
+						srf_subnav_item( 'Studies', home_url( '/studies/' ) ),
+						srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
+						srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
 						srf_subnav_heading( 'Support' ),
-						srf_subnav_item( 'Newly Diagnosed', '/welcome-pack/' ),
+						srf_subnav_item( 'Newly Diagnosed', home_url( '/welcome-pack/' ) ),
 						srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
-						srf_subnav_item( 'Fundraising', '/events/fundraisers/' ),
+						srf_subnav_item( 'Fundraising', home_url( '/events/fundraisers/' ) ),
 					)
 				);
 				srf_nav_item_dropdown(
@@ -103,14 +103,14 @@ namespace SRF;
 					array(
 						srf_subnav_heading( 'Stories' ),
 						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
-						srf_subnav_item( 'Movies', '/resources/movies/' ),
+						srf_subnav_item( 'Movies', home_url( '/resources/movies/' ) ),
 						srf_subnav_heading( 'Learn' ),
-						srf_subnav_item( 'Webinars', '/resources/webinars/' ),
-						srf_subnav_item( 'Blog', '/blog/' ),
-						srf_subnav_item( 'SRF in the News', '/category/press-releases/' ),
-						srf_subnav_item( 'Newsletter', '/newsletter/' ),
+						srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
+						srf_subnav_item( 'Blog', home_url( '/blog/' ) ),
+						srf_subnav_item( 'SRF in the News', home_url( '/category/press-releases/' ) ),
+						srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
 						srf_subnav_heading( 'Events' ),
-						srf_subnav_item( 'Roundtables', '/category/roundtables/' ),
+						srf_subnav_item( 'Roundtables', home_url( '/category/roundtables/' ) ),
 						srf_subnav_heading( 'Podcasts' ),
 						srf_subnav_item( 'Podcast', '#' ),
 					)
@@ -148,74 +148,83 @@ namespace SRF;
 					<ul>
 						<?php
 						echo srf_mobile_nav_item(
-							'What is SYNGAP1?',
+							'About SYNGAP1',
 							'1',
 							array(
-								srf_subnav_item( 'What is SYNGAP1?', '#', true ),
-								srf_subnav_item( 'SYNGAP1 Treatment', '#', true ),
-								srf_subnav_item( 'Syngap1 Epilepsy', '#', true ),
-								srf_subnav_item( 'Life Expectancy', '#', true ),
-								srf_subnav_item( 'SYNGAP1 & Autism', '#', true ),
+								srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
+								srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
+								srf_subnav_item( 'Syngap1 Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
+								srf_subnav_item( 'Life Expectancy', home_url( '/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
+								srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/does-my-syngap1-child-have-autism/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						echo srf_mobile_nav_item(
-							'About Us',
+							'About SRF',
 							'2',
 							array(
 								srf_subnav_heading( 'Our Team' ),
-								srf_subnav_item( 'Meet Our Team', home_url( '/team/' ), true ),
-								srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ), true ),
-								srf_subnav_heading( 'About SRF' ),
-								srf_subnav_item( 'Mission & Values', '#', true ),
-								srf_subnav_item( 'Finances', '#', true ),
-								srf_subnav_item( 'Documents', '#', true ),
-								srf_subnav_item( 'Partners', '#', true ),
-							)
-						);  // phpcs:ignore -- XSS OK
-						echo srf_mobile_nav_item(
-							'Patients & Caregivers',
-							'3',
-							array(
-								srf_subnav_heading( 'Start Here' ),
-								srf_subnav_item( 'Connect With Us', '#', true ),
-								srf_subnav_item( 'Join The Registry (Ciitizen)', '#', true ),
-								srf_subnav_item( 'Doctors', '#', true ),
-								srf_subnav_item( 'Newsletter', '#', true ),
-								srf_subnav_item( 'Could it be SYNGAP1?', '#', true ),
-								srf_subnav_heading( 'Support' ),
-								srf_subnav_item( 'Newly Diagnosed', '#', true ),
-								srf_subnav_item( 'Insurance', '#', true ),
-								srf_subnav_heading( 'Fundraising' ),
-								srf_subnav_item( 'Sprint4Syngap', '#', true ),
+								srf_subnav_item( 'Board Members', home_url( '/team/board-members' ) ),
+								srf_subnav_item( 'Leadership Team', home_url( '/team/leadership-team' ) ),
+								srf_subnav_item( 'Volunteers', home_url( '/team/volunteers' ) ),
+								srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk' ) ),
+								srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu' ) ),
+								srf_subnav_heading( 'About Us' ),
+								srf_subnav_item( 'Mission & Values', home_url( '/mission-values/' ) ),
+								srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
+								srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
+								srf_subnav_item( 'Partners', home_url( '/partners/' ) ),
+								srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
+								srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						echo srf_mobile_nav_item(
 							'Professionals',
-							'4',
+							'3',
 							array(
 								srf_subnav_heading( 'Research' ),
-								srf_subnav_item( 'Roadmap', '#', true ),
-								srf_subnav_item( 'Request NHS Data', '#', true ),
+								srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
+								srf_subnav_item( 'Request NHS Data', home_url( '/request-nhs-data/' ) ),
 								srf_subnav_heading( 'Grants' ),
-								srf_subnav_item( 'Current Grants', '#', true ),
-								srf_subnav_item( 'How to Apply', '#', true ),
-								srf_subnav_heading( 'Roundtables' ),
-								srf_subnav_item( '2021 Feb en español', '#', true ),
-								srf_subnav_item( '2020', '#', true ),
-								srf_subnav_item( '2019', '#', true ),
+								srf_subnav_item( 'Current Grants', home_url( '/resources/grants/' ) ),
+								srf_subnav_item( 'How to Apply', home_url( '/srf-grant-application/' ) ),
+								srf_subnav_heading( 'Models' ),
+								srf_subnav_item( 'iPS Cell Models', home_url( '/ips-cell-models/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						echo srf_mobile_nav_item(
-							'Resources',
+							'Families',
+							'4',
+							array(
+								srf_subnav_heading( 'Connections' ),
+								srf_subnav_item( 'Register with SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
+								srf_subnav_item( 'Join The Registry (Ciitizen)', home_url( '/join-the-ciitizen-registry/' ) ),
+								srf_subnav_item( 'Doctors', home_url( '/doctors/' ) ),
+								srf_subnav_item( 'Could it be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
+								srf_subnav_item( 'Studies', home_url( '/studies/' ) ),
+								srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
+								srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
+								srf_subnav_heading( 'Support' ),
+								srf_subnav_item( 'Newly Diagnosed', home_url( '/welcome-pack/' ) ),
+								srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
+								srf_subnav_item( 'Fundraising', home_url( '/events/fundraisers/' ) ),
+							)
+						);  // phpcs:ignore -- XSS OK
+						echo srf_mobile_nav_item(
+							'News & Events',
 							'5',
 							array(
-								srf_subnav_item( 'News', home_url( '/news/' ), true ),
-								srf_subnav_item( 'Webinars', '#', true ),
-								srf_subnav_item( 'Meet Our Warriors', '#', true ),
-								srf_subnav_item( 'Movies', '#', true ),
-								srf_subnav_item( 'Podcast', '#', true ),
-								srf_subnav_item( 'Press Releases', '#', true ),
-								srf_subnav_item( 'Shop', '#', true ),
+								srf_subnav_heading( 'Stories' ),
+								srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
+								srf_subnav_item( 'Movies', home_url( '/resources/movies/' ) ),
+								srf_subnav_heading( 'Learn' ),
+								srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
+								srf_subnav_item( 'Blog', home_url( '/blog/' ) ),
+								srf_subnav_item( 'SRF in the News', home_url( '/category/press-releases/' ) ),
+								srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
+								srf_subnav_heading( 'Events' ),
+								srf_subnav_item( 'Roundtables', home_url( '/category/roundtables/' ) ),
+								srf_subnav_heading( 'Podcasts' ),
+								srf_subnav_item( 'Podcast', '#' ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						?>
@@ -224,7 +233,7 @@ namespace SRF;
 			</div>
 		</div>
 		<div class="py-6 px-5 space-y-6">
-			<a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-srf-purple-500 hover:bg-srf-purple-600">
+			<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-srf-purple-500 hover:bg-srf-purple-600">
 				Donate
 			</a>
 		</div>
