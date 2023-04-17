@@ -189,4 +189,38 @@ get_header();
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
+	<!-- ========================= -->
+	<!-- Stats section -->
+	<!-- ========================= -->
+	<section class="bg-white">
+		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+			<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
+				<div>
+					<h2 class="text-5xl text-srf-blue-500 font-bold">$3.7M</h2>
+					<h3 class="text-lg text-gray-500 font-normal">Funds committed</h3>
+				</div>
+				<div>
+					<h2 class="text-5xl text-srf-blue-500 font-bold">1164</h2>
+					<h3 class="text-lg text-gray-500 font-normal">Patients counted</h3>
+				</div>
+				<div>
+					<h2 class="text-5xl text-srf-blue-500 font-bold">76</h2>
+					<h3 class="text-lg text-gray-500 font-normal">Families volunteering</h3>
+				</div>
+				<div>
+					<h2 class="text-5xl text-srf-blue-500 font-bold">207</h2>
+					<h3 class="text-lg text-gray-500 font-normal">US Families on our Ciitizen NHS</h3>
+				</div>
+				<div>
+					<h2 class="text-5xl text-srf-blue-500 font-bold">5</h2>
+					<h3 class="text-lg text-gray-500 font-normal">Companies & institutes working on a genetic therapy for SYNGAP1</h3>
+				</div>
+				<div>
+					<h2 class="text-5xl text-srf-blue-500 font-bold">178</h2>
+					<h3 class="text-lg text-gray-500 font-normal">Patients profiled</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
 <?php get_footer(); ?>
