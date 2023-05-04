@@ -135,7 +135,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( home_url( '/news/' ) ); ?>" class="font-sans inline-flex border border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+			<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="font-sans inline-flex border border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 
