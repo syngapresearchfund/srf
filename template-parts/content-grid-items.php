@@ -19,13 +19,13 @@ $srf_bg_colors = array(
 $item_taxonomy = get_queried_object();
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'rounded bg-white' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white' ); ?>>
 	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<?php
 		if ( has_post_thumbnail() ) {
-			srf_post_thumbnail( 'rounded h-64 w-full object-cover object-center' );
+			srf_post_thumbnail( 'h-64 w-full object-cover object-center' );
 		} else {
-			echo '<div class="rounded h-64 w-full ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) . '"></div>';
+			echo '<div class="h-64 w-full ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) . '"></div>';
 		}
 		?>
 
