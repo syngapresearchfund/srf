@@ -21,7 +21,7 @@ namespace SRF;
 		<?php srf_post_meta(); ?>
 	</header>
 
-	<div class="entry-content mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg px-6 lg:px-0 break-all">
+	<div class="entry-content mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg px-6 lg:px-0">
 		<?php
 		srf_single_featured_image();
 		the_content(
