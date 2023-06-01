@@ -52,13 +52,12 @@ namespace SRF;
 				<!-- links -->
 				<div class="flex space-x-5">
 					<?php
-					esc_html( srf_social_icon( 'twitter', '#' ) );
-					esc_html( srf_social_icon( 'facebook', '#' ) );
-					esc_html( srf_social_icon( 'instagram', '#' ) );
-					esc_html( srf_social_icon( 'linkedin', '#' ) );
-					esc_html( srf_social_icon( 'youtube', '#' ) );
-					esc_html( srf_social_icon( 'tiktok', '#' ) );
-					esc_html( srf_social_icon( 'amazon', '#' ) );
+					esc_html( srf_social_icon( 'twitter', 'https://twitter.com/intent/user?screen_name=curesyngap1' ) );
+					esc_html( srf_social_icon( 'facebook', 'https://facebook.com/curesyngap1' ) );
+					esc_html( srf_social_icon( 'instagram', 'https://instagram.com/curesyngap1' ) );
+					esc_html( srf_social_icon( 'linkedin', 'https://www.linkedin.com/company/curesyngap1' ) );
+					esc_html( srf_social_icon( 'youtube', 'https://www.youtube.com/channel/UCtnPWPpqouMA_1UGOyu4W6A?sub_confirmation=1' ) );
+					esc_html( srf_social_icon( 'tiktok', 'https://www.tiktok.com/@curesyngap1' ) );
 					?>
 				</div>
 			</div>
