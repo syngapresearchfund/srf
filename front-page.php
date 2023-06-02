@@ -21,10 +21,35 @@ get_header();
 				Collaboration. Transparency. Urgency.
 			</h1>
 			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
-			<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="mb-5 sm:mb-0 sm:mr-3 font-sans inline-block py-3 px-12 rounded bg-white hover:bg-gray-200 text-srf-blue-500 hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Join our registry</a>
-			<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Get involved</a>
+			<a href="https://www.syngapresearchfund.org/home/what-is-syngap1" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Learn more about SYNGAP1</a>
 		</div>
 	</section>	
+
+	<!-- ========================= -->
+	<!-- Welcome section -->
+	<!-- ========================= -->
+	<section class="bg-white">
+		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Newly Diagnosed?</h2>
+			<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
+				<div class="flex flex-col items-center space-y-6">
+					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Join our registry</h3>
+					<p class="flex-auto">Provide an "elevator pitch" about what our registry is and why one would want to join.</p>
+					<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded bg-srf-purple-500 hover:bg-srf-purple-700 text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
+				</div>
+				<div class="flex flex-col items-center space-y-6">
+					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Get involved</h3>
+					<p class="flex-auto">Provide an "elevator pitch" about getting involved.</p>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform" class="font-sans inline-block py-3 px-12 rounded bg-srf-blue-500 hover:bg-srf-blue-700 text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
+				</div>
+				<div class="flex flex-col items-center space-y-6">
+					<h3 class="text-gray-500 text-2xl font-bold text-center underline">New families</h3>
+					<p class="flex-auto">The seems potentially redundant but it's unclear where this CTA should link at the moment. Perhaps when that is understood, it can be reworked for a more intuitive experience.</p>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform" class="font-sans inline-block py-3 px-12 rounded bg-srf-green-500 hover:bg-srf-green-700 text-white font-bold text-lg tracking-wide transition duration-500">Learn more</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- ========================= -->
 	<!-- Events section -->

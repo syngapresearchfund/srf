@@ -45,8 +45,8 @@ namespace SRF;
 			</div>
 		</div>
 		<!-- bottom footer -->
-		<div class="pt-4 pb-10 bg-gray-900 text-gray-100 text-sm text-center md:text-left space-y-4 md:space-y-0">
-			<div class="container mx-auto px-6 lg:px-0 md:flex justify-between">
+		<div class="pt-4 pb-12 bg-gray-900 text-gray-100 text-sm text-center md:text-left space-y-4 md:space-y-0">
+			<div class="container mx-auto px-6 lg:px-0 space-y-4 md:space-y-0 flex flex-wrap justify-center md:justify-between">
 				<!-- copyright -->
 				<div>Copyright &copy; Syngap Research Fund <?php echo esc_html( get_the_date( 'Y' ) ); ?></div>
 				<!-- links -->
@@ -63,6 +63,11 @@ namespace SRF;
 				</div>
 			</div>
 		</div>
+
+		<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="flex fixed bottom-0 right-4 items-center justify-center px-4 py-1 2xl:py-2 whitespace-nowrap rounded-t-md shadow-sm text-base font-semibold font-sans text-white bg-srf-green-500 hover:bg-srf-green-700">
+			Donate<span class="hidden lg:inline">&nbsp;to SRF</span>
+		</a>
+
 	</footer>
 </div><!-- #page -->
 

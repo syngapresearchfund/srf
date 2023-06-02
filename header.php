@@ -32,10 +32,6 @@ namespace SRF;
 <div id="page" class="site relative">
 	<a class="skip-link screen-reader-text hidden" href="#content"><?php esc_html_e( 'Skip to content' ); ?></a>
 
-	<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex fixed bottom-0 right-4 items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-t-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
-		Donate
-	</a>
-
 	<header id="masthead" class="site-header w-full z-10 text-gray-600 border-b border-gray-300"  x-data="{ open: false, openFirst: false, openSecond: false, openThird: false, openFourth: false, openLast: false }">
 		<?php get_template_part( 'template-parts/content', 'header' ); ?>
 	</header>
