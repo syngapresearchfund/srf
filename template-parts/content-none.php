@@ -26,7 +26,7 @@ namespace SRF;
 	if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
 		printf(
-			'<p">' . wp_kses(
+			'<p class="mb-4 text-lg text-center">' . wp_kses(
 				/* translators: 1: link to WP admin new post page. */
 				__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.' ),
 				array(
@@ -41,14 +41,14 @@ namespace SRF;
 	elseif ( is_search() ) :
 		?>
 
-		<p"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords:' ); ?></p>
+		<p class="mb-4 text-lg text-center"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords:' ); ?></p>
 		<?php
 		get_search_form();
 
 	else :
 		?>
 
-		<p"><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching will help:' ); ?></p>
+		<p class="mb-4 text-lg text-center"><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching will help:' ); ?></p>
 		<?php
 		get_search_form();
 
