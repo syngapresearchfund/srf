@@ -21,7 +21,7 @@ get_header();
 				Collaboration. Transparency. Urgency.
 			</h1>
 			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
-			<a href="https://www.syngapresearchfund.org/home/what-is-syngap1" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-purple-500 border border-white font-bold text-lg tracking-wide transition duration-500">Learn more about SYNGAP1</a>
+			<a href="https://www.syngapresearchfund.org/home/what-is-syngap1" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-purple-500 border-2 border-white font-bold text-lg tracking-wide transition duration-500">Learn more about SYNGAP1</a>
 		</div>
 	</section>	
 
@@ -35,17 +35,17 @@ get_header();
 				<div class="flex flex-col items-center space-y-6">
 					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Join our registry</h3>
 					<p class="flex-auto">Provide an "elevator pitch" about what our registry is and why one would want to join.</p>
-					<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded bg-srf-purple-500 hover:bg-srf-purple-700 text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
+					<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
 				</div>
 				<div class="flex flex-col items-center space-y-6">
 					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Get involved</h3>
 					<p class="flex-auto">Provide an "elevator pitch" about getting involved.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform" class="font-sans inline-block py-3 px-12 rounded bg-srf-blue-500 hover:bg-srf-blue-700 text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
+					<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
 				</div>
 				<div class="flex flex-col items-center space-y-6">
 					<h3 class="text-gray-500 text-2xl font-bold text-center underline">New families</h3>
 					<p class="flex-auto">The seems potentially redundant but it's unclear where this CTA should link at the moment. Perhaps when that is understood, it can be reworked for a more intuitive experience.</p>
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform" class="font-sans inline-block py-3 px-12 rounded bg-srf-green-500 hover:bg-srf-green-700 text-white font-bold text-lg tracking-wide transition duration-500">Learn more</a>
+					<a href="<?php echo esc_url( home_url( '/welcome-pack/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn more</a>
 				</div>
 			</div>
 		</div>
@@ -160,7 +160,7 @@ get_header();
 			?>
 
 			<!-- big button / cta -->
-			<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="font-sans inline-flex border border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+			<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="font-sans inline-flex border-2 border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View all News articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
 		</div>
 	</section>		<!-- header + hero bg wrapper -->
 

@@ -92,7 +92,7 @@ namespace SRF;
 						srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
 						srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
 						srf_subnav_heading( 'Support' ),
-						srf_subnav_item( 'Newly Diagnosed', home_url( '/welcome-pack/' ) ),
+						srf_subnav_item( 'Welcome Pack', home_url( '/welcome-pack/' ) ),
 						srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
 						srf_subnav_item( 'Fundraising', home_url( '/events/fundraisers/' ) ),
 					)
@@ -154,7 +154,7 @@ namespace SRF;
 							array(
 								srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 								srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
-								srf_subnav_item( 'Syngap1 Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
+								srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
 								srf_subnav_item( 'Life Expectancy', home_url( '/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
 								srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/does-my-syngap1-child-have-autism/' ) ),
 							)
