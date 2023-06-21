@@ -121,7 +121,7 @@ namespace SRF;
 			<!-- <a href="<?php //echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
 				Donate
 			</a> -->
-			<?php get_search_form(); ?>
+			<div class="hidden xl:block"><?php get_search_form(); ?></div>
 		</div>
 	</div>
 </div>
@@ -233,6 +233,7 @@ namespace SRF;
 				</nav>
 			</div>
 		</div>
+		<div class="py-6 px-5 space-y-6"><?php get_search_form(); ?></div>
 		<div class="py-6 px-5 space-y-6">
 			<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-srf-purple-500 hover:bg-srf-purple-600">
 				Donate
