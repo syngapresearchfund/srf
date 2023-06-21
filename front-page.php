@@ -34,17 +34,17 @@ get_header();
 			<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
 				<div class="flex flex-col items-center space-y-6">
 					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Join our registry</h3>
-					<p class="flex-auto">Provide an "elevator pitch" about what our registry is and why one would want to join.</p>
+					<p class="flex-auto">Register with Ciitizen to collect as much de-identified group data for researchers to use. We need as many to register to improve the chances for successful clinical trials.</p>
 					<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
 				</div>
 				<div class="flex flex-col items-center space-y-6">
 					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Get involved</h3>
-					<p class="flex-auto">Provide an "elevator pitch" about getting involved.</p>
+					<p class="flex-auto">The best way to help someone with SYNGAP1 is to help spread awareness and stay informed. Start by connecting with SRF, holding a fundraiser, and becoming a volunteer.</p>
 					<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
 				</div>
 				<div class="flex flex-col items-center space-y-6">
 					<h3 class="text-gray-500 text-2xl font-bold text-center underline">New families</h3>
-					<p class="flex-auto">The seems potentially redundant but it's unclear where this CTA should link at the moment. Perhaps when that is understood, it can be reworked for a more intuitive experience.</p>
+					<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a 'Welcome Pack' with basic information, resources, as well as important tools for you and your doctor.</p>
 					<a href="<?php echo esc_url( home_url( '/welcome-pack/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn more</a>
 				</div>
 			</div>
