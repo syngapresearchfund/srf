@@ -95,6 +95,7 @@ namespace SRF;
 						srf_subnav_item( 'Welcome Pack', home_url( '/welcome-pack/' ) ),
 						srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
 						srf_subnav_item( 'Fundraising', home_url( '/events/fundraisers/' ) ),
+						srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 					)
 				);
 				srf_nav_item_dropdown(
@@ -208,6 +209,7 @@ namespace SRF;
 								srf_subnav_item( 'Newly Diagnosed', home_url( '/welcome-pack/' ) ),
 								srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
 								srf_subnav_item( 'Fundraising', home_url( '/events/fundraisers/' ) ),
+								srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						echo srf_mobile_nav_item(
