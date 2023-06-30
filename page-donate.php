@@ -92,8 +92,8 @@ get_header();
 						</div>
 						<div class="p-4 border rounded-md">
 							<h4 class="mb-3 text-gray-900 font-semibold">Donor Advised Funds (DAFs)</h4>
-							<script type = "text/javascript">_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
-							<script type = "text/javascript" src = "https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
+							<script type="text/javascript">_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
+							<script type="text/javascript" src="https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
 						</div>
 					</div>
 				</div>
