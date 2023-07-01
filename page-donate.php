@@ -72,7 +72,10 @@ get_header();
 						</div>
 						<div class="p-4 border rounded-md">
 							<h4 class="font-semibold">Check Donations</h4>
-							<p>Make payable to <strong>Syngap Research Fund</strong> and send to 1270 Lincoln Ave, Palo Alto, CA, 94301.</p>
+							<p class="mt-2">Make payable to:</p>
+							<p class="font-bold">Syngap Research Fund</p>
+							<p class="font-bold">PO Box 25571</p>
+							<p class="font-bold">Pasadena, CA 91185</p>
 						</div>
 						<div class="p-4 border rounded-md">
 							<h4 class="font-semibold">Bank Deposits</h4>
@@ -82,7 +85,8 @@ get_header();
 								<li>First Republic Bank.</li>
 								<li>111 Pine Street.</li>
 								<li>San Francisco, CA 94111.</li>
-								<li class="mt-4">ABA / Routing Number: 321081669.</li>
+								<li class="mt-4">Account number: 80006957411</li>
+								<li>ABA / Routing Number: 321081669.</li>
 								<li>SWIFT Code: FRBBUS6S</li>
 							</ul>
 						</div>
@@ -92,8 +96,10 @@ get_header();
 						</div>
 						<div class="p-4 border rounded-md">
 							<h4 class="mb-3 text-gray-900 font-semibold">Donor Advised Funds (DAFs)</h4>
-							<script type="text/javascript">_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
-							<script type="text/javascript" src="https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
+							<div>
+								<script _dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"></script>
+								<script src="https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -123,10 +129,6 @@ get_header();
 				class="overflow-hidden max-h-0 duration-500 transition-all"
 				>
 					<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
-						<div class="flex justify-between items-center p-4 border rounded-md">
-							<h4 class="text-gray-900 font-semibold">Paypal</h4>
-							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://www.paypal.com/donate/?hosted_button_id=GHANS83MZPCUN">Continue</a>
-						</div>
 						<div class="flex justify-between items-center p-4 border rounded-md">
 							<h4 class="text-gray-900 font-semibold">Just Giving</h4>
 							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://justgiving.com/syngap-researchfund">Continue</a>
