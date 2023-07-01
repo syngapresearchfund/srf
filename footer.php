@@ -48,7 +48,7 @@ namespace SRF;
 		<div class="pt-4 pb-12 bg-gray-900 text-gray-100 text-sm text-center md:text-left space-y-4 md:space-y-0">
 			<div class="container mx-auto px-6 lg:px-0 space-y-4 md:space-y-0 flex flex-wrap justify-center md:justify-between">
 				<!-- copyright -->
-				<div>Copyright &copy; Syngap Research Fund <?php echo esc_html( get_the_date( 'Y' ) ); ?></div>
+				<div>Copyright &copy; Syngap Research Fund <?php echo esc_html( date( 'Y' ) ); ?></div>
 				<!-- links -->
 				<div class="flex space-x-5">
 					<?php

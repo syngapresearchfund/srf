@@ -62,14 +62,6 @@ get_header();
 				class="overflow-hidden max-h-0 duration-500 transition-all"
 				>
 					<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
-						<div class="flex justify-between items-center p-4 border rounded-md">
-							<h4 class="text-gray-900 font-semibold">Paypal</h4>
-							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://www.paypal.com/us/fundraiser/charity/3573999">Continue</a>
-						</div>
-						<div class="flex justify-between items-center p-4 border rounded-md">
-							<h4 class="text-gray-900 font-semibold">Just Giving</h4>
-							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://justgiving.com/syngapresearchfund">Continue</a>
-						</div>
 						<div class="p-4 border rounded-md">
 							<h4 class="font-semibold">Check Donations</h4>
 							<p class="mt-2">Make payable to:</p>
@@ -96,10 +88,16 @@ get_header();
 						</div>
 						<div class="p-4 border rounded-md">
 							<h4 class="mb-3 text-gray-900 font-semibold">Donor Advised Funds (DAFs)</h4>
-							<div>
-								<script _dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"></script>
-								<script src="https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
-							</div>
+							<script>_dafdirect_settings="831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015"</script>
+							<script src="<?php echo esc_url( get_theme_file_uri( 'assets/js/dafdirect4.js' ) ); ?>"></script>
+						</div>
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Paypal</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://www.paypal.com/us/fundraiser/charity/3573999">Continue</a>
+						</div>
+						<div class="flex justify-between items-center p-4 border rounded-md">
+							<h4 class="text-gray-900 font-semibold">Just Giving</h4>
+							<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md" href="https://justgiving.com/syngapresearchfund">Continue</a>
 						</div>
 					</div>
 				</div>
@@ -175,7 +173,7 @@ get_header();
 						</div>
 						<div class="p-4 border rounded-md">
 							<h4 class="mb-3 text-gray-900 font-semibold">Giving Block</h4>
-							<script id="tgb-widget-script"> !function(t,e,i,n,o,c,d,s){t.tgbWidgetOptions={id:o,domain:n},(d=e.createElement(i)).src=[n,"widget/script.js"].join(""),d.async=1,(s=e.getElementById(c)).parentNode.insertBefore(d,s)}(window,document,"script","https://tgbwidget.com/","831200789","tgb-widget-script"); </script>
+							<iframe id="tgb-widget-frame-831200789" frameborder="0" scrolling="no" src="https://tgbwidget.com/?charityID=831200789" style="width: 300px; height: 600px;"></iframe>
 						</div>
 					</div>
 				</div>
