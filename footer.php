@@ -38,7 +38,7 @@ namespace SRF;
 					<ul class="flex space-x-2 justify-end place-items-center">
 						<li class="w-32"><a href="<?php echo esc_url( home_url( '/syngap10-podcast/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/tdc-badge-podcast.png' ) ); ?>" alt="The Best RARE Podcasts"></a></li>
 						<li class="w-32"><a href="https://globalgenes.org/"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/global-advocacy-alliance-founding-member-badge.png' ) ); ?>" alt="Global Advocacy Alliance Founding Member"></a></li>
-						<li class="w-24"><a href="https://www.guidestar.org/profile/83-1200789"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2020.png' ) ); ?>" alt="Guidestar Platinum Symbol of Transparency 2020"></a></li>
+						<li class="w-24"><a href="https://www.guidestar.org/profile/83-1200789"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2022.png' ) ); ?>" alt="Guidestar Platinum Symbol of Transparency 2020"></a></li>
 						<li class="w-32"><a href="<?php echo esc_url( home_url( '/gnp/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2022-top-rated-awards-badge.png' ) ); ?>" alt="2022 Top Rated Awards"></a></li>
 					</ul>
 				</div>
