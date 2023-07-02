@@ -103,7 +103,7 @@ namespace SRF;
 					'openLast',
 					array(
 						srf_subnav_heading( 'Stories' ),
-						srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
+						srf_subnav_item( 'Our Warriors', home_url( '/warriors/' ) ),
 						srf_subnav_item( 'Movies', home_url( '/resources/movies/' ) ),
 						srf_subnav_heading( 'Learn' ),
 						srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
@@ -217,7 +217,7 @@ namespace SRF;
 							'5',
 							array(
 								srf_subnav_heading( 'Stories' ),
-								srf_subnav_item( 'Meet Our Warriors', home_url( '/warriors/' ) ),
+								srf_subnav_item( 'Our Warriors', home_url( '/warriors/' ) ),
 								srf_subnav_item( 'Movies', home_url( '/resources/movies/' ) ),
 								srf_subnav_heading( 'Learn' ),
 								srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
