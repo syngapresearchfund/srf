@@ -41,7 +41,7 @@ namespace SRF;
 					array(
 						srf_subnav_item( 'What is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 						srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
-						srf_subnav_item( 'SYNGAP1 Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
+						srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
 						srf_subnav_item( 'Life Expectancy', home_url( '/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
 						srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/does-my-syngap1-child-have-autism/' ) ),
 					)
