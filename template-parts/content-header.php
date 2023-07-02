@@ -120,8 +120,8 @@ namespace SRF;
 				</ul>
 			</nav>
 			<div class="hidden xl:flex justify-end items-stretch absolute right-0 w-96" x-data="{ searchOpen: false, searchClosed: true }">
-				<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET" class="w-full">
-					<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>" value="<?php the_search_query(); ?>" class="w-full h-full p-2 rounded rounded-r-none outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900" x-show="searchOpen" x-transition>
+				<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET" class="w-full absolute -bottom-full right-0">
+					<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>" value="<?php the_search_query(); ?>" class="w-full h-10 p-2 outline-none border-2 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900" x-show="searchOpen" x-transition>
 				</form>
 				<button class="inline-block p-2 bg-srf-purple-700 hover:bg-srf-purple-800 text-white" @click="searchOpen = ! searchOpen; searchClosed = ! searchClosed">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" x-show="searchClosed">
