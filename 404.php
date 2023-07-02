@@ -22,7 +22,9 @@ get_header();
 
 	<div class="text-center">
 		<p class="mb-4 text-lg"><?php esc_html_e( 'It looks like nothing was found at this location. Perhaps searching will help:' ); ?></p>
-		<?php get_search_form(); ?>
+		<div class="w-96 mx-auto">
+			<?php get_search_form(); ?>
+		</div>
 	</div>
 </div>
 
