@@ -160,7 +160,7 @@ if ( ! function_exists( 'srf_post_meta' ) ) :
 	 * Prints HTML for post excerpt to force "Read more"
 	 */
 	function srf_post_meta() {
-		if ( 'post' === get_post_type() ) {
+		if ( 'post' === get_post_type() || 'srf-warriors' === get_post_type() ) {
 			echo '<div class="mt-6 text-sm text-center">';
 			srf_posted_on();
 
