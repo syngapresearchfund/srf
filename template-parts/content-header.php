@@ -15,7 +15,7 @@ namespace SRF;
 <!-- Main top-level menu, show/hide based on mobile menu state. -->
 <div class="relative bg-white px-6 lg:px-0 z-10 xl:shadow">
 	<div class="container mx-auto">
-		<div class="flex justify-between items-center py-6 lg:justify-start lg:space-x-9">
+		<div class="flex justify-between items-center xl:relative py-6 xl:pr-16 lg:justify-start lg:space-x-9">
 			<div class="flex justify-start lg:w-0 lg:flex-1 hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
@@ -119,10 +119,24 @@ namespace SRF;
 				?>
 				</ul>
 			</nav>
-			<!-- <a href="<?php //echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
-				Donate
-			</a> -->
-			<div class="hidden xl:block"><?php get_search_form(); ?></div>
+			<div class="hidden xl:flex justify-end items-stretch absolute right-0 w-96" x-data="{ searchOpen: false, searchClosed: true }">
+				<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET" class="w-full">
+					<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>" value="<?php the_search_query(); ?>" class="w-full h-full p-2 rounded rounded-r-none outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900" x-show="searchOpen" x-transition>
+				</form>
+				<button class="inline-block p-2 bg-srf-purple-700 hover:bg-srf-purple-800 text-white" @click="searchOpen = ! searchOpen; searchClosed = ! searchClosed">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" x-show="searchClosed">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" x-show="searchOpen">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+				<!-- <button class="inline-block p-3 bg-srf-purple-700 hover:bg-srf-purple-800 text-white" @click="searchClosed = ! searchClosed">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" x-show="searchClosed">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button> -->
+			</div>
 		</div>
 	</div>
 </div>
@@ -133,16 +147,16 @@ namespace SRF;
 		<div class="pt-5 pb-6 px-5">
 			<div class="flex items-center justify-between">
 				<div>
-				<img class="w-auto h-9" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="Workflow">
+					<img class="w-auto h-9" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="Workflow">
 				</div>
 				<div class="-mr-2">
-				<button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="open = false">
-					<span class="sr-only">Close menu</span>
-					<!-- Heroicon name: outline/x -->
-					<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-					</svg>
-				</button>
+					<button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="open = false">
+						<span class="sr-only">Close menu</span>
+						<!-- Heroicon name: outline/x -->
+						<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
 				</div>
 			</div>
 			<div class="mt-6">
@@ -235,7 +249,11 @@ namespace SRF;
 				</nav>
 			</div>
 		</div>
-		<div class="py-6 px-5 space-y-6"><?php get_search_form(); ?></div>
+		<div class="py-6 px-5 space-y-6">
+			<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET" class="flex justify-center">
+				<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>" value="<?php the_search_query(); ?>" class="w-full p-2 rounded outline-none border-2 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900">
+			</form>
+		</div>
 		<div class="py-6 px-5 space-y-6">
 			<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-srf-purple-500 hover:bg-srf-purple-600">
 				Donate
