@@ -476,9 +476,10 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 	 * @param  string  $url The URL path for the nav link.
 	 * @param  boolean $is_mobile If the link is contained within the mobile nav.
 	 */
-	function srf_subnav_item( $name, $url, $is_mobile = false ) {
+	function srf_subnav_item( $name, $url, $is_mobile = false, $new_tab = false ) {
 		$padding_classes = $is_mobile ? 'px-3 py-2' : 'p-3';
-		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900">' . esc_html( $name ) . '</a></li>';
+		$target          = $new_tab ? 'target="_blank" rel="noopener noreferrer"' : '';
+		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" '. esc_attr( $target ) .'>' . esc_html( $name ) . '</a></li>';
 	}
 endif;
 
