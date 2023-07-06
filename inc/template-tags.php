@@ -475,11 +475,12 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 	 * @param  string  $name The name for the nav link.
 	 * @param  string  $url The URL path for the nav link.
 	 * @param  boolean $is_mobile If the link is contained within the mobile nav.
+	 * @param  boolean $new_tab If the link should open in a new tab.
 	 */
 	function srf_subnav_item( $name, $url, $is_mobile = false, $new_tab = false ) {
 		$padding_classes = $is_mobile ? 'px-3 py-2' : 'p-3';
-		$target          = $new_tab ? 'target="_blank" rel="noopener noreferrer"' : '';
-		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" '. esc_attr( $target ) .'>' . esc_html( $name ) . '</a></li>';
+		$target          = $new_tab ? 'target="_blank" rel="noopener noreferrer"' : ''; //TODO: escape with wp_kses or similar.
+		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" '. $target .'>' . esc_html( $name ) . '</a></li>';
 	}
 endif;
 

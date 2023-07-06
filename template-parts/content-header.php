@@ -76,7 +76,7 @@ namespace SRF;
 						srf_subnav_item( 'Partners', home_url( '/partners/' ) ),
 						srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
 						// srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
-						srf_subnav_item( 'Style Guide', home_url( '/wp-content/uploads/2023/07/2023-srf-style-guide.pdf' ), $new_tab = true ),
+						srf_subnav_item( 'Style Guide', home_url( '/wp-content/uploads/2023/07/2023-srf-style-guide.pdf' ), false, true ),
 					)
 				);
 				srf_nav_item_dropdown(
@@ -187,7 +187,7 @@ namespace SRF;
 								srf_subnav_item( 'Partners', home_url( '/partners/' ) ),
 								srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
 								// srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
-								srf_subnav_item( 'Style Guide', home_url( '/wp-content/uploads/2023/07/2023-srf-style-guide.pdf' ), $new_tab = true ),
+								srf_subnav_item( 'Style Guide', home_url( '/wp-content/uploads/2023/07/2023-srf-style-guide.pdf' ), false, true ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						echo srf_mobile_nav_item(
