@@ -119,3 +119,8 @@ Adjustments and Overrides
 .wp-block-button__link {
 	background-color: #3e6cb5;
 }
+
+/* Fix for download button displayed with dark text on file embed. */
+.wp-block-file .wp-block-file__button {
+	color: #fff;
+}
