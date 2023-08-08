@@ -126,7 +126,7 @@ namespace SRF;
 						srf_subnav_heading( 'Events' ),
 						srf_subnav_item( 'Roundtables', home_url( '/category/roundtables/' ) ),
 						srf_subnav_heading( 'Podcasts' ),
-						srf_subnav_item( 'Podcast', '#' ),
+						srf_subnav_item( 'Podcast', '/syngap10-podcast/' ),
 					)
 				);
 				?>
@@ -236,7 +236,7 @@ namespace SRF;
 								srf_subnav_heading( 'Events' ),
 								srf_subnav_item( 'Roundtables', home_url( '/category/roundtables/' ) ),
 								srf_subnav_heading( 'Podcasts' ),
-								srf_subnav_item( 'Podcast', '#' ),
+								srf_subnav_item( 'Podcast', '/syngap10-podcast/' ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						?>
