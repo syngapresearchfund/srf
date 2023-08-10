@@ -11,7 +11,7 @@
 namespace SRF;
 
 $col_span       = $args['current_item'] > 0 ? 'col-span-3' : 'col-span-full';
-$thumbnail_size = $args['current_item'] > 0 ? '' : 'xl:h-96 xl:w-96 xl:px-6 xl:object-contain bg-gray-300';
+$thumbnail_size = $args['current_item'] > 0 ? '' : 'xl:h-80 xl:w-96 xl:px-6 xl:object-contain bg-gray-300';
 $title_size     = $args['current_item'] > 0 ? '' : 'xl:text-3xl';
 $date_size      = $args['current_item'] > 0 ? '' : 'xl:text-base';
 ?>
