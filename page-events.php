@@ -62,7 +62,7 @@ $past_events_query = new WP_Query( $past_args );
 		<?php
 		if ( $upcoming_events_query->have_posts() ) :
 			?>
-		<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left">
+		<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left space-y-6">
 			<?php
 			/* Start the Loop */
 			while ( $upcoming_events_query->have_posts() ) :
@@ -94,12 +94,12 @@ $past_events_query = new WP_Query( $past_args );
 	</section>
 
 	<section class="past-events text-center mb-14">
-		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Past Events</h2>
+		<h6 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Past Events</h6>
 
 		<?php
 		if ( $past_events_query->have_posts() ) :
 			?>
-		<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left">
+		<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left space-y-6">
 			<?php
 			/* Start the Loop */
 			while ( $past_events_query->have_posts() ) :
