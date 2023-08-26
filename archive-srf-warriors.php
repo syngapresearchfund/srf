@@ -21,7 +21,7 @@ get_header();
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo esc_attr( srf_container_classes() ); ?> text-center">
 			<header class="entry-header max-w-3xl mx-auto mb-16">
-				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo post_type_archive_title( '', false ); ?></h1>
+				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold">Our Warriors</h1>
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
 
