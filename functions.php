@@ -11,7 +11,7 @@ namespace SRF;
 /**
  * Sets up theme.
  */
-function srf_setup() : void {
+function srf_setup(): void {
 	// Automatic feed links.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -62,6 +62,7 @@ function srf_setup() : void {
 	add_image_size( 'featured-image-small', 475, 320 );
 	add_image_size( 'featured-thumbnail', 320, 320 );
 }
+
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
 
 /**
@@ -75,6 +76,7 @@ function srf_scripts() {
 	// Alpine library.
 	wp_enqueue_script( 'alpinejs', get_template_directory_uri() . '/assets/js/alpinejs-3.10.5.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
+
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
 
 /**
@@ -90,7 +92,8 @@ function coming_soon_redirect() {
 		exit();
 	}
 }
-// add_action( 'template_redirect', __NAMESPACE__ . '\\coming_soon_redirect' );
+
+//add_action( 'template_redirect', __NAMESPACE__ . '\\coming_soon_redirect' );
 
 /**
  * Custom template tags for this theme.
@@ -105,7 +108,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Jetpack compatability configurations.
  */
-// require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Related posts addition.
