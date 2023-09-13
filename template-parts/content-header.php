@@ -180,7 +180,7 @@ namespace SRF;
 				<nav class="grid gap-y-8 font-sans">
 					<ul>
 						<?php
-						echo srf_mobile_nav_item(
+						srf_mobile_nav_item(
 							'About SYNGAP1',
 							'1',
 							array(
@@ -191,7 +191,7 @@ namespace SRF;
 								srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/does-my-syngap1-child-have-autism/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
-						echo srf_mobile_nav_item(
+						srf_mobile_nav_item(
 							'About SRF',
 							'2',
 							array(
@@ -211,7 +211,7 @@ namespace SRF;
 								srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
-						echo srf_mobile_nav_item(
+						srf_mobile_nav_item(
 							'Professionals',
 							'3',
 							array(
@@ -225,7 +225,7 @@ namespace SRF;
 								srf_subnav_item( 'iPS Cell Models', home_url( '/ips-cell-models/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
-						echo srf_mobile_nav_item(
+						srf_mobile_nav_item(
 							'Families',
 							'4',
 							array(
@@ -244,7 +244,7 @@ namespace SRF;
 								srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
-						echo srf_mobile_nav_item(
+						srf_mobile_nav_item(
 							'News & Events',
 							'5',
 							array(

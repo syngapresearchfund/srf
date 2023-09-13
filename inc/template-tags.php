@@ -65,7 +65,7 @@ if ( ! function_exists( 'srf_entry_footer' ) ) :
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-						/* translators: %s: post title */
+					/* translators: %s: post title */
 						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>' ),
 						array(
 							'span' => array(
@@ -82,7 +82,7 @@ if ( ! function_exists( 'srf_entry_footer' ) ) :
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
+				/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Edit <span class="screen-reader-text">%s</span>' ),
 					array(
 						'span' => array(
@@ -182,8 +182,8 @@ if ( ! function_exists( 'srf_social_icon' ) ) :
 	/**
 	 * Outputs SVG icons for social icons.
 	 *
-	 * @param  string $icon Social icon.
-	 * @param  string $url Social icon URL.
+	 * @param string $icon Social icon.
+	 * @param string $url Social icon URL.
 	 */
 	function srf_social_icon( $icon, $url ) {
 		$social_icon = '<a class="block" href="' . esc_url( $url ) . '"><svg role="img" class="srf-social-icon fill-current text-gray-100 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"/><g>';
@@ -240,29 +240,37 @@ if ( ! function_exists( 'srf_board_grid' ) ) :
 
 		if ( $board_query->have_posts() ) :
 			?>
-		<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
-			<?php
-			/* Start the Loop */
-			while ( $board_query->have_posts() ) :
-				$board_query->the_post();
+			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
+				<?php
+				/* Start the Loop */
+				while ( $board_query->have_posts() ) :
+					$board_query->the_post();
 
-				/*
-				* Include the Post-Type-specific template for the content.
-				* If you want to override this in a child theme, then include a file
-				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				*/
-				get_template_part( 'template-parts/content', 'grid-items' );
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', 'grid-items' );
 
-			endwhile;
-			?>
-		</div>
-		<a href="<?php echo esc_url( home_url( '/team/board-members/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all board members <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+				endwhile;
+				?>
+			</div>
+			<a href="<?php echo esc_url( home_url( '/team/board-members/' ) ); ?>"
+			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+				all board members
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
+					 stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						  d="M13 7l5 5m0 0l-5 5m5-5H6" />
+				</svg>
+			</a>
 
 		<?php else : ?>
 
-		<p class="text-gray-700 text-center mb-7">No board members have been added yet!</p>
+			<p class="text-gray-700 text-center mb-7">No board members have been added yet!</p>
 
-			<?php
+		<?php
 		endif;
 
 		/* Restore original Post Data */
@@ -290,29 +298,37 @@ if ( ! function_exists( 'srf_volunteer_grid' ) ) :
 
 		if ( $board_query->have_posts() ) :
 			?>
-		<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
-			<?php
-			/* Start the Loop */
-			while ( $board_query->have_posts() ) :
-				$board_query->the_post();
+			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
+				<?php
+				/* Start the Loop */
+				while ( $board_query->have_posts() ) :
+					$board_query->the_post();
 
-				/*
-				* Include the Post-Type-specific template for the content.
-				* If you want to override this in a child theme, then include a file
-				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				*/
-				get_template_part( 'template-parts/content', 'grid-items' );
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', 'grid-items' );
 
-			endwhile;
-			?>
-		</div>
-		<a href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View all volunteers <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+				endwhile;
+				?>
+			</div>
+			<a href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>"
+			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+				all volunteers
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
+					 stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						  d="M13 7l5 5m0 0l-5 5m5-5H6" />
+				</svg>
+			</a>
 
 		<?php else : ?>
 
-		<p class="text-gray-700 text-center mb-7">No volunteers have been added yet!</p>
+			<p class="text-gray-700 text-center mb-7">No volunteers have been added yet!</p>
 
-			<?php
+		<?php
 		endif;
 
 		/* Restore original Post Data */
@@ -340,29 +356,37 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 
 		if ( $board_query->have_posts() ) :
 			?>
-		<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
-			<?php
-			/* Start the Loop */
-			while ( $board_query->have_posts() ) :
-				$board_query->the_post();
+			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
+				<?php
+				/* Start the Loop */
+				while ( $board_query->have_posts() ) :
+					$board_query->the_post();
 
-				/*
-				* Include the Post-Type-specific template for the content.
-				* If you want to override this in a child theme, then include a file
-				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				*/
-				get_template_part( 'template-parts/content', 'grid-items' );
+					/*
+					* Include the Post-Type-specific template for the content.
+					* If you want to override this in a child theme, then include a file
+					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					*/
+					get_template_part( 'template-parts/content', 'grid-items' );
 
-			endwhile;
-			?>
-		</div>
-		<a href="<?php echo esc_url( home_url( '/team/us-leadership-team/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View full leadership team <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
+				endwhile;
+				?>
+			</div>
+			<a href="<?php echo esc_url( home_url( '/team/us-leadership-team/' ) ); ?>"
+			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+				full leadership team
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
+					 stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						  d="M13 7l5 5m0 0l-5 5m5-5H6" />
+				</svg>
+			</a>
 
 		<?php else : ?>
 
-		<p class="text-gray-700 text-center mb-7">No team members have been added yet!</p>
+			<p class="text-gray-700 text-center mb-7">No team members have been added yet!</p>
 
-			<?php
+		<?php
 		endif;
 
 		/* Restore original Post Data */
@@ -374,8 +398,8 @@ if ( ! function_exists( 'srf_nav_item' ) ) :
 	/**
 	 * Outputs a link item for the main navigation.
 	 *
-	 * @param  string $name The name for the nav link.
-	 * @param  string $url The variable name (JS) for the dropdown click binder - controlled by Alpine.
+	 * @param string $name The name for the nav link.
+	 * @param string $url The variable name (JS) for the dropdown click binder - controlled by Alpine.
 	 *
 	 * TODO: Make this a little bit more flexible so we have the option to pass in a subnav or render as a single item.
 	 */
@@ -398,9 +422,9 @@ if ( ! function_exists( 'srf_nav_item_dropdown' ) ) :
 	/**
 	 * Outputs a link item for the main navigation.
 	 *
-	 * @param  string $name The name for the nav link.
-	 * @param  string $event_binder The variable name (JS) for the dropdown click binder - controlled by Alpine.
-	 * @param  array  $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
+	 * @param string $name The name for the nav link.
+	 * @param string $event_binder The variable name (JS) for the dropdown click binder - controlled by Alpine.
+	 * @param array $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
 	 *
 	 * TODO: Make this a little bit more flexible so we have the option to pass in a subnav or render as a single item.
 	 */
@@ -433,9 +457,9 @@ if ( ! function_exists( 'srf_mobile_nav_item' ) ) :
 	/**
 	 * Outputs a link item for the main navigation.
 	 *
-	 * @param  string $name The name for the nav link.
-	 * @param  string $data_item The variable name (JS) for the dropdown click binder - controlled by Alpine.
-	 * @param  array  $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
+	 * @param string $name The name for the nav link.
+	 * @param string $data_item The variable name (JS) for the dropdown click binder - controlled by Alpine.
+	 * @param array $subnav_items An array of function calls to srf_subnav_item to populate subnav list.
 	 *
 	 * TODO: Make this a little bit more flexible so we have the option to pass in a subnav or render as a single item.
 	 */
@@ -472,15 +496,18 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 	/**
 	 * Outputs a link item for the main navigation.
 	 *
-	 * @param  string  $name The name for the nav link.
-	 * @param  string  $url The URL path for the nav link.
-	 * @param  boolean $is_mobile If the link is contained within the mobile nav.
-	 * @param  boolean $new_tab If the link should open in a new tab.
+	 * @param string $name The name for the nav link.
+	 * @param string $url The URL path for the nav link.
+	 * @param boolean $is_mobile If the link is contained within the mobile nav.
+	 * @param boolean $new_tab If the link should open in a new tab.
+	 *
+	 * @return string
 	 */
 	function srf_subnav_item( $name, $url, $is_mobile = false, $new_tab = false ) {
 		$padding_classes = $is_mobile ? 'px-3 py-2' : 'p-3';
 		$target          = $new_tab ? 'target="_blank" rel="noopener noreferrer"' : ''; //TODO: escape with wp_kses or similar.
-		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" '. $target .'>' . esc_html( $name ) . '</a></li>';
+
+		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" ' . $target . '>' . esc_html( $name ) . '</a></li>';
 	}
 endif;
 
@@ -488,7 +515,7 @@ if ( ! function_exists( 'srf_subnav_heading' ) ) :
 	/**
 	 * Outputs a link item for the main navigation.
 	 *
-	 * @param  string $name The name for the nav link.
+	 * @param string $name The name for the nav link.
 	 */
 	function srf_subnav_heading( $name ) {
 		return '<h4 class="p-3 font-semibold text-srf-blue-500">' . esc_html( $name ) . '</h4>';
