@@ -12,69 +12,79 @@ use WP_Query;
 
 get_header();
 ?>
-	<!-- ========================= -->
-	<!-- hero section -->
-	<!-- ========================= -->
-	<section class="bg-gradient-to-br from-srf-purple-500 via-srf-blue-500 to-srf-green-500">
-		<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white">
-			<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
-				Collaboration. Transparency. Urgency.
-			</h1>
-			<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
-			<a href="https://www.syngapresearchfund.org/home/what-is-syngap1" class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-blue-500 border-2 border-white font-bold text-lg tracking-wide transition duration-500">Learn more about SYNGAP1</a>
-		</div>
-	</section>	
+<!-- ========================= -->
+<!-- hero section -->
+<!-- ========================= -->
+<section class="bg-gradient-to-br from-srf-purple-500 via-srf-blue-500 to-srf-green-500">
+	<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white">
+		<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
+			Collaboration. Transparency. Urgency.
+		</h1>
+		<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed
+			to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
+		<a href="https://www.syngapresearchfund.org/home/what-is-syngap1"
+		   class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-blue-500 border-2 border-white font-bold text-lg tracking-wide transition duration-500">Learn
+			more about SYNGAP1</a>
+	</div>
+</section>
 
-	<!-- ========================= -->
-	<!-- Welcome section -->
-	<!-- ========================= -->
-	<section class="bg-white">
-		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Newly Diagnosed?</h2>
-			<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
-				<div class="flex flex-col items-center space-y-6">
-					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Join our registry</h3>
-					<p class="flex-auto">Register with Ciitizen to collect as much de-identified group data for researchers to use. We need as many to register to improve the chances for successful clinical trials.</p>
-					<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
-				</div>
-				<div class="flex flex-col items-center space-y-6">
-					<h3 class="text-gray-500 text-2xl font-bold text-center underline">Get involved</h3>
-					<p class="flex-auto">The best way to help someone with SYNGAP1 is to help spread awareness and stay informed. Start by connecting with SRF, holding a fundraiser, and becoming a volunteer.</p>
-					<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
-				</div>
-				<div class="flex flex-col items-center space-y-6">
-					<h3 class="text-gray-500 text-2xl font-bold text-center underline">New families</h3>
-					<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a 'Welcome Pack' with basic information, resources, as well as important tools for you and your doctor.</p>
-					<a href="<?php echo esc_url( home_url( '/welcome-pack/' ) ); ?>" class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn more</a>
-				</div>
+<!-- ========================= -->
+<!-- Welcome section -->
+<!-- ========================= -->
+<section class="bg-white">
+	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+		<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Newly Diagnosed?</h2>
+		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
+			<div class="flex flex-col items-center space-y-6">
+				<h3 class="text-gray-500 text-2xl font-bold text-center underline">Join our registry</h3>
+				<p class="flex-auto">Register with Ciitizen to collect as much de-identified group data for researchers
+					to use. We need as many to register to improve the chances for successful clinical trials.</p>
+				<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>"
+				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
+			</div>
+			<div class="flex flex-col items-center space-y-6">
+				<h3 class="text-gray-500 text-2xl font-bold text-center underline">Get involved</h3>
+				<p class="flex-auto">The best way to help someone with SYNGAP1 is to help spread awareness and stay
+					informed. Start by connecting with SRF, holding a fundraiser, and becoming a volunteer.</p>
+				<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>"
+				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
+			</div>
+			<div class="flex flex-col items-center space-y-6">
+				<h3 class="text-gray-500 text-2xl font-bold text-center underline">New families</h3>
+				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a 'Welcome Pack' with basic
+					information, resources, as well as important tools for you and your doctor.</p>
+				<a href="<?php echo esc_url( home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ); ?>"
+				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
+					more</a>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<!-- ========================= -->
-	<!-- Events section -->
-	<!-- ========================= -->
-	<section class="relative py-32 bg-gray-100">
-		<div class="container mx-auto px-10 text-center">
-			<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events</h2>
+<!-- ========================= -->
+<!-- Events section -->
+<!-- ========================= -->
+<section class="relative py-32 bg-gray-100">
+	<div class="container mx-auto px-10 text-center">
+		<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events</h2>
 
-			<?php
-			$args         = array(
-				'posts_per_page' => 8,
-				'post_type'      => 'srf-events',
-				'order'          => 'DESC',
-				'tax_query'      => array(
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => 'upcoming-events',
-					),
+		<?php
+		$args         = array(
+			'posts_per_page' => 8,
+			'post_type'      => 'srf-events',
+			'order'          => 'DESC',
+			'tax_query'      => array(
+				array(
+					'taxonomy' => 'srf-events-category',
+					'field'    => 'slug',
+					'terms'    => 'upcoming-events',
 				),
-			);
-			$events_query = new WP_Query( $args );
+			),
+		);
+		$events_query = new WP_Query( $args );
 
-			if ( $events_query->have_posts() ) :
-				?>
+		if ( $events_query->have_posts() ) :
+			?>
 			<!-- <div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left"> -->
 			<div class="xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 				<?php
@@ -94,42 +104,49 @@ get_header();
 					get_template_part( 'template-parts/content', 'events-grid', $args );
 
 					// increment the item count.
-					$item_count++;
+					$item_count ++;
 				endwhile;
 				?>
 			</div>
 
-			<?php else : ?>
+		<?php else : ?>
 
 			<div class="no-results max-w-6xl mx-auto mb-10 text-center text-lg">
 				<p>There are no upcoming events on the current schedule.</p>
 				<p>Please check back soon!</p>
 			</div>
 
-				<?php
-			endif;
-			/* Restore original Post Data */
-			wp_reset_postdata();
+		<?php
+		endif;
+		/* Restore original Post Data */
+		wp_reset_postdata();
+		?>
+
+		<!-- big button / cta -->
+		<a href="<?php echo esc_url( home_url( '/events/' ) ); ?>"
+		   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+			all events
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
+				 stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+			</svg>
+		</a>
+	</div>
+</section>
+
+<!-- ========================= -->
+<!-- News section -->
+<!-- ========================= -->
+<section class="bg-white">
+	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+		<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
+
+		<?php
+		$args       = array( 'posts_per_page' => 6 ); // phpcs:ignore -- pagination limit ok.
+		$news_query = new WP_Query( $args );
+
+		if ( $news_query->have_posts() ) :
 			?>
-
-			<!-- big button / cta -->
-			<a href="<?php echo esc_url( home_url( '/events/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View all events <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
-		</div>
-	</section>
-
-	<!-- ========================= -->
-	<!-- News section -->
-	<!-- ========================= -->
-	<section class="bg-white">
-		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
-
-			<?php
-			$args       = array( 'posts_per_page' => 6 ); // phpcs:ignore -- pagination limit ok.
-			$news_query = new WP_Query( $args );
-
-			if ( $news_query->have_posts() ) :
-				?>
 			<!-- <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10"> -->
 			<div class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php
@@ -148,39 +165,46 @@ get_header();
 				?>
 			</div>
 
-				<?php
-			else :
+		<?php
+		else :
 
-				get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 
-			endif;
+		endif;
 
-			/* Restore original Post Data */
-			wp_reset_postdata();
+		/* Restore original Post Data */
+		wp_reset_postdata();
+		?>
+
+		<!-- big button / cta -->
+		<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"
+		   class="font-sans inline-flex border-2 border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View
+			all news articles
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
+				 stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+			</svg>
+		</a>
+	</div>
+</section>        <!-- header + hero bg wrapper -->
+
+<!-- ========================= -->
+<!-- Warriors section -->
+<!-- ========================= -->
+<section class="bg-gray-100">
+	<div class="px-6 lg:px-0 py-24 text-center">
+		<h2 class="mb-10 text-3xl lg:text-4xl text-gray-700 font-extrabold">Our Warriors</h2>
+
+		<?php
+		$args       = array(
+			'posts_per_page' => 10,
+			'post_type'      => 'srf-warriors',
+		);
+		$news_query = new WP_Query( $args );
+
+
+		if ( $news_query->have_posts() ) :
 			?>
-
-			<!-- big button / cta -->
-			<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="font-sans inline-flex border-2 border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View all news articles <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
-		</div>
-	</section>		<!-- header + hero bg wrapper -->
-
-	<!-- ========================= -->
-	<!-- Warriors section -->
-	<!-- ========================= -->
-	<section class="bg-gray-100">
-		<div class="px-6 lg:px-0 py-24 text-center">
-			<h2 class="mb-10 text-3xl lg:text-4xl text-gray-700 font-extrabold">Our Warriors</h2>
-
-			<?php
-			$args       = array(
-				'posts_per_page' => 10,
-				'post_type'      => 'srf-warriors',
-			);
-			$news_query = new WP_Query( $args );
-
-
-			if ( $news_query->have_posts() ) :
-				?>
 			<div class="max-w-screen-2xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-1 mb-10">
 				<?php
 				/* Start the Loop */
@@ -198,54 +222,62 @@ get_header();
 				?>
 			</div>
 
-				<?php
-			else :
+		<?php
+		else :
 
-				get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 
-			endif;
+		endif;
 
-			/* Restore original Post Data */
-			wp_reset_postdata();
-			?>
+		/* Restore original Post Data */
+		wp_reset_postdata();
+		?>
 
-			<!-- big button / cta -->
-			<a href="<?php echo esc_url( home_url( '/warriors/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View all warriors <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></a>
-		</div>
-	</section>		<!-- header + hero bg wrapper -->
+		<!-- big button / cta -->
+		<a href="<?php echo esc_url( home_url( '/warriors/' ) ); ?>"
+		   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+			all warriors
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
+				 stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+			</svg>
+		</a>
+	</div>
+</section>        <!-- header + hero bg wrapper -->
 
-	<!-- ========================= -->
-	<!-- Stats section -->
-	<!-- ========================= -->
-	<section class="bg-white">
-		<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-			<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
-				<div>
-					<h2 class="text-5xl text-srf-blue-500 font-bold">$3.7M</h2>
-					<h3 class="text-lg text-gray-500 font-normal">Funds committed</h3>
-				</div>
-				<div>
-					<h2 class="text-5xl text-srf-blue-500 font-bold">1164</h2>
-					<h3 class="text-lg text-gray-500 font-normal">Patients counted</h3>
-				</div>
-				<div>
-					<h2 class="text-5xl text-srf-blue-500 font-bold">76</h2>
-					<h3 class="text-lg text-gray-500 font-normal">Families volunteering</h3>
-				</div>
-				<div>
-					<h2 class="text-5xl text-srf-blue-500 font-bold">207</h2>
-					<h3 class="text-lg text-gray-500 font-normal">US Families on our Ciitizen NHS</h3>
-				</div>
-				<div>
-					<h2 class="text-5xl text-srf-blue-500 font-bold">5</h2>
-					<h3 class="text-lg text-gray-500 font-normal">Companies & institutes working on a genetic therapy for SYNGAP1</h3>
-				</div>
-				<div>
-					<h2 class="text-5xl text-srf-blue-500 font-bold">178</h2>
-					<h3 class="text-lg text-gray-500 font-normal">Patients profiled</h3>
-				</div>
+<!-- ========================= -->
+<!-- Stats section -->
+<!-- ========================= -->
+<section class="bg-white">
+	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
+			<div>
+				<h2 class="text-5xl text-srf-blue-500 font-bold">$3.7M</h2>
+				<h3 class="text-lg text-gray-500 font-normal">Funds committed</h3>
+			</div>
+			<div>
+				<h2 class="text-5xl text-srf-blue-500 font-bold">1164</h2>
+				<h3 class="text-lg text-gray-500 font-normal">Patients counted</h3>
+			</div>
+			<div>
+				<h2 class="text-5xl text-srf-blue-500 font-bold">76</h2>
+				<h3 class="text-lg text-gray-500 font-normal">Families volunteering</h3>
+			</div>
+			<div>
+				<h2 class="text-5xl text-srf-blue-500 font-bold">207</h2>
+				<h3 class="text-lg text-gray-500 font-normal">US Families on our Ciitizen NHS</h3>
+			</div>
+			<div>
+				<h2 class="text-5xl text-srf-blue-500 font-bold">5</h2>
+				<h3 class="text-lg text-gray-500 font-normal">Companies & institutes working on a genetic therapy for
+					SYNGAP1</h3>
+			</div>
+			<div>
+				<h2 class="text-5xl text-srf-blue-500 font-bold">178</h2>
+				<h3 class="text-lg text-gray-500 font-normal">Patients profiled</h3>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
 <?php get_footer(); ?>
