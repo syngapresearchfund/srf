@@ -124,3 +124,8 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Fields.
+ */
+require get_template_directory() . '/inc/custom-fields/cf-event-dates.php';

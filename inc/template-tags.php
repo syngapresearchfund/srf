@@ -521,3 +521,22 @@ if ( ! function_exists( 'srf_subnav_heading' ) ) :
 		return '<h4 class="p-3 font-semibold text-srf-blue-500">' . esc_html( $name ) . '</h4>';
 	}
 endif;
+
+if ( ! function_exists( 'srf_event_date' ) ) :
+	/**
+	 * Output for Event Dates.
+	 * 
+	 * @output string
+	 */
+	function srf_event_date() {
+		$meta_values = get_post_meta( get_the_ID(), 'event_date', true );
+
+		// Bail early if no content has been added as footnotes
+		if ( empty( $meta_values ) ) {
+			return;
+		}
+		
+		// echo '<h3 class="event-date">' . $meta_values . '</h3>';
+		echo '<time>' . date( 'l, F j, Y, ga', $meta_values ) . '</time>';
+	}
+endif;
