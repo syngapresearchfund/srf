@@ -32,11 +32,12 @@ namespace SRF;
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text hidden" href="#content"><?php esc_html_e( 'Skip to content' ); ?></a>
 
-	<main id="content" class="site-content site-main bg-gray-200">
+	<main id="content" class="site-content site-main bg-gray-200 px-2">
 
 		<div class="min-h-screen min-w-screen flex flex-col gap-y-6 justify-center items-center">
 			<img class="w-auto h-9 sm:h-16" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
-			<h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-srf-blue-500 via-srf-purple-500 to-srf-green-500">COMING SOON!</h1>
+			<h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-br from-srf-blue-500 via-srf-purple-500 to-srf-green-500">COMING SOON!</h1>
+			<p class="mt-6 text-sm italic text-center text-gray-700">In the meantime, you can <a href="https://syngapresearchfund.org" class="text-gray-900 underline hover:text-gray-500">find us here</a>.</p>
 		</div>
 	</main>
 
