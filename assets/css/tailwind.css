@@ -26,18 +26,14 @@ Adjustments and Overrides
 =========================
 */
 
-/**
- * Images Adjustments
- */
+/* Images Adjustments */
 .container .featured-image img,
 .tiled-gallery__item.tiled-gallery__item {
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
-/**
- * Video Embed Adjustments
- */
+/* Video Embed Adjustments */
 .is-type-video .wp-block-embed__wrapper {
 	aspect-ratio: 16 / 9;
 }
@@ -47,17 +43,13 @@ Adjustments and Overrides
 	height: 100%;
 }
 
-/**
- * Post Navigation Adjustments
- */
+/* Post Navigation Adjustments */
 .posts-navigation .nav-links {
 	display: flex;
 	justify-content: space-between;
 }
 
-/**
- * WooCommerce Adjustments
- */
+/* WooCommerce Adjustments */
 .wp-block-gallery .blocks-gallery-item::before,
 .woocommerce .woocommerce-pagination ul.page-numbers li::before,
 .woocommerce-page .woocommerce-pagination ul.page-numbers li::before,
@@ -116,6 +108,20 @@ Adjustments and Overrides
 	background-color: #6f3592;
 }
 
+.single-product .summary .variations .label,
+.single-product .summary .variations .value,
+.single-product .summary .input-text.qty,
+.single-product .summary .sku_wrapper {
+	display: block;
+}
+.single-product .summary .variations .value {
+	padding-top: 0;
+}
+.single-product .summary .input-text.qty {
+	min-height: 45px;
+}
+
+/* General Core Block Overrides */
 .wp-block-button__link {
 	background-color: #3e6cb5;
 }
