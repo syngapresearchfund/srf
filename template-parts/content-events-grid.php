@@ -24,5 +24,5 @@ $date_size      = $args['current_item'] > 0 ? '' : 'xl:text-base';
 	<?php if ( has_excerpt() ) : ?>
 		<h3 class="hidden sm:block pr-6 text-sm text-right font-normal <?php echo esc_attr( $date_size ); ?>"><?php the_excerpt(); ?></h3>
 	<?php endif; ?>
-	<?php srf_event_date(); ?>
+	<?php //srf_event_date(); ?>
 </article>
