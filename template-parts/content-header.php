@@ -130,18 +130,16 @@ namespace SRF;
 						'News & Events',
 						'openLast',
 						array(
+							srf_subnav_item( 'Events', home_url( '/events/' ) ),
+							srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
+							srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
 							srf_subnav_heading( 'Stories' ),
 							srf_subnav_item( 'Our Warriors', home_url( '/syngap-warriors/' ) ),
 							srf_subnav_item( 'Movies', home_url( '/resources/movies/' ) ),
 							srf_subnav_heading( 'Learn' ),
 							srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
+							srf_subnav_item( 'Podcasts', '/podcasts/' ),
 							srf_subnav_item( 'Blog', home_url( '/blog/' ) ),
-							srf_subnav_item( 'SRF In The News', home_url( '/category/press-releases/' ) ),
-							srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
-							srf_subnav_heading( 'Events' ),
-							srf_subnav_item( 'Roundtables', home_url( '/category/roundtables/' ) ),
-							srf_subnav_heading( 'Podcasts' ),
-							srf_subnav_item( 'Podcast', '/syngap10-podcast/' ),
 						)
 					);
 					?>
@@ -258,18 +256,16 @@ namespace SRF;
 							'News & Events',
 							'5',
 							array(
+								srf_subnav_item( 'Events', home_url( '/events/' ) ),
+								srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
+								srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
 								srf_subnav_heading( 'Stories' ),
 								srf_subnav_item( 'Our Warriors', home_url( '/syngap-warriors/' ) ),
 								srf_subnav_item( 'Movies', home_url( '/resources/movies/' ) ),
 								srf_subnav_heading( 'Learn' ),
 								srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
+								srf_subnav_item( 'Podcasts', '/podcasts/' ),
 								srf_subnav_item( 'Blog', home_url( '/blog/' ) ),
-								srf_subnav_item( 'SRF In The News', home_url( '/category/press-releases/' ) ),
-								srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
-								srf_subnav_heading( 'Events' ),
-								srf_subnav_item( 'Roundtables', home_url( '/category/roundtables/' ) ),
-								srf_subnav_heading( 'Podcasts' ),
-								srf_subnav_item( 'Podcast', '/syngap10-podcast/' ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						?>
