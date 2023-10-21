@@ -57,8 +57,10 @@ function srf_setup() : void {
 	// Add support for editor styles.
 	add_theme_support( 'editor-styles' );
 
-	// WooCommerce support.
-	add_theme_support( 'woocommerce' );
+	// WooCommerce support (uncomment to enable)
+	// https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
+	// NOTE: This seems to break the layout of the single product page. Commenting out for now, as it does not seem to be needed.
+	// add_theme_support( 'woocommerce' );
 
 	// Add featured image size.
 	add_image_size( 'featured-image', 635, 320 );
