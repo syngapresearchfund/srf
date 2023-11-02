@@ -248,48 +248,6 @@ get_header();
 							</div>
 						</div>
 				</li>
-				<li class="bg-white border rounded-b-md" x-data="accordion(4)">
-					<h3
-						@click="handleClick()"
-						class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
-					>
-						<div class="flex items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="56" height="42">
-								<g fill="none" fill-rule="evenodd">
-									<circle cx="16" cy="16" fill="#efb914" fill-rule="nonzero" r="16" />
-									<path
-										d="M21.002 9.855A7.947 7.947 0 0124 15.278l-2.847-.708a5.357 5.357 0 00-3.86-3.667c-2.866-.713-5.76.991-6.465 3.806s1.05 5.675 3.917 6.388a5.373 5.373 0 005.134-1.43l2.847.707a7.974 7.974 0 01-5.2 3.385L16.716 27l-2.596-.645.644-2.575a8.28 8.28 0 01-1.298-.323l-.643 2.575-2.596-.646.81-3.241c-2.378-1.875-3.575-4.996-2.804-8.081s3.297-5.281 6.28-5.823L15.323 5l2.596.645-.644 2.575a8.28 8.28 0 011.298.323l.643-2.575 2.596.646z"
-										fill="#fff" />
-								</g>
-							</svg>
-							<span class="block ml-2">Cryptocurrency</span>
-						</div>
-						<svg xmlns="http://www.w3.org/2000/svg" :class="handleRotate()"
-							 class="h-6 w-6 text-srf-purple-500 transform transition-transform duration-500" fill="none"
-							 viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-						</svg>
-					</h3>
-					<div
-						x-ref="tab"
-						:style="handleToggle()"
-						class="overflow-hidden max-h-0 duration-500 transition-all"
-					>
-						<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
-							<div class="flex justify-between items-center p-4 border rounded-md">
-								<h4 class="text-gray-900 font-semibold">Donate with Coinbase</h4>
-								<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md"
-								   href="https://commerce.coinbase.com/checkout/8e5f5ef9-a979-4efe-a18e-7d026997f03a">Continue</a>
-							</div>
-							<div class="p-4 border rounded-md">
-								<h4 class="mb-3 text-gray-900 font-semibold">Giving Block</h4>
-								<iframe id="tgb-widget-frame-831200789" frameborder="0" scrolling="no"
-										src="https://tgbwidget.com/?charityID=831200789"
-										style="width: 300px; height: 600px;"></iframe>
-							</div>
-						</div>
-					</div>
-				</li>
 			</ul>
 		</div>
 	</div>
