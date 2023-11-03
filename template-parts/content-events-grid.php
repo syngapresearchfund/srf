@@ -10,6 +10,7 @@
 
 namespace SRF;
 
+$event_date     = get_post_meta( get_the_ID(), 'event-date', true );
 $col_span       = $args['current_item'] > 0 ? 'col-span-3' : 'col-span-full';
 $thumbnail_size = $args['current_item'] > 0 ? '' : 'xl:h-80 xl:w-96 xl:px-6 xl:object-contain bg-gray-300';
 $title_size     = $args['current_item'] > 0 ? '' : 'xl:text-3xl';
@@ -21,8 +22,8 @@ $date_size      = $args['current_item'] > 0 ? '' : 'xl:text-base';
 	<div class="w-full xs:w-4/6 px-6 text-center xs:text-left">
 		<?php the_title( '<h2 class="entry-title text-2xl font-bold xs:line-clamp-2 md:line-clamp-3 ' . $title_size . '"><a class="hover:underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 	</div>
-	<?php if ( has_excerpt() ) : ?>
-		<h3 class="hidden sm:block pr-6 text-sm text-right font-normal <?php echo esc_attr( $date_size ); ?>"><?php the_excerpt(); ?></h3>
+	<?php if ( ! empty( $event_date) ) : ?>
+		<h3 class="hidden sm:block pr-6 text-sm text-right font-normal <?php echo esc_attr( $date_size ); ?>"><?php echo esc_html( date( 'F j, Y', $event_date ) ); ?></h3>
 	<?php endif; ?>
 	<?php //srf_event_date(); ?>
 </article>

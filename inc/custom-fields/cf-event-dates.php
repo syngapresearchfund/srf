@@ -13,7 +13,7 @@ function srf_event_date_fields() {
 	 * Initialize Custom Fields
 	 */
 	$event_dates = new Fieldmanager_Datepicker( array(
-		'name' => 'event_date',
+		'name' => 'event-date',
 		'label'    => esc_html__( 'Choose date & time', 'srf' ),
 		'use_time' => true,
 	) );
