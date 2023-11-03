@@ -10,7 +10,7 @@
 
 namespace SRF;
 
-$event_date     = get_post_meta( get_the_ID(), 'event-date', true );
+$event_date     = get_post_meta( get_the_ID(), 'event_date', true );
 $col_span       = $args['current_item'] > 0 ? 'col-span-3' : 'col-span-full';
 $thumbnail_size = $args['current_item'] > 0 ? '' : 'xl:h-80 xl:w-96 xl:px-6 xl:object-contain bg-gray-300';
 $title_size     = $args['current_item'] > 0 ? '' : 'xl:text-3xl';

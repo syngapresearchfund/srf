@@ -10,7 +10,7 @@
 
 namespace SRF;
 
-$event_date = get_post_meta( get_the_ID(), 'event-date', true );
+$event_date = get_post_meta( get_the_ID(), 'event_date', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'shadow-lg bg-gray-300 bg-opacity-50 xs:flex items-center ' ); ?>>
