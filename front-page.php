@@ -80,6 +80,15 @@ get_header();
 			'posts_per_page' => 1,
 			'post_type'      => 'srf-events',
 			'order'          => 'DESC',
+			'orderby'        => 'meta_value',
+			'meta_key'       => 'event_date',
+			'meta_query'     => array(
+				array(
+					'key'     => 'event_date',
+					'value'   => time(),
+					'compare' => '>='
+				)
+			),
 			'tax_query'      => array(
 				array(
 					'taxonomy' => 'srf-events-category',
