@@ -67,60 +67,46 @@ get_header();
 <section class="relative py-32 bg-gray-100">
 	<div class="container mx-auto px-10 text-center">
 		<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events</h2>
-
+		<?php
+		/**
+		 * TODO: Move grid container here, below H2. Then move query logic into template tags,
+		 * separating one for featured event and another for the rest of the events + webinars.
+		 * Also be sure to order by the date field in DECS order.
+		 */ 
+		?>
+		<div class="xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 		<?php
 		$args         = array(
-			'posts_per_page' => 8,
+			'posts_per_page' => 1,
 			'post_type'      => 'srf-events',
 			'order'          => 'DESC',
 			'tax_query'      => array(
 				array(
 					'taxonomy' => 'srf-events-category',
 					'field'    => 'slug',
-					'terms'    => 'upcoming-events',
+					'terms'    => 'featured',
 				),
 			),
 		);
-		$events_query = new WP_Query( $args );
+		$featured_events_query = new WP_Query( $args );
 
-		if ( $events_query->have_posts() ) :
-			?>
-			<!-- <div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left"> -->
-			<div class="xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
-				<?php
-				// set the item count to keep track of the current item.
-				$item_count = 0;
+		if ( $featured_events_query->have_posts() ) :
+			/* Start the Loop */
+			while ( $featured_events_query->have_posts() ) :
+				$featured_events_query->the_post();
 
-				/* Start the Loop */
-				while ( $events_query->have_posts() ) :
-					$events_query->the_post();
-					$args = array( 'current_item' => $item_count );
-
-					/*
-					* Include the Post-Type-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					get_template_part( 'template-parts/content', 'events-grid', $args );
-
-					// increment the item count.
-					$item_count ++;
-				endwhile;
-				?>
-			</div>
-
-		<?php else : ?>
-
-			<div class="no-results max-w-6xl mx-auto mb-10 text-center text-lg">
-				<p>There are no upcoming events on the current schedule.</p>
-				<p>Please check back soon!</p>
-			</div>
-
-		<?php
+				/**
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', 'events-featured' );
+			endwhile;
 		endif;
 		/* Restore original Post Data */
 		wp_reset_postdata();
 		?>
+		</div>
 
 		<!-- big button / cta -->
 		<a href="<?php echo esc_url( home_url( '/events/' ) ); ?>"
