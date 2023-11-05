@@ -76,6 +76,7 @@ get_header();
 		?>
 		<div class="xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 		<?php
+		// Featured event.
 		$args         = array(
 			'posts_per_page' => 1,
 			'post_type'      => 'srf-events',
@@ -110,6 +111,56 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', 'events-featured' );
+			endwhile;
+		endif;
+		/* Restore original Post Data */
+		wp_reset_postdata();
+
+		// Upcoming events (non-featured).
+		$args         = array(
+			'posts_per_page' => 6,
+			'post_type'      => array( 'srf-events', 'srf-resources' ),
+			'order'          => 'DESC',
+			'orderby'        => 'meta_value',
+			'meta_key'       => 'event_date',
+			'meta_query'     => array(
+				array(
+					'key'     => 'event_date',
+					'value'   => time(),
+					'compare' => '>='
+				)
+			),
+			'tax_query'      => array(
+				'relation'   => 'OR',
+				array(
+					'taxonomy' => 'srf-events-category',
+					'field'    => 'term_id',
+					'terms'    => array( 38 ),
+					'operator' => 'NOT IN',
+				),
+				array(
+					'taxonomy' => 'srf-resources-category',
+					'field'    => 'term_id',
+					// 'terms'    => array( 20, 24, 66 ),
+					'terms'    => array( 42 ),
+					// 'operator' => 'NOT IN',
+					'operator' => 'IN',
+				),
+			),
+		);
+		$events_query = new WP_Query( $args );
+
+		if ( $events_query->have_posts() ) :
+			/* Start the Loop */
+			while ( $events_query->have_posts() ) :
+				$events_query->the_post();
+
+				/**
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', 'events-grid' );
 			endwhile;
 		endif;
 		/* Restore original Post Data */
