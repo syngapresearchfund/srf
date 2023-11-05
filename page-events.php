@@ -22,29 +22,32 @@ get_header();
 $upcoming_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
 	'post_type'      => 'srf-events',
-	'orderby'        => 'menu_order',
-	'order'          => 'ASC',
-	'tax_query'      => array(
-		array(
-			'taxonomy' => 'srf-events-category',
-			'field'    => 'slug',
-			'terms'    => 'upcoming-events',
-		),
-	),
+	'order'          => 'DESC',
+	'orderby'        => 'meta_value',
+	'meta_key'       => 'event_date',
+    'meta_query'     => array(
+        array(
+            'key'     => 'event_date',
+            'value'   => time(),
+            'compare' => '>='
+        )
+	)
 );
 $upcoming_events_query = new WP_Query( $upcoming_args );
 
 $past_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
 	'post_type'      => 'srf-events',
-	'tax_query'      => array(
-		array(
-			'taxonomy' => 'srf-events-category',
-			'field'    => 'slug',
-			'terms'    => 'upcoming-events',
-			'operator' => 'NOT IN',
-		),
-	),
+	'order'          => 'DESC',
+	'orderby'        => 'meta_value',
+	'meta_key'       => 'event_date',
+    'meta_query'     => array(
+        array(
+            'key'     => 'event_date',
+            'value'   => time(),
+            'compare' => '<'
+        )
+	)
 );
 $past_events_query = new WP_Query( $past_args );
 
