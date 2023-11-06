@@ -23,6 +23,11 @@ get_header();
 			<header class="entry-header max-w-3xl mx-auto mb-16">
 				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold">Our Warriors</h1>
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+
+				<!-- big button / cta -->
+				<a href="mailto:deanna@curesyngap1.org?subject=Warrior%20Submission%20Inquiry" class="mt-16 font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">
+					Share your story
+				</a>
 			</header>
 
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
