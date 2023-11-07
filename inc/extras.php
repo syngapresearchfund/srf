@@ -61,6 +61,9 @@ add_filter( 'get_the_archive_title', __NAMESPACE__ . '\\srf_archive_title' );
 
 /**
  * Filters posts_per_page to display desired number of posts
+ * 
+ * Note: This is not currently in use, but is here for reference.
+ * If we want to use this, we need to uncomment the add_action() line below.
  *
  * @param  object $query Current query object
  */

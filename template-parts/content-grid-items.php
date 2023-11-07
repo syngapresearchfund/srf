@@ -23,6 +23,9 @@ $item_taxonomy = get_queried_object();
 	<a class="post-card relative block" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<?php
 		if ( has_post_thumbnail() ) {
+			// TODO: We should use the_post_thumbnail() here, but I need to define the thumbnail sizes for the grid items and regenerate the thumbnails. This will avoid wonky grids but it will output crisper and more optimized images.
+			// Add the new thumbnail size as a parameter to the_post_thumbnail() and regenerate the thumbnails. We can ditch the custom function after that.
+			// the_post_thumbnail();
 			srf_post_thumbnail( 'h-64 w-full object-cover object-center' );
 		} else {
 			echo '<div class="h-64 w-full ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) . '"></div>';
