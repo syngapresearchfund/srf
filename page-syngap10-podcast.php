@@ -24,6 +24,8 @@ get_header();
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
 
+			<h2 class="mb-10 text-2xl lg:text-3xl font-extrabold text-gray-600 text-center">SynGAP10 weekly 10 minute updates on SYNGAP1 with <a class="underline" href="https://curesyngap1.org/team/board-members/mike-graglia/">Mike</a>.</h2>
+
 			<?php srf_post_thumbnail(); ?>
 
 			<iframe title="SynGAP10 video update with Mike Graglia: Weekly 10 minutes on #SYNGAP1 from the #SynGAP Research Fund 501(c)(3)" allowtransparency="true" height="480" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=bpx6c-aae915-pbblog-playlist&share=1&download=1&rtl=0&fonts=Georgia&skin=1&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=11&size=480" allowfullscreen=""></iframe>
