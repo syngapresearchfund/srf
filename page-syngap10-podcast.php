@@ -24,7 +24,7 @@ get_header();
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
 
-			<h2 class="mb-10 text-2xl lg:text-3xl font-extrabold text-gray-600 text-center">SynGAP10 weekly 10 minute updates on SYNGAP1 with <a class="underline" href="https://curesyngap1.org/team/board-members/mike-graglia/">Mike</a>.</h2>
+			<h2 class="mb-10 text-2xl lg:text-3xl font-extrabold text-gray-600 text-center">SynGAP10 weekly 10 minute updates on SYNGAP1 with <a class="underline" href="<?php echo esc_url( home_url( '/team/board-members/mike-graglia/' ) ); ?>">Mike</a>.</h2>
 
 			<?php srf_post_thumbnail(); ?>
 
