@@ -29,9 +29,9 @@ namespace SRF;
 					newsletter!</h4>
 				<p class="mb-3 text-center lg:text-left">Keep up-to-date with helpful resources, inspiring stories, and
 					the latest SRF news.</p>
-				<form action="" method="POST" class="flex">
-					<input type="email" name="email" placeholder="email@example.com"
-						   class="w-full xl:w-2/3 p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
+				<form action="https://SyngapResearchFund.us4.list-manage.com/subscribe/post?u=5b5957867c282184c537770df&amp;id=001d463f12" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex validate" target="_blank" novalidate>
+					<input type="email" name="email" placeholder="email@example.com" id="mce-EMAIL"
+						   class="required email w-full xl:w-2/3 p-3 rounded-l outline-none border-2 border-r-0 border-srf-purple-700 focus:border-srf-purple-800 placeholder-srf-purple-400 text-purple-900">
 					<button class="p-3 bg-srf-purple-700 hover:bg-srf-purple-800 text-white rounded-r">Submit</button>
 				</form>
 			</div>
