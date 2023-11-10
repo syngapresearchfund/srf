@@ -53,7 +53,7 @@ namespace SRF;
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2022.png' ) ); ?>"
 								alt="Guidestar Platinum Symbol of Transparency 2020"></a></li>
 					<li class="w-32"><a href="<?php echo esc_url( home_url( '/gnp/' ) ); ?>"><img
-								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2022-top-rated-awards-badge.png' ) ); ?>"
+								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2023-top-rated-awards-badge.png' ) ); ?>"
 								alt="2022 Top Rated Awards"></a></li>
 				</ul>
 			</div>
