@@ -40,7 +40,7 @@ namespace SRF;
 			<div class="hidden xl:flex justify-end items-stretch absolute right-0 w-96"
 				 x-data="{ searchOpen: false, searchClosed: true }">
 				<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET"
-					  class="w-full absolute -bottom-full right-0">
+					  class="w-full absolute -bottom-full right-0 z-10">
 					<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>"
 						   value="<?php the_search_query(); ?>"
 						   class="w-full h-10 p-2 outline-none rounded border-2 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900"
