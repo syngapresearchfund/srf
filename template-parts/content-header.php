@@ -70,8 +70,8 @@ namespace SRF;
 							srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 							srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
 							srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
-							srf_subnav_item( 'Life Expectancy', home_url( '/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
-							srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/does-my-syngap1-child-have-autism/' ) ),
+							srf_subnav_item( 'Life Expectancy', home_url( '/blog/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
+							srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/blog/does-my-syngap1-child-have-autism/' ) ),
 						)
 					);
 					srf_nav_item_dropdown(
@@ -106,6 +106,9 @@ namespace SRF;
 							srf_subnav_item( 'How To Apply', home_url( '/srf-grant-application/' ) ),
 							srf_subnav_heading( 'Models' ),
 							srf_subnav_item( 'iPS Cell Models', home_url( '/ips-cell-models/' ) ),
+							srf_subnav_heading( 'Advisory Boards' ),
+							srf_subnav_item( 'Scientific Advisory Board', home_url( '/team/scientific-advisory-board/' ) ),
+							srf_subnav_item( 'Clinical Advisory Board', home_url( '/team/clinical-advisory-board/' ) ),
 						)
 					);
 					srf_nav_item_dropdown(
@@ -196,8 +199,8 @@ namespace SRF;
 								srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 								srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
 								srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
-								srf_subnav_item( 'Life Expectancy', home_url( '/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
-								srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/does-my-syngap1-child-have-autism/' ) ),
+								srf_subnav_item( 'Life Expectancy', home_url( '/blog/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
+								srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/blog/does-my-syngap1-child-have-autism/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						srf_mobile_nav_item(
@@ -232,6 +235,9 @@ namespace SRF;
 								srf_subnav_item( 'How To Apply', home_url( '/srf-grant-application/' ) ),
 								srf_subnav_heading( 'Models' ),
 								srf_subnav_item( 'iPS Cell Models', home_url( '/ips-cell-models/' ) ),
+								srf_subnav_heading( 'Advisory Boards' ),
+								srf_subnav_item( 'Scientific Advisory Board', home_url( '/team/scientific-advisory-board/' ) ),
+								srf_subnav_item( 'Clinical Advisory Board', home_url( '/team/clinical-advisory-board/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						srf_mobile_nav_item(
