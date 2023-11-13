@@ -145,6 +145,7 @@ namespace SRF;
 							srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
 							srf_subnav_item( 'Podcasts', '/podcasts/' ),
 							srf_subnav_item( 'Blog', home_url( '/blog/' ) ),
+							srf_subnav_item( 'Recursos en Español', home_url( '/recursos-en-espanol/' ) ),
 						)
 					);
 					?>
@@ -275,6 +276,7 @@ namespace SRF;
 								srf_subnav_item( 'Webinars', home_url( '/resources/webinars/' ) ),
 								srf_subnav_item( 'Podcasts', '/podcasts/' ),
 								srf_subnav_item( 'Blog', home_url( '/blog/' ) ),
+								srf_subnav_item( 'Recursos en Español', home_url( '/recursos-en-espanol/' ) ),
 							)
 						);  // phpcs:ignore -- XSS OK
 						?>
