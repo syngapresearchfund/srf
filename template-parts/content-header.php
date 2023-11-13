@@ -127,7 +127,7 @@ namespace SRF;
 							srf_subnav_heading( 'Support' ),
 							srf_subnav_item( 'New Family Resources', home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ),
 							srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
-							srf_subnav_item( 'Fundraising', home_url( '/events/fundraisers/' ) ),
+							srf_subnav_item( 'Fundraising', home_url( '/blog/fundraising-the-backbone-of-research/' ) ),
 							srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
 							srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 						)
@@ -259,7 +259,7 @@ namespace SRF;
 								srf_subnav_heading( 'Support' ),
 								srf_subnav_item( 'New Family Resources', home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ),
 								srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
-								srf_subnav_item( 'Fundraising', home_url( '/events/fundraisers/' ) ),
+								srf_subnav_item( 'Fundraising', home_url( '/blog/fundraising-the-backbone-of-research/' ) ),
 								srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
 								srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 							)
