@@ -64,6 +64,7 @@ module.exports = {
 		extend: {
 			backgroundOpacity: ['even'],
 			borderRadius: ['first', 'last'],
+			grayscale: ['hover', 'focus'],
 		},
 	},
 	corePlugins: {
