@@ -15,7 +15,7 @@ namespace SRF;
 	<div class="container mx-auto px-6 lg:px-0 py-24">
 		<!-- top footer -->
 		<div class="lg:flex justify-between gap-x-28 space-y-12 lg:space-y-0">
-			<img class="w-auto h-9 sm:h-14" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo-white.svg" alt="">
+			<img class="w-auto mx-auto h-9 sm:h-14" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo-white.svg" alt="">
 			<div class="flex-1 text-center lg:text-left">
 				<!-- newsletter -->
 				<div id="mc_embed_shell">
