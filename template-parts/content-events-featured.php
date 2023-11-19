@@ -19,7 +19,7 @@ $event_date = get_post_meta( get_the_ID(), 'event_date', true );
 		<h4 class="mb-2 font-extrabold uppercase">
 			<span class="text-transparent bg-clip-text bg-gradient-to-r from-srf-purple-500 to-srf-blue-500">Featured </span><span class="text-transparent bg-clip-text bg-gradient-to-r from-srf-blue-500 via-srf-green-600 to-srf-green-500"> Event</span>
 		</h4>
-		<?php the_title( '<h2 class="entry-title w-full xs:w-4/6 mr-6 p-3 xs:p-0 text-2xl font-bold text-center xs:text-left xs:line-clamp-2 md:line-clamp-3 xl:text-3xl"><a class="hover:underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		<?php the_title( '<h2 class="entry-title w-full xs:w-4/6 mr-6 p-3 xs:p-0 text-2xl font-bold text-center xs:text-left line-clamp-4 xl:text-3xl"><a class="hover:underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 	</div>
 	<?php if ( ! empty( $event_date) ) : ?>
 		<h3 class="hidden sm:block mr-6 text-sm text-right font-normal xl:text-base"><?php echo esc_html( date( 'F j, Y', $event_date ) ); ?></h3>

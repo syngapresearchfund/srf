@@ -74,7 +74,7 @@ get_header();
 		 * Also be sure to order by the date field in DECS order.
 		 */ 
 		?>
-		<div class="xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
+		<div class="max-w-6xl xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 		<?php
 		// Featured event.
 		$args         = array(
