@@ -21,7 +21,7 @@ namespace SRF;
 				<div id="mc_embed_shell">
 					<div id="mc_embed_signup">
 						<div class="flex flex-col flex-1 justify-center">
-							<h4 class="mb-4 font-bold text-2xl lg:text-3xl text-center lg:text-left">Sign up for our newsletter!</h4>
+							<h4 class="mb-4 font-bold text-2xl 2xl:text-3xl text-center lg:text-left">Sign up for our newsletter!</h4>
 							<p class="mb-3 text-center lg:text-left">Keep up-to-date with helpful resources, inspiring stories, and the latest SRF news.</p>
 							<form action="https://syngapresearchfund.us4.list-manage.com/subscribe/post?u=5b5957867c282184c537770df&amp;id=001d463f12&amp;f_id=007fc5e9f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="flex validate" target="_blank">
 								<div id="mc_embed_signup_scroll" class="w-full">
