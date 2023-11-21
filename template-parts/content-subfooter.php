@@ -14,7 +14,7 @@ namespace SRF;
 
 	<div class="container mx-auto px-6 lg:px-0 py-24">
 		<!-- top footer -->
-		<div class="lg:flex justify-between gap-x-28 space-y-12 lg:space-y-0">
+		<div class="lg:flex justify-between gap-x-14 space-y-12 lg:space-y-0">
 			<img class="w-auto mx-auto h-9 sm:h-14" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo-white.svg" alt="">
 			<div class="flex-1 text-center lg:text-left">
 				<!-- newsletter -->
@@ -50,7 +50,7 @@ namespace SRF;
 						href="<?php echo esc_url( get_theme_file_uri( 'assets/files/SRF-501c3-Ruling.pdf' ) ); ?>">83-1200789</a>)
 					headquartered in California.</p>
 				<!-- links -->
-				<ul class="flex space-x-2 justify-center xl:justify-end place-items-center">
+				<ul class="flex flex-wrap space-x-2 justify-center xl:justify-end place-items-center">
 					<li class="w-32"><a href="<?php echo esc_url( home_url( '/syngap10-podcast/' ) ); ?>"><img
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/tdc-badge-podcast.png' ) ); ?>"
 								alt="The Best RARE Podcasts"></a></li>
