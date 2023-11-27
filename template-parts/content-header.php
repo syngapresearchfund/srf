@@ -38,7 +38,7 @@ namespace SRF;
 			</div>
 			<!-- Desktop menu, show/hide dropdown items on item state. -->
 			<div class="hidden xl:flex justify-end items-stretch absolute right-0 w-96"
-				 x-data="{ searchOpen: false, searchClosed: true }">
+				 x-data="{ searchOpen: false, searchClosed: true }" x-cloak>
 				<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET"
 					  class="w-full absolute -bottom-full right-0 z-10">
 					<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>"
@@ -157,7 +157,7 @@ namespace SRF;
 								<path fill="none" d="M0 0h24v24H0V0z" />
 								<path fill="#4b5563" d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
 							</svg>
-							<span class="text-xs absolute w-16 -left-3 -bottom-2 transition-opacity duration-500 ease-in-out" :class="showCartCount ? 'opacity-100' : 'opacity-0'"><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+							<span class="text-xs absolute w-16 -left-3 -bottom-2 transition-opacity duration-500 ease-in-out" :class="showCartCount ? 'opacity-100' : 'opacity-0'" x-cloak><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
 						</a>
 					</li>
 				</ul>
