@@ -22,7 +22,7 @@ get_header();
 		</h1>
 		<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed
 			to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
-		<a href="<?php echo esc_url( home_url( '/what-is-syngap-1/' ) ); ?>"
+		<a href="<?php echo esc_url( home_url( '/what-is-syngap1/' ) ); ?>"
 		   class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-blue-500 border-2 border-white font-bold text-lg tracking-wide transition duration-500">Learn
 			more about SYNGAP1</a>
 	</div>
