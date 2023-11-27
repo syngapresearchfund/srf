@@ -86,7 +86,7 @@ namespace SRF;
 							srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu' ) ),
 							srf_subnav_item( 'Our Volunteers', home_url( '/team/volunteers' ) ),
 							srf_subnav_heading( 'About Us' ),
-							srf_subnav_item( 'Mission & Values', home_url( '/mission-values/' ) ),
+							srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
 							srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
 							srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
 							srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
