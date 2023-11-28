@@ -127,7 +127,7 @@ if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
 		$thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 sm:float-left sm:mr-10';
 		$current_terms     = wp_get_post_terms( $post->ID, 'srf-resources-category', array( 'fields' => 'slugs' ) );
 
-		if ( in_array( 'movies', $current_terms, true ) || 'srf-podcasts' === get_post_type() ) {
+		if ( in_array( 'movies', $current_terms, true ) || 'srf-podcasts' === get_post_type() || in_array( 'webinars', $current_terms, true ) ) {
 			return; // exit early - no featured images on these pages.
 		}
 
