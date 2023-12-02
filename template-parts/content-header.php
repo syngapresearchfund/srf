@@ -45,10 +45,13 @@ namespace SRF;
 						   value="<?php the_search_query(); ?>"
 						   class="w-full h-10 p-2 outline-none rounded border-2 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900"
 						   :class="searchOpen ? 'rounded-tr-none' : ''"
-						   x-show="searchOpen" x-transition>
+						   x-show="searchOpen"
+						   x-transition
+						   x-ref="input"
+						>
 				</form>
 				<button class="inline-block p-2 rounded bg-srf-purple-700 hover:bg-srf-purple-800 text-white"
-						@click="searchOpen = ! searchOpen; searchClosed = ! searchClosed" :class="searchOpen ? 'rounded-b-none' : ''">
+						@click="searchOpen = ! searchOpen; $nextTick( () => { $refs.input.focus(); } ); searchClosed = ! searchClosed" :class="searchOpen ? 'rounded-b-none' : ''" >
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
 						 stroke="currentColor" class="w-6 h-6" x-show="searchClosed">
 						<path stroke-linecap="round" stroke-linejoin="round"
