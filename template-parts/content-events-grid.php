@@ -15,7 +15,7 @@ $event_date     = get_post_meta( get_the_ID(), 'event_date', true );
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'shadow-lg bg-gray-300 bg-opacity-50 xs:flex items-center col-span-3' ); ?>>
 	<?php srf_post_thumbnail( 'block w-full h-48 xs:w-56 mx-auto border-8 border-gray-300 object-cover' ); ?>
-	<div class="w-full xs:w-4/6 px-6 text-center xs:text-left">
+	<div class="w-full xs:w-4/6 px-6 py-2 text-center xs:text-left">
 		<?php the_title( '<h2 class="entry-title text-xl sm:text-2xl font-bold line-clamp-4"><a class="hover:underline" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 	</div>
 	<?php if ( ! empty( $event_date) ) : ?>
