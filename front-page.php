@@ -302,7 +302,7 @@ get_header();
 				<h3 class="text-lg text-gray-600 font-normal">Funds committed</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl text-srf-blue-500 font-bold">1297</h2>
+				<h2 class="text-5xl text-srf-blue-500 font-bold"><a href="<?php echo esc_url( home_url( '/blog/tag/census/' ) ); ?>">1297</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients counted</h3>
 			</div>
 			<div>
@@ -310,16 +310,15 @@ get_header();
 				<h3 class="text-lg text-gray-600 font-normal">Families volunteering</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl text-srf-blue-500 font-bold">214</h2>
+				<h2 class="text-5xl text-srf-blue-500 font-bold"><a href="https://ciitizen.com/syngap1/srf/">214</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">US Families on our Ciitizen NHS</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl text-srf-blue-500 font-bold">35</h2>
-				<h3 class="text-lg text-gray-600 font-normal">Companies & institutes working on a genetic therapy for
-					SYNGAP1</h3>
+				<h3 class="text-lg text-gray-600 font-normal">Companies & institutes working for SYNGAP1</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl text-srf-blue-500 font-bold">196</h2>
+				<h2 class="text-5xl text-srf-blue-500 font-bold"><a href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>">196</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients profiled</h3>
 			</div>
 		</div>
