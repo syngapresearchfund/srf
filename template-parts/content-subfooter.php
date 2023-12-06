@@ -45,7 +45,7 @@ namespace SRF;
 				</div>
 			</div>
 			<div class="flex-1 text-center lg:text-right">
-				<p class="text-lg m-3">The Syngap Research fund is a 501(c)(3) public charity (EIN <a
+				<p class="text-lg m-3">The Syngap Research Fund is a 501(c)(3) public charity (EIN <a
 						class="hover:underline text-srf-purple-100"
 						href="<?php echo esc_url( get_theme_file_uri( 'assets/files/SRF-501c3-Ruling.pdf' ) ); ?>">83-1200789</a>)
 					headquartered in California.</p>
