@@ -256,13 +256,12 @@ if ( ! function_exists( 'srf_board_grid' ) ) :
 				endwhile;
 				?>
 			</div>
-			<a href="<?php echo esc_url( home_url( '/team/board-members/' ) ); ?>"
-			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View
-				all board members
+			<a href="<?php echo esc_url( home_url( '/team/board-members/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
+				View all board members
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-					 stroke="currentColor">
+					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						  d="M13 7l5 5m0 0l-5 5m5-5H6" />
+						d="M13 7l5 5m0 0l-5 5m5-5H6" />
 				</svg>
 			</a>
 
@@ -314,13 +313,12 @@ if ( ! function_exists( 'srf_volunteer_grid' ) ) :
 				endwhile;
 				?>
 			</div>
-			<a href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>"
-			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View
-				all volunteers
+			<a href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
+				View all volunteers
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-					 stroke="currentColor">
+					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						  d="M13 7l5 5m0 0l-5 5m5-5H6" />
+						d="M13 7l5 5m0 0l-5 5m5-5H6" />
 				</svg>
 			</a>
 
@@ -372,13 +370,12 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 				endwhile;
 				?>
 			</div>
-			<a href="<?php echo esc_url( home_url( '/team/us-leadership-team/' ) ); ?>"
-			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">View
-				full leadership team
+			<a href="<?php echo esc_url( home_url( '/team/us-leadership-team/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
+				View full leadership team
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-					 stroke="currentColor">
+					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						  d="M13 7l5 5m0 0l-5 5m5-5H6" />
+						d="M13 7l5 5m0 0l-5 5m5-5H6" />
 				</svg>
 			</a>
 
@@ -505,7 +502,7 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 	 */
 	function srf_subnav_item( $name, $url, $is_mobile = false, $new_tab = false ) {
 		$padding_classes = $is_mobile ? 'px-3 py-2' : 'p-3';
-		$target          = $new_tab ? 'target="_blank" rel="noopener noreferrer"' : ''; //TODO: escape with wp_kses or similar.
+		$target          = $new_tab ? 'target="_blank" rel="noopener noreferrer"' : ''; // TODO: escape with wp_kses or similar.
 
 		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" ' . $target . '>' . esc_html( $name ) . '</a></li>';
 	}
@@ -525,18 +522,17 @@ endif;
 if ( ! function_exists( 'srf_event_date' ) ) :
 	/**
 	 * Output for Event Dates.
-	 * 
+	 *
 	 * @output string
 	 */
 	function srf_event_date() {
 		$meta_values = get_post_meta( get_the_ID(), 'event_date', true );
 
-		// Bail early if no content has been added as footnotes
+		// Bail early if no content has been added as footnotes.
 		if ( empty( $meta_values ) ) {
 			return;
 		}
-		
-		// echo '<h3 class="event-date">' . $meta_values . '</h3>';
+
 		echo '<time>' . date( 'l, F j, Y, ga', $meta_values ) . '</time>';
 	}
 endif;
