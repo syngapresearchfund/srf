@@ -15,7 +15,7 @@ namespace SRF;
 <!-- Main top-level menu, show/hide based on mobile menu state. -->
 <div class="relative bg-white px-6 lg:px-2 z-10 xl:shadow">
 	<div class="container mx-auto">
-		<div class="flex justify-between items-center xl:relative py-6 xl:pr-16 xl:justify-start xl:space-x-9">
+		<div class="flex items-center xl:relative py-6 xl:pr-16">
 			<div class="flex hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
@@ -23,7 +23,7 @@ namespace SRF;
 						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
-			<nav class="hidden xl:block font-sans">
+			<nav class="hidden xl:block ml-9 font-sans">
 				<ul class="flex space-x-6">
 					<?php
 					srf_nav_item_dropdown(
@@ -104,7 +104,7 @@ namespace SRF;
 					?>
 				</ul>
 			</nav>
-			<div class="-mr-2 -my-2 justify-end xl:hidden">
+			<div class="-mr-2 -my-2 ml-auto xl:hidden">
 				<button type="button"
 						class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
 						aria-expanded="false" @click="open = true">
@@ -118,7 +118,7 @@ namespace SRF;
 				</button>
 			</div>
 			<!-- Desktop Header Buttons (Cart, Search, Donate) -->
-			<div class="hidden xl:flex justify-end items-stretch">
+			<div class="hidden xl:flex ml-auto">
 				<!-- Desktop shop cart. -->
 				<div class="relative p-2 cursor-pointer" x-data="{ showCartCount: false }">
 					<a class="cart-contents flex" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'srf' ); ?>" @mouseover="showCartCount = true" @mouseleave="showCartCount = false">
@@ -131,7 +131,7 @@ namespace SRF;
 					</a>
 				</div>
 				<!-- Desktop search form, show/hide input state. -->
-				<div class="hidden xl:flex justify-end items-stretch"
+				<div class="hidden xl:flex items-stretch"
 					x-data="{ searchOpen: false, searchClosed: true }" x-cloak>
 					<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET"
 						class="w-full absolute -bottom-full right-0 z-10">
