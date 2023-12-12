@@ -15,7 +15,7 @@ namespace SRF;
 <!-- Main top-level menu, show/hide based on mobile menu state. -->
 <div class="relative bg-white px-6 lg:px-2 z-10 xl:shadow">
 	<div class="container mx-auto">
-		<div class="flex items-center xl:relative py-6 xl:pr-16">
+		<div class="flex items-center xl:relative py-6">
 			<div class="flex hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
@@ -134,7 +134,7 @@ namespace SRF;
 				<div class="hidden xl:flex items-stretch"
 					x-data="{ searchOpen: false, searchClosed: true }" x-cloak>
 					<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET"
-						class="w-full absolute -bottom-full right-0 z-10">
+						class="w-full absolute top-full right-0 z-10">
 						<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>"
 							value="<?php the_search_query(); ?>"
 							class="w-full h-10 p-2 outline-none rounded border-2 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900"
