@@ -137,7 +137,7 @@ namespace SRF;
 						class="w-full absolute top-full right-0 z-10">
 						<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>"
 							value="<?php the_search_query(); ?>"
-							class="w-full h-10 p-2 outline-none rounded border-2 border-gray-300 focus:border-gray-500 placeholder-gray-400 text-purple-900"
+							class="w-full h-10 px-4 py-6 outline-none rounded border-2 border-gray-300 focus:border-gray-500 placeholder-gray-400 text-purple-900"
 							x-show="searchOpen"
 							x-transition
 							x-ref="input"
