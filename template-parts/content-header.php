@@ -127,7 +127,7 @@ namespace SRF;
 							<path fill="none" d="M0 0h24v24H0V0z" />
 							<path fill="#4b5563" d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
 						</svg>
-						<span class="text-xs absolute w-16 -left-3 -bottom-2 transition-opacity duration-500 ease-in-out" :class="showCartCount ? 'opacity-100' : 'opacity-0'" x-cloak><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+						<span class="text-xs absolute w-16 -left-1 -bottom-2 transition-opacity duration-500 ease-in-out" :class="showCartCount ? 'opacity-100' : 'opacity-0'" x-cloak><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
 					</a>
 				</div>
 				<!-- Desktop search form, show/hide input state. -->
@@ -137,16 +137,15 @@ namespace SRF;
 						class="w-full absolute top-full right-0 z-10">
 						<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>"
 							value="<?php the_search_query(); ?>"
-							class="w-full h-10 p-2 outline-none rounded border-2 border-srf-purple-700 focus:border-srf-purple-800 placeholder-gray-400 text-purple-900"
-							:class="searchOpen ? 'rounded-tr-none' : ''"
+							class="w-full h-10 p-2 outline-none rounded border-2 border-gray-300 focus:border-gray-500 placeholder-gray-400 text-purple-900"
 							x-show="searchOpen"
 							x-transition
 							x-ref="input"
 							>
 					</form>
-					<button class="inline-block p-2 rounded bg-srf-purple-700 hover:bg-srf-purple-800 text-white"
-							@click="searchOpen = ! searchOpen; $nextTick( () => { $refs.input.focus(); } ); searchClosed = ! searchClosed" :class="searchOpen ? 'rounded-b-none' : ''" >
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+					<button class="inline-block p-2"
+							@click="searchOpen = ! searchOpen; $nextTick( () => { $refs.input.focus(); } ); searchClosed = ! searchClosed" :class="searchOpen ? ' rounded bg-srf-purple-700 hover:bg-srf-purple-800 text-white' : ''" >
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
 							stroke="currentColor" class="w-6 h-6" x-show="searchClosed">
 							<path stroke-linecap="round" stroke-linejoin="round"
 								d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -156,6 +155,9 @@ namespace SRF;
 							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 						</svg>
 					</button>
+					<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 ml-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
+						Donate
+					</a>
 				</div>
 			</div>
 		</div>
@@ -192,28 +194,17 @@ namespace SRF;
 					<ul>
 						<?php
 						srf_mobile_nav_item(
-							'About SYNGAP1',
+							'About',
 							'1',
 							array(
+								srf_subnav_heading( 'About SYNGAP1' ),
 								srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 								srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
 								srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
 								srf_subnav_item( 'Life Expectancy', home_url( '/blog/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
 								srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/blog/does-my-syngap1-child-have-autism/' ) ),
-							)
-						);  // phpcs:ignore -- XSS OK
-						srf_mobile_nav_item(
-							'About SRF',
-							'2',
-							array(
-								srf_subnav_heading( 'Our Team' ),
-								srf_subnav_item( 'Board Members', home_url( '/team/board-members' ) ),
-								srf_subnav_item( 'Leadership Team', home_url( '/team/leadership-team' ) ),
-								srf_subnav_item( 'Fondo de Investigacion Syngap', home_url( '/team/fondo-de-investigacion-syngap/' ) ),
-								srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk' ) ),
-								srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu' ) ),
-								srf_subnav_item( 'Our Volunteers', home_url( '/team/volunteers' ) ),
-								srf_subnav_heading( 'About Us' ),
+								srf_subnav_heading( 'About SRF' ),
+								srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 								srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
 								srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
 								srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
@@ -221,10 +212,10 @@ namespace SRF;
 								srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
 								srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
 							)
-						);  // phpcs:ignore -- XSS OK
+						);
 						srf_mobile_nav_item(
 							'Professionals',
-							'3',
+							'2',
 							array(
 								srf_subnav_heading( 'Research' ),
 								srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
@@ -242,7 +233,7 @@ namespace SRF;
 						);  // phpcs:ignore -- XSS OK
 						srf_mobile_nav_item(
 							'Families',
-							'4',
+							'3',
 							array(
 								srf_subnav_heading( 'Connections' ),
 								srf_subnav_item( 'Register with SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
@@ -262,7 +253,7 @@ namespace SRF;
 						);  // phpcs:ignore -- XSS OK
 						srf_mobile_nav_item(
 							'News & Events',
-							'5',
+							'4',
 							array(
 								srf_subnav_item( 'Events', home_url( '/events/' ) ),
 								srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
