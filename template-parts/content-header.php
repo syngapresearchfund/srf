@@ -23,7 +23,7 @@ namespace SRF;
 						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
-			<nav class="hidden xl:block ml-9 font-sans">
+			<nav class="hidden xl:block ml-10 font-sans">
 				<ul class="flex space-x-6">
 					<?php
 					srf_nav_item_dropdown(

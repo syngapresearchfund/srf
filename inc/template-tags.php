@@ -346,7 +346,7 @@ if ( ! function_exists( 'srf_researcher_grid' ) ) :
 				array(
 					'taxonomy' => 'srf-team-category',
 					'field'    => 'slug',
-					'terms'    => 'us-leadership-team',
+					'terms'    => 'leadership-team',
 				),
 			),
 		);
