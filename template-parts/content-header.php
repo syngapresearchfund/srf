@@ -71,6 +71,7 @@ namespace SRF;
 						'openFirst',
 						array(
 							srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
+							srf_subnav_item( 'How Many People Have SYNGAP1?', home_url( '/how-many-people-have-syngap1-census/' ) ),
 							srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
 							srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
 							srf_subnav_item( 'Life Expectancy', home_url( '/blog/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
@@ -129,6 +130,7 @@ namespace SRF;
 							srf_subnav_item( 'Doctors', home_url( '/doctors/' ) ),
 							srf_subnav_heading( 'Support' ),
 							srf_subnav_item( 'New Family Resources', home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ),
+							srf_subnav_item( 'Siblings', home_url( '/syngap-siblings/' ) ),
 							srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
 							srf_subnav_item( 'Fundraising', home_url( '/blog/fundraising-the-backbone-of-research/' ) ),
 							srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
