@@ -38,8 +38,9 @@ get_header();
 			<p class="text-center lg:w-4/6 mx-auto">Your contribution is tax-deductible as described on your receipt and
 				to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN <a
 					class="text-srf-blue-500 hover:underline"
-					href="https://static1.squarespace.com/static/5b4b651b3917eeb14f9188d6/t/5cf83409cf94710001e28cfb/1559770123219/SRF+501c3+Ruling.pdf">83-1200789</a>.
-				In addition to credit card above, you can donate via the following:</p>
+					href="https://static1.squarespace.com/static/5b4b651b3917eeb14f9188d6/t/5cf83409cf94710001e28cfb/1559770123219/SRF+501c3+Ruling.pdf">83-1200789</a>.</p>
+			<p class="text-center lg:w-4/6 mx-auto font-bold">Note: All equities will be liquidated and moved to cash upon receipt.</p>
+			<p class="text-center lg:w-4/6 mx-auto">In addition to credit card above, you can donate via the following:</p>
 			<ul class="flex flex-col">
 				<li class="bg-white border border-b-0 rounded-t-md" x-data="accordion(1)">
 					<h3
