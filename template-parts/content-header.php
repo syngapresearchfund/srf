@@ -23,7 +23,7 @@ namespace SRF;
 						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
-			<nav class="hidden xl:block ml-10 font-sans">
+			<nav class="hidden xl:block ml-auto font-sans">
 				<ul class="flex space-x-6">
 					<?php
 					srf_nav_item_dropdown(
@@ -120,7 +120,7 @@ namespace SRF;
 				</button>
 			</div>
 			<!-- Desktop Header Buttons (Cart, Search, Donate) -->
-			<div class="hidden xl:flex ml-auto">
+			<div class="hidden xl:flex ml-8">
 				<!-- Desktop shop cart. -->
 				<div class="relative p-2 cursor-pointer" x-data="{ showCartCount: false }">
 					<a class="cart-contents flex" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'srf' ); ?>" @mouseover="showCartCount = true" @mouseleave="showCartCount = false">
