@@ -41,8 +41,9 @@ namespace SRF;
 				</a>
 			</div>
 			<!-- copyright -->
-			<div>Copyright &copy; Syngap Research Fund <?php echo esc_html( date( 'Y' ) ); ?> | All Rights Reserved | <a
-					href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="underline">Privacy Policy</a>
+			<div class="text-center">
+				<p>Copyright &copy; Syngap Research Fund <?php echo esc_html( date( 'Y' ) ); ?> | All Rights Reserved</p>
+				<p><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="underline">Privacy Policy</a> | <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="underline">Contact Us</a></p>
 			</div>
 			<!-- links -->
 			<div class="flex space-x-5">
