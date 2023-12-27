@@ -33,7 +33,7 @@ get_header();
 
 			<div class="max-w-6xl mx-auto mb-12 md:grid grid-cols-3 gap-4 text-base leading-relaxed text-gray-700">
 				<p class="bg-white px-4 py-6 m-4 md:m-0">The Syngap Research Fund is eager to provide high-impact research grants to interested physicians and researchers worldwide to accelerate diagnosis and management of SynGAP1 syndrome.</p>
-				<p class="bg-white px-4 py-6 m-4 md:m-0">Please complete SRF’s grant application if you are interested in applying for funding to conduct SynGAP1 research.</p>
+				<p class="bg-white px-4 py-6 m-4 md:m-0">Please complete <a class="underline" href="<?php echo esc_url( home_url( '/srf-grant-application/' ) ); ?>">SRF’s grant application</a> if you are interested in applying for funding to conduct SynGAP1 research.</p>
 				<p class="bg-white px-4 py-6 m-4 md:m-0"><strong class="font-bold">Note:</strong> SRF has a Board-directed policy that does not allow for the payment of indirect costs to nonprofit institutions.</p>
 			</div>
 
