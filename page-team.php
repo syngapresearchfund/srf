@@ -28,17 +28,32 @@ get_header();
 
 	<section class="board-members text-center mb-14">
 		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Board Members</h2>
-		<?php srf_board_grid(); ?>
+		<?php srf_team_grid( 'board-members' ); ?>
 	</section>
 
-	<section class="researchers text-center mb-14">
+	<section class="leadership-team text-center mb-14">
 		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Leadership Team</h2>
-		<?php srf_leadership_grid(); ?>
+		<?php srf_team_grid( 'leadership-team' ); ?>
+	</section>
+
+	<section class="fondo-team text-center mb-14">
+		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Fondo de Investigación Syngap</h2>
+		<?php srf_team_grid( 'fondo-de-investigacion-syngap' ); ?>
+	</section>
+
+	<section class="uk-team text-center mb-14">
+		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">SRF UK</h2>
+		<?php srf_team_grid( 'srf-uk' ); ?>
+	</section>
+
+	<section class="eu-team text-center mb-14">
+		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">SRF EU</h2>
+		<?php srf_team_grid( 'srf-eu' ); ?>
 	</section>
 
 	<section class="volunteers text-center mb-14 py-14">
 		<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Volunteers</h2>
-		<?php srf_volunteer_grid(); ?>
+		<?php srf_team_grid( 'volunteers' ); ?>
 	</section>
 
 

@@ -220,11 +220,11 @@ if ( ! function_exists( 'srf_social_icon' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'srf_board_grid' ) ) :
+if ( ! function_exists( 'srf_team_grid' ) ) :
 	/**
-	 * Outputs the grid for SRF Board Members.
+	 * Outputs the grid for SRF Team Members.
 	 */
-	function srf_board_grid() {
+	function srf_team_grid( $category_slug ) {
 		$args        = array(
 			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-team',
@@ -232,19 +232,20 @@ if ( ! function_exists( 'srf_board_grid' ) ) :
 				array(
 					'taxonomy' => 'srf-team-category',
 					'field'    => 'slug',
-					'terms'    => 'board-members',
+					'terms'    => $category_slug,
 				),
 			),
 		);
-		$board_query = new WP_Query( $args );
+		$team_query = new WP_Query( $args );
+		$view_all   = 'View ' . ( 'leadership-team' === $category_slug ? 'full ' : 'all ' ) . str_replace( '-', ' ', $category_slug );
 
-		if ( $board_query->have_posts() ) :
+		if ( $team_query->have_posts() ) :
 			?>
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
 				<?php
 				/* Start the Loop */
-				while ( $board_query->have_posts() ) :
-					$board_query->the_post();
+				while ( $team_query->have_posts() ) :
+					$team_query->the_post();
 
 					/*
 					* Include the Post-Type-specific template for the content.
@@ -256,8 +257,8 @@ if ( ! function_exists( 'srf_board_grid' ) ) :
 				endwhile;
 				?>
 			</div>
-			<a href="<?php echo esc_url( home_url( '/team/board-members/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
-				View all board members
+			<a href="<?php echo esc_url( home_url( "/team/$category_slug/" ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
+				<?php echo esc_html( $view_all ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -267,121 +268,7 @@ if ( ! function_exists( 'srf_board_grid' ) ) :
 
 		<?php else : ?>
 
-			<p class="text-gray-700 text-center mb-7">No board members have been added yet!</p>
-
-		<?php
-		endif;
-
-		/* Restore original Post Data */
-		wp_reset_postdata();
-	}
-endif;
-
-if ( ! function_exists( 'srf_volunteer_grid' ) ) :
-	/**
-	 * Outputs the grid for SRF Volunteers.
-	 */
-	function srf_volunteer_grid() {
-		$args        = array(
-			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
-			'post_type'      => 'srf-team',
-			'tax_query'      => array( // phpcs:ignore -- tax_query ok.
-				array(
-					'taxonomy' => 'srf-team-category',
-					'field'    => 'slug',
-					'terms'    => 'volunteers',
-				),
-			),
-		);
-		$board_query = new WP_Query( $args );
-
-		if ( $board_query->have_posts() ) :
-			?>
-			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
-				<?php
-				/* Start the Loop */
-				while ( $board_query->have_posts() ) :
-					$board_query->the_post();
-
-					/*
-					* Include the Post-Type-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					get_template_part( 'template-parts/content', 'grid-items' );
-
-				endwhile;
-				?>
-			</div>
-			<a href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
-				View all volunteers
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-					stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M13 7l5 5m0 0l-5 5m5-5H6" />
-				</svg>
-			</a>
-
-		<?php else : ?>
-
-			<p class="text-gray-700 text-center mb-7">No volunteers have been added yet!</p>
-
-		<?php
-		endif;
-
-		/* Restore original Post Data */
-		wp_reset_postdata();
-	}
-endif;
-
-if ( ! function_exists( 'srf_researcher_grid' ) ) :
-	/**
-	 * Outputs the grid for SRF Researchers.
-	 */
-	function srf_leadership_grid() {
-		$args        = array(
-			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
-			'post_type'      => 'srf-team',
-			'tax_query'      => array( // phpcs:ignore -- tax_query ok.
-				array(
-					'taxonomy' => 'srf-team-category',
-					'field'    => 'slug',
-					'terms'    => 'us-leadership-team',
-				),
-			),
-		);
-		$board_query = new WP_Query( $args );
-
-		if ( $board_query->have_posts() ) :
-			?>
-			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-10">
-				<?php
-				/* Start the Loop */
-				while ( $board_query->have_posts() ) :
-					$board_query->the_post();
-
-					/*
-					* Include the Post-Type-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					get_template_part( 'template-parts/content', 'grid-items' );
-
-				endwhile;
-				?>
-			</div>
-			<a href="<?php echo esc_url( home_url( '/team/us-leadership-team/' ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
-				View full leadership team
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-					stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M13 7l5 5m0 0l-5 5m5-5H6" />
-				</svg>
-			</a>
-
-		<?php else : ?>
-
-			<p class="text-gray-700 text-center mb-7">No team members have been added yet!</p>
+			<p class="text-gray-700 text-center mb-7">No members have been added yet!</p>
 
 		<?php
 		endif;
