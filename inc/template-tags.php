@@ -314,7 +314,7 @@ if ( ! function_exists( 'srf_nav_item_dropdown' ) ) :
 	 */
 	function srf_nav_item_dropdown( $name, $event_binder, $subnav_items ) {
 		$output = sprintf(
-			'<li class="relative py-2 cursor-pointer" x-cloak @mouseleave="%1$s = false">
+			'<li class="relative py-6 cursor-pointer" x-cloak @mouseleave="%1$s = false">
 				<div @mouseover="%1$s = true">
 					<div class="text-gray-600 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 						<span>%2$s</span>
@@ -323,7 +323,7 @@ if ( ! function_exists( 'srf_nav_item_dropdown' ) ) :
 						</svg>
 					</div>
 
-					<div class="absolute z-10 -ml-4 transform transition duration-300 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="%1$s ? \'opacity-100 h-auto translate-y-0\' : \'opacity-0 h-0 overflow-hidden translate-y-2\'">
+					<div class="absolute z-10 -ml-4 transform transition duration-300 ease-in-out px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" :class="%1$s ? \'opacity-100 h-auto translate-y-6\' : \'opacity-0 h-0 overflow-hidden translate-y-2\'">
 						<ul class="relative rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white sm:p-4">%3$s</ul>
 					</div>
 				</div>
