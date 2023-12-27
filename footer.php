@@ -60,7 +60,7 @@ namespace SRF;
 	</div>
 
 	<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>"
-	   class="flex fixed bottom-0 right-4 items-center justify-center px-4 py-1 2xl:py-2 whitespace-nowrap rounded-t-md shadow-sm text-base font-semibold font-sans text-white bg-srf-green-500 hover:bg-srf-green-700">
+	   class="flex fixed bottom-0 right-4 items-center justify-center px-4 py-1 2xl:py-2 whitespace-nowrap rounded-t-md shadow-sm text-base font-semibold font-sans bg-white hover:bg-srf-purple-500 border-2 border-b-0 border-srf-purple-500 text-srf-purple-500 hover:text-white">
 		Donate<span class="hidden lg:inline">&nbsp;to SRF</span>
 	</a>
 
