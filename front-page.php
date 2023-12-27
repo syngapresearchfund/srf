@@ -51,8 +51,7 @@ get_header();
 			</div>
 			<div class="flex flex-col items-center space-y-6">
 				<h3 class="text-gray-600 text-2xl font-bold text-center underline">New families</h3>
-				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a 'Welcome Pack' with basic
-					information, resources, as well as important tools for you and your doctor.</p>
+				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a Resource Guide with basic information as well as important tools for you and your doctor.</p>
 				<a href="<?php echo esc_url( home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ); ?>"
 				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
 					more</a>
