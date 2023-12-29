@@ -391,7 +391,7 @@ if ( ! function_exists( 'srf_subnav_item' ) ) :
 		$padding_classes = $is_mobile ? 'px-3 py-2' : 'p-3';
 		$target          = $new_tab ? 'target="_blank" rel="noopener noreferrer"' : ''; // TODO: escape with wp_kses or similar.
 
-		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-50"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" ' . $target . '>' . esc_html( $name ) . '</a></li>';
+		return '<li class="' . $padding_classes . ' rounded-lg hover:bg-gray-100"><a href="' . esc_url( $url ) . '" class="block text-base font-medium text-gray-900" ' . $target . '>' . esc_html( $name ) . '</a></li>';
 	}
 endif;
 
@@ -402,7 +402,7 @@ if ( ! function_exists( 'srf_subnav_heading' ) ) :
 	 * @param string $name The name for the nav link.
 	 */
 	function srf_subnav_heading( $name ) {
-		return '<h4 class="p-3 font-semibold text-srf-blue-500">' . esc_html( $name ) . '</h4>';
+		return '<h4 class="p-3 font-semibold text-srf-blue-500 cursor-default">' . esc_html( $name ) . '</h4>';
 	}
 endif;
 
