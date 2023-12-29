@@ -33,6 +33,19 @@ get_header();
 				<p class="text-2xl xl:text-4xl">hosted by <a class="underline" href="<?php echo esc_url( home_url( '/team/volunteers/ashley-frye-mba/' ) ); ?>">Ashley Frye</a>.</p>
 			</div>
 
+			<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
+				<p class="prose lg:prose-xl mx-auto">Listen below or find us on your podcast player of choice!</p>
+				<ul class="flex flex-wrap lg:flex-nowrap justify-center mx-auto space-x-2">
+					<li class="w-1/3 mt-4 lg:mt-0"><a href="https://podcasts.apple.com/us/podcast/syngap-stories/id1667705687" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Apple-Badge.png' ) ); ?>" alt="Apple Podcasts" /></a></li>
+					<li class="w-1/3 mt-4 lg:mt-0"><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kOWExMThiYy9wb2RjYXN0L3Jzcw" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Google-Badge.png' ) ); ?>" alt="Google Podcasts" /></a></li>
+					<li class="w-1/3 mt-4 lg:mt-0"><a href="https://music.amazon.com/podcasts/20b4c971-9d2f-4934-8adf-2875bdcabedf" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Amazon-Badge.png' ) ); ?>" alt="Amazon Music" /></a></li>
+					<li class="w-1/3 mt-4 lg:mt-0"><a href="https://open.spotify.com/show/4UijtRfgW2Tbcbrz3Yv9J9" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Spotify-Badge.png' ) ); ?>" alt="Spotify" /></a></li>
+					<li class="w-1/3 mt-4 lg:mt-0"><a href="https://www.iheart.com/podcast/269-syngap-stories-107883257/" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-iHeart-Badge.png' ) ); ?>" alt="iHeart Radio" /></a></li>
+					<li class="w-1/3 mt-4 lg:mt-0"><a href="https://healthpodcastnetwork.com/show/syngap1-stories/" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-HPN-Badge.png' ) ); ?>" alt="Health Podcast Network" /></a></li>
+				</ul>
+				<div class="mx-auto w-2/3 h-px bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
+			</div>
+
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
 				<?php
 				/* Start the Loop */
