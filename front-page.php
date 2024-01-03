@@ -297,19 +297,19 @@ get_header();
 	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500" href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>">$4.45M</a></h2>
+				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500" href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>">$5M</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Funds committed</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="<?php echo esc_url( home_url( '/blog/tag/census/' ) ); ?>">1297</a></h2>
+				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="<?php echo esc_url( home_url( '/blog/tag/census/' ) ); ?>">1,339</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients counted</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500" href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>">139</a></h2>
+				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500" href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>">152</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Families volunteering</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="https://ciitizen.com/syngap1/srf/">214</a></h2>
+				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="https://ciitizen.com/syngap1/srf/">218</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">US Families on our Ciitizen NHS</h3>
 			</div>
 			<div>

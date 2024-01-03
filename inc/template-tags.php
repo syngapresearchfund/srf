@@ -423,17 +423,3 @@ if ( ! function_exists( 'srf_event_date' ) ) :
 		echo '<time>' . date( 'l, F j, Y, ga', $meta_values ) . '</time>';
 	}
 endif;
-
-if ( ! function_exists( 'srf_podcast_platforms' ) ) :
-	/**
-	 * Output for podcast platform button/links.
-	 *
-	 * @output string
-	 */
-	function srf_podcast_platforms() {
-		$output = sprintf(
-			'<div',
-			esc_html(),
-		);
-	}
-endif;
