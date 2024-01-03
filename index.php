@@ -27,15 +27,40 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
 
-			<?php if ( is_home() || is_category()) : ?>
-				<ul class="blog-category-list mb-16 text-lg text-gray-900">
-					<?php wp_list_categories( array(
-						'show_option_all' => 'All',
-						'hide_title_if_empty' => 1,
-						'separator' => ' ',
-						'title_li' => 'Categories:',
-					) ); ?>
-				</ul>
+			<?php if ( is_home() || is_category() || is_tag() ) : ?>
+				<div class="prose lg:prose-xl max-w-6xl mx-auto mb-10">
+					<div class="flex justify-between">
+					<?php 
+						$cat_args = array(
+							'taxonomy'           => 'category',
+							'show_option_none'    => 'Filter by Category',
+							// 'show_option_all'    => 'All',
+							'name'               => 'cat',
+							'class'              => 'blog-filter',
+							'hide_if_empty'         => true,
+						);
+						wp_dropdown_categories( $cat_args );
+					?>
+
+					<?php
+						$tag_args = array(
+							'taxonomy'           => 'post_tag',
+							'show_option_none'    => 'Filter by Tag',
+							// 'show_option_all'    => 'All',
+							'name'               => 'tag',
+							'class'              => 'blog-filter',
+							'hide_if_empty'         => true,
+						);
+						wp_dropdown_categories( $tag_args );
+					?>
+					</div>
+
+					<?php
+						if ( is_category() || is_tag() ) {
+							srf_blog_filter_reset_btn();
+						}
+					?>
+				</div>
 			<?php endif; ?>
 			<!-- <div class="max-w-4xl mx-auto space-y-16"> -->
 			<div id="post-list" class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">

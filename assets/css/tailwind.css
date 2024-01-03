@@ -54,28 +54,8 @@ Adjustments and Overrides
 }
 
 /* Blog Listing Adjustments */
-.blog-category-list .categories {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	font-weight: 600;
-}
-.blog-category-list .categories > ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	font-weight: 400;
-}
-.blog-category-list .categories li {
-	--tw-space-x-reverse: 0;
-	margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-	margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.blog-category-list .categories a:hover,
-.blog-category-list .categories a:focus,
-.blog-category-list .categories a:active,
-.blog-category-list .current-cat a {
-	text-decoration: underline;
+select.blog-filter {
+	@apply border-2 border-gray-300 py-1 px-2 rounded-sm;
 }
 
 /* WooCommerce Adjustments */
