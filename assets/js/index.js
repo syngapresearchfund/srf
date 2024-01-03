@@ -8,6 +8,7 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		// Category filter dropdown
 		document.getElementById('cat').onchange = function () {
+			// if value is not a cat id, bail early.
 			if (this.value === '-1') {
 				return;
 			}
@@ -21,22 +22,23 @@
 
 		// Tag filter dropdown
 		document.getElementById('tag').onchange = function (e) {
-			let selectedOptionText = this.options[this.selectedIndex].innerText;
-			// if value is category id
+			const selectedOptionText = this.options[this.selectedIndex].innerText;
+			const selectedOptionSlug = selectedOptionText
+				.toLowerCase()
+				.trim()
+				.replace(/[\s\W-]+/g, '-');
+
 			if (this.value === '-1') {
+				// if value is not a tag id, bail early.
 				return;
 			}
 
 			if (this.value === '0') {
 				window.location = '/blog/';
 			} else {
-				window.location =
-					'/?tag=' +
-					selectedOptionText
-						.toLowerCase()
-						.trim()
-						.replace(/[\s\W-]+/g, '-');
+				window.location = '/?tag=' + selectedOptionSlug;
 			}
+			a;
 		};
 	});
 })();
