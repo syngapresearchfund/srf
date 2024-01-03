@@ -71,7 +71,10 @@ Adjustments and Overrides
 	margin-right: calc(1.25rem * var(--tw-space-x-reverse));
 	margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.blog-category-list .categories a:hover {
+.blog-category-list .categories a:hover,
+.blog-category-list .categories a:focus,
+.blog-category-list .categories a:active,
+.blog-category-list .current-cat a {
 	text-decoration: underline;
 }
 
