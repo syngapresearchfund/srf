@@ -22,12 +22,6 @@
 
 		// Tag filter dropdown
 		document.getElementById('tag').onchange = function (e) {
-			const selectedOptionText = this.options[this.selectedIndex].innerText;
-			const selectedOptionSlug = selectedOptionText
-				.toLowerCase()
-				.trim()
-				.replace(/[\s\W-]+/g, '-');
-
 			if (this.value === '-1') {
 				// if value is not a tag id, bail early.
 				return;
@@ -36,7 +30,7 @@
 			if (this.value === '0') {
 				window.location = '/blog/';
 			} else {
-				window.location = '/?tag=' + selectedOptionSlug;
+				window.location = '/?tag=' + this.value;
 			}
 			a;
 		};

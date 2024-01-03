@@ -47,6 +47,7 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 							'taxonomy'           => 'post_tag',
 							'show_option_none'    => 'Filter by Tag',
 							// 'show_option_all'    => 'All',
+							'value_field'        => 'slug',
 							'name'               => 'tag',
 							'class'              => 'blog-filter',
 							'hide_if_empty'         => true,
