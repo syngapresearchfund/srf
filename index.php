@@ -27,6 +27,14 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
 
+			<ul class="blog-category-list mb-16 text-lg text-gray-900">
+				<?php wp_list_categories( array(
+					'show_option_all' => 'All',
+					'hide_title_if_empty' => 1,
+					'separator' => ' ',
+					'title_li' => 'Categories:',
+				) ); ?>
+			</ul>
 			<!-- <div class="max-w-4xl mx-auto space-y-16"> -->
 			<div id="post-list" class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php

@@ -53,6 +53,28 @@ Adjustments and Overrides
 	justify-content: space-between;
 }
 
+/* Blog Listing Adjustments */
+.blog-category-list .categories {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-weight: 600;
+}
+.blog-category-list .categories > ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-weight: 400;
+}
+.blog-category-list .categories li {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+	margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.blog-category-list .categories a:hover {
+	text-decoration: underline;
+}
+
 /* WooCommerce Adjustments */
 .wp-block-gallery .blocks-gallery-item::before,
 .woocommerce .woocommerce-pagination ul.page-numbers li::before,
