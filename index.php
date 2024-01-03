@@ -32,25 +32,27 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 					<div class="flex justify-between">
 					<?php 
 						$cat_args = array(
-							'taxonomy'           => 'category',
-							'show_option_none'    => 'Filter by Category',
+							'taxonomy'         => 'category',
+							'show_option_none' => 'Filter by Category',
 							// 'show_option_all'    => 'All',
-							'name'               => 'cat',
-							'class'              => 'blog-filter',
-							'hide_if_empty'         => true,
+							'name'             => 'cat',
+							'class'            => 'blog-filter',
+							'hide_if_empty'    => true,
 						);
 						wp_dropdown_categories( $cat_args );
 					?>
 
 					<?php
+						$current_category = get_queried_object();
 						$tag_args = array(
-							'taxonomy'           => 'post_tag',
-							'show_option_none'    => 'Filter by Tag',
+							'taxonomy'         => 'post_tag',
+							'show_option_none' => 'Filter by Tag',
 							// 'show_option_all'    => 'All',
-							'value_field'        => 'slug',
-							'name'               => 'tag',
-							'class'              => 'blog-filter',
-							'hide_if_empty'         => true,
+							'value_field'      => 'slug',
+							'name'             => 'tag',
+							'class'            => 'blog-filter',
+							'hide_if_empty'    => true,
+							'selected'         => $current_category->slug,
 						);
 						wp_dropdown_categories( $tag_args );
 					?>
