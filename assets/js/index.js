@@ -6,8 +6,11 @@
 (function () {
 	// Blog Dropdown Filters
 	document.addEventListener('DOMContentLoaded', function () {
+		const catSelect = document.getElementById('cat');
+		const tagSelect = document.getElementById('tag');
+
 		// Category filter dropdown
-		document.getElementById('cat').onchange = function () {
+		catSelect.onchange = function () {
 			// if value is not a cat id, bail early.
 			if (this.value === '-1') {
 				return;
@@ -18,10 +21,12 @@
 			} else {
 				window.location = '/?cat=' + this.value;
 			}
+
+			tagSelect.value = '';
 		};
 
 		// Tag filter dropdown
-		document.getElementById('tag').onchange = function (e) {
+		tagSelect.onchange = function (e) {
 			if (this.value === '-1') {
 				// if value is not a tag id, bail early.
 				return;
@@ -32,7 +37,8 @@
 			} else {
 				window.location = '/?tag=' + this.value;
 			}
-			a;
+
+			catSelect.value = '';
 		};
 	});
 })();

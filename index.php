@@ -28,41 +28,37 @@ $posts_title = get_the_title( get_option( 'page_for_posts', true ) );
 			</header>
 
 			<?php if ( is_home() || is_category() || is_tag() ) : ?>
-				<div class="prose lg:prose-xl max-w-6xl mx-auto mb-10">
-					<div class="flex justify-between">
-					<?php 
-						$cat_args = array(
-							'taxonomy'         => 'category',
-							'show_option_none' => 'Filter by Category',
-							// 'show_option_all'    => 'All',
-							'name'             => 'cat',
-							'class'            => 'blog-filter',
-							'hide_if_empty'    => true,
-						);
-						wp_dropdown_categories( $cat_args );
-					?>
-
-					<?php
-						$current_category = get_queried_object();
-						$tag_args = array(
-							'taxonomy'         => 'post_tag',
-							'show_option_none' => 'Filter by Tag',
-							// 'show_option_all'    => 'All',
-							'value_field'      => 'slug',
-							'name'             => 'tag',
-							'class'            => 'blog-filter',
-							'hide_if_empty'    => true,
-							'selected'         => $current_category->slug,
-						);
-						wp_dropdown_categories( $tag_args );
-					?>
+				<div class="prose lg:prose-xl max-w-6xl mx-auto mb-10 flex justify-between flex-wrap">
+					<div>
+						<h4 class="text-sm">Filter by Category:</h4>
+						<?php 
+							$cat_args = array(
+								'taxonomy'        => 'category',
+								'show_option_all' => 'All',
+								'name'            => 'cat',
+								'class'           => 'blog-filter',
+								'hide_if_empty'   => true,
+							);
+							wp_dropdown_categories( $cat_args );
+						?>
 					</div>
 
-					<?php
-						if ( is_category() || is_tag() ) {
-							srf_blog_filter_reset_btn();
-						}
-					?>
+					<div>
+						<h4 class="text-sm">Filter by Tag:</h4>
+						<?php
+							$current_category = get_queried_object();
+							$tag_args = array(
+								'taxonomy'        => 'post_tag',
+								'show_option_all' => 'All',
+								'value_field'     => 'slug',
+								'name'            => 'tag',
+								'class'           => 'blog-filter',
+								'hide_if_empty'   => true,
+								'selected'        => $current_category->slug,
+							);
+							wp_dropdown_categories( $tag_args );
+						?>
+					</div>
 				</div>
 			<?php endif; ?>
 			<!-- <div class="max-w-4xl mx-auto space-y-16"> -->

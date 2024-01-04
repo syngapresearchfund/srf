@@ -423,14 +423,3 @@ if ( ! function_exists( 'srf_event_date' ) ) :
 		echo '<time>' . date( 'l, F j, Y, ga', $meta_values ) . '</time>';
 	}
 endif;
-
-if ( ! function_exists( 'srf_blog_filter_reset_btn' ) ) :
-	/**
-	 * Output for the "reset" button on the blog filter archive pages.
-	 *
-	 * @output string
-	 */
-	function srf_blog_filter_reset_btn() {
-		echo '<div class="text-right"><a href="' . home_url( '/blog/' ) . '" class="text-sm hover:underline">Reset</a></div>';
-	}
-endif;
