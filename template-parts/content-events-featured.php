@@ -14,7 +14,7 @@ $event_date = get_post_meta( get_the_ID(), 'event_date', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'shadow-lg bg-gray-300 bg-opacity-50 xs:flex items-center col-span-full ' ); ?>>
-	<?php srf_post_thumbnail( 'block w-full h-48 xs:w-56 mx-auto xs:mx-0 xs:mr-6 border-8 border-gray-300 object-cover xl:h-80 xl:w-96 xl:px-6 xl:object-contain bg-gray-300' ); ?>
+	<?php the_post_thumbnail( 'featured-image', array( 'class' => 'block w-full h-48 xs:w-56 mx-auto xs:mx-0 xs:mr-6 border-8 border-gray-300 object-cover xl:h-80 xl:w-96 xl:px-6 xl:object-contain bg-gray-300' ) ); ?>
 	<div class="w-full xs:w-4/6 px-6 text-center xs:text-left">
 		<h4 class="mb-2 font-extrabold uppercase text-xs sm:text-base">
 			<span class="text-transparent bg-clip-text bg-gradient-to-r from-srf-purple-500 to-srf-blue-500">Featured </span><span class="text-transparent bg-clip-text bg-gradient-to-r from-srf-blue-500 via-srf-green-600 to-srf-green-500"> Event</span>
