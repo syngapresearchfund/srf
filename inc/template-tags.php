@@ -116,7 +116,7 @@ if ( ! function_exists( 'srf_post_thumbnail' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
+if ( ! function_exists( 'srf_single_featured_image' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 */
@@ -124,7 +124,7 @@ if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
 		global $post;
 
 		// TODO: Adjust the featured image to be based on an aspect ratio size - maybe.
-		$thumbnail_classes = 'w-2/3 sm:w-1/3 max-h-80 sm:float-left sm:mr-10';
+		$thumbnail_classes = 'w-2/3 sm:w-1/3 h-96 sm:float-left sm:mr-10 object-cover object-center';
 		$current_terms     = wp_get_post_terms( $post->ID, 'srf-resources-category', array( 'fields' => 'slugs' ) );
 
 		if ( in_array( 'movies', $current_terms, true ) || 'srf-podcasts' === get_post_type() || in_array( 'webinars', $current_terms, true ) ) {
@@ -132,7 +132,7 @@ if ( ! function_exists( 'srf_profile_thumbnail' ) ) :
 		}
 
 		if ( 'post' !== get_post_type() && 'product' !== get_post_type() && 'srf-events' !== get_post_type() ) {
-			srf_post_thumbnail( $thumbnail_classes );
+			the_post_thumbnail( 'profile-image', array( 'class' => $thumbnail_classes ) );
 		} else {
 			the_post_thumbnail( 'full', array( 'class' => 'block mx-auto mb-0' ) );
 		}
