@@ -99,6 +99,31 @@ function coming_soon_redirect() {
 // add_action( 'template_redirect', __NAMESPACE__ . '\\coming_soon_redirect' );
 
 /**
+ * Exclude posts with a Siblings taxonomy term from the main Warriors archive.
+ *
+ * Only allow logged-in users to view the full site.
+ */
+function srf_exclude_siblings_from_archive( $query ) {
+
+    // Three conditions that we want to exit early for
+    if ( ( is_admin() ) || ( ! is_post_type_archive( 'srf-warriors' ) ) || ( ! $query->is_main_query() ) ) {
+        return;
+    }
+
+    // Modify the query to exclude posts with any My Taxonomy term
+    $taxquery = array(
+        array(
+            'taxonomy' => 'srf-warriors-category',
+            'operator' => 'NOT EXISTS',
+        )
+    );
+
+    $query->set( 'tax_query', $taxquery );
+
+}
+add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_exclude_siblings_from_archive' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
