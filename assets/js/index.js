@@ -6,6 +6,10 @@
 (function () {
 	// Blog Dropdown Filters
 	document.addEventListener('DOMContentLoaded', function () {
+		if (!document.body.classList.contains('blog')) {
+			return;
+		}
+
 		const catSelect = document.getElementById('cat');
 		const tagSelect = document.getElementById('tag');
 
