@@ -66,6 +66,7 @@ function srf_setup() : void {
 	add_image_size( 'featured-image', 635, 320 );
 	add_image_size( 'featured-image-small', 475, 320 );
 	add_image_size( 'featured-thumbnail', 320, 320 );
+	add_image_size( 'profile-image', 640, 640 );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
 

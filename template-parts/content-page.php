@@ -19,7 +19,7 @@ $srf_content_classes = is_page( 'shop' ) ? 'max-w-5xl mx-auto mb-10' : 'mx-auto 
 		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</header>
 
-	<?php srf_post_thumbnail(); ?>
+	<?php the_post_thumbnail( 'featured-image', array( 'class' => 'mx-auto mb-10') ); ?>
 
 	<div class="entry-content <?php echo esc_attr( $srf_content_classes ); ?>">
 		<?php

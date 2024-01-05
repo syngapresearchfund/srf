@@ -26,7 +26,7 @@ get_header();
 
 			<h2 class="mb-10 text-2xl lg:text-3xl font-extrabold text-gray-600 text-center">SynGAP10 weekly 10 minute updates on SYNGAP1 with <a class="underline" href="<?php echo esc_url( home_url( '/team/board-members/mike-graglia/' ) ); ?>">Mike</a>.</h2>
 
-			<?php srf_post_thumbnail(); ?>
+			<?php the_post_thumbnail( 'featured-image', array( 'class' => 'mx-auto mb-10') ); ?>
 
 			<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
 				<p class="prose lg:prose-xl mx-auto">Listen below or find us on your podcast player of choice!</p>
