@@ -48,7 +48,7 @@ get_header();
 			</div>
 			<div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
 				<?php
-					the_posts_navigation();
+					the_posts_navigation( array( 'prev_text' => 'Next Page', 'next_text' => 'Previous Page' ) );
 				?>
 			</div>
 		</div> <!-- .post-grid -->

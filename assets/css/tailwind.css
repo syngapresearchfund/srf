@@ -51,6 +51,7 @@ Adjustments and Overrides
 .posts-navigation .nav-links {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: row-reverse;
 }
 
 /* Blog Listing Adjustments */
