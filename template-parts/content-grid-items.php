@@ -28,18 +28,8 @@ $item_taxonomy = get_queried_object();
 		}
 		?>
 
-		<?php // if ( 'srf-resources' === get_post_type() ) : ?>
-		<?php if ( 'Webinars' === $item_taxonomy->name ) : ?>
-			<header class="entry-header p-6 absolute top-0 h-full w-full text-gray-100 bg-gray-900 bg-opacity-40 rounded">
-				<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-5">', '</h2>' ); ?>
-				<?php if ( has_excerpt() ) : ?>
-					<h3 class="mt-4 text-sm font-normal"><?php the_excerpt(); ?></h3>
-				<?php endif; ?>
-			</header><!-- .entry-header -->
-		<?php else : ?>
-			<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40 rounded-b">
-				<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
-			</header><!-- .entry-header -->
-		<?php endif; ?>
+		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40 rounded-b">
+			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
+		</header><!-- .entry-header -->
 	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
