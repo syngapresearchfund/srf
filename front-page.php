@@ -65,7 +65,7 @@ get_header();
 <!-- ========================= -->
 <section class="relative py-32 bg-gray-100">
 	<div class="container mx-auto px-10 text-center">
-		<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events</h2>
+		<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events & Webinars</h2>
 		<?php
 		/**
 		 * TODO: Move grid container here, below H2. Then move query logic into template tags,
@@ -169,8 +169,17 @@ get_header();
 
 		<!-- big button / cta -->
 		<a href="<?php echo esc_url( home_url( '/events/' ) ); ?>"
-		   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+		   class="font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
 			all events
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
+				 stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+			</svg>
+		</a>
+		<!-- big button / cta -->
+		<a href="<?php echo esc_url( home_url( '/resources/webinars/' ) ); ?>"
+		   class="mt-8 sm:mt-0 sm:ml-8 font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+			all webinars
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
 				 stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
