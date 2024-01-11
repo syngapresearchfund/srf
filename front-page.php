@@ -259,7 +259,7 @@ get_header();
 
 		if ( $news_query->have_posts() ) :
 			?>
-			<div class="max-w-screen-2xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-1 mb-10">
+			<div class="max-w-screen-2xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-1 mb-10">
 				<?php
 				/* Start the Loop */
 				while ( $news_query->have_posts() ) :

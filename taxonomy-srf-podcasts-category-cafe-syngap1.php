@@ -63,7 +63,6 @@ La esperanza de nuestra presentadora Merlina Davila es que a partir de compartir
 				endwhile;
 				?>
 			</div>
-			<!-- TODO: This navigation is broken - subsequent pages return 404. -->
 			<div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
 				<?php
 					the_posts_navigation( array( 'prev_text' => 'Next Page', 'next_text' => 'Previous Page' ) );
