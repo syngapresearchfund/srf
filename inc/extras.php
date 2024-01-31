@@ -62,17 +62,16 @@ add_filter( 'get_the_archive_title', __NAMESPACE__ . '\\srf_archive_title' );
 /**
  * Filters the main query to display desired post order for teams CPT.
  * 
+ * TODO: This is not currently working. Commented out the action hook until I can test it.
+ * 
  * @param  object $query Current query object
  */
 function srf_team_orderby( $query ) {
-	if ( is_admin() && ! $query->is_main_query() && $query->is_post_type_archive( 'srf-team' ) ) {
-		return;
+	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'srf-team' ) ) {
+		$query->set( 'orderby', array( 'menu_order' => 'DESC', 'title' => 'ASC' ) );
 	}
-
-	$query->set( 'orderby', array( 'menu_order' => 'DESC', 'title' => 'ASC' ) );
-	// $query->set( 'order', 'ASC' );
 }
-add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_team_orderby', 10 );
+// add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_team_orderby', 11 );
 
 /**
  * Filters posts_per_page to display desired number of posts
