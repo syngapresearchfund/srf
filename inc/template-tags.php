@@ -210,6 +210,7 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 		$args        = array(
 			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-team',
+			'orderby'        => array( 'menu_order' => 'DESC', 'title' => 'ASC' ),
 			'tax_query'      => array( // phpcs:ignore -- tax_query ok.
 				array(
 					'taxonomy' => 'srf-team-category',
