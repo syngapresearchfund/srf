@@ -318,7 +318,7 @@ get_header();
 				<h3 class="text-lg text-gray-600 font-normal">Families volunteering</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="https://ciitizen.com/syngap1/srf/">218</a></h2>
+				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="https://ciitizen.com/syngap1/srf/">225</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">US Families on our Ciitizen NHS</h3>
 			</div>
 			<div>
@@ -326,7 +326,7 @@ get_header();
 				<h3 class="text-lg text-gray-600 font-normal">Companies & institutes working for SYNGAP1</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>">196</a></h2>
+				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>">197</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients profiled</h3>
 			</div>
 		</div>
