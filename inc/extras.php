@@ -60,6 +60,20 @@ function srf_archive_title( $title ) {
 add_filter( 'get_the_archive_title', __NAMESPACE__ . '\\srf_archive_title' );
 
 /**
+ * Filters the main query to display desired post order for teams CPT.
+ * 
+ * @param  object $query Current query object
+ */
+function srf_team_orderby( $query ) {
+	if ( is_admin() && ! $query->is_main_query() && $query->is_post_type_archive( 'srf-team' ) ) {
+		return;
+	}
+
+	$query->set( 'orderby', 'menu_order' );
+}
+add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_team_orderby', 10 );
+
+/**
  * Filters posts_per_page to display desired number of posts
  * 
  * Note: This is not currently in use, but is here for reference.
