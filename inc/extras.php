@@ -69,7 +69,8 @@ function srf_team_orderby( $query ) {
 		return;
 	}
 
-	$query->set( 'orderby', 'menu_order' );
+	$query->set( 'orderby', array( 'menu_order' => 'DESC', 'title' => 'ASC' ) );
+	// $query->set( 'order', 'ASC' );
 }
 add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_team_orderby', 10 );
 
