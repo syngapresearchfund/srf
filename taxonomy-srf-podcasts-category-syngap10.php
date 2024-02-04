@@ -23,12 +23,11 @@ get_header();
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo esc_attr( $container_classes ); ?> text-center">
 			<header class="entry-header max-w-3xl mx-auto mb-10">
-				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?></h1>
+				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?> Podcast</h1>
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
 			
 			<div class="prose lg:prose-xl mx-auto mb-10">
-				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/SYNGAP1-Stories.png' ) ); ?>" alt="Syngap1 Stories" />
 				<p class="text-2xl xl:text-4xl">SynGAP10 weekly 10 minute updates on SYNGAP1 with <a class="underline" href="<?php echo esc_url( home_url( '/team/board-members/mike-graglia/' ) ); ?>">Mike</a>.</p>
 			</div>
 
@@ -67,12 +66,12 @@ get_header();
 				?>
 			</div>
 			<div class="mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg">
-				<figure class="mx-auto">
+				<figure>
 					<a href="https://www.rarediseasefilmfestival.com/rarediseasepodcasts">
-						<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/tdc-badge-podcast.png' ) ); ?>" alt="The Disorder Channel – The Best RARE Podcasts" />
+						<img class="mx-auto" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/tdc-badge-podcast.png' ) ); ?>" alt="The Disorder Channel – The Best RARE Podcasts" />
 					</a>
-					<figcaption class="italic">
-						Thank you to the DISORDER&nbsp;Channel for recognizing our Podcast!
+					<figcaption class="text-center italic">
+						Thank you to the DISORDER Channel for recognizing our Podcast!
 					</figcaption>
 				</figure>
 			</div>
