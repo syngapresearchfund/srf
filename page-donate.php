@@ -93,8 +93,8 @@ get_header();
 									<li>First Republic Bank.</li>
 									<li>111 Pine Street.</li>
 									<li>San Francisco, CA 94111.</li>
-									<li class="mt-4">Account number: 80006957411</li>
-									<li>ABA / Routing Number: 321081669.</li>
+									<li class="mt-4">Account number: 80015274544</li>
+									<li>ABA / Routing Number: 321081669</li>
 									<li>SWIFT Code: FRBBUS6S</li>
 								</ul>
 							</div>
