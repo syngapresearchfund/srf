@@ -30,10 +30,10 @@ get_header();
 		<p>Below are SYNGAP1 research studies that SRF has reviewed and encourage families to join. If you have general questions about any studies, please contact Corey Baysden, SRF via <a href="mailto:Corey@curesyngap1.org?subject=Studies enquiries">Corey@curesyngap1.org<a></p>
 	</div>
 
-	<div class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
-		<?php
-		/* Start the Loop */
-		if ( have_posts() ) :
+	<?php if ( have_posts() ) : ?>
+		<div class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
+			<?php
+			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
 
@@ -45,16 +45,16 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-		else : ?>
-			<p class="text-2xl text-center italic">No <?php echo esc_html( $current_term->name ); ?> have been uploaded yet. Please check back later!</p>
-		<?php endif; ?>
-
-	</div>
-	<div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
-		<?php
-			the_posts_navigation( array( 'prev_text' => 'Next Page', 'next_text' => 'Previous Page' ) );
-		?>
-	</div>
+			?>
+		</div>
+		<div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
+			<?php
+				the_posts_navigation( array( 'prev_text' => 'Next Page', 'next_text' => 'Previous Page' ) );
+			?>
+		</div>
+	<?php else : ?>
+		<p class="text-2xl text-center italic">No <?php echo esc_html( $current_term->name ); ?> have been uploaded yet. Please check back later!</p>
+	<?php endif; ?>
 </div>
 
 <?php
