@@ -16,18 +16,17 @@
 namespace SRF;
 
 $container_classes = srf_container_classes();
-$current_term      = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 get_header();
 ?>
 
 <div class="<?php echo esc_attr( $container_classes ); ?> text-center">
 	<header class="entry-header max-w-3xl mx-auto mb-16">
-		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php esc_html_e( 'Webinars', 'srf' ); ?></h1>
+		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php esc_html_e( 'Studies', 'srf' ); ?></h1>
 		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</header>
 
 	<div class="prose lg:prose-xl mx-auto mb-10">
-		<p>Below are SYNGAP1 research studies that SRF has reviewed and encourage families to join. If you have general questions about any studies, please contact Corey Baysden, SRF via <a href="mailto:Corey@curesyngap1.org?subject=Studies enquiries">Corey@curesyngap1.org<a></p>
+		<p>Below are SYNGAP1 research studies that SRF has reviewed and encourage families to join. If you have general questions about any studies, please contact Corey Baysden, SRF via <a href="mailto:Corey@curesyngap1.org?subject=Studies enquiries">Corey@curesyngap1.org</a></p>
 	</div>
 
 	<?php if ( have_posts() ) : ?>
@@ -53,7 +52,7 @@ get_header();
 			?>
 		</div>
 	<?php else : ?>
-		<p class="text-2xl text-center italic">No <?php echo esc_html( $current_term->name ); ?> have been uploaded yet. Please check back later!</p>
+		<p class="text-2xl text-center italic">No studies have been uploaded yet. Please check back later!</p>
 	<?php endif; ?>
 </div>
 
