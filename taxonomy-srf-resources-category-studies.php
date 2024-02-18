@@ -26,6 +26,10 @@ get_header();
 		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</header>
 
+	<div class="prose lg:prose-xl mx-auto mb-10">
+		<p>Below are SYNGAP1 research studies that SRF has reviewed and encourage families to join. If you have general questions about any studies, please contact Corey Baysden, SRF via <a href="mailto:Corey@curesyngap1.org?subject=Studies enquiries">Corey@curesyngap1.org<a></p>
+	</div>
+
 	<div class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 		<?php
 		/* Start the Loop */
