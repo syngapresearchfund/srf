@@ -59,8 +59,8 @@ namespace SRF;
 								alt="Global Advocacy Alliance Founding Member"></a></li>
 					<li class="w-20"><a href="https://www.guidestar.org/profile/83-1200789" target="_blank"
 										rel="noopener noreferrer"><img
-								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2022.png' ) ); ?>"
-								alt="Guidestar Platinum Symbol of Transparency 2020"></a></li>
+								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2024.png' ) ); ?>"
+								alt="Guidestar Platinum Symbol of Transparency 2024"></a></li>
 					<li class="w-24"><a href="<?php echo esc_url( home_url( '/gnp/' ) ); ?>"><img
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2023-top-rated-awards-badge.png' ) ); ?>"
 								alt="2022 Top Rated Awards"></a></li>
