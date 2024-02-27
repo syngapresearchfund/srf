@@ -132,3 +132,4 @@ require get_template_directory() . '/inc/customizer.php';
  * Custom Fields.
  */
 require get_template_directory() . '/inc/custom-fields/cf-event-dates.php';
+require get_template_directory() . '/inc/custom-fields/cf-homepage-fields.php';

@@ -406,3 +406,21 @@ if ( ! function_exists( 'srf_event_date' ) ) :
 		echo '<time>' . date( 'l, F j, Y, ga', $meta_values ) . '</time>';
 	}
 endif;
+
+if ( ! function_exists( 'srf_homepage_announcement' ) ) :
+	/**
+	 * Output for the homepage announcement bar.
+	 *
+	 * @output string
+	 */
+	function srf_homepage_announcement() {
+		$meta_values = get_post_meta( get_the_ID(), 'homepage_announcement', true );
+
+		// Bail early if no content has been added as footnotes.
+		if ( empty( $meta_values ) ) {
+			return;
+		}
+
+		echo '<div class="mx-auto text-white text-center text-xl py-6">' . wp_kses_post( $meta_values ) . '</div>';
+	}
+endif;

@@ -29,6 +29,13 @@ get_header();
 </section>
 
 <!-- ========================= -->
+<!-- Announcement bar -->
+<!-- ========================= -->
+<section class="bg-srf-purple-500">
+	<?php esc_html( srf_homepage_announcement() ); ?>
+</section>
+
+<!-- ========================= -->
 <!-- Welcome section -->
 <!-- ========================= -->
 <section class="bg-white">
