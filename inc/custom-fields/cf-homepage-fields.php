@@ -10,7 +10,7 @@
 
 function srf_homepage_fields() {
 	/**
-	 * Initialize Custom Fields
+	 * Exit early if not on the front page in the admin.
 	 */
 	if (is_admin() && isset($_GET['post'])) {
         $post_id = $_GET['post']; // Get the current post ID
@@ -22,6 +22,9 @@ function srf_homepage_fields() {
         }
     }
 
+	/**
+	 * Initialize Custom Fields.
+	 */
 	$homepage_announcement = new Fieldmanager_RichTextArea( array(
 		'name' => 'homepage_announcement',
         'buttons_1' => array( 'bold', 'italic', 'link' ),
