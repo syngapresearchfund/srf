@@ -126,7 +126,7 @@ get_header();
 		$args         = array(
 			'posts_per_page' => 6,
 			'post_type'      => array( 'srf-events', 'srf-resources' ),
-			'order'          => 'DESC',
+			'order'          => 'ASC',
 			'orderby'        => 'meta_value',
 			'meta_key'       => 'event_date',
 			'meta_query'     => array(
