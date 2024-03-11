@@ -13,9 +13,9 @@ namespace SRF;
 ?>
 
 <!-- Main top-level menu, show/hide based on mobile menu state. -->
-<div class="relative bg-white px-6 lg:px-2 z-10 xl:shadow">
+<div class="relative bg-white px-6 lg:px-2 z-10 2xl:shadow">
 	<div class="container mx-auto">
-		<div class="flex items-center xl:relative py-6">
+		<div class="flex items-center 2xl:relative py-6">
 			<div class="flex hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
@@ -23,14 +23,13 @@ namespace SRF;
 						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
-			<nav class="hidden xl:block ml-auto font-sans">
+			<nav class="hidden 2xl:block ml-auto font-sans">
 				<ul class="flex space-x-6">
 					<?php
 					srf_nav_item_dropdown(
-						'About',
+						'About SYNGAP1',
 						'openFirst',
 						array(
-							srf_subnav_heading( 'About SYNGAP1' ),
 							srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 							srf_subnav_item( 'How Many People Have SYNGAP1?', home_url( '/how-many-people-have-syngap1-census/' ) ),
 							srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
@@ -38,7 +37,12 @@ namespace SRF;
 							srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
 							srf_subnav_item( 'Life Expectancy', home_url( '/blog/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
 							srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/blog/does-my-syngap1-child-have-autism/' ) ),
-							srf_subnav_heading( 'About SRF' ),
+						)
+					);
+					srf_nav_item_dropdown(
+						'About SRF',
+						'openSecond',
+						array(
 							srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 							srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
 							srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
@@ -46,11 +50,14 @@ namespace SRF;
 							srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
 							srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
 							srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
+							srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk/' ) ),
+							srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu/' ) ),
+							srf_subnav_item( 'Fondo de Investigación Syngap', home_url( '/team/fondo-de-investigacion-syngap/' ) ),
 						)
 					);
 					srf_nav_item_dropdown(
 						'Professionals',
-						'openSecond',
+						'openThird',
 						array(
 							srf_subnav_heading( 'Research' ),
 							srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
@@ -68,7 +75,7 @@ namespace SRF;
 					);
 					srf_nav_item_dropdown(
 						'Families',
-						'openThird',
+						'openFourth',
 						array(
 							srf_subnav_heading( 'Connections' ),
 							srf_subnav_item( 'Register With SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
@@ -108,7 +115,7 @@ namespace SRF;
 					?>
 				</ul>
 			</nav>
-			<div class="-mr-2 -my-2 ml-auto xl:hidden">
+			<div class="-mr-2 -my-2 ml-auto 2xl:hidden">
 				<button type="button"
 						class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
 						aria-expanded="false" @click="open = true">
@@ -122,7 +129,7 @@ namespace SRF;
 				</button>
 			</div>
 			<!-- Desktop Header Buttons (Cart, Search, Donate) -->
-			<div class="hidden xl:flex ml-8">
+			<div class="hidden 2xl:flex ml-8">
 				<!-- Desktop shop cart. -->
 				<div class="relative p-2 cursor-pointer" x-data="{ showCartCount: false }">
 					<a class="cart-contents flex" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'srf' ); ?>" @mouseover="showCartCount = true" @mouseleave="showCartCount = false">
@@ -135,7 +142,7 @@ namespace SRF;
 					</a>
 				</div>
 				<!-- Desktop search form, show/hide input state. -->
-				<div class="hidden xl:flex items-stretch"
+				<div class="hidden 2xl:flex items-stretch"
 					x-data="{ searchOpen: false, searchClosed: true }" x-cloak>
 					<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET"
 						class="w-full absolute top-full right-0 z-10">
@@ -169,7 +176,7 @@ namespace SRF;
 </div>
 
 <!-- Mobile menu, show/hide based on mobile menu state. -->
-<div class="absolute z-10 top-0 -inset-x-0 p-2 transition transform origin-top-right xl:hidden" x-show="open"
+<div class="absolute z-10 top-0 -inset-x-0 p-2 transition transform origin-top-right 2xl:hidden" x-show="open"
 	 x-transition x-cloak>
 	<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
 		<div class="pt-5 pb-6 px-5">
@@ -198,10 +205,9 @@ namespace SRF;
 					<ul>
 						<?php
 						srf_mobile_nav_item(
-							'About',
+							'About SYNGAP1',
 							'1',
 							array(
-								srf_subnav_heading( 'About SYNGAP1' ),
 								srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 								srf_subnav_item( 'How Many People Have SYNGAP1?', home_url( '/how-many-people-have-syngap1-census/' ) ),
 								srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
@@ -209,7 +215,12 @@ namespace SRF;
 								srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
 								srf_subnav_item( 'Life Expectancy', home_url( '/blog/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
 								srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/blog/does-my-syngap1-child-have-autism/' ) ),
-								srf_subnav_heading( 'About SRF' ),
+							)
+						);
+						srf_mobile_nav_item(
+							'About SRF',
+							'2',
+							array(
 								srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 								srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
 								srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
@@ -217,11 +228,14 @@ namespace SRF;
 								srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
 								srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
 								srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
+								srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk/' ) ),
+								srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu/' ) ),
+								srf_subnav_item( 'Fondo de Investigación Syngap', home_url( '/team/fondo-de-investigacion-syngap/' ) ),
 							)
 						);
 						srf_mobile_nav_item(
 							'Professionals',
-							'2',
+							'3',
 							array(
 								srf_subnav_heading( 'Research' ),
 								srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
@@ -239,7 +253,7 @@ namespace SRF;
 						);  // phpcs:ignore -- XSS OK
 						srf_mobile_nav_item(
 							'Families',
-							'3',
+							'4',
 							array(
 								srf_subnav_heading( 'Connections' ),
 								srf_subnav_item( 'Register with SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
@@ -261,7 +275,7 @@ namespace SRF;
 						);  // phpcs:ignore -- XSS OK
 						srf_mobile_nav_item(
 							'News & Events',
-							'4',
+							'5',
 							array(
 								srf_subnav_item( 'Events', home_url( '/events/' ) ),
 								srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
