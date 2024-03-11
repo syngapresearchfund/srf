@@ -19,7 +19,7 @@ namespace SRF;
 			<div class="flex hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
-					<img class="w-auto h-9 sm:h-12"
+					<img class="w-auto h-9 sm:h-11"
 						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
@@ -27,10 +27,9 @@ namespace SRF;
 				<ul class="flex space-x-6">
 					<?php
 					srf_nav_item_dropdown(
-						'About',
+						'About SYNGAP1',
 						'openFirst',
 						array(
-							srf_subnav_heading( 'About SYNGAP1' ),
 							srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
 							srf_subnav_item( 'How Many People Have SYNGAP1?', home_url( '/how-many-people-have-syngap1-census/' ) ),
 							srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
@@ -38,7 +37,12 @@ namespace SRF;
 							srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
 							srf_subnav_item( 'Life Expectancy', home_url( '/blog/whats-the-life-expectancy-of-someone-with-syngap1/' ) ),
 							srf_subnav_item( 'SYNGAP1 & Autism', home_url( '/blog/does-my-syngap1-child-have-autism/' ) ),
-							srf_subnav_heading( 'About SRF' ),
+						)
+					);
+					srf_nav_item_dropdown(
+						'About SRF',
+						'openSecond',
+						array(
 							srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 							srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
 							srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
@@ -46,11 +50,14 @@ namespace SRF;
 							srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
 							srf_subnav_item( 'Sponsors', home_url( '/sponsors/' ) ),
 							srf_subnav_item( 'Style Guide', home_url( '/style-guide/' ) ),
+							srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk/' ) ),
+							srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu/' ) ),
+							srf_subnav_item( 'Fondo de Investigación Syngap', home_url( '/team/fondo-de-investigacion-syngap/' ) ),
 						)
 					);
 					srf_nav_item_dropdown(
 						'Professionals',
-						'openSecond',
+						'openThird',
 						array(
 							srf_subnav_heading( 'Research' ),
 							srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
@@ -68,7 +75,7 @@ namespace SRF;
 					);
 					srf_nav_item_dropdown(
 						'Families',
-						'openThird',
+						'openFourth',
 						array(
 							srf_subnav_heading( 'Connections' ),
 							srf_subnav_item( 'Register With SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
