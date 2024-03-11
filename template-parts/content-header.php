@@ -19,7 +19,7 @@ namespace SRF;
 			<div class="flex hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">SynGap Research Fund</span>
-					<img class="w-auto h-9 sm:h-12"
+					<img class="w-auto h-9 sm:h-11"
 						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
 				</a>
 			</div>
