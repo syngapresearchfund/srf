@@ -22,7 +22,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import 'tailwindcss/utilities';
 
 [x-cloak] {
-  display: none !important;
+    display: none !important;
 }
 
 /*
@@ -33,30 +33,30 @@ Adjustments and Overrides
 /* Images Adjustments */
 .container .featured-image img,
 .tiled-gallery__item.tiled-gallery__item {
-	margin-top: 0;
-	margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Video Embed Adjustments */
 .is-type-video .wp-block-embed__wrapper {
-	aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;
 }
 
 .is-type-video .wp-block-embed__wrapper iframe {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /* Post Navigation Adjustments */
 .posts-navigation .nav-links {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row-reverse;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 /* Blog Listing Adjustments */
 select.blog-filter {
-	@apply border-2 border-gray-300 py-1 px-2 rounded-sm;
+    @apply border-2 border-gray-300 py-1 px-2 rounded-sm;
 }
 
 /* WooCommerce Adjustments */
@@ -65,78 +65,104 @@ select.blog-filter {
 .woocommerce-page .woocommerce-pagination ul.page-numbers li::before,
 .woocommerce ul.products li.product::before,
 .woocommerce-page ul.products li.product::before {
-	content: none;
+    content: none;
 }
+
 .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
-	background-color: transparent;
-	border-radius: 0;
-	top: initial;
+    background-color: transparent;
+    border-radius: 0;
+    top: initial;
 }
+
 .woocommerce div.product div.images .flex-control-thumbs li {
-	padding-left: 0;
+    padding-left: 0;
 }
+
 @media (min-width: 640px) {
-	.woocommerce div.product div.images .flex-control-thumbs li {
-		padding-left: 0;
-	}
+    .woocommerce div.product div.images .flex-control-thumbs li {
+        padding-left: 0;
+    }
 }
+
 .woocommerce div.product div.images .flex-control-thumbs li::before {
-	content: none;
+    content: none;
 }
 
 .woocommerce span.onsale {
-	background-color: #6f3592;
-	border: 2px solid white;
-	padding: 0.25rem 0.5rem;
+    background-color: #6f3592;
+    border: 2px solid white;
+    padding: 0.25rem 0.5rem;
 }
+
 .woocommerce ul.products li.product .onsale {
-	top: -5px;
+    top: -5px;
     right: -5px;
 }
+
 .woocommerce ul.products li.product .price,
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-	color: #3e6cb5;
+    color: #3e6cb5;
 }
+
 .woocommerce-info {
-	border-top-color: #6f3592;
+    border-top-color: #6f3592;
 }
+
 .woocommerce-info::before {
-	color: #6f3592;
+    color: #6f3592;
 }
+
 .woocommerce-message {
-	border-top-color: #19ae69;
+    border-top-color: #19ae69;
 }
+
 .woocommerce-message::before {
-	color: #19ae69;
+    color: #19ae69;
 }
 
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-	background-color: #6f3592;
+    background-color: #6f3592;
 }
 
 .single-product .summary .variations .label,
 .single-product .summary .variations .value,
 .single-product .summary .input-text.qty,
 .single-product .summary .sku_wrapper {
-	display: block;
+    display: block;
 }
+
 .single-product .summary .variations .value {
-	padding-top: 0;
+    padding-top: 0;
 }
+
 .single-product .summary .input-text.qty {
-	min-height: 45px;
+    min-height: 45px;
+}
+
+.woocommerce-cart .wc-block-components-express-payment li,
+.woocommerce-cart .wc-block-components-product-metadata li,
+.woocommerce-checkout .wc-block-components-express-payment li,
+.woocommerce-checkout .wc-block-components-product-metadata li {
+    padding-left: 0;
+}
+
+.woocommerce-cart .wc-block-components-product-metadata li:before,
+.woocommerce-cart .wc-block-components-express-payment li:before,
+.woocommerce-checkout .wc-block-components-product-metadata li:before,
+.woocommerce-checkout .wc-block-components-express-payment li:before {
+    content: none;
 }
 
 /* General Core Block Overrides */
 .wp-block-button__link {
-	background-color: #3e6cb5;
+    background-color: #3e6cb5;
 }
 
 /* Fix for download button displayed with dark text on file embed. */
 .wp-block-file .wp-block-file__button {
-	color: #fff;
+    color: #fff;
 }
