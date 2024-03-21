@@ -148,6 +148,12 @@ select.blog-filter {
     @apply w-auto h-9 sm:h-11 2xl:h-14;
 }
 
+.wc-block-checkout__shipping-option.wp-block-woocommerce-checkout-shipping-methods-block,
+.wp-block-woocommerce-cart-order-summary-shipping-block,
+.wp-block-woocommerce-checkout-order-summary-shipping-block {
+    @apply hidden;
+}
+
 .woocommerce-cart .wc-block-components-express-payment li,
 .woocommerce-cart .wc-block-components-product-metadata li,
 .woocommerce-checkout .wc-block-components-express-payment li,
