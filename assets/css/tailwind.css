@@ -143,6 +143,11 @@ select.blog-filter {
     min-height: 45px;
 }
 
+.woocommerce .site-header img,
+.woocommerce-page .site-header img {
+    @apply w-auto h-9 sm:h-11 2xl:h-14;
+}
+
 .woocommerce-cart .wc-block-components-express-payment li,
 .woocommerce-cart .wc-block-components-product-metadata li,
 .woocommerce-checkout .wc-block-components-express-payment li,
