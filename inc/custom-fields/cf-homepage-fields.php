@@ -10,31 +10,38 @@
 
 function srf_homepage_fields() {
 	/**
+	 * Exit early if Fieldmanager is not loaded.
+	 */
+	if ( ! class_exists( 'Fieldmanager_RichTextArea' ) ) {
+		return;
+	}
+	/**
 	 * Exit early if not on the front page in the admin.
 	 */
-	if (is_admin() && isset($_GET['post'])) {
-        $post_id = $_GET['post']; // Get the current post ID
-        $front_page_id = get_option('page_on_front'); // Get the front page ID
+	if ( is_admin() && isset( $_GET['post'] ) ) {
+		$post_id       = $_GET['post']; // Get the current post ID
+		$front_page_id = get_option( 'page_on_front' ); // Get the front page ID
 
-        // Check if the current post is the front page
-        if ($post_id !== $front_page_id) {
-            return;
-        }
-    }
+		// Check if the current post is the front page
+		if ( $post_id !== $front_page_id ) {
+			return;
+		}
+	}
 
 	/**
 	 * Initialize Custom Fields.
 	 */
 	$homepage_announcement = new Fieldmanager_RichTextArea( array(
-		'name' => 'homepage_announcement',
-        'buttons_1' => array( 'bold', 'italic', 'link' ),
-        'buttons_2' => array(),
-        'editor_settings' => array(
-            'quicktags' => false,
-            'media_buttons' => false,
-        ),
+		'name'            => 'homepage_announcement',
+		'buttons_1'       => array( 'bold', 'italic', 'link' ),
+		'buttons_2'       => array(),
+		'editor_settings' => array(
+			'quicktags'     => false,
+			'media_buttons' => false,
+		),
 	) );
 
 	$homepage_announcement->add_meta_box( esc_html__( 'Homepage Announcement', 'srf' ), 'page' );
 }
+
 add_action( 'fm_post_page', 'srf_homepage_fields' );
