@@ -11,7 +11,7 @@ namespace SRF;
 /**
  * Sets up theme.
  */
-function srf_setup() : void {
+function srf_setup(): void {
 	// Automatic feed links.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -68,6 +68,7 @@ function srf_setup() : void {
 	add_image_size( 'featured-thumbnail', 320, 320 );
 	add_image_size( 'profile-image', 640, 640 );
 }
+
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
 
 /**
@@ -83,6 +84,7 @@ function srf_scripts() {
 	// Alpine library.
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/index.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
+
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
 
 /**
@@ -96,6 +98,7 @@ function coming_soon_redirect() {
 		exit();
 	}
 }
+
 // add_action( 'template_redirect', __NAMESPACE__ . '\\coming_soon_redirect' );
 
 /**
@@ -131,5 +134,4 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Custom Fields.
  */
-require get_template_directory() . '/inc/custom-fields/cf-event-dates.php';
 require get_template_directory() . '/inc/custom-fields/cf-homepage-fields.php';
