@@ -38,9 +38,12 @@ get_header();
 			<p class="text-center lg:w-4/6 mx-auto">Your contribution is tax-deductible as described on your receipt and
 				to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN <a
 					class="text-srf-blue-500 hover:underline"
-					href="https://static1.squarespace.com/static/5b4b651b3917eeb14f9188d6/t/5cf83409cf94710001e28cfb/1559770123219/SRF+501c3+Ruling.pdf">83-1200789</a>.</p>
-			<p class="text-center lg:w-4/6 mx-auto font-bold">Note: All equities will be liquidated and moved to cash upon receipt.</p>
-			<p class="text-center lg:w-4/6 mx-auto">In addition to credit card above, you can donate via the following:</p>
+					href="https://static1.squarespace.com/static/5b4b651b3917eeb14f9188d6/t/5cf83409cf94710001e28cfb/1559770123219/SRF+501c3+Ruling.pdf">83-1200789</a>.
+			</p>
+			<p class="text-center lg:w-4/6 mx-auto font-bold">Note: All equities will be liquidated and moved to cash
+				upon receipt.</p>
+			<p class="text-center lg:w-4/6 mx-auto">In addition to credit card above, you can donate via the
+				following:</p>
 			<ul class="flex flex-col">
 				<li class="bg-white border border-b-0 rounded-t-md" x-data="accordion(1)">
 					<h3
@@ -87,16 +90,9 @@ get_header();
 							</div>
 							<div class="p-4 border rounded-md">
 								<h4 class="font-semibold">Bank Deposits</h4>
-								<ul>
-									<li>Domestic Wire / ACH Instructions.</li>
-									<li>Wire / Credit Funds To:</li>
-									<li>First Republic Bank.</li>
-									<li>111 Pine Street.</li>
-									<li>San Francisco, CA 94111.</li>
-									<li class="mt-4">Account number: 80015274544</li>
-									<li>ABA / Routing Number: 321081669</li>
-									<li>SWIFT Code: FRBBUS6S</li>
-								</ul>
+								<p>Please email <a
+										href="mailto:info@curesyngap1.org?subject=Donations – Bank Deposit Wiring Instructions">info@curesyngap1.org</a>
+									to get our wiring instructions.</p>
 							</div>
 							<div class="flex justify-between items-center p-4 border rounded-md">
 								<h4 class="text-gray-900 font-semibold">Wires, stock transfers & requests</h4>
@@ -252,8 +248,10 @@ get_header();
 			</ul>
 		</div>
 		<div class="max-w-xl mt-16 mx-auto text-center">
-			<h3 class="mb-8 text-l lg:text-xl font-semibold text-gray-600">Use this QR code or Syngap.Fund/Give<br>to link to this page.</h3>
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Donate-QR-Code.png' ) ); ?>" alt="Donate to SRF">
+			<h3 class="mb-8 text-l lg:text-xl font-semibold text-gray-600">Use this QR code or Syngap.Fund/Give<br>to
+				link to this page.</h3>
+			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Donate-QR-Code.png' ) ); ?>"
+				 alt="Donate to SRF">
 		</div>
 	</div>
 
