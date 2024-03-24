@@ -10,12 +10,13 @@
 
 namespace SRF;
 
-$srf_bg_colors = array(
+$srf_bg_colors    = array(
 	'bg-srf-blue-500',
 	'bg-srf-purple-500',
 	'bg-srf-green-500',
 );
-$item_taxonomy = get_queried_object();
+$item_taxonomy    = get_queried_object();
+$ambassador_state = get_post_meta( get_the_ID(), 'states', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white' ); ?>>
@@ -30,6 +31,12 @@ $item_taxonomy = get_queried_object();
 
 		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40 rounded-b">
 			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
+			<?php if ( ! empty( $ambassador_state ) && is_tax( 'srf-team-category', array(
+					'state-representatives',
+					'state-advocates'
+				) ) ) : ?>
+				<h3 class="text-lg font-bold"><?php echo esc_html( $ambassador_state ); ?></h3>
+			<?php endif; ?>
 		</header><!-- .entry-header -->
 	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
