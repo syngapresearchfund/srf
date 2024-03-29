@@ -94,9 +94,6 @@ namespace SRF;
 				<p><a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>" class="underline">Privacy
 						Policy</a> | <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="underline">Contact
 						Us</a></p>
-				<p>Medical Disclaimer: <span class="italic">Information on this site is not, nor is it intended to be, medical advice. Please
-						consult your physician with any questions or concerns you may have regarding your health.</span>
-				</p>
 			</div>
 			<!-- links -->
 			<div class="flex space-x-5">
@@ -110,6 +107,9 @@ namespace SRF;
 				?>
 			</div>
 		</div>
+		<p class="container mx-auto mt-6 px-6 lg:px-0 text-center">Medical Disclaimer: <span class="italic">Information on this site is not, nor is it intended to be, medical advice. Please
+						consult your physician with any questions or concerns you may have regarding your health.</span>
+		</p>
 	</div>
 
 	<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>"
