@@ -107,7 +107,7 @@ namespace SRF;
 				?>
 			</div>
 		</div>
-		<p class="container mx-auto mt-6 px-6 lg:px-0 text-center">Medical Disclaimer: <span class="italic">Information on this site is not, nor is it intended to be, medical advice. Please
+		<p class="container mx-auto mt-6 px-6 lg:px-0 text-center text-sm">Medical Disclaimer: <span class="italic">Information on this site is not, nor is it intended to be, medical advice. Please
 						consult your physician with any questions or concerns you may have regarding your health.</span>
 		</p>
 	</div>
