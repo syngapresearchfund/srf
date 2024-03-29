@@ -22,7 +22,7 @@ namespace SRF;
 	<?php get_template_part( 'template-parts/content', 'subfooter' ); ?>
 
 	<!-- bottom footer -->
-	<div class="pt-4 pb-12 bg-gray-900 text-gray-100 text-sm text-center md:text-left space-y-4 md:space-y-0">
+	<div class="pt-4 pb-12 bg-gray-900 text-gray-100 text-sm text-center md:text-left">
 		<div
 			class="container mx-auto px-6 lg:px-0 space-y-4 md:space-y-0 flex flex-wrap justify-center md:justify-between">
 			<!-- flags (credit: https://github.com/HatScripts/circle-flags) -->
