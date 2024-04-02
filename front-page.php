@@ -58,7 +58,8 @@ get_header();
 			</div>
 			<div class="flex flex-col items-center space-y-6">
 				<h3 class="text-gray-600 text-2xl font-bold text-center underline">New families</h3>
-				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a Resource Guide with basic information as well as important tools for you and your doctor.</p>
+				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a Resource Guide with basic
+					information as well as important tools for you and your doctor.</p>
 				<a href="<?php echo esc_url( home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ); ?>"
 				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
 					more</a>
@@ -72,106 +73,107 @@ get_header();
 <!-- ========================= -->
 <section class="relative py-32 bg-gray-100">
 	<div class="container mx-auto px-10 text-center">
-		<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events & Webinars</h2>
+		<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events &
+			Webinars</h2>
 		<?php
 		/**
 		 * TODO: Move grid container here, below H2. Then move query logic into template tags,
 		 * separating one for featured event and another for the rest of the events + webinars.
 		 * Also be sure to order by the date field in DECS order.
-		 */ 
+		 */
 		?>
 		<div class="max-w-6xl xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
-		<?php
-		// Featured event.
-		$args         = array(
-			'posts_per_page' => 1,
-			'post_type'      => 'srf-events',
-			'order'          => 'DESC',
-			'orderby'        => 'meta_value',
-			'meta_key'       => 'event_date',
-			'meta_query'     => array(
-				array(
-					'key'     => 'event_date',
-					'value'   => time(),
-					'compare' => '>='
-				)
-			),
-			'tax_query'      => array(
-				array(
-					'taxonomy' => 'srf-events-category',
-					'field'    => 'slug',
-					'terms'    => 'featured',
+			<?php
+			// Featured event.
+			$args                  = array(
+				'posts_per_page' => 1,
+				'post_type'      => 'srf-events',
+				'order'          => 'DESC',
+				'orderby'        => 'meta_value',
+				'meta_key'       => 'event_date',
+				'meta_query'     => array(
+					array(
+						'key'     => 'event_date',
+						'value'   => time(),
+						'compare' => '>='
+					)
 				),
-			),
-		);
-		$featured_events_query = new WP_Query( $args );
-
-		if ( $featured_events_query->have_posts() ) :
-			/* Start the Loop */
-			while ( $featured_events_query->have_posts() ) :
-				$featured_events_query->the_post();
-
-				/**
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'events-featured' );
-			endwhile;
-		endif;
-		/* Restore original Post Data */
-		wp_reset_postdata();
-
-		// Upcoming events (non-featured).
-		$args         = array(
-			'posts_per_page' => 6,
-			'post_type'      => array( 'srf-events', 'srf-resources' ),
-			'order'          => 'ASC',
-			'orderby'        => 'meta_value',
-			'meta_key'       => 'event_date',
-			'meta_query'     => array(
-				array(
-					'key'     => 'event_date',
-					'value'   => time(),
-					'compare' => '>='
-				)
-			),
-			'tax_query'      => array(
-				'relation'   => 'OR',
-				array(
-					'taxonomy' => 'srf-events-category',
-					'field'    => 'term_id',
-					'terms'    => array( 38 ),
-					'operator' => 'NOT IN',
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'srf-events-category',
+						'field'    => 'slug',
+						'terms'    => 'featured',
+					),
 				),
-				array(
-					'taxonomy' => 'srf-resources-category',
-					'field'    => 'term_id',
-					// 'terms'    => array( 20, 24, 66 ),
-					'terms'    => array( 42 ),
-					// 'operator' => 'NOT IN',
-					'operator' => 'IN',
+			);
+			$featured_events_query = new WP_Query( $args );
+
+			if ( $featured_events_query->have_posts() ) :
+				/* Start the Loop */
+				while ( $featured_events_query->have_posts() ) :
+					$featured_events_query->the_post();
+
+					/**
+					 * Include the Post-Type-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'events-featured' );
+				endwhile;
+			endif;
+			/* Restore original Post Data */
+			wp_reset_postdata();
+
+			// Upcoming events (non-featured).
+			$args         = array(
+				'posts_per_page' => 6,
+				'post_type'      => array( 'srf-events', 'srf-resources' ),
+				'order'          => 'ASC',
+				'orderby'        => 'meta_value',
+				'meta_key'       => 'event_date',
+				'meta_query'     => array(
+					array(
+						'key'     => 'event_date',
+						'value'   => time(),
+						'compare' => '>='
+					)
 				),
-			),
-		);
-		$events_query = new WP_Query( $args );
+				'tax_query'      => array(
+					'relation' => 'OR',
+					array(
+						'taxonomy' => 'srf-events-category',
+						'field'    => 'term_id',
+						'terms'    => array( 38 ),
+						'operator' => 'NOT IN',
+					),
+					array(
+						'taxonomy' => 'srf-resources-category',
+						'field'    => 'term_id',
+						// 'terms'    => array( 20, 24, 66 ),
+						'terms'    => array( 42 ),
+						// 'operator' => 'NOT IN',
+						'operator' => 'IN',
+					),
+				),
+			);
+			$events_query = new WP_Query( $args );
 
-		if ( $events_query->have_posts() ) :
-			/* Start the Loop */
-			while ( $events_query->have_posts() ) :
-				$events_query->the_post();
+			if ( $events_query->have_posts() ) :
+				/* Start the Loop */
+				while ( $events_query->have_posts() ) :
+					$events_query->the_post();
 
-				/**
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'events-grid' );
-			endwhile;
-		endif;
-		/* Restore original Post Data */
-		wp_reset_postdata();
-		?>
+					/**
+					 * Include the Post-Type-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'events-grid' );
+				endwhile;
+			endif;
+			/* Restore original Post Data */
+			wp_reset_postdata();
+			?>
 		</div>
 
 		<!-- big button / cta -->
@@ -313,27 +315,39 @@ get_header();
 	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500" href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>">$5M</a></h2>
+				<h2 class="text-5xl font-bold"><a
+						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
+						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>">$5M</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Funds committed</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="<?php echo esc_url( home_url( '/blog/tag/census/' ) ); ?>">1,339</a></h2>
+				<h2 class="text-5xl font-bold"><a
+						class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500"
+						href="<?php echo esc_url( home_url( '/blog/tag/census/' ) ); ?>">1,400</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients counted</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500" href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>">152</a></h2>
-				<h3 class="text-lg text-gray-600 font-normal">Families volunteering</h3>
+				<h2 class="text-5xl font-bold"><a
+						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
+						href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>">164</a></h2>
+				<h3 class="text-lg text-gray-600 font-normal">Volunteers</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="https://ciitizen.com/syngap1/srf/">225</a></h2>
+				<h2 class="text-5xl font-bold"><a
+						class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500"
+						href="https://ciitizen.com/syngap1/srf/">228</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">US Families on our Ciitizen NHS</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500" href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>">35</a></h2>
+				<h2 class="text-5xl font-bold"><a
+						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
+						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>">35</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Companies & institutes working for SYNGAP1</h3>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold"><a class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500" href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>">197</a></h2>
+				<h2 class="text-5xl font-bold"><a
+						class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500"
+						href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>">200</a></h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients profiled</h3>
 			</div>
 		</div>
