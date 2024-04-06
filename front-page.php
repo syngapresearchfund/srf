@@ -142,17 +142,13 @@ get_header();
 					'relation' => 'OR',
 					array(
 						'taxonomy' => 'srf-events-category',
-						'field'    => 'term_id',
-						'terms'    => array( 38 ),
-						'operator' => 'NOT IN',
+						'field'    => 'slug',
+						'terms'    => array( 'conferences', 'fundraisers' ),
 					),
 					array(
 						'taxonomy' => 'srf-resources-category',
-						'field'    => 'term_id',
-						// 'terms'    => array( 20, 24, 66 ),
-						'terms'    => array( 42 ),
-						// 'operator' => 'NOT IN',
-						'operator' => 'IN',
+						'field'    => 'slug',
+						'terms'    => array( 'webinars' ),
 					),
 				),
 			);
