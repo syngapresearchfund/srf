@@ -141,9 +141,18 @@ get_header();
 				'tax_query'      => array(
 					'relation' => 'OR',
 					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => array( 'conferences', 'fundraisers' ),
+						'relation' => 'AND',
+						array(
+							'taxonomy' => 'srf-events-category',
+							'field'    => 'slug',
+							'terms'    => array( 'conferences', 'fundraisers' ),
+						),
+						array(
+							'taxonomy' => 'srf-events-category',
+							'field'    => 'slug',
+							'terms'    => array( 'featured' ),
+							'operator' => 'NOT IN',
+						),
 					),
 					array(
 						'taxonomy' => 'srf-resources-category',
