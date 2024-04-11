@@ -57,9 +57,13 @@ function srf_setup(): void {
 	// Add support for editor styles.
 	add_theme_support( 'editor-styles' );
 
+	// Adds support for appearance tools - added in 6.5
+	// See https://wordpress.org/documentation/wordpress-version/version-6-5/#add-appearance-tools-to-classic-themes
+	add_theme_support( 'appearance-tools' );
+
 	// WooCommerce support (uncomment to enable)
 	// https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
-	// NOTE: This seems to break the layout of the single product page. Commenting out for now, as it does not seem to be needed.
+	// NOTE: This appears to break the layout of the single product page. Commenting out for now, as it does not seem to be needed.
 	// add_theme_support( 'woocommerce' );
 
 	// Add featured image size.
