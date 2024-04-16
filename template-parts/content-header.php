@@ -82,6 +82,7 @@ namespace SRF;
 							srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-ciitizen-registry/' ) ),
 							srf_subnav_item( 'Studies', home_url( '/studies/' ) ),
 							srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
+							srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
 							srf_subnav_heading( 'Medical' ),
 							srf_subnav_item( 'Could It Be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
 							srf_subnav_item( 'Doctors', home_url( '/doctors/' ) ),
@@ -132,41 +133,49 @@ namespace SRF;
 			<div class="hidden xl:flex ml-6">
 				<!-- Desktop shop cart. -->
 				<div class="relative p-2 cursor-pointer" x-data="{ showCartCount: false }">
-					<a class="cart-contents flex" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'srf' ); ?>" @mouseover="showCartCount = true" @mouseleave="showCartCount = false">
+					<a class="cart-contents flex" href="<?php echo esc_url( wc_get_cart_url() ); ?>"
+					   title="<?php esc_attr_e( 'View your shopping cart', 'srf' ); ?>"
+					   @mouseover="showCartCount = true" @mouseleave="showCartCount = false">
 						<?php /* translators: %d: number of items in cart */ ?>
 						<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 							<path fill="none" d="M0 0h24v24H0V0z" />
-							<path fill="#4b5563" d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+							<path fill="#4b5563"
+								  d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
 						</svg>
-						<span class="text-xs absolute w-16 -left-1 -bottom-2 transition-opacity duration-500 ease-in-out" :class="showCartCount ? 'opacity-100' : 'opacity-0'" x-cloak><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+						<span
+							class="text-xs absolute w-16 -left-1 -bottom-2 transition-opacity duration-500 ease-in-out"
+							:class="showCartCount ? 'opacity-100' : 'opacity-0'"
+							x-cloak><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
 					</a>
 				</div>
 				<!-- Desktop search form, show/hide input state. -->
 				<div class="hidden xl:flex items-stretch"
-					x-data="{ searchOpen: false, searchClosed: true }" x-cloak>
+					 x-data="{ searchOpen: false, searchClosed: true }" x-cloak>
 					<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET"
-						class="w-full absolute top-full right-0 z-10">
+						  class="w-full absolute top-full right-0 z-10">
 						<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>"
-							value="<?php the_search_query(); ?>"
-							class="w-full h-10 px-4 py-6 outline-none rounded border-2 border-gray-300 focus:border-gray-500 placeholder-gray-400 text-purple-900"
-							x-show="searchOpen"
-							x-transition
-							x-ref="input"
-							>
+							   value="<?php the_search_query(); ?>"
+							   class="w-full h-10 px-4 py-6 outline-none rounded border-2 border-gray-300 focus:border-gray-500 placeholder-gray-400 text-purple-900"
+							   x-show="searchOpen"
+							   x-transition
+							   x-ref="input"
+						>
 					</form>
 					<button class="inline-block p-2"
-							@click="searchOpen = ! searchOpen; $nextTick( () => { $refs.input.focus(); } ); searchClosed = ! searchClosed" :class="searchOpen ? ' rounded bg-srf-purple-700 hover:bg-srf-purple-800 text-white' : ''" >
+							@click="searchOpen = ! searchOpen; $nextTick( () => { $refs.input.focus(); } ); searchClosed = ! searchClosed"
+							:class="searchOpen ? ' rounded bg-srf-purple-700 hover:bg-srf-purple-800 text-white' : ''">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-							stroke="currentColor" class="w-6 h-6" x-show="searchClosed">
+							 stroke="currentColor" class="w-6 h-6" x-show="searchClosed">
 							<path stroke-linecap="round" stroke-linejoin="round"
-								d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+								  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
 						</svg>
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-							stroke="currentColor" class="w-6 h-6" x-show="searchOpen">
+							 stroke="currentColor" class="w-6 h-6" x-show="searchOpen">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 						</svg>
 					</button>
-					<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>" class="hidden xl:flex items-center justify-center px-4 py-2 ml-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
+					<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>"
+					   class="hidden xl:flex items-center justify-center px-4 py-2 ml-2 whitespace-nowrap border border-transparent rounded-md shadow-sm text-base font-semibold font-sans text-white bg-srf-purple-500 hover:bg-srf-purple-700">
 						Donate
 					</a>
 				</div>
@@ -260,6 +269,7 @@ namespace SRF;
 								srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-ciitizen-registry/' ) ),
 								srf_subnav_item( 'Studies', home_url( '/studies/' ) ),
 								srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
+								srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
 								srf_subnav_heading( 'Medical' ),
 								srf_subnav_item( 'Could It Be SYNGAP1?', 'https://symptom-checker.probablygenetic.com/syngap/?utm_campaign=srf-website' ),
 								srf_subnav_item( 'Doctors', home_url( '/doctors/' ) ),
@@ -292,13 +302,16 @@ namespace SRF;
 						);  // phpcs:ignore -- XSS OK
 						?>
 						<li class="p-4 cursor-pointer">
-							<a class="cart-contents flex" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'srf' ); ?>">
+							<a class="cart-contents flex" href="<?php echo esc_url( wc_get_cart_url() ); ?>"
+							   title="<?php esc_attr_e( 'View your shopping cart', 'srf' ); ?>">
 								<?php /* translators: %d: number of items in cart */ ?>
 								<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<path fill="none" d="M0 0h24v24H0V0z" />
-									<path fill="#4b5563" d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+									<path fill="#4b5563"
+										  d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
 								</svg>
-								<span class="text-xs"><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
+								<span
+									class="text-xs"><?php echo wp_kses_data( sprintf( _n( '(%d item)', '(%d items)', WC()->cart->get_cart_contents_count(), 'srf' ), WC()->cart->get_cart_contents_count() ) ); ?></span>
 							</a>
 						</li>
 					</ul>
