@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "layout": {
+      "contentSize": "768px",
+      "wideSize": "1024px"
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "EB Garamond, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;",
+      "fontSize": "1.25rem",
+      "lineHeight": "1.8"
+    }
+  }
+}

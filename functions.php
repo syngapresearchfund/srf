@@ -92,6 +92,15 @@ function srf_scripts(): void {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
 
 /**
+ * Disable FSE block templates on the frontend.
+ */
+function srf_disable_block_templates_on_frontend(): void {
+	remove_theme_support( 'block-templates' );
+}
+
+add_theme_support( 'template_redirect', __NAMESPACE__ . '\\srf_disable_block_templates_on_frontend' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
