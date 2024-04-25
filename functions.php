@@ -92,6 +92,11 @@ function srf_scripts(): void {
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );
 
 /**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-functions.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -110,11 +115,6 @@ require get_template_directory() . '/inc/extras.php';
  * Related posts addition.
  */
 require get_template_directory() . '/inc/related-posts.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.

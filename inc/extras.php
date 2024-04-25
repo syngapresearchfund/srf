@@ -15,8 +15,10 @@ namespace SRF;
  */
 function srf_remove_thumbnail_dimensions( $html ) {
 	$html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+
 	return $html;
 }
+
 add_filter( 'post_thumbnail_html', __NAMESPACE__ . '\\srf_remove_thumbnail_dimensions', 10 );
 add_filter( 'image_send_to_editor', __NAMESPACE__ . '\\srf_remove_thumbnail_dimensions', 10 );
 
@@ -28,6 +30,7 @@ add_filter( 'image_send_to_editor', __NAMESPACE__ . '\\srf_remove_thumbnail_dime
 function srf_custom_excerpt_length() {
 	return 20;
 }
+
 add_filter( 'excerpt_length', __NAMESPACE__ . '\\srf_custom_excerpt_length', 999 );
 
 /**
@@ -38,6 +41,7 @@ function srf_excerpt_more( $more ) {
 
 	return '...</p><p class="mt-4"><a class="link__more font-semibold hover:underline" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( 'Read more →' ) . '</a></p>';
 }
+
 add_filter( 'excerpt_more', __NAMESPACE__ . '\\srf_excerpt_more' );
 
 /**
@@ -57,29 +61,34 @@ function srf_archive_title( $title ) {
 
 	return $title;
 }
+
 add_filter( 'get_the_archive_title', __NAMESPACE__ . '\\srf_archive_title' );
 
 /**
  * Filters the main query to display desired post order for teams CPT.
- * 
- * @param  object $query Current query object
+ *
+ * @param object $query Current query object
  */
-function srf_team_orderby( $query ) {
+function srf_archive_orderby( $query ) {
 	if ( ! is_admin() && $query->is_main_query() ) {
 		if ( is_post_type_archive( 'srf-team' ) || is_tax( 'srf-team-category' ) ) {
 			$query->set( 'orderby', array( 'menu_order' => 'DESC', 'title' => 'ASC' ) );
 		}
+		if ( is_post_type_archive( 'srf-resources' ) || is_tax( 'srf-resources-category' ) ) {
+			$query->set( 'orderby', array( 'menu_order' => 'DESC', 'date' => 'DESC' ) );
+		}
 	}
 }
-add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_team_orderby', 11 );
+
+add_action( 'pre_get_posts', __NAMESPACE__ . '\\srf_archive_orderby', 11 );
 
 /**
  * Filters posts_per_page to display desired number of posts
- * 
+ *
  * Note: This is not currently in use, but is here for reference.
  * If we want to use this, we need to uncomment the add_action() line below.
  *
- * @param  object $query Current query object
+ * @param object $query Current query object
  */
 function srf_posts_per_page( $query ) {
 	if ( is_admin() || ! $query->is_main_query() ) {
