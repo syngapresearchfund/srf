@@ -107,9 +107,10 @@ namespace SRF;
 				?>
 			</div>
 		</div>
-		<p class="container mx-auto mt-6 px-6 lg:px-0 text-center">Medical Disclaimer: <span class="italic">Information on this site is not, nor is it intended to be, medical advice. Please
-						consult your physician with any questions or concerns you may have regarding your health.</span>
-		</p>
+		<p class="container mx-auto mt-6 px-6 lg:px-0 text-center italic">The information you obtain at this site is
+			not, nor is it intended to be, medical advice. <a class="underline"
+															  href="<?php echo esc_url( home_url( '/disclaimer/' ) ); ?>">Full
+				Disclaimer</a>.</p>
 	</div>
 
 	<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>"
