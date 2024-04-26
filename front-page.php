@@ -31,9 +31,7 @@ get_header();
 <!-- ========================= -->
 <!-- Announcement bar -->
 <!-- ========================= -->
-<section class="bg-srf-purple-500">
-	<?php esc_html( srf_homepage_announcement() ); ?>
-</section>
+<?php esc_html( srf_homepage_announcement_banner() ); ?>
 
 <!-- ========================= -->
 <!-- Welcome section -->

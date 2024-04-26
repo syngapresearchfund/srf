@@ -413,14 +413,14 @@ if ( ! function_exists( 'srf_homepage_announcement' ) ) :
 	 *
 	 * @output string
 	 */
-	function srf_homepage_announcement() {
-		$meta_values = get_post_meta( get_the_ID(), 'homepage_announcement', true );
+	function srf_homepage_announcement_banner() {
+		$meta_values = get_field( 'announcement_banner' );
 
 		// Bail early if no content has been added as footnotes.
 		if ( empty( $meta_values ) ) {
 			return;
 		}
 
-		echo '<div class="mx-auto text-white text-center text-xl py-6">' . wp_kses_post( $meta_values ) . '</div>';
+		echo '<section class="bg-srf-purple-500"><div class="mx-auto text-white text-center text-xl py-6">' . wp_kses_post( $meta_values ) . '</div></section>';
 	}
 endif;
