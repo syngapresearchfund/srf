@@ -74,7 +74,7 @@ function srf_archive_orderby( $query ) {
 		if ( is_post_type_archive( 'srf-team' ) || is_tax( 'srf-team-category' ) ) {
 			$query->set( 'orderby', array( 'menu_order' => 'DESC', 'title' => 'ASC' ) );
 		}
-		if ( is_post_type_archive( 'srf-resources' ) || is_tax( 'srf-resources-category' ) ) {
+		if ( is_post_type_archive( 'srf-resources' ) || is_tax( 'srf-resources-category', array( 'studies' ) ) ) {
 			$query->set( 'orderby', array( 'menu_order' => 'DESC', 'date' => 'DESC' ) );
 		}
 	}
