@@ -18,7 +18,7 @@ $srf_bg_colors = array(
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-span-3 bg-white rounded shadow-lg' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-span-2 bg-white rounded shadow-lg' ); ?>>
 	<div class="p-6 border-t border-gray-200 text-gray-600">
 		<h2 class="entry-title mb-2 font-bold text-2xl text-gray-700"><a
 				class="link__more block font-semibold hover:underline" href="<?php esc_url( get_permalink() ); ?>"
