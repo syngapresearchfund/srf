@@ -10,13 +10,11 @@
 
 namespace SRF;
 
-$srf_bg_colors    = array(
+$srf_bg_colors = array(
 	'bg-srf-blue-500',
 	'bg-srf-purple-500',
 	'bg-srf-green-500',
 );
-$item_taxonomy    = get_queried_object();
-$ambassador_state = get_post_meta( get_the_ID(), 'states', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white' ); ?>>
@@ -25,7 +23,7 @@ $ambassador_state = get_post_meta( get_the_ID(), 'states', true );
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail( 'profile-image', array( 'class' => 'h-64 w-full object-cover object-center' ) );
 		} else {
-			echo '<div class="h-64 w-full ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) . '"></div>';
+			echo '<div class="h-64 w-full bg-opacity-30 ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) . '"></div>';
 		}
 		?>
 
@@ -35,7 +33,7 @@ $ambassador_state = get_post_meta( get_the_ID(), 'states', true );
 					'state-representatives',
 					'state-advocates'
 				) ) ) : ?>
-				<h3 class="text-lg font-bold"><?php echo esc_html( $ambassador_state ); ?></h3>
+				<h3 class="text-lg font-bold"><?php echo esc_html( get_field( 'ambassador_states' ) ); ?></h3>
 			<?php endif; ?>
 		</header><!-- .entry-header -->
 	</a>
