@@ -88,12 +88,13 @@ get_header();
 				'post_type'      => 'srf-events',
 				'order'          => 'DESC',
 				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_date',
+				'meta_key'       => 'event_dates',
 				'meta_query'     => array(
 					array(
-						'key'     => 'event_date',
-						'value'   => time(),
-						'compare' => '>='
+						'key'     => 'event_dates',
+						'value'   => date( 'Ymd' ),
+						'compare' => '>=',
+						'type'    => 'DATETIME',
 					)
 				),
 				'tax_query'      => array(
@@ -128,12 +129,13 @@ get_header();
 				'post_type'      => array( 'srf-events', 'srf-resources' ),
 				'order'          => 'ASC',
 				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_date',
+				'meta_key'       => 'event_dates',
 				'meta_query'     => array(
 					array(
-						'key'     => 'event_date',
-						'value'   => time(),
-						'compare' => '>='
+						'key'     => 'event_dates',
+						'value'   => date( 'Ymd' ),
+						'compare' => '>=',
+						'type'    => 'DATETIME',
 					)
 				),
 				'tax_query'      => array(
@@ -320,37 +322,43 @@ get_header();
 			<div>
 				<h2 class="text-5xl font-bold"><a
 						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
-						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>"><?php echo esc_html( get_field( 'funds_committed' ) ); ?></a></h2>
+						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>"><?php echo esc_html( get_field( 'funds_committed' ) ); ?></a>
+				</h2>
 				<h3 class="text-lg text-gray-600 font-normal">Funds committed</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a
 						class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500"
-						href="<?php echo esc_url( home_url( '/blog/tag/census/' ) ); ?>"><?php echo esc_html( get_field( 'patients_counted' ) ); ?></a></h2>
+						href="<?php echo esc_url( home_url( '/blog/tag/census/' ) ); ?>"><?php echo esc_html( get_field( 'patients_counted' ) ); ?></a>
+				</h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients counted</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a
 						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
-						href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>"><?php echo esc_html( get_field( 'volunteers' ) ); ?></a></h2>
+						href="<?php echo esc_url( home_url( '/team/volunteers/' ) ); ?>"><?php echo esc_html( get_field( 'volunteers' ) ); ?></a>
+				</h2>
 				<h3 class="text-lg text-gray-600 font-normal">Volunteers</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a
 						class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500"
-						href="https://ciitizen.com/syngap1/srf/"><?php echo esc_html( get_field( 'ciitizen_nhs' ) ); ?></a></h2>
+						href="https://ciitizen.com/syngap1/srf/"><?php echo esc_html( get_field( 'ciitizen_nhs' ) ); ?></a>
+				</h2>
 				<h3 class="text-lg text-gray-600 font-normal">US Families on our Ciitizen NHS</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a
 						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
-						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>"><?php echo esc_html( get_field( 'companies_institutes' ) ); ?></a></h2>
+						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>"><?php echo esc_html( get_field( 'companies_institutes' ) ); ?></a>
+				</h2>
 				<h3 class="text-lg text-gray-600 font-normal">Companies & institutes working for SYNGAP1</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a
 						class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500"
-						href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>"><?php echo esc_html( get_field( 'patients_profiled' ) ); ?></a></h2>
+						href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>"><?php echo esc_html( get_field( 'patients_profiled' ) ); ?></a>
+				</h2>
 				<h3 class="text-lg text-gray-600 font-normal">Patients profiled</h3>
 			</div>
 		</div>
