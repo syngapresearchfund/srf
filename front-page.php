@@ -86,7 +86,7 @@ get_header();
 			$args                  = array(
 				'posts_per_page' => 1,
 				'post_type'      => 'srf-events',
-				'order'          => 'DESC',
+				'order'          => 'ASC',
 				'orderby'        => 'meta_value',
 				'meta_key'       => 'event_dates',
 				'meta_query'     => array(
