@@ -21,7 +21,7 @@ $srf_bg_colors = array(
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-span-2 bg-white rounded shadow-lg' ); ?>>
 	<div class="p-6 border-t border-gray-200 text-gray-600">
 		<h2 class="entry-title mb-2 font-bold text-2xl text-gray-700"><a
-				class="link__more block font-semibold hover:underline" href="<?php esc_url( get_permalink() ); ?>"
+				class="link__more block font-semibold hover:underline" href="<?php esc_url( the_permalink() ); ?>"
 				rel="bookmark"><?php echo esc_html( get_field( 'short_title' ) ); ?></a></h2>
 		<div
 			class="mx-auto h-1 rounded transform translate-y-2 bg-opacity-50 <?php echo esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ); ?>"></div>
