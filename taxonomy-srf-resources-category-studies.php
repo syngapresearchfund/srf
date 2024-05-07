@@ -27,8 +27,8 @@ get_header();
 		</header>
 
 		<div class="prose lg:prose-xl mx-auto mb-10 text-center">
-			<p class='font-bold'>Below are SYNGAP1 research studies reviewed by SynGAP Research Fund. We encourage as
-				many families to join as possible!</p>
+			<p class='font-bold'>Below are SYNGAP1 research studies reviewed by SynGAP Research Fund. We encourage
+				families to join as many studies as possible!</p>
 			<p>If you have general questions about any studies, please contact Corey Baysden, SRF via <a
 					href="mailto:Corey@curesyngap1.org?subject=Studies enquiries">Corey@curesyngap1.org</a></p>
 			<p class='text-sm'>(Past studies can be found <a
