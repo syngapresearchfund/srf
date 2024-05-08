@@ -24,7 +24,7 @@ $upcoming_args         = array(
 	'post_type'      => 'srf-events',
 	'order'          => 'DESC',
 	'orderby'        => 'meta_value',
-	'meta_key'       => 'event_date',
+	'meta_key'       => 'event_dates',
 	'meta_query'     => array(
 		array(
 			'key'     => 'event_dates',
@@ -41,7 +41,7 @@ $past_args         = array(
 	'post_type'      => 'srf-events',
 	'order'          => 'DESC',
 	'orderby'        => 'meta_value',
-	'meta_key'       => 'event_date',
+	'meta_key'       => 'event_dates',
 	'meta_query'     => array(
 		array(
 			'key'     => 'event_dates',
