@@ -95,14 +95,11 @@ get_header();
 						'value'   => date( 'Ymd' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
-					)
-				),
-				'tax_query'      => array(
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => 'featured',
 					),
+					array(
+						'key'   => 'is_featured',
+						'value' => 1,
+					)
 				),
 			);
 			$featured_events_query = new WP_Query( $args );
@@ -136,23 +133,25 @@ get_header();
 						'value'   => date( 'Ymd' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
+					),
+					array(
+						'relation' => 'OR',
+						array(
+							'key'   => 'is_featured',
+							'value' => 0,
+						),
+						array(
+							'key'     => 'is_featured',
+							'compare' => 'NOT EXISTS',
+						),
 					)
 				),
 				'tax_query'      => array(
 					'relation' => 'OR',
 					array(
-						'relation' => 'AND',
-						array(
-							'taxonomy' => 'srf-events-category',
-							'field'    => 'slug',
-							'terms'    => array( 'conferences', 'fundraisers' ),
-						),
-						array(
-							'taxonomy' => 'srf-events-category',
-							'field'    => 'slug',
-							'terms'    => array( 'featured' ),
-							'operator' => 'NOT IN',
-						),
+						'taxonomy' => 'srf-events-category',
+						'field'    => 'slug',
+						'terms'    => array( 'conferences', 'fundraisers' ),
 					),
 					array(
 						'taxonomy' => 'srf-resources-category',
