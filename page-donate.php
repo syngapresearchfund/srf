@@ -119,7 +119,7 @@ get_header();
 					</div>
 				</li>
 				<li class="bg-white border border-b-0" x-data="accordion(2)">
-					<h3
+					<div
 						@click="handleClick()"
 						class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
 					>
@@ -175,32 +175,32 @@ get_header();
 							 viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 						</svg>
-						</h2>
-						<div
-							x-ref="tab"
-							:style="handleToggle()"
-							class="overflow-hidden max-h-0 duration-500 transition-all"
-						>
-							<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
-								<div class="flex justify-between items-center p-4 border rounded-md">
-									<h4 class="text-gray-900 font-semibold">Paypal</h4>
-									<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md"
-									   href="https://www.paypal.com/paypalme/SYNGAPEUROPE?country.x=NL&locale.x=nl_NL">Continue</a>
-								</div>
-								<div class="p-4 border rounded-md">
-									<h4 class="font-semibold">Bank Account</h4>
-									<ul>
-										<li>ABN AMRO Bank</li>
-										<li><strong>Stichting SynGAP Research Fund Europe</strong></li>
-										<li>Account Number: NL23 ABNA 0114 7506 61.</li>
-										<li>BIC/SWIFT: ABNANL2A</li>
-									</ul>
-								</div>
+					</div>
+					<div
+						x-ref="tab"
+						:style="handleToggle()"
+						class="overflow-hidden max-h-0 duration-500 transition-all"
+					>
+						<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
+							<div class="flex justify-between items-center p-4 border rounded-md">
+								<h4 class="text-gray-900 font-semibold">Paypal</h4>
+								<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md"
+								   href="https://www.paypal.com/paypalme/SYNGAPEUROPE?country.x=NL&locale.x=nl_NL">Continue</a>
+							</div>
+							<div class="p-4 border rounded-md">
+								<h4 class="font-semibold">Bank Account</h4>
+								<ul>
+									<li>ABN AMRO Bank</li>
+									<li><strong>Stichting SynGAP Research Fund Europe</strong></li>
+									<li>Account Number: NL23 ABNA 0114 7506 61.</li>
+									<li>BIC/SWIFT: ABNANL2A</li>
+								</ul>
 							</div>
 						</div>
+					</div>
 				</li>
 				<li class="bg-white border border-b-0" x-data="accordion(3)">
-					<h3
+					<div
 						@click="handleClick()"
 						class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
 					>
@@ -221,29 +221,29 @@ get_header();
 							 viewBox="0 0 24 24" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 						</svg>
-						</h2>
-						<div
-							x-ref="tab"
-							:style="handleToggle()"
-							class="overflow-hidden max-h-0 duration-500 transition-all"
-						>
-							<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
-								<div class="flex justify-between items-center p-4 border rounded-md">
-									<h4 class="text-gray-900 font-semibold">Just Giving</h4>
-									<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md"
-									   href="https://justgiving.com/syngap-researchfund">Continue</a>
-								</div>
-								<div class="p-4 border rounded-md">
-									<h4 class="font-semibold">Bank Account</h4>
-									<ul>
-										<li>ABN AMRO Bank</li>
-										<li><strong>Stichting SynGAP Research Fund Europe</strong></li>
-										<li>Account Number: NL23 ABNA 0114 7506 61.</li>
-										<li>BIC/SWIFT: ABNANL2A</li>
-									</ul>
-								</div>
+					</div>
+					<div
+						x-ref="tab"
+						:style="handleToggle()"
+						class="overflow-hidden max-h-0 duration-500 transition-all"
+					>
+						<div class="p-6 space-y-6 bg-gray-50 border-l-2 border-srf-purple-500">
+							<div class="flex justify-between items-center p-4 border rounded-md">
+								<h4 class="text-gray-900 font-semibold">Just Giving</h4>
+								<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md"
+								   href="https://justgiving.com/syngap-researchfund">Continue</a>
+							</div>
+							<div class="p-4 border rounded-md">
+								<h4 class="font-semibold">Bank Account</h4>
+								<ul>
+									<li>ABN AMRO Bank</li>
+									<li><strong>Stichting SynGAP Research Fund Europe</strong></li>
+									<li>Account Number: NL23 ABNA 0114 7506 61.</li>
+									<li>BIC/SWIFT: ABNANL2A</li>
+								</ul>
 							</div>
 						</div>
+					</div>
 				</li>
 			</ul>
 		</div>
