@@ -206,8 +206,8 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 	/**
 	 * Outputs the grid for SRF Team Members.
 	 */
-	function srf_team_grid( $category_slug ) {
-		$args        = array(
+	function srf_team_grid( $category_slug, $view_all_button = true ) {
+		$args       = array(
 			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-team',
 			'orderby'        => array( 'menu_order' => 'DESC', 'title' => 'ASC' ),
@@ -240,14 +240,17 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 				endwhile;
 				?>
 			</div>
-			<a href="<?php echo esc_url( home_url( "/team/$category_slug/" ) ); ?>" class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
+			<?php if ( $view_all_button ) : ?>
+			<a href="<?php echo esc_url( home_url( "/team/$category_slug/" ) ); ?>"
+			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
 				<?php echo esc_html( $view_all ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-					stroke="currentColor">
+					 stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M13 7l5 5m0 0l-5 5m5-5H6" />
+						  d="M13 7l5 5m0 0l-5 5m5-5H6" />
 				</svg>
 			</a>
+		<?php endif; ?>
 
 		<?php else : ?>
 
