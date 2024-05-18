@@ -10,11 +10,16 @@
 
 namespace SRF;
 
-$srf_bg_colors = array(
+$srf_bg_colors    = array(
 	'bg-srf-blue-500',
 	'bg-srf-purple-500',
 	'bg-srf-green-500',
 );
+$ambassador_field = get_field( 'ambassador_states' );
+$ambassador_state = ! empty( $ambassador_field ) && is_tax( 'srf-team-category', array(
+	'state-representatives',
+	'state-advocates'
+) ) ? $ambassador_field . ' - ' : '';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white' ); ?>>
@@ -28,13 +33,7 @@ $srf_bg_colors = array(
 		?>
 
 		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40 rounded-b">
-			<?php the_title( '<h2 class="entry-title text-2xl font-bold line-clamp-2">', '</h2>' ); ?>
-			<?php if ( ! empty( $ambassador_state ) && is_tax( 'srf-team-category', array(
-					'state-representatives',
-					'state-advocates'
-				) ) ) : ?>
-				<h3 class="text-lg font-bold"><?php echo esc_html( get_field( 'ambassador_states' ) ); ?></h3>
-			<?php endif; ?>
+			<?php the_title( '<h2 class="entry-title text-xl font-bold line-clamp-2">' . $ambassador_state, '</h2>' ); ?>
 		</header><!-- .entry-header -->
 	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
