@@ -206,7 +206,7 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 	/**
 	 * Outputs the grid for SRF Team Members.
 	 */
-	function srf_team_grid( $category_slug, $view_all_button = true ) {
+	function srf_team_grid( $category_slug, $view_all_txt = false, $view_all_display = true ) {
 		$args       = array(
 			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-team',
@@ -220,7 +220,10 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 			),
 		);
 		$team_query = new WP_Query( $args );
-		$view_all   = 'View ' . ( 'leadership-team' === $category_slug ? 'full ' : 'all ' ) . str_replace( '-', ' ', $category_slug );
+
+		if ( empty( $view_all_txt ) ) {
+			$view_all_txt = 'View all ' . str_replace( '-', ' ', $category_slug );
+		}
 
 		if ( $team_query->have_posts() ) :
 			?>
@@ -235,15 +238,15 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', 'grid-items' );
+					get_template_part( 'template-parts/content', 'grid-items', array( 'cat_slug' => $category_slug ) );
 
 				endwhile;
 				?>
 			</div>
-			<?php if ( $view_all_button ) : ?>
+			<?php if ( $view_all_display ) : ?>
 			<a href="<?php echo esc_url( home_url( "/team/$category_slug/" ) ); ?>"
 			   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-600 rounded py-3 px-8 text-white transition duration-500 font-bold">
-				<?php echo esc_html( $view_all ); ?>
+				<?php echo esc_html( $view_all_txt ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
 					 stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
