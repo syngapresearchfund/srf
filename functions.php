@@ -71,9 +71,17 @@ function srf_setup(): void {
 	add_image_size( 'featured-image-small', 475, 320 );
 	add_image_size( 'featured-thumbnail', 320, 320 );
 	add_image_size( 'profile-image', 640, 640 );
+
+	// Remove patterns that ship with WordPress Core.
+	remove_theme_support( 'core-block-patterns' );
 }
 
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\srf_setup' );
+
+/**
+ * Prevent the loading of patterns from the WordPress.org Pattern Directory.
+ */
+add_filter( 'should_load_remote_block_patterns', '__return_false' );
 
 /**
  * Enqueue scripts and styles.
