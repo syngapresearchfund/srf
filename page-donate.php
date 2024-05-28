@@ -84,9 +84,9 @@ get_header();
 							<div class="p-4 border rounded-md">
 								<h4 class="font-semibold">Check Donations</h4>
 								<p class="mt-2">Make payable to:</p>
-								<p class="font-bold">Syngap Research Fund</p>
-								<p class="font-bold">PO Box 25571</p>
-								<p class="font-bold">Pasadena, CA 91185</p>
+								<p class="font-bold">Syngap Research Fund Incorporated</p>
+								<p class="font-bold">PO Box 104191</p>
+								<p class="font-bold">Pasadena, CA 91189-4191</p>
 							</div>
 							<div class="p-4 border rounded-md">
 								<h4 class="font-semibold">Bank Deposits</h4>
