@@ -53,6 +53,7 @@ namespace SRF;
 							srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk/' ) ),
 							srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu/' ) ),
 							srf_subnav_item( 'Fondo de Investigación Syngap', home_url( '/team/fondo-de-investigacion-syngap/' ) ),
+							srf_subnav_item( 'Diversity, Equity, & Inclusion', home_url( '/team/dei/' ) ),
 						)
 					);
 					srf_nav_item_dropdown(
@@ -240,6 +241,7 @@ namespace SRF;
 								srf_subnav_item( 'SRF UK', home_url( '/team/srf-uk/' ) ),
 								srf_subnav_item( 'SRF EU', home_url( '/team/srf-eu/' ) ),
 								srf_subnav_item( 'Fondo de Investigación Syngap', home_url( '/team/fondo-de-investigacion-syngap/' ) ),
+								srf_subnav_item( 'Diversity, Equity, & Inclusion', home_url( '/team/dei/' ) ),
 							)
 						);
 						srf_mobile_nav_item(
