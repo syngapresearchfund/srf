@@ -8,9 +8,12 @@ module.exports = {
 	theme: {
 		screens: {
 			xs: '475px',
-			...defaultTheme.screens,
+			...defaultTheme.screens
 		},
 		extend: {
+			backgroundImage: {
+				'hero-image': 'url(\'assets/images/hero-bg-image.png\')'
+			},
 			colors: {
 				orange: colors.orange,
 				teal: colors.teal,
@@ -25,7 +28,7 @@ module.exports = {
 					700: '#53276d',
 					800: '#44215a',
 					900: '#361a47',
-					light: '#d4cae1',
+					light: '#d4cae1'
 				},
 				'srf-blue': {
 					100: '#d0dcef',
@@ -37,7 +40,7 @@ module.exports = {
 					700: '#31558f',
 					800: '#2a4a7c',
 					900: '#243f69',
-					light: '#d0ddee',
+					light: '#d0ddee'
 				},
 				'srf-green': {
 					100: '#a1f2cc',
@@ -49,32 +52,32 @@ module.exports = {
 					700: '#13814e',
 					800: '#0f6b41',
 					900: '#0c5533',
-					light: '#cbe7d4',
-				},
+					light: '#cbe7d4'
+				}
 			},
 			fontFamily: {
 				ebg: ['EB Garamond', 'serif'],
 				poppins: ['Poppins', 'sans-serif'],
 				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-				serif: ['"EB Garamond"', ...defaultTheme.fontFamily.serif],
-			},
-		},
+				serif: ['"EB Garamond"', ...defaultTheme.fontFamily.serif]
+			}
+		}
 	},
 	variants: {
 		extend: {
 			backgroundOpacity: ['even'],
 			borderRadius: ['first', 'last'],
-			grayscale: ['hover', 'focus'],
-		},
+			grayscale: ['hover', 'focus']
+		}
 	},
 	corePlugins: {
-		aspectRatio: false,
+		aspectRatio: false
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/line-clamp'),
 		require('@tailwindcss/aspect-ratio'),
-		plugin(function ({ addBase, theme }) {
+		plugin(function({ addBase, theme }) {
 			addBase({
 				h1: { fontFamily: theme('fontFamily.sans') },
 				h2: { fontFamily: theme('fontFamily.sans') },
@@ -82,21 +85,21 @@ module.exports = {
 				h4: { fontFamily: theme('fontFamily.sans') },
 				h5: { fontFamily: theme('fontFamily.sans') },
 				h6: { fontFamily: theme('fontFamily.sans') },
-				body: { fontFamily: theme('fontFamily.serif') },
+				body: { fontFamily: theme('fontFamily.serif') }
 			});
 		}),
-		plugin(function ({ addComponents, theme }) {
+		plugin(function({ addComponents, theme }) {
 			const buttons = {
 				'.woocommerce a.button': {
 					fontFamily: theme('fontFamily.sans'),
 					fontSize: theme('fontSize.sm'),
 					fontWeight: theme('fontWeight.semibold'),
 					color: theme('colors.white'),
-					backgroundColor: theme('colors.srf-blue.500'),
-				},
+					backgroundColor: theme('colors.srf-blue.500')
+				}
 			};
 
 			addComponents(buttons);
-		}),
-	],
+		})
+	]
 };

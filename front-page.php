@@ -15,12 +15,16 @@ get_header();
 <!-- ========================= -->
 <!-- hero section -->
 <!-- ========================= -->
-<section class="bg-gradient-to-br from-srf-purple-500 via-srf-blue-500 to-srf-green-500">
-	<div class="container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white">
+<section class="relative bg-gradient-to-br from-srf-purple-500 via-srf-blue-500 to-srf-green-500 overflow-y-hidden">
+	<img class="absolute block w-full h-full object-cover opacity-10"
+		 src="<?php echo esc_url( get_theme_file_uri( 'assets/images/home-hero-bg-image.png' ) ); ?>"
+		 alt="SRF Warrior Grid" />
+	<div class=" relative container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white z-10">
 		<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 			Collaboration. Transparency. Urgency.
 		</h1>
-		<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families committed
+		<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families
+			committed
 			to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
 		<a href="<?php echo esc_url( home_url( '/what-is-syngap1/' ) ); ?>"
 		   class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-blue-500 border-2 border-white font-bold text-lg tracking-wide transition duration-500">Learn
