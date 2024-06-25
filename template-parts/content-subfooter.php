@@ -50,7 +50,7 @@ namespace SRF;
 						href="<?php echo esc_url( get_theme_file_uri( 'assets/files/SRF-501c3-Ruling.pdf' ) ); ?>">83-1200789</a>)
 					headquartered in California.</p>
 				<!-- links -->
-				<ul class="flex flex-wrap space-x-3 lg:space-x-2.5 justify-center xl:justify-end place-items-center">
+				<ul class="flex flex-wrap space-x-3 justify-center xl:justify-end place-items-center">
 					<li class="w-24 lg:w-14"><a href="<?php echo esc_url( home_url( '/syngap10-podcast/' ) ); ?>"><img
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/tdc-badge-podcast.png' ) ); ?>"
 								alt="The Best RARE Podcasts"></a></li>
