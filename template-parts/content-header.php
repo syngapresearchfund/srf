@@ -13,7 +13,7 @@ namespace SRF;
 ?>
 
 <!-- Main top-level menu, show/hide based on mobile menu state. -->
-<div class="relative bg-white px-6 lg:px-2 z-10 xl:shadow">
+<div class="relative bg-white px-6 lg:px-2 z-20 xl:shadow">
 	<div class="container mx-auto">
 		<div class="flex items-center xl:relative py-6">
 			<div class="flex hover:opacity-80">
@@ -153,7 +153,7 @@ namespace SRF;
 				<div class="hidden xl:flex items-stretch"
 					 x-data="{ searchOpen: false, searchClosed: true }" x-cloak>
 					<form id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET"
-						  class="w-full absolute top-full right-0 z-10">
+						  class="w-full absolute top-full right-0 z-20">
 						<input type="text" name="s" placeholder="<?php esc_attr_e( 'Search...' ); ?>"
 							   value="<?php the_search_query(); ?>"
 							   class="w-full h-10 px-4 py-6 outline-none rounded border-2 border-gray-300 focus:border-gray-500 placeholder-gray-400 text-purple-900"
@@ -186,7 +186,7 @@ namespace SRF;
 </div>
 
 <!-- Mobile menu, show/hide based on mobile menu state. -->
-<div class="absolute z-10 top-0 -inset-x-0 p-2 transition transform origin-top-right xl:hidden" x-show="open"
+<div class="absolute z-20 top-0 -inset-x-0 p-2 transition transform origin-top-right xl:hidden" x-show="open"
 	 x-transition x-cloak>
 	<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
 		<div class="pt-5 pb-6 px-5">
