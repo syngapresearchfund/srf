@@ -50,20 +50,23 @@ namespace SRF;
 						href="<?php echo esc_url( get_theme_file_uri( 'assets/files/SRF-501c3-Ruling.pdf' ) ); ?>">83-1200789</a>)
 					headquartered in California.</p>
 				<!-- links -->
-				<ul class="flex flex-wrap space-x-2 justify-center xl:justify-end place-items-center">
-					<li class="w-24"><a href="<?php echo esc_url( home_url( '/syngap10-podcast/' ) ); ?>"><img
+				<ul class="flex flex-wrap space-x-3 lg:space-x-2.5 justify-center xl:justify-end place-items-center">
+					<li class="w-24 lg:w-14"><a href="<?php echo esc_url( home_url( '/syngap10-podcast/' ) ); ?>"><img
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/tdc-badge-podcast.png' ) ); ?>"
 								alt="The Best RARE Podcasts"></a></li>
-					<li class="w-24"><a href="https://globalgenes.org/" target="_blank" rel="noopener noreferrer"><img
+					<li class="w-24 lg:w-14"><a href="https://globalgenes.org/" target="_blank" rel="noopener noreferrer"><img
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/global-advocacy-alliance-founding-member-badge.png' ) ); ?>"
 								alt="Global Advocacy Alliance Founding Member"></a></li>
-					<li class="w-20"><a href="https://www.guidestar.org/profile/83-1200789" target="_blank"
+					<li class="w-20 lg:w-12"><a href="https://www.guidestar.org/profile/83-1200789" target="_blank"
 										rel="noopener noreferrer"><img
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2024.png' ) ); ?>"
 								alt="Guidestar Platinum Symbol of Transparency 2024"></a></li>
-					<li class="w-24"><a href="<?php echo esc_url( home_url( '/gnp/' ) ); ?>"><img
+					<li class="w-24 lg:w-14"><a href="<?php echo esc_url( home_url( '/gnp/' ) ); ?>"><img
 								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2023-top-rated-awards-badge.png' ) ); ?>"
 								alt="2022 Top Rated Awards"></a></li>
+					<li class="w-24 lg:w-14"><a href="<?php echo esc_url( 'https://cfcgiving.opm.gov/welcome' ); ?>"><img
+								src="<?php echo esc_url( get_theme_file_uri( 'assets/images/CFC-logo.png' ) ); ?>"
+								alt="Combined Federal Campaign"></a></li>
 				</ul>
 			</div>
 		</div>
