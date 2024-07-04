@@ -40,7 +40,7 @@ get_header();
 <!-- ========================= -->
 <!-- Events section -->
 <!-- ========================= -->
-<section class="relative py-32 bg-gray-100">
+<section class="relative py-32 bg-white">
 	<div class="container mx-auto px-10 text-center">
 		<h2 class="mb-10 mx-auto font-extrabold text-center text-3xl lg:text-4xl text-gray-600">Upcoming Events &
 			Webinars</h2>
@@ -175,7 +175,7 @@ get_header();
 <!-- ========================= -->
 <!-- News section -->
 <!-- ========================= -->
-<section class="bg-white">
+<section class="bg-gray-100">
 	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 		<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Latest News & Updates</h2>
 
@@ -229,7 +229,7 @@ get_header();
 <!-- ========================= -->
 <!-- Warriors section -->
 <!-- ========================= -->
-<section class="bg-gray-100">
+<section class="bg-white">
 	<div class="px-6 lg:px-0 py-24 text-center">
 		<h2 class="mb-10 text-3xl lg:text-4xl text-gray-700 font-extrabold">Our Warriors</h2>
 
@@ -286,7 +286,7 @@ get_header();
 <!-- ========================= -->
 <!-- Newly Diagnosed section -->
 <!-- ========================= -->
-<section id="newly-diagnosed" class="bg-white">
+<section id="newly-diagnosed" class="bg-gray-100">
 	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
 		<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Newly Diagnosed?</h2>
 		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
