@@ -2462,6 +2462,12 @@ Adjustments and Overrides
 =========================
 */
 
+/* Smooth Scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Images Adjustments */
 
 .container .featured-image img,

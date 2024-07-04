@@ -30,6 +30,11 @@ Adjustments and Overrides
 =========================
 */
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Images Adjustments */
 .container .featured-image img,
 .tiled-gallery__item.tiled-gallery__item {
