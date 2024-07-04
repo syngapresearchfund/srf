@@ -38,39 +38,6 @@ get_header();
 <?php esc_html( srf_homepage_announcement_banner() ); ?>
 
 <!-- ========================= -->
-<!-- Welcome section -->
-<!-- ========================= -->
-<section class="bg-white">
-	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
-		<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Newly Diagnosed?</h2>
-		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
-			<div class="flex flex-col items-center space-y-6">
-				<h3 class="text-gray-600 text-2xl font-bold text-center underline">Join our registry</h3>
-				<p class="flex-auto">Register with Ciitizen to collect as much de-identified group data for researchers
-					to use. We need as many to register to improve the chances for successful clinical trials.</p>
-				<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>"
-				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
-			</div>
-			<div class="flex flex-col items-center space-y-6">
-				<h3 class="text-gray-600 text-2xl font-bold text-center underline">Get involved</h3>
-				<p class="flex-auto">The best way to help someone with SYNGAP1 is to help spread awareness and stay
-					informed. Start by connecting with SRF, holding a fundraiser, and becoming a volunteer.</p>
-				<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>"
-				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
-			</div>
-			<div class="flex flex-col items-center space-y-6">
-				<h3 class="text-gray-600 text-2xl font-bold text-center underline">New families</h3>
-				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a Resource Guide with basic
-					information as well as important tools for you and your doctor.</p>
-				<a href="<?php echo esc_url( home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ); ?>"
-				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
-					more</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- ========================= -->
 <!-- Events section -->
 <!-- ========================= -->
 <section class="relative py-32 bg-gray-100">
@@ -315,6 +282,39 @@ get_header();
 		</a>
 	</div>
 </section>        <!-- header + hero bg wrapper -->
+
+<!-- ========================= -->
+<!-- Newly Diagnosed section -->
+<!-- ========================= -->
+<section id="newly-diagnosed" class="bg-white">
+	<div class="container mx-auto px-6 lg:px-0 py-24 text-center">
+		<h2 class="mb-10 text-3xl lg:text-4xl font-extrabold text-gray-600">Newly Diagnosed?</h2>
+		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
+			<div class="flex flex-col items-center space-y-6">
+				<h3 class="text-gray-600 text-2xl font-bold text-center underline">Join our registry</h3>
+				<p class="flex-auto">Register with Ciitizen to collect as much de-identified group data for researchers
+					to use. We need as many to register to improve the chances for successful clinical trials.</p>
+				<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>"
+				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
+			</div>
+			<div class="flex flex-col items-center space-y-6">
+				<h3 class="text-gray-600 text-2xl font-bold text-center underline">Get involved</h3>
+				<p class="flex-auto">The best way to help someone with SYNGAP1 is to help spread awareness and stay
+					informed. Start by connecting with SRF, holding a fundraiser, and becoming a volunteer.</p>
+				<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>"
+				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
+			</div>
+			<div class="flex flex-col items-center space-y-6">
+				<h3 class="text-gray-600 text-2xl font-bold text-center underline">New families</h3>
+				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a Resource Guide with basic
+					information as well as important tools for you and your doctor.</p>
+				<a href="<?php echo esc_url( home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ); ?>"
+				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
+					more</a>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- ========================= -->
 <!-- Stats section -->
