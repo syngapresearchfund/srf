@@ -37,7 +37,7 @@ get_header();
 
 		<section class="board-members text-center mb-14">
 			<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Board of Trustees</h2>
-			<?php srf_team_grid( 'board-members', 'trustees' ); ?>
+			<?php srf_team_grid( 'board-members', 'View all trustees' ); ?>
 		</section>
 
 		<section class="leadership-team text-center mb-14">
