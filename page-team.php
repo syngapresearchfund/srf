@@ -26,8 +26,8 @@ get_header();
 		</header>
 
 		<section class="board-members text-center mb-14">
-			<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">State Representatives</h2>
-			<?php srf_team_grid( 'state-representatives' ); ?>
+			<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">State Ambassadors</h2>
+			<?php srf_team_grid( 'state-ambassadors' ); ?>
 		</section>
 
 		<section class="board-members text-center mb-14">

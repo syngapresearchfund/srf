@@ -93,11 +93,11 @@ if ( ! function_exists( 'srf_is_state_ambassador' ) ) :
 			return false;
 		}
 
-		if ( ! empty( $args ) && ( 'state-representatives' === $args['cat_slug'] || 'state-advocates' === $args['cat_slug'] ) ) {
+		if ( ! empty( $args ) && ( 'state-ambassadors' === $args['cat_slug'] || 'state-advocates' === $args['cat_slug'] ) ) {
 			return true;
 		}
 
-		if ( is_tax() && ( 'state-representatives' === get_query_var( 'term' ) || 'state-advocates' === get_query_var( 'term' ) ) ) {
+		if ( is_tax() && ( 'state-ambassadors' === get_query_var( 'term' ) || 'state-advocates' === get_query_var( 'term' ) ) ) {
 			return true;
 		}
 
