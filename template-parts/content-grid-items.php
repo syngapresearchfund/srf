@@ -16,7 +16,7 @@ $srf_bg_colors    = array(
 	'bg-srf-green-500',
 );
 $ambassador_field = get_field( 'ambassador_states' );
-$ambassador_state = ! empty( $ambassador_field ) && ! empty( $args ) && ( 'state-representatives' === $args['cat_slug'] || 'state-advocates' === $args['cat_slug'] ) ? $ambassador_field . ' - ' : '';
+$ambassador_state = ! empty( $ambassador_field ) && srf_is_state_ambassador( $args ) ? $ambassador_field . ' - ' : '';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white' ); ?>>

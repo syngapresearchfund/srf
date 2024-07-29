@@ -80,3 +80,28 @@ if ( ! function_exists( 'srf_current_menu_item' ) ) :
 		return $menu_item_class;
 	}
 endif;
+
+if ( ! function_exists( 'srf_is_state_ambassador' ) ) :
+	/**
+	 * Checks if the current post is a state ambassador
+	 *
+	 * @param array $args Arguments passed in from get_tempalte_part.
+	 * @return boolean
+	 */
+	function srf_is_state_ambassador( $args ) {
+		if ( 'srf-team' !== get_post_type() ) {
+			return false;
+		}
+
+		if ( ! empty( $args ) && ( 'state-representatives' === $args['cat_slug'] || 'state-advocates' === $args['cat_slug'] ) ) {
+			return true;
+		}
+
+		if ( is_tax() && ( 'state-representatives' === get_query_var( 'term' ) || 'state-advocates' === get_query_var( 'term' ) ) ) {
+			return true;
+		}
+
+
+		return false;
+	}
+endif;
