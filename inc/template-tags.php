@@ -207,10 +207,13 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 	 * Outputs the grid for SRF Team Members.
 	 */
 	function srf_team_grid( $category_slug, $view_all_txt = false, $view_all_display = true ) {
+		$meta_key_arg = 'state-ambassadors' === $category_slug || 'state-advocates' === $category_slug ? array( 'meta_key' => 'ambassador_states',  ) : NULL;
+		$order_by_arg = 'state-ambassadors' === $category_slug || 'state-advocates' === $category_slug ? array( 'meta_value' => 'ASC',  ) : ( 'board-members' === $category_slug ? array( 'menu_order' => 'DESC', 'title' => 'ASC' ) : array( 'title' => 'ASC' ) );
 		$args       = array(
 			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-team',
-			'orderby'        => array( 'menu_order' => 'DESC', 'title' => 'ASC' ),
+			'meta_key'       => $meta_key_arg,
+			'orderby'        => $order_by_arg,
 			'tax_query'      => array( // phpcs:ignore -- tax_query ok.
 				array(
 					'taxonomy' => 'srf-team-category',
