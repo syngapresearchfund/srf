@@ -1,0 +1,32 @@
+<?php
+/**
+ * Template part for displaying posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @since 2019-05-19 First docBlock
+ * @package SRF
+ */
+
+namespace SRF;
+
+$srf_bg_colors    = array(
+	'bg-srf-blue-500',
+	'bg-srf-purple-500',
+	'bg-srf-green-500',
+);
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'h-64 w-full bg-opacity-20 hover:bg-opacity-40 ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) ); ?>>
+	<a class="post-card relative block h-full" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+		<div class="entry-header p-6">
+			<?php the_title( '<h2 class="entry-title mb-6 text-xl text-center font-bold">', '</h2>' ); ?>
+			<ul>
+				<li><strong class="font-bold">Grant Number:</strong> <?php echo esc_html( get_field( 'grant_number' ) ); ?></li>
+				<li><strong class="font-bold">Funding Amount:</strong> <?php echo esc_html( get_field( 'funding_amount' ) ); ?></li>
+				<li><strong class="font-bold">Percentage Dispersed:</strong> <?php echo esc_html( get_field( 'percentage_dispersed' ) ); ?></li>
+				<li><strong class="font-bold">Grant Status:</strong> <?php echo esc_html( get_field( 'grant_status' ) ); ?></li>
+			</ul>
+		</div><!-- .entry-header -->
+	</a>
+</article><!-- #post-<?php the_ID(); ?> -->
