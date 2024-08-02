@@ -28,13 +28,13 @@ get_header();
 			</header>
 			
 			<div class="prose lg:prose-xl mx-auto mb-8 text-center">
-				<p>The founders cover SRF overhead, allowing donations to go toward research and programs to help SYNGAP1 patients.  This page is where all your donations go: we find labs where the PI has knowledge of SynGAP and/or key skills that will be essential for our quest for a therapy for our patients and we support those labs.</p>
+				<p>This page shows where your donations go! We support labs where the team has specific knowledge and key skills that will be essential for our quest for a therapy for our patients. The founders cover SynGAP Research Fund overhead, allowing donations to go toward research and programs to help patients and families with SYNGAP1-Related Disorders.</p>
 			</div>
 
 			<div class="max-w-6xl mx-auto mb-12 md:grid grid-cols-3 gap-4 text-base leading-relaxed text-center text-gray-700">
-				<p class="bg-white px-4 py-6 m-4 md:m-0">The Syngap Research Fund is eager to provide high-impact research grants to interested physicians and researchers worldwide to accelerate diagnosis and management of SynGAP1 syndrome.</p>
-				<p class="bg-white px-4 py-6 m-4 md:m-0">Please complete <a class="underline" href="<?php echo esc_url( home_url( '/srf-grant-application/' ) ); ?>">SRF’s grant application</a> if you are interested in applying for funding to conduct SynGAP1 research.</p>
-				<p class="bg-white px-4 py-6 m-4 md:m-0"><strong class="font-bold">Note:</strong> SRF has a Board-directed policy that does not allow for the payment of indirect costs to nonprofit institutions.</p>
+				<p class="bg-white px-4 py-6 m-4 md:m-0">The SynGAP Research Fund is eager to provide high-impact research grants to interested clinicians and researchers worldwide to accelerate diagnosis and management of <em class="italic">SYNGAP1-Related Disorders</em>.</p>
+				<p class="bg-white px-4 py-6 m-4 md:m-0">Please see <a class="underline" href="<?php echo esc_url( home_url( '/syngap-research-fund-grant-program/' ) ); ?>">SRF’s grant application process</a> if you are interested in applying for funding to conduct SynGAP1 research.</p>
+				<p class="bg-white px-4 py-6 m-4 md:m-0">Peruse current projects from grantees below and pick your favorite to follow in our newsletters, press releases, webinars, and annual conferences.</p>
 			</div>
 
 			<div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-2">
