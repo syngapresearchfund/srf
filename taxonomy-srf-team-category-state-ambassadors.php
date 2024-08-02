@@ -28,7 +28,7 @@ get_header();
 			</header>
 
 			<div class="prose lg:prose-xl mx-auto mb-16">
-				<p>Our State Ambassadors are dedicated volunteers who connect with families in their state, offering crucial information about the SynGAP Research Fund (SRF). They provide details about SRF registries, ongoing studies, clinical assistance, and essential contacts. State Ambassadors play a vital role in fostering a supportive community and ensuring families have access to the latest resources and information.</p>
+				<p>Our State Ambassadors are dedicated volunteers who connect with families in their state, offering crucial information about the SynGAP Research Fund (SRF). They provide details about SRF registries, ongoing studies, clinical assistance, essential contacts, and <a href="https://curesyngap1.org/get-involved/" class="underline">ways to get involved</a>. State Ambassadors play a vital role in fostering a supportive community and ensuring families have access to the latest resources and information.</p>
 			</div>
 
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
