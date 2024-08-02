@@ -1866,6 +1866,10 @@ body {
   background-color: rgba(25, 174, 105, var(--tw-bg-opacity));
 }
 
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2;
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -1876,6 +1880,10 @@ body {
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+
+.hover\:bg-opacity-40:hover {
+  --tw-bg-opacity: 0.4;
 }
 
 .bg-gradient-to-r {
@@ -2744,6 +2752,10 @@ select.blog-filter {
     display: grid;
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3053,6 +3065,10 @@ select.blog-filter {
 
   .lg\:-translate-x-1\/2 {
     --tw-translate-x: -50%;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {

@@ -21,23 +21,23 @@ get_header();
 ?>
 
 	<?php if ( have_posts() ) : ?>
-		<div class="<?php echo esc_attr( $container_classes ); ?> text-center">
-			<header class="entry-header max-w-3xl mx-auto mb-10">
+		<div class="<?php echo esc_attr( $container_classes ); ?>">
+			<header class="entry-header max-w-3xl mx-auto mb-10 text-center">
 				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?></h1>
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
 			
-			<div class="prose lg:prose-xl mx-auto mb-8">
+			<div class="prose lg:prose-xl mx-auto mb-8 text-center">
 				<p>The founders cover SRF overhead, allowing donations to go toward research and programs to help SYNGAP1 patients.  This page is where all your donations go: we find labs where the PI has knowledge of SynGAP and/or key skills that will be essential for our quest for a therapy for our patients and we support those labs.</p>
 			</div>
 
-			<div class="max-w-6xl mx-auto mb-12 md:grid grid-cols-3 gap-4 text-base leading-relaxed text-gray-700">
+			<div class="max-w-6xl mx-auto mb-12 md:grid grid-cols-3 gap-4 text-base leading-relaxed text-center text-gray-700">
 				<p class="bg-white px-4 py-6 m-4 md:m-0">The Syngap Research Fund is eager to provide high-impact research grants to interested physicians and researchers worldwide to accelerate diagnosis and management of SynGAP1 syndrome.</p>
 				<p class="bg-white px-4 py-6 m-4 md:m-0">Please complete <a class="underline" href="<?php echo esc_url( home_url( '/srf-grant-application/' ) ); ?>">SRF’s grant application</a> if you are interested in applying for funding to conduct SynGAP1 research.</p>
 				<p class="bg-white px-4 py-6 m-4 md:m-0"><strong class="font-bold">Note:</strong> SRF has a Board-directed policy that does not allow for the payment of indirect costs to nonprofit institutions.</p>
 			</div>
 
-			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+			<div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-2">
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -48,7 +48,7 @@ get_header();
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', 'grid-items' );
+					get_template_part( 'template-parts/content', 'grant-grid-items' );
 
 				endwhile;
 				?>
