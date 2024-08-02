@@ -17,7 +17,7 @@ $srf_bg_colors    = array(
 );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'h-64 w-full bg-opacity-20 hover:bg-opacity-40 ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-opacity-20 hover:bg-opacity-40 ' . esc_attr( $srf_bg_colors[ array_rand( $srf_bg_colors, 1 ) ] ) ); ?>>
 	<a class="post-card relative block h-full" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<div class="entry-header p-6">
 			<?php the_title( '<h2 class="entry-title mb-6 text-xl text-center font-bold">', '</h2>' ); ?>
