@@ -180,3 +180,12 @@ select.blog-filter {
 .wp-block-file .wp-block-file__button {
     color: #fff;
 }
+
+/* Prose overrides in content */
+.wp-block-atbs-tabs .tabs-titles > .tab-title {
+    @apply m-0;
+}
+
+.wp-block-atbs-tabs .tabs-titles > .tab-title::before {
+    @apply content-none;
+}
