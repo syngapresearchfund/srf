@@ -84,6 +84,7 @@ namespace SRF;
 							srf_subnav_item( 'Studies', home_url( '/resources/studies/' ) ),
 							srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
 							srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
+							srf_subnav_item( 'Fundraising', home_url( '/srf-fundraising-resources/' ) ),
 							srf_subnav_heading( 'Medical' ),
 							srf_subnav_item( 'Resources for Undiagnosed', home_url( '/resources-for-undiagnosed/' ) ),
 							srf_subnav_item( 'Doctors', home_url( '/doctors/' ) ),
@@ -93,7 +94,6 @@ namespace SRF;
 							srf_subnav_item( 'Adults with SYNGAP1', home_url( '/adults-with-syngap1-caregiver-resources/' ) ),
 							srf_subnav_item( 'Siblings', home_url( '/sibling-support/' ) ),
 							srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
-							srf_subnav_item( 'Fundraising', home_url( '/blog/fundraising-the-backbone-of-research/' ) ),
 							srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
 							srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 						)
@@ -273,6 +273,7 @@ namespace SRF;
 								srf_subnav_item( 'Studies', home_url( '/resources/studies/' ) ),
 								srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
 								srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
+								srf_subnav_item( 'Fundraising', home_url( '/srf-fundraising-resources/' ) ),
 								srf_subnav_heading( 'Medical' ),
 								srf_subnav_item( 'Resources for Undiagnosed', home_url( '/resources-for-undiagnosed/' ) ),
 								srf_subnav_item( 'Doctors', home_url( '/doctors/' ) ),
@@ -282,7 +283,6 @@ namespace SRF;
 								srf_subnav_item( 'Adults with SYNGAP1', home_url( '/adults-with-syngap1-caregiver-resources/' ) ),
 								srf_subnav_item( 'Siblings', home_url( '/sibling-support/' ) ),
 								srf_subnav_item( 'Insurance', 'https://www.angelman.org/wp-content/uploads/2022/01/ASF-State-Insurance-Resource-Guide-Jan2022.pdf' ),
-								srf_subnav_item( 'Fundraising', home_url( '/blog/fundraising-the-backbone-of-research/' ) ),
 								srf_subnav_item( 'RARE Bears', home_url( '/rare-bears/' ) ),
 								srf_subnav_item( 'Shop', home_url( '/shop/' ) ),
 							)
