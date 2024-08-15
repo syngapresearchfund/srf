@@ -70,6 +70,11 @@ get_header();
 			<?php srf_team_grid( 'dei', 'View all DEI board members' ); ?>
 		</section>
 
+		<section class="board-members text-center mb-14">
+			<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">International Ambassadors</h2>
+			<?php srf_team_grid( 'international-ambassadors' ); ?>
+		</section>
+
 	</div>
 	<?php
 get_footer();
