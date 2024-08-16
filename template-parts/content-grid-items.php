@@ -10,13 +10,19 @@
 
 namespace SRF;
 
-$srf_bg_colors    = array(
+$srf_bg_colors         = array(
 	'bg-srf-blue-500',
 	'bg-srf-purple-500',
 	'bg-srf-green-500',
 );
-$ambassador_field = get_field( 'ambassador_states' );
-$ambassador_state = ! empty( $ambassador_field ) && srf_is_state_ambassador( $args ) ? $ambassador_field . ' - ' : '';
+$ambassador_field      = get_field( 'ambassador_states' );
+$ambassador_field_intl = get_field( 'ambassador_countries' );
+// $ambassador_state      = ! empty( $ambassador_field ) && srf_is_state_ambassador( $args ) ? $ambassador_field . ' - ' : '';
+// $ambassador_country    = ! empty( $ambassador_field_intl ) && srf_is_intl_ambassador( $args ) ? $ambassador_field_intl . ' - ' : '';
+$ambassador_state      = ! empty( $ambassador_field ) ? $ambassador_field . ' - ' : '';
+$ambassador_country    = ! empty( $ambassador_field_intl ) ? $ambassador_field_intl . ' - ' : '';
+
+$ambassador_title = srf_is_state_ambassador( $args ) ? $ambassador_state : ( srf_is_intl_ambassador( $args ) ? $ambassador_country : '' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-white' ); ?>>
@@ -30,7 +36,7 @@ $ambassador_state = ! empty( $ambassador_field ) && srf_is_state_ambassador( $ar
 		?>
 
 		<header class="entry-header p-6 absolute bottom-0 w-full text-gray-100 bg-gray-900 bg-opacity-40 rounded-b">
-			<?php the_title( '<h2 class="entry-title text-xl font-bold line-clamp-2">' . $ambassador_state, '</h2>' ); ?>
+			<?php the_title( '<h2 class="entry-title text-xl font-bold line-clamp-2">' . $ambassador_title, '</h2>' ); ?>
 		</header><!-- .entry-header -->
 	</a>
 </article><!-- #post-<?php the_ID(); ?> -->

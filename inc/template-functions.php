@@ -105,3 +105,28 @@ if ( ! function_exists( 'srf_is_state_ambassador' ) ) :
 		return false;
 	}
 endif;
+
+if ( ! function_exists( 'srf_is_intl_ambassador' ) ) :
+	/**
+	 * Checks if the current post is a state ambassador
+	 *
+	 * @param array $args Arguments passed in from get_tempalte_part.
+	 * @return boolean
+	 */
+	function srf_is_intl_ambassador( $args ) {
+		if ( 'srf-team' !== get_post_type() ) {
+			return false;
+		}
+
+		if ( ! empty( $args ) && 'international-ambassadors' === $args['cat_slug'] ) {
+			return true;
+		}
+
+		if ( is_tax() && 'international-ambassadors' === get_query_var( 'term' ) ) {
+			return true;
+		}
+
+
+		return false;
+	}
+endif;
