@@ -17,8 +17,6 @@ $srf_bg_colors         = array(
 );
 $ambassador_field      = get_field( 'ambassador_states' );
 $ambassador_field_intl = get_field( 'ambassador_countries' );
-// $ambassador_state      = ! empty( $ambassador_field ) && srf_is_state_ambassador( $args ) ? $ambassador_field . ' - ' : '';
-// $ambassador_country    = ! empty( $ambassador_field_intl ) && srf_is_intl_ambassador( $args ) ? $ambassador_field_intl . ' - ' : '';
 $ambassador_state      = ! empty( $ambassador_field ) ? $ambassador_field . ' - ' : '';
 $ambassador_country    = ! empty( $ambassador_field_intl ) ? $ambassador_field_intl . ' - ' : '';
 
