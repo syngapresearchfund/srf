@@ -292,9 +292,10 @@ get_header();
 		<div class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-16 space-y-16 lg:space-y-0 mb-10 text-center">
 			<div class="flex flex-col items-center space-y-6">
 				<h3 class="text-gray-600 text-2xl font-bold text-center underline">Join our registry</h3>
-				<p class="flex-auto">Register with Ciitizen Health to collect as much de-identified group data for researchers
+				<p class="flex-auto">Register with Citizen Health to collect as much de-identified group data for
+					researchers
 					to use. We need as many to register to improve the chances for successful clinical trials.</p>
-				<a href="<?php echo esc_url( home_url( '/join-the-ciitizen-registry/' ) ); ?>"
+				<a href="<?php echo esc_url( home_url( '/join-the-citizen-registry/' ) ); ?>"
 				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
 			</div>
 			<div class="flex flex-col items-center space-y-6">
@@ -346,9 +347,9 @@ get_header();
 			<div>
 				<h2 class="text-5xl font-bold"><a
 						class="text-srf-blue-500 hover:text-srf-green-500 transition duration-500"
-						href="https://ciitizen.com/syngap1/srf/"><?php echo esc_html( get_field( 'ciitizen_nhs' ) ); ?></a>
+						href="https://www.citizen.health/partners/srf"><?php echo esc_html( get_field( 'citizen_nhs' ) ); ?></a>
 				</h2>
-				<h3 class="text-lg text-gray-600 font-normal">US Families in Ciitizen Health NHS</h3>
+				<h3 class="text-lg text-gray-600 font-normal">US Families in Citizen Health NHS</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a

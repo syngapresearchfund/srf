@@ -80,7 +80,7 @@ namespace SRF;
 						array(
 							srf_subnav_heading( 'Connections' ),
 							srf_subnav_item( 'Register With SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
-							srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-ciitizen-registry/' ) ),
+							srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-citizen-registry/' ) ),
 							srf_subnav_item( 'Studies', home_url( '/resources/studies/' ) ),
 							srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
 							srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
@@ -269,7 +269,7 @@ namespace SRF;
 							array(
 								srf_subnav_heading( 'Connections' ),
 								srf_subnav_item( 'Register with SRF', 'https://docs.google.com/forms/d/e/1FAIpQLSdQK-BcpONtn15ZVxMcH1qPRzX-zvuUXQR3p4N7P3kF_m58Fw/viewform' ),
-								srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-ciitizen-registry/' ) ),
+								srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-citizen-registry/' ) ),
 								srf_subnav_item( 'Studies', home_url( '/resources/studies/' ) ),
 								srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
 								srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
