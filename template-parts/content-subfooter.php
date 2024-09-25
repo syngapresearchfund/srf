@@ -102,7 +102,7 @@ namespace SRF;
 							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2024-top-rated-awards-badge.png' ) ); ?>"
 							alt="2022 Top Rated Awards"></a></li>
 				<li class="w-24 lg:w-14"><a
-						href="<?php echo esc_url( home_url( '/combined-federal-campaign/' ) ); ?>"><img
+						href="<?php echo esc_url( home_url( '/blog/srf-joins-cfc/' ) ); ?>"><img
 							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/CFC-logo.png' ) ); ?>"
 							alt="Combined Federal Campaign"></a></li>
 			</ul>
