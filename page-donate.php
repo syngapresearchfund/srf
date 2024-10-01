@@ -34,7 +34,7 @@ get_header();
 		<!-- End Give Lively Fundraising Widget -->
 
 		<div class="w-full lg:w-2/3 space-y-4 mt-14 mx-auto">
-			<h2 class="text-2xl font-semibold text-gray-600 text-center">Other Ways to Donate</h2>
+			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Other Ways to Donate</h2>
 			<p class="text-center lg:w-4/6 mx-auto">Your contribution is tax-deductible as described on your receipt and
 				to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN <a
 					class="text-srf-blue-500 hover:underline"
