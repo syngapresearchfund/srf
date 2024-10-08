@@ -236,10 +236,13 @@ get_header();
 							<div class="p-4 border rounded-md">
 								<h4 class="font-semibold">Bank Account</h4>
 								<ul>
-									<li>ABN AMRO Bank</li>
-									<li><strong>Stichting SynGAP Research Fund Europe</strong></li>
-									<li>Account Number: NL23 ABNA 0114 7506 61.</li>
-									<li>BIC/SWIFT: ABNANL2A</li>
+									<li>SYNGAP RESEARCH FUND UK</li>
+									<li>Account Type: Business</li>
+									<li>Account Number: 39953692</li>
+									<li>Sort Code: 23-05-80</li>
+									<li class="mt-3 italic">For payments from outside the UK</li>
+									<li>BIC/SWIFT: MYMBGB2L</li>
+									<li>IBAN: GB14MYMB 230580 39953692</li>
 								</ul>
 							</div>
 						</div>
