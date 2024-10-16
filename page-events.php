@@ -77,9 +77,19 @@ $past_args         = array(
 );
 $past_events_query = new WP_Query( $past_args );
 
-$upcoming_and_current_events_query             = new WP_Query();
-$upcoming_and_current_events_query->posts      = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
-$upcoming_and_current_events_query->post_count = count( $upcoming_and_current_events_query->posts );
+$events_query                      = new WP_Query();
+$upcoming_and_current_events_query = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
+
+// Sort the merged posts array by event date in ascending order
+usort( $upcoming_and_current_events_query, function ( $a, $b ) {
+	$date_a = get_post_meta( $a->ID, 'event_dates', true );
+	$date_b = get_post_meta( $b->ID, 'event_dates', true );
+
+	return strtotime( $date_a ) - strtotime( $date_b );
+} );
+
+$events_query->posts      = $upcoming_and_current_events_query;
+$events_query->post_count = count( $upcoming_and_current_events_query );
 ?>
 
 	<div class="container mx-auto px-6 lg:px-0 py-16">
@@ -93,13 +103,13 @@ $upcoming_and_current_events_query->post_count = count( $upcoming_and_current_ev
 			<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Upcoming Events</h2>
 
 			<?php
-			if ( $upcoming_and_current_events_query->have_posts() ) :
+			if ( $events_query->have_posts() ) :
 				?>
 				<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left space-y-6">
 					<?php
 					/* Start the Loop */
-					while ( $upcoming_and_current_events_query->have_posts() ) :
-						$upcoming_and_current_events_query->the_post();
+					while ( $events_query->have_posts() ) :
+						$events_query->the_post();
 
 						/*
 						* Include the Post-Type-specific template for the content.
