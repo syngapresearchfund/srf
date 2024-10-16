@@ -10,7 +10,9 @@
 
 namespace SRF;
 
-$event_date = get_field( 'event_dates' );
+$start_date = get_field( 'event_dates' );
+$end_date   = get_field( 'event_end_date' );
+$event_date = ! empty( $end_date ) ? $start_date . ' - ' . $end_date : $start_date;
 ?>
 
 <article
