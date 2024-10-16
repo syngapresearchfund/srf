@@ -36,6 +36,30 @@ $upcoming_args         = array(
 );
 $upcoming_events_query = new WP_Query( $upcoming_args );
 
+$ongoing_args         = array(
+	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
+	'post_type'      => 'srf-events',
+	'order'          => 'DESC',
+	'orderby'        => 'meta_value',
+	'meta_key'       => 'event_dates',
+	'meta_query'     => array(
+		'relation' => 'AND',
+		array(
+			'key'     => 'event_dates',
+			'value'   => date( 'Ymd' ),
+			'compare' => '<=',
+			'type'    => 'DATETIME',
+		),
+		array(
+			'key'     => 'event_end_date',
+			'value'   => date( 'Ymd' ),
+			'compare' => '>=',
+			'type'    => 'DATETIME',
+		)
+	)
+);
+$ongoing_events_query = new WP_Query( $ongoing_args );
+
 $past_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
 	'post_type'      => 'srf-events',
@@ -53,6 +77,9 @@ $past_args         = array(
 );
 $past_events_query = new WP_Query( $past_args );
 
+$upcoming_and_current_events_query             = new WP_Query();
+$upcoming_and_current_events_query->posts      = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
+$upcoming_and_current_events_query->post_count = count( $upcoming_and_current_events_query->posts );
 ?>
 
 	<div class="container mx-auto px-6 lg:px-0 py-16">
@@ -66,13 +93,13 @@ $past_events_query = new WP_Query( $past_args );
 			<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Upcoming Events</h2>
 
 			<?php
-			if ( $upcoming_events_query->have_posts() ) :
+			if ( $upcoming_and_current_events_query->have_posts() ) :
 				?>
 				<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left space-y-6">
 					<?php
 					/* Start the Loop */
-					while ( $upcoming_events_query->have_posts() ) :
-						$upcoming_events_query->the_post();
+					while ( $upcoming_and_current_events_query->have_posts() ) :
+						$upcoming_and_current_events_query->the_post();
 
 						/*
 						* Include the Post-Type-specific template for the content.
