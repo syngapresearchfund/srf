@@ -34,7 +34,8 @@ get_header();
 		<!-- End Give Lively Fundraising Widget -->
 
 		<div class="w-full lg:w-2/3 space-y-4 mt-14 mx-auto">
-			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Other Ways to Donate</h2>
+			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Other Ways to
+				Donate</h2>
 			<p class="text-center lg:w-4/6 mx-auto">Your contribution is tax-deductible as described on your receipt and
 				to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN <a
 					class="text-srf-blue-500 hover:underline"
@@ -85,8 +86,9 @@ get_header();
 								<h4 class="font-semibold">Check Donations</h4>
 								<p class="mt-2">Make payable to:</p>
 								<p class="font-bold">Syngap Research Fund Incorporated</p>
-								<p class="font-bold">PO Box 104191</p>
-								<p class="font-bold">Pasadena, CA 91189-4191</p>
+								<p class="font-bold">SRF Donations</p>
+								<p class="font-bold">PO BOX 515734</p>
+								<p class="font-bold">LOS ANGELES CA 90051-5150</p>
 							</div>
 							<div class="p-4 border rounded-md">
 								<h4 class="font-semibold">Bank Deposits</h4>
