@@ -86,6 +86,7 @@ get_header();
 								<h4 class="font-semibold">Check Donations</h4>
 								<p class="mt-2">Make payable to:</p>
 								<p class="font-bold">Syngap Research Fund Incorporated</p>
+								<p class="mt-2">Send to:</p>
 								<p class="font-bold">SRF Donations</p>
 								<p class="font-bold">PO BOX 515734</p>
 								<p class="font-bold">LOS ANGELES CA 90051-5150</p>
