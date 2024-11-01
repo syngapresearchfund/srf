@@ -4,3 +4,4 @@ srf-theme.zip
 .parcel-cache
 .vscode
 .idea
+.php-cs-fixer.cache 
