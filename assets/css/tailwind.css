@@ -64,6 +64,19 @@ select.blog-filter {
     @apply border-2 border-gray-300 py-1 px-2 rounded-sm;
 }
 
+/* Prose table overrides */
+.prose thead tr th:first-child,
+.prose tbody tr td:first-child {
+    padding-left: 0.6666667em;
+}
+
+@media (min-width: 1024px) {
+    .lg\:prose-xl thead tr th:first-child,
+    .lg\:prose-xl tbody tr td:first-child {
+        padding-left: 0.6666667em;
+    }
+}
+
 /* WooCommerce Adjustments */
 .wp-block-gallery .blocks-gallery-item::before,
 .woocommerce .woocommerce-pagination ul.page-numbers li::before,
