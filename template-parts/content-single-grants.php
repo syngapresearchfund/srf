@@ -25,7 +25,7 @@ namespace SRF;
 	<div class="entry-content mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg px-6 lg:px-0">
 		<?php srf_single_featured_image(); ?>
 
-		<ul>
+		<ul class="grant-details">
 			<?php if ( get_field( 'principal_investigator' ) ) : ?>
 				<li><strong class="font-bold">Principal
 						Investigator:</strong> <?php echo esc_html( get_field( 'principal_investigator' ) ); ?></li>
@@ -35,13 +35,15 @@ namespace SRF;
 						class="font-bold">Institution:</strong> <?php echo esc_html( get_field( 'institution' ) ); ?>
 				</li>
 			<?php endif; ?>
-			<li><strong class="font-bold">Grant Number:</strong> <?php echo esc_html( get_field( 'grant_number' ) ); ?>
+			<li><strong class="font-bold">Grant
+					Number:</strong> <?php echo esc_html( get_field( 'grant_number' ) ); ?>
 			</li>
 			<li><strong class="font-bold">Funding
 					Amount:</strong> <?php echo esc_html( get_field( 'funding_amount' ) ); ?></li>
 			<li><strong class="font-bold">Percentage
 					Dispersed:</strong> <?php echo esc_html( get_field( 'percentage_dispersed' ) ); ?></li>
-			<li><strong class="font-bold">Grant Status:</strong> <?php echo esc_html( get_field( 'grant_status' ) ); ?>
+			<li><strong class="font-bold">Grant
+					Status:</strong> <?php echo esc_html( get_field( 'grant_status' ) ); ?>
 			</li>
 		</ul>
 
