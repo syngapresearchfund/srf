@@ -207,9 +207,12 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 	 * Outputs the grid for SRF Team Members.
 	 */
 	function srf_team_grid( $category_slug, $view_all_txt = false, $view_all_display = true ) {
-		$meta_key_arg = 'state-ambassadors' === $category_slug || 'state-advocates' === $category_slug ? array( 'meta_key' => 'ambassador_states',  ) : ( 'international-ambassadors' === $category_slug ? array( 'meta_key' => 'ambassador_countries' ) : NULL );
-		$order_by_arg = 'state-ambassadors' === $category_slug || 'state-advocates' === $category_slug ? array( 'meta_value' => 'ASC',  ) : ( 'board-members' === $category_slug ? array( 'menu_order' => 'DESC', 'title' => 'ASC' ) : array( 'title' => 'ASC' ) );
-		$args       = array(
+		$meta_key_arg = 'state-ambassadors' === $category_slug || 'state-advocates' === $category_slug ? array( 'meta_key' => 'ambassador_states', ) : ( 'international-ambassadors' === $category_slug ? array( 'meta_key' => 'ambassador_countries' ) : null );
+		$order_by_arg = 'state-ambassadors' === $category_slug || 'state-advocates' === $category_slug ? array( 'meta_value' => 'ASC', ) : ( 'board-members' === $category_slug ? array(
+			'menu_order' => 'DESC',
+			'title'      => 'ASC'
+		) : array( 'title' => 'ASC' ) );
+		$args         = array(
 			'posts_per_page' => 8, // phpcs:ignore -- pagination limit ok.
 			'post_type'      => 'srf-team',
 			'meta_key'       => $meta_key_arg,
@@ -222,7 +225,7 @@ if ( ! function_exists( 'srf_team_grid' ) ) :
 				),
 			),
 		);
-		$team_query = new WP_Query( $args );
+		$team_query   = new WP_Query( $args );
 
 		if ( empty( $view_all_txt ) ) {
 			$view_all_txt = 'View all ' . str_replace( '-', ' ', $category_slug );
@@ -431,5 +434,23 @@ if ( ! function_exists( 'srf_homepage_announcement' ) ) :
 		}
 
 		echo '<section class="bg-srf-purple-500"><div class="mx-auto text-white text-center text-xl py-6">' . wp_kses_post( $meta_values ) . '</div></section>';
+	}
+endif;
+
+if ( ! function_exists( 'srf_conditional_link_custom_field' ) ) :
+	/**
+	 * Output a text field after handling the conditional logic to determine if it's a link or not.
+	 *
+	 * @output string
+	 */
+	function srf_conditional_link_custom_field( $meta_field ) {
+		$meta_value = get_field( "$meta_field" );
+		$meta_url   = get_field( "$meta_field" . '_url' );
+
+		if ( empty( $meta_url ) ) {
+			return esc_html( $meta_value );
+		} else {
+			return '<a href="' . esc_url( $meta_url ) . '">' . esc_html( $meta_value ) . '</a>';
+		}
 	}
 endif;

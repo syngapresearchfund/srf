@@ -28,11 +28,12 @@ namespace SRF;
 		<ul class="grant-details">
 			<?php if ( get_field( 'principal_investigator' ) ) : ?>
 				<li><strong class="font-bold">Principal
-						Investigator:</strong> <?php echo esc_html( get_field( 'principal_investigator' ) ); ?></li>
+						Investigator:</strong> <?php echo srf_conditional_link_custom_field( 'principal_investigator' ); ?>
+				</li>
 			<?php endif; ?>
 			<?php if ( get_field( 'institution' ) ) : ?>
 				<li><strong
-						class="font-bold">Institution:</strong> <?php echo esc_html( get_field( 'institution' ) ); ?>
+						class="font-bold">Institution:</strong> <?php echo srf_conditional_link_custom_field( 'institution' ); ?>
 				</li>
 			<?php endif; ?>
 			<li><strong class="font-bold">Grant
