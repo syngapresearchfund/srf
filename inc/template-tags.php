@@ -450,7 +450,7 @@ if ( ! function_exists( 'srf_conditional_link_custom_field' ) ) :
 		if ( empty( $meta_url ) ) {
 			return esc_html( $meta_value );
 		} else {
-			return '<a href="' . esc_url( $meta_url ) . '">' . esc_html( $meta_value ) . '</a>';
+			return '<a href="' . esc_url( $meta_url ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $meta_value ) . '</a>';
 		}
 	}
 endif;
