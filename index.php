@@ -42,6 +42,7 @@ $archive_subheading = is_category() ? "Category: " : "Tag: ";
 								'taxonomy'        => 'category',
 								'show_option_all' => 'All',
 								'name'            => 'cat',
+								'orderby'        => 'name',
 								'class'           => 'blog-filter',
 								'hide_if_empty'   => true,
 							);
@@ -58,6 +59,7 @@ $archive_subheading = is_category() ? "Category: " : "Tag: ";
 								'show_option_all' => 'All',
 								'value_field'     => 'slug',
 								'name'            => 'tag',
+								'orderby'        => 'name',
 								'class'           => 'blog-filter',
 								'hide_if_empty'   => true,
 								'selected'        => $current_category->slug,
