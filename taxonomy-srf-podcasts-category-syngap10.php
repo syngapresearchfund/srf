@@ -36,7 +36,6 @@ get_header();
 		<p class="prose lg:prose-xl mx-auto">Listen below or find us on your podcast player of choice!</p>
 		<ul class="flex flex-wrap lg:flex-nowrap justify-center mx-auto space-x-2">
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://podcasts.apple.com/us/podcast/syngap10-mike-graglia-weekly-10-min-update-on-syngap1/id1560389818" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Apple-Badge.png' ) ); ?>" alt="Apple Podcasts" /></a></li>
-			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81NDhhMTUwYy9wb2RjYXN0L3Jzcw" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Google-Badge.png' ) ); ?>" alt="Google Podcasts" /></a></li>
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://music.amazon.com/podcasts/f226a8c3-a9d7-4bdf-9e99-ca082db6d97f/syngap10-audio-with-mike-graglia-weekly-10-minute-syngap1-updates-from-syngap-research-fund-501c3" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Amazon-Badge.png' ) ); ?>" alt="Amazon Music" /></a></li>
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://open.spotify.com/show/2qhQwMqDjflUAboaLoXjpi" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Spotify-Badge.png' ) ); ?>" alt="Spotify" /></a></li>
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://www.youtube.com/playlist?list=PLjpr3a14_ls38mAeOZeErFpEjbrw5mGhR" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-YouTube-Badge.png' ) ); ?>" alt="YouTube" /></a></li>
