@@ -28,6 +28,8 @@ get_header();
 				<a href="mailto:deanna@curesyngap1.org?subject=Warrior%20Submission%20Inquiry" class="mt-16 font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">
 					Share your story
 				</a>
+
+			<p class="mt-5">See our new collection of Sibling Stories <a class="underline" href="<?php echo esc_url( home_url( '/syngap-siblings/' ) ); ?>">here</a>!</p>
 			</header>
 
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
@@ -48,7 +50,12 @@ get_header();
 			</div>
 			<div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
 				<?php
-					the_posts_navigation( array( 'prev_text' => 'Next Page', 'next_text' => 'Previous Page' ) );
+					the_posts_navigation(
+						array(
+							'prev_text' => 'Next Page',
+							'next_text' => 'Previous Page',
+						)
+					);
 				?>
 			</div>
 		</div> <!-- .post-grid -->

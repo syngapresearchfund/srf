@@ -17,8 +17,8 @@ get_header();
 <!-- ========================= -->
 <section class="relative bg-gradient-to-br from-srf-purple-500 via-srf-blue-500 to-srf-green-500 overflow-y-hidden">
 	<img class="absolute block w-full h-full object-cover opacity-10"
-		 src="<?php echo esc_url( get_theme_file_uri( 'assets/images/home-hero-bg-image.png' ) ); ?>"
-		 alt="SRF Warrior Grid" />
+		src="<?php echo esc_url( get_theme_file_uri( 'assets/images/home-hero-bg-image.png' ) ); ?>"
+		alt="SRF Warrior Grid" />
 	<div class=" relative container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white z-10">
 		<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 			Collaboration. Transparency. Urgency.
@@ -27,7 +27,7 @@ get_header();
 			committed
 			to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
 		<a href="<?php echo esc_url( home_url( '/what-is-syngap1/' ) ); ?>"
-		   class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-blue-500 border-2 border-white font-bold text-lg tracking-wide transition duration-500">Learn
+			class="font-sans inline-block py-3 px-12 rounded  hover:bg-white text-white hover:text-srf-blue-500 border-2 border-white font-bold text-lg tracking-wide transition duration-500">Learn
 			more about SYNGAP1</a>
 	</div>
 </section>
@@ -70,7 +70,7 @@ get_header();
 					array(
 						'key'   => 'is_featured',
 						'value' => 1,
-					)
+					),
 				),
 			);
 			$featured_events_query = new WP_Query( $args );
@@ -115,7 +115,7 @@ get_header();
 							'key'     => 'is_featured',
 							'compare' => 'NOT EXISTS',
 						),
-					)
+					),
 				),
 				'tax_query'      => array(
 					'relation' => 'OR',
@@ -154,7 +154,7 @@ get_header();
 							'value'   => date( 'Ymd' ),
 							'compare' => '>=',
 							'type'    => 'DATETIME',
-						)
+						),
 					),
 					array(
 						'relation' => 'OR',
@@ -166,7 +166,7 @@ get_header();
 							'key'     => 'is_featured',
 							'compare' => 'NOT EXISTS',
 						),
-					)
+					),
 				),
 				'tax_query'      => array(
 					'relation' => 'OR',
@@ -208,19 +208,19 @@ get_header();
 
 		<!-- big button / cta -->
 		<a href="<?php echo esc_url( home_url( '/events/' ) ); ?>"
-		   class="font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+			class="font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
 			all events
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-				 stroke="currentColor">
+				stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 			</svg>
 		</a>
 		<!-- big button / cta -->
 		<a href="<?php echo esc_url( home_url( '/resources/webinars/' ) ); ?>"
-		   class="mt-8 sm:mt-0 sm:ml-8 font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+			class="mt-8 sm:mt-0 sm:ml-8 font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
 			all webinars
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-				 stroke="currentColor">
+				stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 			</svg>
 		</a>
@@ -258,7 +258,7 @@ get_header();
 				?>
 			</div>
 
-		<?php
+			<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -271,10 +271,10 @@ get_header();
 
 		<!-- big button / cta -->
 		<a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>"
-		   class="font-sans inline-flex border-2 border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View
+			class="font-sans inline-flex border-2 border-gray-700 hover:border-transparent hover:bg-srf-blue-500 rounded py-3 px-8 text-gray-700 hover:text-white transition duration-500 font-bold">View
 			all blog posts
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-				 stroke="currentColor">
+				stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 			</svg>
 		</a>
@@ -315,7 +315,7 @@ get_header();
 				?>
 			</div>
 
-		<?php
+			<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -328,10 +328,10 @@ get_header();
 
 		<!-- big button / cta -->
 		<a href="<?php echo esc_url( home_url( '/syngap-warriors/' ) ); ?>"
-		   class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
+			class="font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
 			all warriors
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
-				 stroke="currentColor">
+				stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
 			</svg>
 		</a>
@@ -351,21 +351,21 @@ get_header();
 					researchers
 					to use. We need as many to register to improve the chances for successful clinical trials.</p>
 				<a href="<?php echo esc_url( home_url( '/join-the-citizen-registry/' ) ); ?>"
-				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
+					class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-purple-500 border-2 border-srf-purple-500 text-srf-purple-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Register</a>
 			</div>
 			<div class="flex flex-col items-center space-y-6">
 				<h3 class="text-gray-600 text-2xl font-bold text-center underline">Get involved</h3>
 				<p class="flex-auto">The best way to help someone with SYNGAP1 is to help spread awareness and stay
 					informed. Start by connecting with SRF, holding a fundraiser, and becoming a volunteer.</p>
 				<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>"
-				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
+					class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
 			</div>
 			<div class="flex flex-col items-center space-y-6">
 				<h3 class="text-gray-600 text-2xl font-bold text-center underline">New families</h3>
 				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a Resource Guide with basic
 					information as well as important tools for you and your doctor.</p>
 				<a href="<?php echo esc_url( home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ); ?>"
-				   class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
+					class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
 					more</a>
 			</div>
 		</div>
