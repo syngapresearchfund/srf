@@ -2533,7 +2533,7 @@ select.blog-filter {
 
 @media (min-width: 1024px) {
   .lg\:prose-xl thead tr th:first-child,
-    .lg\:prose-xl tbody tr td:first-child {
+	.lg\:prose-xl tbody tr td:first-child {
     padding-left: 0.6666667em;
   }
 }
@@ -2652,7 +2652,9 @@ select.blog-filter {
 .woocommerce-cart .wc-block-components-express-payment li,
 .woocommerce-cart .wc-block-components-product-metadata li,
 .woocommerce-cart .wc-block-components-shipping-rates-control__package-items li,
-.woocommerce-checkout .wc-block-components-shipping-rates-control__package-items li,
+.woocommerce-checkout
+	.wc-block-components-shipping-rates-control__package-items
+	li,
 .woocommerce-checkout .wc-block-components-express-payment li,
 .woocommerce-checkout .wc-block-components-product-metadata li {
   padding-left: 0;
@@ -2660,8 +2662,12 @@ select.blog-filter {
 
 .woocommerce-cart .wc-block-components-product-metadata li:before,
 .woocommerce-cart .wc-block-components-express-payment li:before,
-.woocommerce-cart .wc-block-components-shipping-rates-control__package-items li:before,
-.woocommerce-checkout .wc-block-components-shipping-rates-control__package-items li:before,
+.woocommerce-cart
+	.wc-block-components-shipping-rates-control__package-items
+	li:before,
+.woocommerce-checkout
+	.wc-block-components-shipping-rates-control__package-items
+	li:before,
 .woocommerce-checkout .wc-block-components-product-metadata li:before,
 .woocommerce-checkout .wc-block-components-express-payment li:before {
   content: none;
@@ -2687,6 +2693,51 @@ select.blog-filter {
 
 .wp-block-atbs-tabs .tabs-titles > .tab-title::before {
   content: none;
+}
+
+/* Event Calendar Adjustments */
+
+#content .tribe-events .tribe-events-c-search__button, #content .tribe-events button.tribe-events-c-search__button, #content .tribe-common .tribe-common-c-btn, #content .tribe-common a.tribe-common-c-btn, #content .tribe-common button.tribe-common-c-btn {
+  --tw-bg-opacity: 1;
+  background-color: rgba(62, 108, 181, var(--tw-bg-opacity));
+}
+
+#content .tribe-common .tribe-common-c-btn-border, #content .tribe-common a.tribe-common-c-btn-border {
+  --tw-border-opacity: 1;
+  border-color: rgba(62, 108, 181, var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(62, 108, 181, var(--tw-text-opacity));
+}
+
+#content
+	.single-tribe_events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active, #content
+	.single-tribe_events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button:focus, #content
+	.single-tribe_events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button:focus-within, #content
+	.single-tribe_events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button:hover, #content
+	.tribe-events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button.tribe-events-c-subscribe-dropdown__button--active, #content
+	.tribe-events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button:focus, #content
+	.tribe-events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button:focus-within, #content
+	.tribe-events
+	.tribe-events-c-subscribe-dropdown
+	.tribe-events-c-subscribe-dropdown__button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(62, 108, 181, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 @media (min-width: 475px) {
