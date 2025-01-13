@@ -266,3 +266,9 @@ select.blog-filter {
 	.tribe-events-c-subscribe-dropdown__button:hover {
 	@apply text-white bg-srf-blue-500;
 }
+
+#tribe-events,
+#tribe-events-pg-template,
+.tribe-events-pg-template {
+	@apply p-0;
+}

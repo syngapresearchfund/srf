@@ -2740,6 +2740,10 @@ select.blog-filter {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+#tribe-events, #tribe-events-pg-template, .tribe-events-pg-template {
+  padding: 0px;
+}
+
 @media (min-width: 475px) {
   .xs\:mx-0 {
     margin-left: 0px;
