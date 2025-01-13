@@ -2744,6 +2744,10 @@ select.blog-filter {
   padding: 0px;
 }
 
+.tribe-block__events-link {
+  justify-content: center;
+}
+
 @media (min-width: 475px) {
   .xs\:mx-0 {
     margin-left: 0px;

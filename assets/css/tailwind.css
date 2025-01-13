@@ -272,3 +272,7 @@ select.blog-filter {
 .tribe-events-pg-template {
 	@apply p-0;
 }
+
+.tribe-block__events-link {
+	@apply justify-center;
+}
