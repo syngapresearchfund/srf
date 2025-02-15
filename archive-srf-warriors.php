@@ -25,7 +25,7 @@ get_header();
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 
 				<!-- big button / cta -->
-				<a href="mailto:deanna@curesyngap1.org?subject=Warrior%20Submission%20Inquiry" class="mt-16 font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">
+				<a href="mailto:allison@curesyngap1.org?subject=Warrior%20Submission%20Inquiry" class="mt-16 font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">
 					Share your story
 				</a>
 
