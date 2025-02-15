@@ -98,15 +98,14 @@ get_header();
 									to get our wiring instructions.</p>
 							</div>
 							<div class="flex justify-between items-center p-4 border rounded-md">
-								<h4 class="text-gray-900 font-semibold">Wires, stock transfers & requests</h4>
+								<h4 class="text-gray-900 font-semibold">Transfers of Stocks and Bonds</h4>
 								<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md"
-								   href="https://www.syngapresearchfund.org/contact-us">Continue</a>
+								   href="<?php echo esc_url( home_url( '/gifts-of-stocks-and-bonds/' ) ); ?>">Continue</a>
 							</div>
-							<div class="p-4 border rounded-md">
-								<h4 class="mb-3 text-gray-900 font-semibold">Donor Advised Funds (DAFs)</h4>
-								<script>_dafdirect_settings = '831200789_2010_1fabf4e0-5131-4feb-aeec-a42b06864015';</script>
-								<script
-									src="<?php echo esc_url( get_theme_file_uri( 'assets/js/dafdirect4.js' ) ); ?>"></script>
+							<div class="flex justify-between items-center p-4 border rounded-md">
+								<h4 class="mb-3 text-gray-900 font-semibold">Wires, Donor Advised Funds (DAFs), other requests</h4>
+								<a class="block px-4 py-3 bg-srf-blue-500 hover:bg-srf-blue-700 text-white rounded-md"
+								   href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Continue</a>
 							</div>
 							<div class="flex justify-between items-center p-4 border rounded-md">
 								<h4 class="text-gray-900 font-semibold">Paypal</h4>
