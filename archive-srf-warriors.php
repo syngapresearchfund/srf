@@ -30,6 +30,7 @@ get_header();
 				</a>
 
 			<p class="mt-5">See our new collection of Sibling Stories <a class="underline" href="<?php echo esc_url( home_url( '/syngap-siblings/' ) ); ?>">here</a>!</p>
+			<p class="mt-5">We also remember those Warriors who we have lost on a special <a class="underline" href="<?php echo esc_url( home_url( '/in-memory-of-syngap1-warriors-we-have-lost/' ) ); ?>">"In Memory Of"</a> page.</p>
 			</header>
 
 			<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
