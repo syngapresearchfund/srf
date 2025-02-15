@@ -45,6 +45,7 @@ namespace SRF;
 						array(
 							srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 							srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
+							srf_subnav_item( 'SRF Impact Report', home_url( '/syngap-research-fund-impact-on-the-road-to-cure-syngap1/' ) ),
 							srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
 							srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
 							srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
@@ -234,6 +235,7 @@ namespace SRF;
 							array(
 								srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 								srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
+								srf_subnav_item( 'SRF Impact Report', home_url( '/syngap-research-fund-impact-on-the-road-to-cure-syngap1/' ) ),
 								srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
 								srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
 								srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
