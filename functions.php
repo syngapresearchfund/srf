@@ -117,12 +117,7 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Jetpack compatability configurations.
  */
-// require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Related posts addition.
- */
-require get_template_directory() . '/inc/related-posts.php';
+require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Customizer additions.
