@@ -127,3 +127,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * ACF Field configurations.
+ */
+require get_template_directory() . '/inc/acf-fields/team-category-fields.php';
