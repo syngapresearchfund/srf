@@ -43,11 +43,13 @@ html {
 }
 
 /* Video Embed Adjustments */
-.is-type-video .wp-block-embed__wrapper {
+.is-type-video .wp-block-embed__wrapper,
+.wp-block-jetpack-videopress .jetpack-videopress-player__wrapper {
 	aspect-ratio: 16 / 9;
 }
 
-.is-type-video .wp-block-embed__wrapper iframe {
+.is-type-video .wp-block-embed__wrapper iframe,
+.wp-block-jetpack-videopress .jetpack-videopress-player__wrapper iframe {
 	width: 100%;
 	height: 100%;
 }
