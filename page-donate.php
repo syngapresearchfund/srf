@@ -27,6 +27,7 @@ get_header();
 
 		<!-- Begin Classy Fundraising Widget -->
 		<div id="ictUSJFSav7wK0XtQpIxG" class="664981"></div>
+		<!-- End Classy Fundraising Widget -->
 
 		<div class="w-full lg:w-2/3 space-y-4 mt-14 mx-auto">
 			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Other Ways to
