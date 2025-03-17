@@ -95,6 +95,11 @@ function srf_scripts(): void {
 	wp_enqueue_script( 'alpinejs', get_template_directory_uri() . '/assets/js/alpinejs-3.10.5.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	// Alpine library.
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/index.js', array(), wp_get_theme()->get( 'Version' ), true );
+
+	if ( is_page( 'donate' ) ) {
+		// Classy Donation Widget.
+		wp_enqueue_script( 'classy-donation-widget', 'https://giving.classy.org/embedded/api/sdk/js/86467', array(), wp_get_theme()->get( 'Version' ), true );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\srf_scripts' );

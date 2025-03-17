@@ -25,13 +25,8 @@ get_header();
 				class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 		</header>
 
-		<!-- Begin Give Lively Fundraising Widget -->
-		<script>gl = document.createElement('script');
-			gl.src = 'https://secure.givelively.org/widgets/branded_donation/syngap-research-fund-incorporated.js';
-			document.getElementsByTagName('head')[0].appendChild(gl);</script>
-		<div data-widget-src='https://secure.givelively.org/donate/syngap-research-fund-incorporated?ref=sd_widget'
-			 id="give-lively-widget" class="gl-branded-donation-widget"></div>
-		<!-- End Give Lively Fundraising Widget -->
+		<!-- Begin Classy Fundraising Widget -->
+		<div id="ictUSJFSav7wK0XtQpIxG" class="664981"></div>
 
 		<div class="w-full lg:w-2/3 space-y-4 mt-14 mx-auto">
 			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Other Ways to
@@ -56,7 +51,7 @@ get_header();
 								<g fill-rule="evenodd">
 									<g stroke-width="1pt">
 										<path fill="#bd3d44"
-											  d="M0 0h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8V197H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8V512H0z"
+											  d="M0 0h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8V197H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0z"
 											  transform="scale(.9375)" />
 										<path fill="#fff"
 											  d="M0 39.4h972.8v39.4H0zm0 78.8h972.8v39.3H0zm0 78.7h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.8h972.8v39.4H0zm0 78.7h972.8v39.4H0z"
