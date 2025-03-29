@@ -278,3 +278,15 @@ select.blog-filter {
 .tribe-block__events-link {
 	@apply justify-center;
 }
+
+/* Classy Donation Widget Adjustments */
+#classy-donation-image {
+	/* width: 100%; */
+	width: 400px;
+}
+
+/* @media (min-width: 1024px) {
+	#classy-donation-image {
+		width: 400px;
+	}
+} */

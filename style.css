@@ -1403,6 +1403,10 @@ body {
   flex: 1 1 auto;
 }
 
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
 .transform {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -1944,6 +1948,11 @@ body {
 
 .fill-current {
   fill: currentColor;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .object-cover {
@@ -2749,6 +2758,19 @@ select.blog-filter {
 .tribe-block__events-link {
   justify-content: center;
 }
+
+/* Classy Donation Widget Adjustments */
+
+#classy-donation-image {
+  /* width: 100%; */
+  width: 400px;
+}
+
+/* @media (min-width: 1024px) {
+	#classy-donation-image {
+		width: 400px;
+	}
+} */
 
 @media (min-width: 475px) {
   .xs\:mx-0 {
