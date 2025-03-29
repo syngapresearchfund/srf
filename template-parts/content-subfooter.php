@@ -99,7 +99,7 @@ namespace SRF;
 							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2024.png' ) ); ?>"
 							alt="Guidestar Platinum Symbol of Transparency 2024"></a></li>
 				<li class="w-24 lg:w-14"><a href="<?php echo esc_url( home_url( '/gnp/' ) ); ?>"><img
-							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2024-top-rated-awards-badge.png' ) ); ?>"
+							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2025-great-nonprofits-badge.png' ) ); ?>"
 							alt="2022 Top Rated Awards"></a></li>
 				<li class="w-24 lg:w-14"><a
 						href="<?php echo esc_url( home_url( '/blog/srf-joins-cfc/' ) ); ?>"><img
