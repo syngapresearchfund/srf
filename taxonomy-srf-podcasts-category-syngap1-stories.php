@@ -25,10 +25,10 @@ get_header();
 		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?></h1>
 		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</header>
-	
+
 	<div class="prose lg:prose-xl mx-auto mb-10">
 		<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/SYNGAP1-Stories.png' ) ); ?>" alt="Syngap1 Stories" />
-		<p class="text-2xl xl:text-3xl">Stories shared by families about their lives raising Syngapians, co-hosted by <a class="underline" href="<?php echo esc_url( home_url( '/team/volunteers/ashley-frye-mba/' ) ); ?>">Ashley Frye</a> and <a class="underline" href="<?php echo esc_url( home_url( '/team/volunteers/rainy-schlosser/' ) ); ?>">Rainy Schlosser</a>.</p>
+		<p class="text-2xl xl:text-3xl">Stories shared by families about their lives raising Syngapians, co-hosted by <a class="underline" href="<?php echo esc_url( home_url( '/team/volunteers/rainy-schlosser/' ) ); ?>">Rainy Schlosser</a>.</p>
 	</div>
 
 	<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
