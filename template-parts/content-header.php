@@ -62,7 +62,6 @@ namespace SRF;
 						'openThird',
 						array(
 							srf_subnav_heading( 'Research' ),
-							srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
 							srf_subnav_item( 'Request NHS Data', home_url( '/request-nhs-data/' ) ),
 							srf_subnav_heading( 'Grants' ),
 							srf_subnav_item( 'Current Grants', home_url( '/resources/grants/' ) ),
@@ -252,7 +251,6 @@ namespace SRF;
 							'3',
 							array(
 								srf_subnav_heading( 'Research' ),
-								srf_subnav_item( 'Roadmap', home_url( '/roadmap/' ) ),
 								srf_subnav_item( 'Request NHS Data', home_url( '/request-nhs-data/' ) ),
 								srf_subnav_heading( 'Grants' ),
 								srf_subnav_item( 'Current Grants', home_url( '/resources/grants/' ) ),
