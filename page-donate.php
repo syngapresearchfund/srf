@@ -259,8 +259,9 @@ get_header();
 				</li>
 			</ul>
 		</div>
-		<div class="max-w-xl mt-16 mx-auto text-center">
-			<h3 class="mb-8 text-l lg:text-xl font-semibold text-gray-600">Use this QR code or Syngap.Fund/Give<br>to
+		<div class="max-w-xl mt-16 mx-auto space-y-4 text-center">
+			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Sharing</h2>
+			<h3 class="text-m lg:text-l font-semibold text-gray-600">Use this QR code or <a class="underline" href="https://curesyngap1.org/give">cureSYNGAP1.org/Give</a><br>to
 				link to this page.</h3>
 			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Donate-QR-Code.png' ) ); ?>"
 				 alt="Donate to SRF">
