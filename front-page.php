@@ -411,7 +411,7 @@ get_header();
 						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
 						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>"><?php echo esc_html( get_field( 'companies_institutes' ) ); ?></a>
 				</h2>
-				<h3 class="text-lg text-gray-600 font-normal">Companies & institutes working for SYNGAP1</h3>
+				<h3 class="text-lg text-gray-600 font-normal">SRF Partners and Sponsors</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a
