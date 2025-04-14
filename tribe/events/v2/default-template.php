@@ -23,6 +23,12 @@ get_header();
 			</header>
 		<?php endif; ?>
 
+		<div class="max-w-6xl mt-6 mx-auto">
+			<p class="text-center text-gray-600">
+				See something missing? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWkfV47_HYD_NGjFxzWrU_AU8Hy-rogz4HZkBfrLlu5KyxxQ/viewform?usp=sf_link" class="underline">Fill out this form</a> to add your event.
+			</p>
+		</div> <!-- .post-grid -->
+
 		<div class="max-w-6xl mx-auto">
 			<?php echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
 		</div> <!-- .post-grid -->
