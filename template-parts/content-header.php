@@ -102,7 +102,7 @@ namespace SRF;
 						'News & Events',
 						'openLast',
 						array(
-							srf_subnav_item( 'Events', home_url( '/events/' ) ),
+							srf_subnav_item( 'Events Calendar', home_url( '/calendar/' ) ),
 							srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
 							srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
 							srf_subnav_heading( 'Stories' ),
@@ -291,7 +291,7 @@ namespace SRF;
 							'News & Events',
 							'5',
 							array(
-								srf_subnav_item( 'Events', home_url( '/events/' ) ),
+								srf_subnav_item( 'Events Calendar', home_url( '/calendar/' ) ),
 								srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
 								srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
 								srf_subnav_heading( 'Stories' ),
