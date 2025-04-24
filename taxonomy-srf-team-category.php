@@ -46,7 +46,7 @@ get_header();
 
 <?php if ( have_posts() ) : ?>
     <div class="<?php echo esc_attr( $container_classes ); ?> text-center">
-        <header class="entry-header max-w-3xl mx-auto mb-10">
+        <header class="entry-header max-w-3xl mx-auto mb-16">
             <h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold">
                 <?php echo esc_html(get_team_category_title($term_slug)); ?>
             </h1>
