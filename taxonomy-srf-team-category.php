@@ -14,10 +14,10 @@ $term = get_queried_object();
 $term_slug = $term->slug;
 
 // Get term meta if it exists
-$intro_text = get_field('team_intro_text', $term);
+$intro_text = get_field('team_introduction_text', $term);
 $after_content = get_field('team_after_content', $term);
 $team_logo = get_field('team_category_logo', $term);
-
+$team_secondary_image = get_field('team_secondary_image', $term);
 /**
  * Get the title for the team category
  *
@@ -29,7 +29,7 @@ function get_team_category_title($slug) {
         'board-members' => 'Board of Trustees',
         'dei' => 'Diversity, Equity, and Inclusion Board',
         'srf-au' => 'SRF Australia',
-        'srf-eu' => 'SRF Europe',
+        'srf-eu' => 'STICHTING* SYNGAP RESEARCH FUND EUROPE',
         'srf-uk' => 'SRF United Kingdom',
         'volunteers' => 'Our Volunteers',
         'state-advocates' => 'State Advocates',
@@ -45,8 +45,8 @@ get_header();
 ?>
 
 <?php if ( have_posts() ) : ?>
-    <div class="<?php echo esc_attr( $container_classes ); ?> text-center">
-        <header class="entry-header max-w-3xl mx-auto mb-16">
+    <div class="<?php echo esc_attr( $container_classes ); ?>">
+        <header class="entry-header max-w-3xl mx-auto mb-16 text-center">
             <h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold">
                 <?php echo esc_html(get_team_category_title($term_slug)); ?>
             </h1>
@@ -68,6 +68,12 @@ get_header();
             ?>
         </div>
 
+        <div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
+            <?php
+            the_posts_navigation(array('prev_text' => 'Next Page', 'next_text' => 'Previous Page'));
+            ?>
+        </div>
+
         <?php if (!empty($after_content)) : ?>
             <div class="entry-content mx-auto mt-14 prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg">
                 <?php echo wp_kses_post($after_content); ?>
@@ -82,11 +88,13 @@ get_header();
             </div>
         <?php endif; ?>
 
-        <div class="max-w-6xl mx-auto mt-14 pt-10 text-center border-t-2 border-gray-200">
-            <?php
-            the_posts_navigation(array('prev_text' => 'Next Page', 'next_text' => 'Previous Page'));
-            ?>
-        </div>
+        <?php if ($team_secondary_image) : ?>
+            <div class="prose lg:prose-xl mx-auto mb-16">
+                <img class="w-1/2 mx-auto"
+                     src="<?php echo esc_url($team_secondary_image['url']); ?>"
+                     alt="<?php echo esc_attr($team_secondary_image['alt']); ?>" />
+            </div>
+        <?php endif; ?>
     </div>
 <?php else :
     get_template_part('template-parts/content', 'none');
