@@ -123,23 +123,33 @@ namespace SRF;
 
 <script>
 	document.addEventListener('alpine:init', () => {
-		Alpine.store('mobileDropdown', {
-			tab: 0
+		// Centralized store for all accordion UIs
+		Alpine.store('accordionStore', {
+			tabs: {},
+			getTab(key) {
+				return this.tabs[key] || 0;
+			},
+			setTab(key, value) {
+				this.tabs[key] = this.tabs[key] === value ? 0 : value;
+			}
 		});
 
-		Alpine.data('mobileDropdown', (xid) => ({
+		// Generic Alpine data for accordion UIs
+		Alpine.data('accordionUI', (storeKey, xid) => ({
 			xid: null,
+			storeKey: null,
 			init() {
 				this.xid = xid;
+				this.storeKey = storeKey;
 			},
 			handleClick() {
-				this.$store.mobileDropdown.tab = this.$store.mobileDropdown.tab === this.xid ? 0 : this.xid;
+				this.$store.accordionStore.setTab(this.storeKey, this.xid);
 			},
 			handleRotate() {
-				return this.$store.mobileDropdown.tab === this.xid ? 'rotate-180' : '';
+				return this.$store.accordionStore.getTab(this.storeKey) === this.xid ? 'rotate-180' : '';
 			},
 			handleToggle() {
-				return this.$store.mobileDropdown.tab === this.xid
+				return this.$store.accordionStore.getTab(this.storeKey) === this.xid
 					? `max-height: ${this.$refs.tab.scrollHeight}px`
 					: '';
 			}

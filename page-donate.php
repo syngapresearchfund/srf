@@ -53,7 +53,7 @@ get_header();
 			<p class="text-center lg:w-4/6 mx-auto">In addition to credit card above, you can donate via the
 				following:</p>
 			<ul class="flex flex-col">
-				<li class="bg-white border border-b-0 rounded-t-md" x-data="accordion(1)">
+				<li class="bg-white border border-b-0 rounded-t-md" x-data="accordionUI('accordion', 1)">
 					<h3
 						@click="handleClick()"
 						class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
@@ -127,7 +127,7 @@ get_header();
 						</div>
 					</div>
 				</li>
-				<li class="bg-white border border-b-0" x-data="accordion(2)">
+				<li class="bg-white border border-b-0" x-data="accordionUI('accordion', 2)">
 					<div
 						@click="handleClick()"
 						class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
@@ -208,7 +208,7 @@ get_header();
 						</div>
 					</div>
 				</li>
-				<li class="bg-white border border-b-0" x-data="accordion(3)">
+				<li class="bg-white border border-b-0" x-data="accordionUI('accordion', 3)">
 					<div
 						@click="handleClick()"
 						class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
@@ -268,30 +268,5 @@ get_header();
 		</div>
 	</div>
 
-	<script>
-		document.addEventListener('alpine:init', () => {
-			Alpine.store('accordion', {
-				tab: 0
-			});
-
-			Alpine.data('accordion', (xid) => ({
-				xid: null,
-				init() {
-					this.xid = xid;
-				},
-				handleClick() {
-					this.$store.accordion.tab = this.$store.accordion.tab === this.xid ? 0 : this.xid;
-				},
-				handleRotate() {
-					return this.$store.accordion.tab === this.xid ? 'rotate-180' : '';
-				},
-				handleToggle() {
-					return this.$store.accordion.tab === this.xid
-						? `max-height: ${this.$refs.tab.scrollHeight}px`
-						: '';
-				}
-			}));
-		});
-	</script>
-	<?php
+<?php
 get_footer();
