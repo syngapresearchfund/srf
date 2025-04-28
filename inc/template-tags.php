@@ -344,7 +344,7 @@ if ( ! function_exists( 'srf_mobile_nav_item' ) ) :
 	 */
 	function srf_mobile_nav_item( $name, $data_item, $subnav_items ) {
 		$output = sprintf(
-			'<li class="bg-white" x-data="mobileDropdown(%1$s)">
+			'<li class="bg-white" x-data="accordionUI(\'mobileDropdown\', %1$s)">
 				<h3
 				@click="handleClick()"
 				class="flex flex-row justify-between items-center font-semibold text-gray-600 p-4 cursor-pointer"
