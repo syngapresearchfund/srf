@@ -18,6 +18,7 @@ $intro_text = get_field('team_introduction_text', $term);
 $after_content = get_field('team_after_content', $term);
 $team_logo = get_field('team_category_logo', $term);
 $team_secondary_image = get_field('team_secondary_image', $term);
+
 /**
  * Get the title for the team category
  *
