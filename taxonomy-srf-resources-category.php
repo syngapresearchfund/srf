@@ -16,15 +16,34 @@
 namespace SRF;
 
 $container_classes = srf_container_classes();
+$term = get_queried_object();
+$term_slug = $term->slug;
+$current_term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+// Get term meta if it exists
+$intro_text = get_field('resources_introduction_text', $term);
+$before_content_grid = get_field('resources_before_content_grid', $term);
+
 get_header();
 ?>
 
 	<?php if ( have_posts() ) : ?>
 		<div class="<?php echo esc_attr( $container_classes ); ?> text-center">
 			<header class="entry-header max-w-3xl mx-auto mb-16">
-				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php esc_html_e( 'Webinars', 'srf' ); ?></h1>
+				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?></h1>
 				<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 			</header>
+
+			<?php if (!empty($intro_text)) : ?>
+			<div class="prose lg:prose-xl mx-auto mb-10 text-center">
+                <?php echo wp_kses_post($intro_text); ?>
+            </div>
+			<?php endif; ?>
+
+			<?php if (!empty($before_content_grid)) : ?>
+				<div class="max-w-6xl mx-auto mb-12 md:grid grid-cols-3 gap-4 text-base leading-relaxed text-center text-gray-700">
+					<?php echo wp_kses_post($before_content_grid); ?>
+				</div>
+			<?php endif; ?>
 
 			<div class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php
