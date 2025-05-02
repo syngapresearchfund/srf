@@ -96,8 +96,8 @@ namespace SRF;
 							alt="Global Advocacy Alliance Founding Member"></a></li>
 				<li class="w-20 lg:w-12"><a href="https://www.guidestar.org/profile/83-1200789" target="_blank"
 											rel="noopener noreferrer"><img
-							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/seal-of-transparency-2024.png' ) ); ?>"
-							alt="Guidestar Platinum Symbol of Transparency 2024"></a></li>
+							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/candid-seal-platinum-2025.svg' ) ); ?>"
+							alt="Guidestar Platinum Symbol of Transparency 2025"></a></li>
 				<li class="w-24 lg:w-14"><a href="<?php echo esc_url( home_url( '/gnp/' ) ); ?>"><img
 							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2025-great-nonprofits-badge.png' ) ); ?>"
 							alt="2025 Great Nonprofits - Top Rated Award"></a></li>
