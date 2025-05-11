@@ -28,8 +28,8 @@ get_header();
 
 	<div class="prose lg:prose-xl mx-auto mb-10">
 		<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/SYNGAP10-podcast.jpg' ) ); ?>" alt="Syngap10" />
-		<p class="text-2xl xl:text-3xl">Welcome to SYNGAP10, your 10-minute weekly briefing on everything you need to know about SYNGAP1.</p>
-		<p>Stay current on what SynGAP Research Fund (SRF) is doing to advocate for families/patients and to advance research into SYNGAP1, hosted by <a class="underline" href="<?php echo esc_url( home_url( '/team/board-members/mike-graglia/' ) ); ?>">Mike Graglia</a>.</p>
+		<p class="text-2xl xl:text-3xl">Welcome to SYNGAP10, your 10-minute weekly briefing on everything you need to know about <em>SYNGAP1</em>.</p>
+		<p>Stay current on what SynGAP Research Fund (SRF) is doing to advocate for families/patients and to advance research into <em>SYNGAP1</em>, hosted by <a class="underline" href="<?php echo esc_url( home_url( '/team/board-members/mike-graglia/' ) ); ?>">Mike Graglia</a>.</p>
 	</div>
 
 	<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
