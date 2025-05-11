@@ -28,7 +28,7 @@ get_header();
 
 	<div class="prose lg:prose-xl mx-auto mb-10">
 		<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/SYNGAP1-Stories.png' ) ); ?>" alt="Syngap1 Stories" />
-		<p class="text-2xl xl:text-3xl">Stories shared by families about their lives raising Syngapians, co-hosted by <a class="underline" href="<?php echo esc_url( home_url( '/team/volunteers/rainy-schlosser/' ) ); ?>">Rainy Schlosser</a>.</p>
+		<p class="text-2xl xl:text-3xl">Stories shared by families about their lives raising Syngapians, hosted by <a class="underline" href="<?php echo esc_url( home_url( '/team/volunteers/rainy-schlosser/' ) ); ?>">Rainy Schlosser</a>.</p>
 	</div>
 
 	<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
