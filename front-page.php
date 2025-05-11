@@ -207,7 +207,7 @@ get_header();
 		</div>
 
 		<!-- big button / cta -->
-		<a href="<?php echo esc_url( home_url( '/events/' ) ); ?>"
+		<a href="<?php echo esc_url( home_url( '/calendar/list/' ) ); ?>"
 			class="font-sans inline-flex bg-srf-purple-500 hover:bg-srf-purple-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
 			all events
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
