@@ -34,7 +34,7 @@ La esperanza de nuestra presentadora Merlina Davila es que a partir de compartir
 	</div>
 
 	<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
-		<p class="prose lg:prose-xl mx-auto">Listen below or find us on your podcast player of choice!</p>
+		<p class="prose lg:prose-xl mx-auto">Escuchen aquí o encuéntrenos en su servicio de podcasts favorito!</p>
 		<ul class="flex flex-wrap lg:flex-nowrap justify-center mx-auto space-x-2">
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://podcasts.apple.com/us/podcast/caf%C3%A9-syngap1/id1705809525" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Apple-Badge.png' ) ); ?>" alt="Apple Podcasts" /></a></li>
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://music.amazon.com/account/manage?0=%2F6e65b878-4506-4882-b6cd-1ea873c0ba7e%2Fcaf%C3%A9-syngap1&1=6e65b878-4506-4882-b6cd-1ea873c0ba7e%2Fcaf%C3%A9-syngap1&subView=podcasts&successUrl=L3BvZGNhc3RzLzZlNjViODc4LTQ1MDYtNDg4Mi1iNmNkLTFlYTg3M2MwYmE3ZS9jYWbDqS1zeW5nYXAx&cancelUrl=L3BvZGNhc3RzLzZlNjViODc4LTQ1MDYtNDg4Mi1iNmNkLTFlYTg3M2MwYmE3ZS9jYWbDqS1zeW5nYXAx&customerId=A3TXRQKXWX2JLM&deviceType=A16ZV8BU3SN1N3&deviceId=13019090689468329&musicTerritory=US&locale=en_US&currencyOfPreference=undefined" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-Amazon-Badge.png' ) ); ?>" alt="Amazon Music" /></a></li>
@@ -42,6 +42,7 @@ La esperanza de nuestra presentadora Merlina Davila es que a partir de compartir
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://www.youtube.com/playlist?list=PLjpr3a14_ls2YLD7B5fHFQRq9AQbXqzgr" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-YouTube-Badge.png' ) ); ?>" alt="YouTube" /></a></li>
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://healthpodcastnetwork.com/show/cafe-syngap1/" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-HPN-Badge.png' ) ); ?>" alt="Health Podcast Network" /></a></li>
 		</ul>
+		<p class="prose mx-auto"><strong>Y POR FAVOR</strong> — denos 5 estrellas en todas partes — si importa!<br>Vaya <a href="https://www.syngap1.org/rating" class="underline">SYNGAP1.org/Rating</a> para ver porque importa!</p>
 		<div class="mx-auto w-2/3 h-px bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</div>
 
