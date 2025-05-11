@@ -25,11 +25,11 @@ get_header();
 		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?></h1>
 		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</header>
-	
+
 	<div class="prose lg:prose-xl mx-auto mb-10">
 		<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Cafe-SYNGAP1.png' ) ); ?>" alt="Café Syngap1" />
 		<p class="text-2xl xl:text-3xl">Su anfitriona, <a class="underline" href="<?php echo esc_url( home_url( '/team/fondo-de-investigacion-syngap/merlina-davila/' ) ); ?>">Merlina Dávila</a>, le da la bienvenida a Café SYNGAP1, donde cada episodio inspira a nuestra comunidad a seguir adelante.</p>
-		<p>Bienvenidos al nuevo podcast de SRF en Español: Café Syngap1 pretender ser un espacio para encontrar apoyo, consejos y esperanza en una comunidad de Padres, Hermanos, Investigadores, Científicos, Terapeutas y todos aquellos involucrados en esta patología.
+		<p>Bienvenidos al nuevo podcast de SRF en Español: Café SYNGAP1 pretender ser un espacio para encontrar apoyo, consejos y esperanza en una comunidad de Padres, Hermanos, Investigadores, Científicos, Terapeutas y todos aquellos involucrados en esta patología.
 La esperanza de nuestra presentadora Merlina Davila es que a partir de compartir nuestras historias, conocimientos, experiencias, retos, éxitos y avances, seamos mas unidos como comunidad y que cada episodio nos inspire a seguir adelante.</p>
 	</div>
 

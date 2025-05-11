@@ -40,6 +40,7 @@ get_header();
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://www.iheart.com/podcast/269-syngap-stories-107883257/" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-iHeart-Badge.png' ) ); ?>" alt="iHeart Radio" /></a></li>
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://healthpodcastnetwork.com/show/syngap1-stories/" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-HPN-Badge.png' ) ); ?>" alt="Health Podcast Network" /></a></li>
 		</ul>
+		<p class="prose mx-auto">And <strong>PLEASE</strong> – give us 5-stars everywhere – it matters!<br>See <a href="https://www.syngap1.org/rating" class="underline">SYNGAP1.org/Rating</a> to find out why!</p>
 		<div class="mx-auto w-2/3 h-px bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</div>
 

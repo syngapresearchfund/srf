@@ -25,7 +25,7 @@ get_header();
 		<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $current_term->name ); ?> Podcast</h1>
 		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</header>
-	
+
 	<div class="prose lg:prose-xl mx-auto mb-10">
 		<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/SYNGAP10-podcast.jpg' ) ); ?>" alt="Syngap10" />
 		<p class="text-2xl xl:text-3xl">Welcome to SYNGAP10, your 10-minute weekly briefing on everything you need to know about SYNGAP1.</p>
@@ -41,6 +41,7 @@ get_header();
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://www.youtube.com/playlist?list=PLjpr3a14_ls38mAeOZeErFpEjbrw5mGhR" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-YouTube-Badge.png' ) ); ?>" alt="YouTube" /></a></li>
 			<li class="w-1/3 mt-4 lg:mt-0"><a href="https://healthpodcastnetwork.com/show/syngap10/" ><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Podcast-HPN-Badge.png' ) ); ?>" alt="Health Podcast Network" /></a></li>
 		</ul>
+		<p class="prose mx-auto">And <strong>PLEASE</strong> – give us 5-stars everywhere – it matters!<br>See <a href="https://www.syngap1.org/rating" class="underline">SYNGAP1.org/Rating</a> to find out why!</p>
 		<div class="mx-auto w-2/3 h-px bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</div>
 
