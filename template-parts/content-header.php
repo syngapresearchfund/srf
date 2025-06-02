@@ -31,7 +31,7 @@ namespace SRF;
 						'openFirst',
 						array(
 							srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
-							srf_subnav_item( 'How Many People Have SYNGAP1?', home_url( '/how-many-people-have-syngap1-census/' ) ),
+							srf_subnav_item( 'SYNGAP1 Census', home_url( '/how-many-people-have-syngap1-census/' ) ),
 							srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
 							srf_subnav_item( 'SYNGAP1 Pipeline', home_url( '/syngap1-related-disorder-therapeutic-pipeline/' ) ),
 							srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
@@ -222,7 +222,7 @@ namespace SRF;
 							'1',
 							array(
 								srf_subnav_item( 'What Is SYNGAP1?', home_url( '/what-is-syngap1/' ) ),
-								srf_subnav_item( 'How Many People Have SYNGAP1?', home_url( '/how-many-people-have-syngap1-census/' ) ),
+								srf_subnav_item( 'SYNGAP1 Census', home_url( '/how-many-people-have-syngap1-census/' ) ),
 								srf_subnav_item( 'SYNGAP1 Treatment', home_url( '/syngap1-treatment/' ) ),
 								srf_subnav_item( 'SYNGAP1 Pipeline', home_url( '/syngap1-related-disorder-therapeutic-pipeline/' ) ),
 								srf_subnav_item( 'SYNGAP1 & Epilepsy', home_url( '/syngap1-epilepsy/' ) ),
