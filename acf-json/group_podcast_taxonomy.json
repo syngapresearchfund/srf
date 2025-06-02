@@ -1,0 +1,96 @@
+{
+	"key": "group_podcast_taxonomy",
+	"title": "Podcast Category Settings",
+	"fields": [
+		{
+			"key": "field_podcast_image",
+			"label": "Podcast Image",
+			"name": "podcast_image",
+			"type": "image",
+			"instructions": "Upload the podcast cover image",
+			"required": 1,
+			"return_format": "url",
+			"preview_size": "medium",
+			"library": "all"
+		},
+		{
+			"key": "field_podcast_description",
+			"label": "Podcast Description",
+			"name": "podcast_description",
+			"type": "wysiwyg",
+			"instructions": "Enter the podcast description",
+			"required": 1,
+			"tabs": "all",
+			"toolbar": "full",
+			"media_upload": 1
+		},
+		{
+			"key": "field_podcast_platforms",
+			"label": "Podcast Platforms",
+			"name": "podcast_platforms",
+			"type": "repeater",
+			"instructions": "Add podcast platform links and badges",
+			"required": 1,
+			"min": 1,
+			"max": 0,
+			"layout": "table",
+			"button_label": "Add Platform",
+			"sub_fields": [
+				{
+					"key": "field_platform_name",
+					"label": "Platform Name",
+					"name": "name",
+					"type": "text",
+					"required": 1
+				},
+				{
+					"key": "field_platform_link",
+					"label": "Platform Link",
+					"name": "link",
+					"type": "url",
+					"required": 1
+				},
+				{
+					"key": "field_platform_badge",
+					"label": "Platform Badge",
+					"name": "badge_image",
+					"type": "image",
+					"required": 1,
+					"return_format": "url",
+					"preview_size": "medium",
+					"library": "all"
+				}
+			]
+		},
+		{
+			"key": "field_rating_message",
+			"label": "Rating Message",
+			"name": "rating_message",
+			"type": "wysiwyg",
+			"instructions": "Enter the rating message. You can include the rating link (https://www.syngap1.org/rating) directly in the text.",
+			"required": 1,
+			"tabs": "all",
+			"toolbar": "full",
+			"media_upload": 0
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "taxonomy",
+				"operator": "==",
+				"value": "srf-podcasts-category"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "Settings for podcast category taxonomy terms",
+	"show_in_rest": 0,
+	"modified": 1711044000
+}
