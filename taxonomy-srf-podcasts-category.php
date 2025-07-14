@@ -43,9 +43,57 @@ get_header();
 	<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
 		<p class="prose lg:prose-xl mx-auto"><?php echo esc_html__('Listen below or find us on your podcast player of choice!', 'srf'); ?></p>
 
-		<?php if (!empty($podcast_platforms)) : ?>
+					<?php
+	// Platform mappings for badge images and display names
+	$platform_mappings = array(
+		'apple' => array(
+			'name' => 'Apple Podcasts',
+			'badge' => 'assets/images/Podcast-Apple-Badge.png'
+		),
+		'spotify' => array(
+			'name' => 'Spotify',
+			'badge' => 'assets/images/Podcast-Spotify-Badge.png'
+		),
+		'amazon' => array(
+			'name' => 'Amazon Music',
+			'badge' => 'assets/images/Podcast-Amazon-Badge.png'
+		),
+		'google' => array(
+			'name' => 'Google Podcasts',
+			'badge' => 'assets/images/Podcast-Google-Badge.png'
+		),
+		'youtube' => array(
+			'name' => 'YouTube',
+			'badge' => 'assets/images/Podcast-YouTube-Badge.png'
+		),
+		'hpn' => array(
+			'name' => 'Health Podcast Network',
+			'badge' => 'assets/images/Podcast-HPN-Badge.png'
+		),
+		'iheart' => array(
+			'name' => 'iHeart Radio',
+			'badge' => 'assets/images/Podcast-iHeart-Badge.png'
+		)
+	);
+
+	// Build platforms array from ACF fields
+	$platforms = array();
+	for ($i = 1; $i <= 5; $i++) {
+		$platform_key = get_field("platform_{$i}", $term);
+		$link = get_field("platform_{$i}_link", $term);
+
+		if (!empty($platform_key) && !empty($link) && isset($platform_mappings[$platform_key])) {
+			$platforms[] = array(
+				'name' => $platform_mappings[$platform_key]['name'],
+				'link' => $link,
+				'badge_image' => get_theme_file_uri($platform_mappings[$platform_key]['badge'])
+			);
+		}
+	}
+
+	if (!empty($platforms)) : ?>
 		<ul class="flex flex-wrap lg:flex-nowrap justify-center mx-auto space-x-2">
-			<?php foreach ($podcast_platforms as $platform) : ?>
+			<?php foreach ($platforms as $platform) : ?>
 				<li class="w-1/3 mt-4 lg:mt-0">
 					<a href="<?php echo esc_url($platform['link']); ?>">
 						<img src="<?php echo esc_url($platform['badge_image']); ?>" alt="<?php echo esc_attr($platform['name']); ?>" />
@@ -53,7 +101,7 @@ get_header();
 				</li>
 			<?php endforeach; ?>
 		</ul>
-		<?php endif; ?>
+	<?php endif; ?>
 
 		<?php if (!empty($rating_message)) : ?>
 		<div class="prose mx-auto">
