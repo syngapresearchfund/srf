@@ -18,7 +18,7 @@ $current_term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'ta
 // Get term meta if it exists
 $podcast_image = get_field('podcast_image', $term);
 $podcast_description = get_field('podcast_description', $term);
-$podcast_platforms = get_field('podcast_platforms', $term);
+$platform_intro_text = get_field('platform_intro_text', $term);
 $rating_message = get_field('rating_message', $term);
 $rating_link = get_field('rating_link', $term);
 
@@ -41,7 +41,7 @@ get_header();
 	<?php endif; ?>
 
 	<div class="max-w-6xl mx-auto mb-10 space-y-5 text-center">
-		<p class="prose lg:prose-xl mx-auto"><?php echo esc_html__('Listen below or find us on your podcast player of choice!', 'srf'); ?></p>
+		<p class="prose lg:prose-xl mx-auto"><?php echo esc_html($platform_intro_text ?: __('Listen below or find us on your podcast player of choice!', 'srf')); ?></p>
 
 					<?php
 	// Platform mappings for badge images and display names

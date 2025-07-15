@@ -25,6 +25,15 @@
 			"media_upload": 1
 		},
 		{
+			"key": "field_platform_intro_text",
+			"label": "Platform Introduction Text",
+			"name": "platform_intro_text",
+			"type": "text",
+			"instructions": "Text displayed above the platform badges (e.g., 'Listen below or find us on your podcast player of choice!')",
+			"required": 0,
+			"default_value": "Listen below or find us on your podcast player of choice!"
+		},
+		{
 			"key": "field_platform_1",
 			"label": "Platform 1",
 			"name": "platform_1",

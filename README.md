@@ -13,6 +13,7 @@ The theme now supports dynamic podcast platform badges that can be managed throu
 3. **Add Platform Information**: You'll see the following fields:
    - **Podcast Image**: Upload the podcast cover image
    - **Podcast Description**: Add a description of the podcast
+   - **Platform Introduction Text**: Customize the text above platform badges (optional)
    - **Platform 1-5**: Dropdown menus to select platforms (Apple Podcasts, Spotify, Amazon Music, etc.)
    - **Platform 1-5 Link**: URL fields for each platform's link
    - **Rating Message**: Add a message encouraging ratings
@@ -59,9 +60,13 @@ This theme is configured to work with the **free version of Advanced Custom Fiel
 
 ### Field Structure:
 
-The configuration provides dropdown selections and URL fields for up to 5 podcast platforms:
+The configuration provides the following fields:
+- **Podcast Image**: Upload the podcast cover image
+- **Podcast Description**: Rich text description of the podcast
+- **Platform Introduction Text**: Customizable text above platform badges (defaults to "Listen below or find us on your podcast player of choice!")
 - **Platform 1-5**: Dropdown to select from predefined platforms (Apple Podcasts, Spotify, Amazon Music, etc.)
 - **Platform 1-5 Link**: URL field for the platform link
+- **Rating Message**: Rich text message encouraging ratings
 - **Badge images are automatically loaded** from the theme's assets directory
 
 ### Troubleshooting:
