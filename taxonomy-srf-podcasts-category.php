@@ -12,7 +12,6 @@ namespace SRF;
 
 $container_classes = srf_container_classes();
 $term = get_queried_object();
-$term_slug = $term->slug;
 $current_term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 
 // Get term meta if it exists
