@@ -1,0 +1,222 @@
+{
+	"key": "group_podcast_taxonomy",
+	"title": "Podcast Category Settings",
+	"fields": [
+		{
+			"key": "field_podcast_image",
+			"label": "Podcast Image",
+			"name": "podcast_image",
+			"type": "image",
+			"instructions": "Upload the podcast cover image",
+			"required": 1,
+			"return_format": "url",
+			"preview_size": "medium",
+			"library": "all"
+		},
+		{
+			"key": "field_podcast_description",
+			"label": "Podcast Description",
+			"name": "podcast_description",
+			"type": "wysiwyg",
+			"instructions": "Enter the podcast description",
+			"required": 1,
+			"tabs": "all",
+			"toolbar": "full",
+			"media_upload": 1
+		},
+		{
+			"key": "field_platform_intro_text",
+			"label": "Platform Introduction Text",
+			"name": "platform_intro_text",
+			"type": "text",
+			"instructions": "Text displayed above the platform badges (e.g., 'Listen below or find us on your podcast player of choice!')",
+			"required": 0,
+			"default_value": "Listen below or find us on your podcast player of choice!"
+		},
+		{
+			"key": "field_platform_1",
+			"label": "Platform 1",
+			"name": "platform_1",
+			"type": "select",
+			"instructions": "Select the first platform",
+			"required": 0,
+			"choices": {
+				"": "Select a platform",
+				"apple": "Apple Podcasts",
+				"spotify": "Spotify",
+				"amazon": "Amazon Music",
+				"google": "Google Podcasts",
+				"youtube": "YouTube",
+				"hpn": "Health Podcast Network",
+				"iheart": "iHeart Radio"
+			},
+			"default_value": "",
+			"allow_null": 1,
+			"multiple": 0,
+			"ui": 1,
+			"return_format": "value"
+		},
+		{
+			"key": "field_platform_1_link",
+			"label": "Platform 1 - Link",
+			"name": "platform_1_link",
+			"type": "url",
+			"instructions": "Enter the URL for the first platform",
+			"required": 0
+		},
+		{
+			"key": "field_platform_2",
+			"label": "Platform 2",
+			"name": "platform_2",
+			"type": "select",
+			"instructions": "Select the second platform",
+			"required": 0,
+			"choices": {
+				"": "Select a platform",
+				"apple": "Apple Podcasts",
+				"spotify": "Spotify",
+				"amazon": "Amazon Music",
+				"google": "Google Podcasts",
+				"youtube": "YouTube",
+				"hpn": "Health Podcast Network",
+				"iheart": "iHeart Radio"
+			},
+			"default_value": "",
+			"allow_null": 1,
+			"multiple": 0,
+			"ui": 1,
+			"return_format": "value"
+		},
+		{
+			"key": "field_platform_2_link",
+			"label": "Platform 2 - Link",
+			"name": "platform_2_link",
+			"type": "url",
+			"instructions": "Enter the URL for the second platform",
+			"required": 0
+		},
+		{
+			"key": "field_platform_3",
+			"label": "Platform 3",
+			"name": "platform_3",
+			"type": "select",
+			"instructions": "Select the third platform",
+			"required": 0,
+			"choices": {
+				"": "Select a platform",
+				"apple": "Apple Podcasts",
+				"spotify": "Spotify",
+				"amazon": "Amazon Music",
+				"google": "Google Podcasts",
+				"youtube": "YouTube",
+				"hpn": "Health Podcast Network",
+				"iheart": "iHeart Radio"
+			},
+			"default_value": "",
+			"allow_null": 1,
+			"multiple": 0,
+			"ui": 1,
+			"return_format": "value"
+		},
+		{
+			"key": "field_platform_3_link",
+			"label": "Platform 3 - Link",
+			"name": "platform_3_link",
+			"type": "url",
+			"instructions": "Enter the URL for the third platform",
+			"required": 0
+		},
+		{
+			"key": "field_platform_4",
+			"label": "Platform 4",
+			"name": "platform_4",
+			"type": "select",
+			"instructions": "Select the fourth platform",
+			"required": 0,
+			"choices": {
+				"": "Select a platform",
+				"apple": "Apple Podcasts",
+				"spotify": "Spotify",
+				"amazon": "Amazon Music",
+				"google": "Google Podcasts",
+				"youtube": "YouTube",
+				"hpn": "Health Podcast Network",
+				"iheart": "iHeart Radio"
+			},
+			"default_value": "",
+			"allow_null": 1,
+			"multiple": 0,
+			"ui": 1,
+			"return_format": "value"
+		},
+		{
+			"key": "field_platform_4_link",
+			"label": "Platform 4 - Link",
+			"name": "platform_4_link",
+			"type": "url",
+			"instructions": "Enter the URL for the fourth platform",
+			"required": 0
+		},
+		{
+			"key": "field_platform_5",
+			"label": "Platform 5",
+			"name": "platform_5",
+			"type": "select",
+			"instructions": "Select the fifth platform",
+			"required": 0,
+			"choices": {
+				"": "Select a platform",
+				"apple": "Apple Podcasts",
+				"spotify": "Spotify",
+				"amazon": "Amazon Music",
+				"google": "Google Podcasts",
+				"youtube": "YouTube",
+				"hpn": "Health Podcast Network",
+				"iheart": "iHeart Radio"
+			},
+			"default_value": "",
+			"allow_null": 1,
+			"multiple": 0,
+			"ui": 1,
+			"return_format": "value"
+		},
+		{
+			"key": "field_platform_5_link",
+			"label": "Platform 5 - Link",
+			"name": "platform_5_link",
+			"type": "url",
+			"instructions": "Enter the URL for the fifth platform",
+			"required": 0
+		},
+		{
+			"key": "field_rating_message",
+			"label": "Rating Message",
+			"name": "rating_message",
+			"type": "wysiwyg",
+			"instructions": "Enter the rating message. You can include the rating link (https://www.syngap1.org/rating) directly in the text.",
+			"required": 1,
+			"tabs": "all",
+			"toolbar": "full",
+			"media_upload": 0
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "taxonomy",
+				"operator": "==",
+				"value": "srf-podcasts-category"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "Settings for podcast category taxonomy terms",
+	"show_in_rest": 0,
+	"modified": 1711044000
+}
