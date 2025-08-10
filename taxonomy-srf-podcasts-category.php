@@ -19,8 +19,6 @@ $podcast_image = get_field('podcast_image', $term);
 $podcast_description = get_field('podcast_description', $term);
 $platform_intro_text = get_field('platform_intro_text', $term);
 $rating_message = get_field('rating_message', $term);
-$rating_link = get_field('rating_link', $term);
-
 get_header();
 ?>
 
