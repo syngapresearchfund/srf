@@ -19,6 +19,7 @@ $podcast_image = get_field('podcast_image', $term);
 $podcast_description = get_field('podcast_description', $term);
 $platform_intro_text = get_field('platform_intro_text', $term);
 $rating_message = get_field('rating_message', $term);
+$after_grid_content = get_field('after_grid_content', $term);
 get_header();
 ?>
 
@@ -133,6 +134,12 @@ get_header();
 		</div>
 	<?php else : ?>
 		<p class="text-2xl text-center italic"><?php printf(esc_html__('No %s episodes have been uploaded yet. Stay tuned!', 'srf'), esc_html($current_term->name)); ?></p>
+	<?php endif; ?>
+
+	<?php if (!empty($after_grid_content)) : ?>
+	<div class="mx-auto prose lg:prose-xl max-w-screen-md 2xl:max-w-screen-lg">
+		<?php echo wp_kses_post($after_grid_content); ?>
+	</div>
 	<?php endif; ?>
 </div>
 
