@@ -22,7 +22,7 @@ get_header();
 		<div class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 	</header>
 
-	<div id="post-list" class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
+	<div id="post-list" class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -33,7 +33,7 @@ get_header();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content-grid-items', get_post_type() );
 
 		endwhile;
 			?>

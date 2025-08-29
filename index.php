@@ -27,7 +27,7 @@ $archive_subheading = is_category() ? "Category: " : "Tag: ";
 				<h1 class="entry-title mb-4 text-4xl lg:text-5xl text-gray-600 font-extrabold"><?php echo esc_html( $posts_title ); ?></h1>
 				<div class="mx-auto mb-6 w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 				<?php
-					if ( is_category() || is_tag() ) { 
+					if ( is_category() || is_tag() ) {
 						the_archive_title( '<h4 class="archive-title text-xl lg:text-2xl text-gray-700 font-bold italic">' . $archive_subheading, '</h4>' );
 					}
 				?>
@@ -37,7 +37,7 @@ $archive_subheading = is_category() ? "Category: " : "Tag: ";
 				<div class="max-w-6xl mx-auto mb-10 flex justify-between flex-wrap text-lg text-gray-600">
 					<div>
 						<h4 class="mb-2 font-semibold text-sm text-gray-900">Filter by Category:</h4>
-						<?php 
+						<?php
 							$cat_args = array(
 								'taxonomy'        => 'category',
 								'show_option_all' => 'All',
@@ -70,7 +70,7 @@ $archive_subheading = is_category() ? "Category: " : "Tag: ";
 				</div>
 			<?php endif; ?>
 			<!-- <div class="max-w-4xl mx-auto space-y-16"> -->
-			<div id="post-list" class="max-w-6xl mx-auto lg:grid grid-cols-6 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
+			<div id="post-list" class="max-w-6xl mx-auto lg:grid grid-cols-3 gap-8 space-y-8 lg:space-y-0 mb-10 text-left">
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) :
@@ -81,7 +81,7 @@ $archive_subheading = is_category() ? "Category: " : "Tag: ";
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					*/
-					get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'template-parts/content-grid-items', get_post_type() );
 
 				endwhile;
 				?>
