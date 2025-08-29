@@ -350,7 +350,7 @@
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "Enter any content to be added after the podcast episode grid.",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -383,5 +383,5 @@
     "active": true,
     "description": "Settings for podcast category taxonomy terms",
     "show_in_rest": 0,
-    "modified": 1756436993
+    "modified": 1756494640
 }
