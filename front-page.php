@@ -54,26 +54,26 @@ get_header();
 		<div class="max-w-6xl xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 			<?php
 			// Featured event.
-			$args                  = array(
+			$featured_args = array(
 				'posts_per_page' => 1,
-				'post_type'      => 'srf-events',
+				'post_type'      => 'tribe_events',
 				'order'          => 'ASC',
 				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
+				'meta_key'       => '_EventStartDate',
 				'meta_query'     => array(
 					array(
-						'key'     => 'event_dates',
-						'value'   => date( 'Ymd' ),
+						'key'     => '_EventStartDate',
+						'value'   => date( 'Y-m-d H:i:s' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
 					),
 					array(
-						'key'   => 'is_featured',
-						'value' => 1,
+						'key'   => '_tribe_featured',
+						'value' => '1',
 					),
 				),
 			);
-			$featured_events_query = new WP_Query( $args );
+			$featured_events_query = new WP_Query( $featured_args );
 
 			if ( $featured_events_query->have_posts() ) :
 				/* Start the Loop */
@@ -92,66 +92,53 @@ get_header();
 			wp_reset_postdata();
 
 			// Upcoming events (non-featured).
-			$upcoming_args         = array(
+			$upcoming_args = array(
 				'posts_per_page' => 6,
-				'post_type'      => array( 'srf-events', 'srf-resources' ),
+				'post_type'      => 'tribe_events',
 				'order'          => 'ASC',
 				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
+				'meta_key'       => '_EventStartDate',
 				'meta_query'     => array(
 					array(
-						'key'     => 'event_dates',
-						'value'   => date( 'Ymd' ),
+						'key'     => '_EventStartDate',
+						'value'   => date( 'Y-m-d H:i:s' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
 					),
 					array(
 						'relation' => 'OR',
 						array(
-							'key'   => 'is_featured',
-							'value' => 0,
+							'key'   => '_tribe_featured',
+							'value' => '0',
 						),
 						array(
-							'key'     => 'is_featured',
+							'key'     => '_tribe_featured',
 							'compare' => 'NOT EXISTS',
 						),
-					),
-				),
-				'tax_query'      => array(
-					'relation' => 'OR',
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => array( 'conferences', 'fundraisers' ),
-					),
-					array(
-						'taxonomy' => 'srf-resources-category',
-						'field'    => 'slug',
-						'terms'    => array( 'webinars' ),
 					),
 				),
 			);
 			$upcoming_events_query = new WP_Query( $upcoming_args );
 
 			// Ongoing events (non-featured).
-			$ongoing_args         = array(
+			$ongoing_args = array(
 				'posts_per_page' => 6,
-				'post_type'      => array( 'srf-events', 'srf-resources' ),
+				'post_type'      => 'tribe_events',
 				'order'          => 'ASC',
 				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
+				'meta_key'       => '_EventStartDate',
 				'meta_query'     => array(
 					array(
 						'relation' => 'AND',
 						array(
-							'key'     => 'event_dates',
-							'value'   => date( 'Ymd' ),
+							'key'     => '_EventStartDate',
+							'value'   => date( 'Y-m-d H:i:s' ),
 							'compare' => '<=',
 							'type'    => 'DATETIME',
 						),
 						array(
-							'key'     => 'event_end_date',
-							'value'   => date( 'Ymd' ),
+							'key'     => '_EventEndDate',
+							'value'   => date( 'Y-m-d H:i:s' ),
 							'compare' => '>=',
 							'type'    => 'DATETIME',
 						),
@@ -159,26 +146,13 @@ get_header();
 					array(
 						'relation' => 'OR',
 						array(
-							'key'   => 'is_featured',
-							'value' => 0,
+							'key'   => '_tribe_featured',
+							'value' => '0',
 						),
 						array(
-							'key'     => 'is_featured',
+							'key'     => '_tribe_featured',
 							'compare' => 'NOT EXISTS',
 						),
-					),
-				),
-				'tax_query'      => array(
-					'relation' => 'OR',
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => array( 'conferences', 'fundraisers' ),
-					),
-					array(
-						'taxonomy' => 'srf-resources-category',
-						'field'    => 'slug',
-						'terms'    => array( 'webinars' ),
 					),
 				),
 			);
