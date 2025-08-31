@@ -159,34 +159,16 @@ get_header();
 			);
 			$ongoing_events_query = new WP_Query( $ongoing_args );
 
-			$events_query                      = new WP_Query();
-			$upcoming_and_current_events_query = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
+			// Merge the posts from both queries
+			$merged_posts = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
 
-			// Remove duplicate events by ID
-			$unique_events = array();
-			$seen_ids      = array();
-			foreach ( $upcoming_and_current_events_query as $event ) {
-				if ( ! in_array( $event->ID, $seen_ids, true ) ) {
-					$unique_events[] = $event;
-					$seen_ids[]      = $event->ID;
-				}
-			}
+			// Create a simple array-based approach to avoid WP_Query issues
+			$events_posts = $merged_posts;
 
-			// Sort the merged posts array by event date in ascending order
-			usort( $unique_events, function ( $a, $b ) {
-				$date_a = get_post_meta( $a->ID, 'event_dates', true );
-				$date_b = get_post_meta( $b->ID, 'event_dates', true );
-
-				return strtotime( $date_a ) - strtotime( $date_b );
-			} );
-
-			$events_query->posts      = $unique_events;
-			$events_query->post_count = count( $unique_events );
-
-			if ( $events_query->have_posts() ) :
+			if ( ! empty( $events_posts ) ) :
 				/* Start the Loop */
-				while ( $events_query->have_posts() ) :
-					$events_query->the_post();
+				foreach ( $events_posts as $post ) :
+					setup_postdata( $post );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -194,7 +176,7 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-grid' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
