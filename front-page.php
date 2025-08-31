@@ -158,14 +158,16 @@ get_header();
 			);
 			$ongoing_events_query = new WP_Query( $ongoing_args );
 
-			$events_query             = new WP_Query();
-			$events_query->posts      = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
-			$events_query->post_count = count( $events_query->posts );
+			// Merge the posts from both queries
+			$merged_posts = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
 
-			if ( $events_query->have_posts() ) :
+			// Create a simple array-based approach to avoid WP_Query issues
+			$events_posts = $merged_posts;
+
+			if ( ! empty( $events_posts ) ) :
 				/* Start the Loop */
-				while ( $events_query->have_posts() ) :
-					$events_query->the_post();
+				foreach ( $events_posts as $post ) :
+					setup_postdata( $post );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -173,7 +175,7 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-grid' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
