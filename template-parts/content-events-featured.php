@@ -10,11 +10,11 @@
 
 namespace SRF;
 
-// $start_date = get_post_meta( get_the_ID(), '_EventStartDate', true );
-// $end_date   = get_post_meta( get_the_ID(), '_EventEndDate', true );
-// $event_date = srf_formatted_event_date( $start_date, $end_date );
+$start_date = get_post_meta( get_the_ID(), '_EventStartDate', true );
+$end_date   = get_post_meta( get_the_ID(), '_EventEndDate', true );
+$event_date = srf_formatted_event_date( $start_date, $end_date );
 
-$event_date = 'November 1, 2025';
+// $event_date = 'November 1, 2025';
 
 ?>
 
