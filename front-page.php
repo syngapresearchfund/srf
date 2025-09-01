@@ -53,32 +53,22 @@ get_header();
 		?>
 		<div class="max-w-6xl xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 			<?php
-			// Featured event.
+			// Featured event using Tribe Events optimized query.
 			$featured_args = array(
 				'posts_per_page' => 1,
-				'post_type'      => 'tribe_events',
 				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => '_EventStartDate',
-				'meta_query'     => array(
-					array(
-						'key'     => '_EventStartDate',
-						'value'   => current_time( 'Y-m-d H:i:s' ),
-						'compare' => '>=',
-						'type'    => 'DATETIME',
-					),
-					array(
-						'key'   => '_tribe_featured',
-						'value' => '1',
-					),
-				),
+				'orderby'        => 'event_date',
+				'start_date'     => 'now', // Events starting now or later
+				'featured'       => true, // Featured events only
 			);
-			$featured_events_query = new WP_Query( $featured_args );
+			$featured_events_query = tribe_get_events( $featured_args );
 
-			if ( $featured_events_query->have_posts() ) :
+			if ( ! empty( $featured_events_query ) ) :
 				/* Start the Loop */
-				while ( $featured_events_query->have_posts() ) :
-					$featured_events_query->the_post();
+				foreach ( $featured_events_query as $event ) :
+					// Set up post data for the current event
+					$GLOBALS['post'] = $event;
+					setup_postdata( $event );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -86,75 +76,27 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-featured' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-			// Combined upcoming and ongoing events (non-featured).
+			// Combined upcoming and ongoing events (non-featured) using Tribe Events optimized query.
 			$events_args = array(
 				'posts_per_page' => 6,
-				'post_type'      => 'tribe_events',
 				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => '_EventStartDate',
-				'meta_query'     => array(
-					'relation' => 'AND',
-					// Non-featured events only
-					array(
-						'relation' => 'OR',
-						array(
-							'key'   => '_tribe_featured',
-							'value' => 0,
-						),
-						array(
-							'key'     => '_tribe_featured',
-							'compare' => 'NOT EXISTS',
-						),
-					),
-					// Events that are either upcoming OR ongoing
-					array(
-						'relation' => 'OR',
-						// Upcoming events (start date >= today)
-						array(
-							'key'     => '_EventStartDate',
-							'value'   => date( 'Ymd' ),
-							'compare' => '>=',
-							'type'    => 'DATETIME',
-						),
-						// Ongoing events (start date <= today AND end date >= today)
-						array(
-							'relation' => 'AND',
-							array(
-								'key'     => '_EventStartDate',
-								'value'   => date( 'Ymd' ),
-								'compare' => '<=',
-								'type'    => 'DATETIME',
-							),
-							array(
-								'key'     => '_EventEndDate',
-								'value'   => date( 'Ymd' ),
-								'compare' => '>=',
-								'type'    => 'DATETIME',
-							),
-						),
-					),
-				),
-				// 'tax_query'      => array(
-				// 	'relation' => 'OR',
-				// 	array(
-				// 		'taxonomy' => 'tribe_events_cat',
-				// 		'field'    => 'slug',
-				// 		'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
-				// 	),
-				// ),
+				'orderby'        => 'event_date',
+				'start_date'     => 'now', // This handles both upcoming and ongoing events efficiently
+				'featured'       => false, // Non-featured events only
 			);
-			$events_query = new WP_Query( $events_args );
+			$events_query = tribe_get_events( $events_args );
 
-			if ( $events_query->have_posts() ) :
+			if ( ! empty( $events_query ) ) :
 				/* Start the Loop */
-				while ( $events_query->have_posts() ) :
-					$events_query->the_post();
+				foreach ( $events_query as $event ) :
+					// Set up post data for the current event
+					$GLOBALS['post'] = $event;
+					setup_postdata( $event );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -162,7 +104,7 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-grid' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
