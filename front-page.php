@@ -64,13 +64,20 @@ get_header();
 					'relation' => 'AND',
 					array(
 						'key'     => '_EventStartDate',
-						'value'   => date( 'Y-m-d H:i:s' ),
+						'value'   => date( 'Ymd' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
 					),
 					array(
 						'key'   => '_tribe_featured',
 						'value' => '1',
+					),
+				),
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
 					),
 				),
 			);
@@ -102,7 +109,7 @@ get_header();
 				'meta_query'     => array(
 					array(
 						'key'     => '_EventStartDate',
-						'value'   => date( 'Y-m-d H:i:s' ),
+						'value'   => date( 'Ymd' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
 					),
@@ -116,6 +123,13 @@ get_header();
 							'key'     => '_tribe_featured',
 							'compare' => 'NOT EXISTS',
 						),
+					),
+				),
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
 					),
 				),
 			);
@@ -133,13 +147,13 @@ get_header();
 						'relation' => 'AND',
 						array(
 							'key'     => '_EventStartDate',
-							'value'   => date( 'Y-m-d H:i:s' ),
+							'value'   => date( 'Ymd' ),
 							'compare' => '<=',
 							'type'    => 'DATETIME',
 						),
 						array(
 							'key'     => '_EventEndDate',
-							'value'   => date( 'Y-m-d H:i:s' ),
+							'value'   => date( 'Ymd' ),
 							'compare' => '>=',
 							'type'    => 'DATETIME',
 						),
@@ -154,6 +168,13 @@ get_header();
 							'key'     => '_tribe_featured',
 							'compare' => 'NOT EXISTS',
 						),
+					),
+				),
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
 					),
 				),
 			);
