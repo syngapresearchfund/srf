@@ -72,13 +72,6 @@ get_header();
 						'value' => '1',
 					),
 				),
-				'tax_query'      => array(
-					array(
-						'taxonomy' => 'tribe_events_cat',
-						'field'    => 'slug',
-						'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
-					),
-				),
 			);
 			$featured_events_query = new WP_Query( $featured_args );
 
