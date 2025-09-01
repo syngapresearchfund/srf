@@ -63,7 +63,7 @@ get_header();
 				'meta_query'     => array(
 					array(
 						'key'     => '_EventStartDate',
-						'value'   => date( 'Ymd' ),
+						'value'   => date( 'Y-m-d H:i:s' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
 					),
@@ -98,74 +98,61 @@ get_header();
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-			// Upcoming events (non-featured).
-			$upcoming_args = array(
+			// Events query (upcoming and ongoing, non-featured)
+			$events_args = array(
 				'posts_per_page' => 6,
 				'post_type'      => 'tribe_events',
 				'order'          => 'ASC',
 				'orderby'        => 'meta_value',
 				'meta_key'       => '_EventStartDate',
 				'meta_query'     => array(
-					array(
-						'key'     => '_EventStartDate',
-						'value'   => date( 'Ymd' ),
-						'compare' => '>=',
-						'type'    => 'DATETIME',
-					),
-					array(
-						'relation' => 'OR',
-						array(
-							'key'   => '_tribe_featured',
-							'value' => '0',
-						),
-						array(
-							'key'     => '_tribe_featured',
-							'compare' => 'NOT EXISTS',
-						),
-					),
-				),
-				'tax_query'      => array(
-					array(
-						'taxonomy' => 'tribe_events_cat',
-						'field'    => 'slug',
-						'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
-					),
-				),
-			);
-			$upcoming_events_query = new WP_Query( $upcoming_args );
-
-			// Ongoing events (non-featured).
-			$ongoing_args = array(
-				'posts_per_page' => 6,
-				'post_type'      => 'tribe_events',
-				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => '_EventStartDate',
-				'meta_query'     => array(
+					'relation' => 'OR',
+					// Upcoming events (start date >= today)
 					array(
 						'relation' => 'AND',
 						array(
 							'key'     => '_EventStartDate',
-							'value'   => date( 'Ymd' ),
+							'value'   => date( 'Y-m-d H:i:s' ),
+							'compare' => '>=',
+							'type'    => 'DATETIME',
+						),
+						array(
+							'relation' => 'OR',
+							array(
+								'key'   => '_tribe_featured',
+								'value' => '0',
+							),
+							array(
+								'key'     => '_tribe_featured',
+								'compare' => 'NOT EXISTS',
+							),
+						),
+					),
+					// Ongoing events (start date <= today AND end date >= today)
+					array(
+						'relation' => 'AND',
+						array(
+							'key'     => '_EventStartDate',
+							'value'   => date( 'Y-m-d H:i:s' ),
 							'compare' => '<=',
 							'type'    => 'DATETIME',
 						),
 						array(
 							'key'     => '_EventEndDate',
-							'value'   => date( 'Ymd' ),
+							'value'   => date( 'Y-m-d H:i:s' ),
 							'compare' => '>=',
 							'type'    => 'DATETIME',
 						),
-					),
-					array(
-						'relation' => 'OR',
 						array(
-							'key'   => '_tribe_featured',
-							'value' => '0',
-						),
-						array(
-							'key'     => '_tribe_featured',
-							'compare' => 'NOT EXISTS',
+							'relation' => 'OR',
+							array(
+								'key'   => '_tribe_featured',
+								'value' => '0',
+							),
+							array(
+								'key'     => '_tribe_featured',
+								'compare' => 'NOT EXISTS',
+							),
 						),
 					),
 				),
@@ -177,18 +164,12 @@ get_header();
 					),
 				),
 			);
-			$ongoing_events_query = new WP_Query( $ongoing_args );
+			$events_query = new WP_Query( $events_args );
 
-			// Merge the posts from both queries
-			$merged_posts = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
-
-			// Create a simple array-based approach to avoid WP_Query issues
-			$events_posts = $merged_posts;
-
-			if ( ! empty( $events_posts ) ) :
+			if ( $events_query->have_posts() ) :
 				/* Start the Loop */
-				foreach ( $events_posts as $post ) :
-					setup_postdata( $post );
+				while ( $events_query->have_posts() ) :
+					$events_query->the_post();
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -196,7 +177,7 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-grid' );
-				endforeach;
+				endwhile;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
