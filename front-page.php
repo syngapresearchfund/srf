@@ -91,65 +91,39 @@ get_header();
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-			// Events query (upcoming and ongoing, non-featured)
-			$events_args = array(
+			// Upcoming events (non-featured).
+			$upcoming_args         = array(
 				'posts_per_page' => 6,
+				// 'post_type'      => array( 'srf-events', 'srf-resources' ),
 				'post_type'      => 'tribe_events',
 				'order'          => 'ASC',
 				'orderby'        => 'meta_value',
+				// 'meta_key'       => 'event_dates',
 				'meta_key'       => '_EventStartDate',
 				'meta_query'     => array(
-					'relation' => 'OR',
-					// Upcoming events (start date >= today)
 					array(
-						'relation' => 'AND',
-						array(
-							'key'     => '_EventStartDate',
-							'value'   => current_time( 'Y-m-d H:i:s' ),
-							'compare' => '>=',
-							'type'    => 'DATETIME',
-						),
-						array(
-							'relation' => 'OR',
-							array(
-								'key'   => '_tribe_featured',
-								'value' => '0',
-							),
-							array(
-								'key'     => '_tribe_featured',
-								'compare' => 'NOT EXISTS',
-							),
-						),
+						// 'key'     => 'event_dates',
+						'key'     => '_EventStartDate',
+						'value'   => date( 'Ymd' ),
+						'compare' => '>=',
+						'type'    => 'DATETIME',
 					),
-					// Ongoing events (start date <= today AND end date >= today)
 					array(
-						'relation' => 'AND',
+						'relation' => 'OR',
 						array(
-							'key'     => '_EventStartDate',
-							'value'   => current_time( 'Y-m-d H:i:s' ),
-							'compare' => '<=',
-							'type'    => 'DATETIME',
+							// 'key'   => 'is_featured',
+							'key'   => '_tribe_featured',
+							'value' => 0,
 						),
 						array(
-							'key'     => '_EventEndDate',
-							'value'   => current_time( 'Y-m-d H:i:s' ),
-							'compare' => '>=',
-							'type'    => 'DATETIME',
-						),
-						array(
-							'relation' => 'OR',
-							array(
-								'key'   => '_tribe_featured',
-								'value' => '0',
-							),
-							array(
-								'key'     => '_tribe_featured',
-								'compare' => 'NOT EXISTS',
-							),
+							// 'key'     => 'is_featured',
+							'key'     => '_tribe_featured',
+							'compare' => 'NOT EXISTS',
 						),
 					),
 				),
 				// 'tax_query'      => array(
+				// 	'relation' => 'OR',
 				// 	array(
 				// 		'taxonomy' => 'tribe_events_cat',
 				// 		'field'    => 'slug',
@@ -157,7 +131,63 @@ get_header();
 				// 	),
 				// ),
 			);
-			$events_query = new WP_Query( $events_args );
+			$upcoming_events_query = new WP_Query( $upcoming_args );
+
+			// Ongoing events (non-featured).
+			$ongoing_args         = array(
+				'posts_per_page' => 6,
+				// 'post_type'      => array( 'srf-events', 'srf-resources' ),
+				'post_type'      => 'tribe_events',
+				'order'          => 'ASC',
+				'orderby'        => 'meta_value',
+				// 'meta_key'       => 'event_dates',
+				'meta_key'       => '_EventStartDate',
+				'meta_query'     => array(
+					array(
+						'relation' => 'AND',
+						array(
+							// 'key'     => 'event_dates',
+							'key'     => '_EventStartDate',
+							'value'   => date( 'Ymd' ),
+							'compare' => '<=',
+							'type'    => 'DATETIME',
+						),
+						array(
+							// 'key'     => 'event_end_date',
+							'key'     => '_EventEndDate',
+							'value'   => date( 'Ymd' ),
+							'compare' => '>=',
+							'type'    => 'DATETIME',
+						),
+					),
+					array(
+						'relation' => 'OR',
+						array(
+							// 'key'   => 'is_featured',
+							'key'   => '_tribe_featured',
+							'value' => 0,
+						),
+						array(
+							// 'key'     => 'is_featured',
+							'key'     => '_tribe_featured',
+							'compare' => 'NOT EXISTS',
+						),
+					),
+				),
+				// 'tax_query'      => array(
+				// 	'relation' => 'OR',
+				// 	array(
+				// 		'taxonomy' => 'tribe_events_cat',
+				// 		'field'    => 'slug',
+				// 		'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
+				// 	),
+				// ),
+			);
+			$ongoing_events_query = new WP_Query( $ongoing_args );
+
+			$events_query             = new WP_Query();
+			$events_query->posts      = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
+			$events_query->post_count = count( $events_query->posts );
 
 			if ( $events_query->have_posts() ) :
 				/* Start the Loop */
