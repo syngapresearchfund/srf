@@ -10,9 +10,36 @@
 
 namespace SRF;
 
-$start_date = get_field( 'event_dates' );
-$end_date   = get_field( 'event_end_date' );
-$event_date = ! empty( $end_date ) ? $start_date . ' - ' . $end_date : $start_date;
+$start_date = get_post_meta( get_the_ID(), '_EventStartDate', true );
+$end_date   = get_post_meta( get_the_ID(), '_EventEndDate', true );
+
+// Format dates to "Month Day, Year" format
+$formatted_start = '';
+$formatted_end = '';
+
+if ( ! empty( $start_date ) ) {
+	$start_timestamp = strtotime( $start_date );
+	$formatted_start = date( 'F jS, Y', $start_timestamp );
+}
+
+if ( ! empty( $end_date ) ) {
+	$end_timestamp = strtotime( $end_date );
+	$formatted_end = date( 'F jS, Y', $end_timestamp );
+}
+
+// Check if start and end dates are the same (comparing just the date portion)
+if ( ! empty( $formatted_end ) ) {
+	$start_date_only = date( 'Y-m-d', strtotime( $start_date ) );
+	$end_date_only = date( 'Y-m-d', strtotime( $end_date ) );
+
+	if ( $start_date_only === $end_date_only ) {
+		$event_date = $formatted_start;
+	} else {
+		$event_date = $formatted_start . ' - ' . $formatted_end;
+	}
+} else {
+	$event_date = $formatted_start;
+}
 ?>
 
 <article
