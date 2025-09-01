@@ -63,7 +63,7 @@ get_header();
 				'meta_query'     => array(
 					array(
 						'key'     => '_EventStartDate',
-						'value'   => date( 'Y-m-d H:i:s' ),
+						'value'   => current_time( 'Y-m-d H:i:s' ),
 						'compare' => '>=',
 						'type'    => 'DATETIME',
 					),
@@ -112,7 +112,7 @@ get_header();
 						'relation' => 'AND',
 						array(
 							'key'     => '_EventStartDate',
-							'value'   => date( 'Y-m-d H:i:s' ),
+							'value'   => current_time( 'Y-m-d H:i:s' ),
 							'compare' => '>=',
 							'type'    => 'DATETIME',
 						),
@@ -133,13 +133,13 @@ get_header();
 						'relation' => 'AND',
 						array(
 							'key'     => '_EventStartDate',
-							'value'   => date( 'Y-m-d H:i:s' ),
+							'value'   => current_time( 'Y-m-d H:i:s' ),
 							'compare' => '<=',
 							'type'    => 'DATETIME',
 						),
 						array(
 							'key'     => '_EventEndDate',
-							'value'   => date( 'Y-m-d H:i:s' ),
+							'value'   => current_time( 'Y-m-d H:i:s' ),
 							'compare' => '>=',
 							'type'    => 'DATETIME',
 						),
