@@ -149,13 +149,13 @@ get_header();
 						),
 					),
 				),
-				'tax_query'      => array(
-					array(
-						'taxonomy' => 'tribe_events_cat',
-						'field'    => 'slug',
-						'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
-					),
-				),
+				// 'tax_query'      => array(
+				// 	array(
+				// 		'taxonomy' => 'tribe_events_cat',
+				// 		'field'    => 'slug',
+				// 		'terms'    => array( 'conference', 'fundraiser', 'webinar' ),
+				// 	),
+				// ),
 			);
 			$events_query = new WP_Query( $events_args );
 
