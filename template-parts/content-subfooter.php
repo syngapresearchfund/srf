@@ -105,6 +105,10 @@ namespace SRF;
 						href="<?php echo esc_url( home_url( '/blog/srf-joins-cfc/' ) ); ?>"><img
 							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/CFC-logo.png' ) ); ?>"
 							alt="Combined Federal Campaign"></a></li>
+				<li class="w-20 lg:w-12"><a href="https://www.citizen.health/partners/srf" target="_blank"
+											rel="noopener noreferrer"><img
+							src="<?php echo esc_url( get_theme_file_uri( 'assets/images/2025-citizen-health-partner-badge.png' ) ); ?>"
+							alt="Guidestar Platinum Symbol of Transparency 2025"></a></li>
 			</ul>
 		</div>
 	</div>
