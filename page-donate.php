@@ -25,20 +25,11 @@ get_header();
 				class="mx-auto w-2/3 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded transform translate-y-2"></div>
 		</header>
 
-		<!-- Begin Give Lively Fundraising Widget -->
-		<!-- <script>gl = document.createElement('script');
-			gl.src = 'https://secure.givelively.org/widgets/branded_donation/syngap-research-fund-incorporated.js';
-			document.getElementsByTagName('head')[0].appendChild(gl);</script>
-		<div data-widget-src='https://secure.givelively.org/donate/syngap-research-fund-incorporated?ref=sd_widget'
-			 id="give-lively-widget" class="gl-branded-donation-widget"></div> -->
-		<!-- End Give Lively Fundraising Widget -->
-
-		<!-- Begin Classy Fundraising Widget -->
+		<!-- Begin Givesmart Fundraising Widget -->
 		<div class="flex flex-wrap flex-shrink-0 justify-center">
-			<div id="ictUSJFSav7wK0XtQpIxG" classy="664981"></div>
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/classy-donation-image.png" id="classy-donation-image" class="rounded-lg object-contain" alt="Classy Donation Image">
+			<iframe id="mc-donation" src="https://fundraise.givesmart.com/form/oWo8zw?utm_source=embed&utm_medium=page&utm_campaign=d&vid=1mefjq" width="100%" height="1950" overflow="scroll" onLoad="window.scrollTo(0,0);"></iframe>
 		</div>
-		<!-- End Classy Fundraising Widget -->
+		<!-- End Givesmart Fundraising Widget -->
 
 		<div class="w-full lg:w-2/3 space-y-4 mt-14 mx-auto">
 			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Other Ways to
