@@ -255,7 +255,7 @@ get_header();
 			<h3 class="text-m lg:text-l font-semibold text-gray-600">Use this QR code or cureSYNGAP1.org/Give<br>to
 				link to this page.</h3>
 			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/CS1-Donate-QR.png' ) ); ?>"
-				 alt="Donate to SRF">
+				 alt="Donate to SRF" class="mx-auto">
 		</div>
 	</div>
 
