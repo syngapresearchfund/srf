@@ -53,32 +53,22 @@ get_header();
 		?>
 		<div class="max-w-6xl xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 			<?php
-			// Featured event.
-			$args                  = array(
+			// Featured event using Tribe Events optimized query.
+			$featured_args = array(
 				'posts_per_page' => 1,
-				'post_type'      => 'srf-events',
 				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
-				'meta_query'     => array(
-					array(
-						'key'     => 'event_dates',
-						'value'   => date( 'Ymd' ),
-						'compare' => '>=',
-						'type'    => 'DATETIME',
-					),
-					array(
-						'key'   => 'is_featured',
-						'value' => 1,
-					),
-				),
+				'orderby'        => 'event_date',
+				'start_date'     => 'now', // Events starting now or later
+				'featured'       => true, // Featured events only
 			);
-			$featured_events_query = new WP_Query( $args );
+			$featured_events_query = tribe_get_events( $featured_args );
 
-			if ( $featured_events_query->have_posts() ) :
+			if ( ! empty( $featured_events_query ) ) :
 				/* Start the Loop */
-				while ( $featured_events_query->have_posts() ) :
-					$featured_events_query->the_post();
+				foreach ( $featured_events_query as $event ) :
+					// Set up post data for the current event
+					$GLOBALS['post'] = $event;
+					setup_postdata( $event );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -86,112 +76,27 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-featured' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-			// Upcoming events (non-featured).
-			$upcoming_args         = array(
+			// Combined upcoming and ongoing events (non-featured) using Tribe Events optimized query.
+			$events_args = array(
 				'posts_per_page' => 6,
-				'post_type'      => array( 'srf-events', 'srf-resources' ),
 				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
-				'meta_query'     => array(
-					array(
-						'key'     => 'event_dates',
-						'value'   => date( 'Ymd' ),
-						'compare' => '>=',
-						'type'    => 'DATETIME',
-					),
-					array(
-						'relation' => 'OR',
-						array(
-							'key'   => 'is_featured',
-							'value' => 0,
-						),
-						array(
-							'key'     => 'is_featured',
-							'compare' => 'NOT EXISTS',
-						),
-					),
-				),
-				'tax_query'      => array(
-					'relation' => 'OR',
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => array( 'conferences', 'fundraisers' ),
-					),
-					array(
-						'taxonomy' => 'srf-resources-category',
-						'field'    => 'slug',
-						'terms'    => array( 'webinars' ),
-					),
-				),
+				'orderby'        => 'event_date',
+				'start_date'     => 'now', // This handles both upcoming and ongoing events efficiently
+				'featured'       => false, // Non-featured events only
 			);
-			$upcoming_events_query = new WP_Query( $upcoming_args );
+			$events_query = tribe_get_events( $events_args );
 
-			// Ongoing events (non-featured).
-			$ongoing_args         = array(
-				'posts_per_page' => 6,
-				'post_type'      => array( 'srf-events', 'srf-resources' ),
-				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
-				'meta_query'     => array(
-					array(
-						'relation' => 'AND',
-						array(
-							'key'     => 'event_dates',
-							'value'   => date( 'Ymd' ),
-							'compare' => '<=',
-							'type'    => 'DATETIME',
-						),
-						array(
-							'key'     => 'event_end_date',
-							'value'   => date( 'Ymd' ),
-							'compare' => '>=',
-							'type'    => 'DATETIME',
-						),
-					),
-					array(
-						'relation' => 'OR',
-						array(
-							'key'   => 'is_featured',
-							'value' => 0,
-						),
-						array(
-							'key'     => 'is_featured',
-							'compare' => 'NOT EXISTS',
-						),
-					),
-				),
-				'tax_query'      => array(
-					'relation' => 'OR',
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => array( 'conferences', 'fundraisers' ),
-					),
-					array(
-						'taxonomy' => 'srf-resources-category',
-						'field'    => 'slug',
-						'terms'    => array( 'webinars' ),
-					),
-				),
-			);
-			$ongoing_events_query = new WP_Query( $ongoing_args );
-
-			$events_query             = new WP_Query();
-			$events_query->posts      = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
-			$events_query->post_count = count( $events_query->posts );
-
-			if ( $events_query->have_posts() ) :
+			if ( ! empty( $events_query ) ) :
 				/* Start the Loop */
-				while ( $events_query->have_posts() ) :
-					$events_query->the_post();
+				foreach ( $events_query as $event ) :
+					// Set up post data for the current event
+					$GLOBALS['post'] = $event;
+					setup_postdata( $event );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -199,7 +104,7 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-grid' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();

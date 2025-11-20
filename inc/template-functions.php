@@ -130,3 +130,42 @@ if ( ! function_exists( 'srf_is_intl_ambassador' ) ) :
 		return false;
 	}
 endif;
+
+if ( ! function_exists( 'srf_formatted_event_date' ) ) :
+	/**
+	 * Returns formatted event date string for given start and end dates.
+	 *
+	 * @param string $start_date
+	 * @param string $end_date
+	 * @return string
+	 */
+	function srf_formatted_event_date( $start_date, $end_date ) {
+		$formatted_start = '';
+		$formatted_end = '';
+
+		if ( ! empty( $start_date ) ) {
+			$start_timestamp = strtotime( $start_date );
+			$formatted_start = date( 'F jS, Y', $start_timestamp );
+		}
+
+		if ( ! empty( $end_date ) ) {
+			$end_timestamp = strtotime( $end_date );
+			$formatted_end = date( 'F jS, Y', $end_timestamp );
+		}
+
+		// Check if start and end dates are the same (comparing just the date portion)
+		if ( ! empty( $formatted_end ) ) {
+			$start_date_only = date( 'Y-m-d', strtotime( $start_date ) );
+			$end_date_only = date( 'Y-m-d', strtotime( $end_date ) );
+
+			if ( $start_date_only === $end_date_only ) {
+				return $formatted_start;
+			} else {
+				return $formatted_start . ' - ' . $formatted_end;
+			}
+
+		} else {
+			return $formatted_start;
+		}
+	}
+endif;
