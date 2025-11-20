@@ -18,9 +18,9 @@ namespace SRF;
 		<div class="flex items-center xl:relative py-6">
 			<div class="flex hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<span class="sr-only">SynGap Research Fund</span>
-					<img class="w-auto h-9 sm:h-11 2xl:h-14"
-						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg" alt="">
+					<span class="sr-only">CureSYNGAP1</span>
+					<img class="w-auto h-28"
+						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/CURESYNGAP1.svg" alt="">
 				</a>
 			</div>
 			<nav class="hidden xl:block ml-auto font-sans">
@@ -195,9 +195,9 @@ namespace SRF;
 		<div class="pt-5 pb-6 px-5">
 			<div class="flex items-center justify-between">
 				<div>
-					<img class="w-auto h-9"
-						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/srf-logo.svg"
-						 alt="Workflow">
+					<img class="w-auto h-28"
+						 src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/CURESYNGAP1.svg"
+						 alt="CureSYNGAP1">
 				</div>
 				<div class="-mr-2">
 					<button type="button"
