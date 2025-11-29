@@ -15,7 +15,7 @@ namespace SRF;
 <!-- Main top-level menu, show/hide based on mobile menu state. -->
 <div class="relative bg-white px-6 lg:px-2 z-20 xl:shadow">
 	<div class="container mx-auto">
-		<div class="flex items-center xl:relative py-6">
+		<div class="flex items-center xl:relative py-2">
 			<div class="flex hover:opacity-80">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<span class="sr-only">CureSYNGAP1</span>
