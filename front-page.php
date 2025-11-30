@@ -18,12 +18,12 @@ get_header();
 <section class="relative bg-gradient-to-br from-srf-purple-500 via-srf-blue-500 to-srf-green-500 overflow-y-hidden">
 	<img class="absolute block w-full h-full object-cover opacity-10"
 		src="<?php echo esc_url( get_theme_file_uri( 'assets/images/home-hero-bg-image.png' ) ); ?>"
-		alt="SRF Warrior Grid" />
+		alt="CURE SYNGAP1 Warrior Grid" />
 	<div class=" relative container mx-auto px-6 lg:px-0 py-24 lg:py-36 text-center text-white z-10">
 		<h1 class="mb-6 text-4xl lg:text-5xl font-extrabold">
 			Collaboration. Transparency. Urgency.
 		</h1>
-		<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">SynGAP Research Fund (SRF) is a global group of families
+		<p class="lg:w-1/2 lg:mx-auto mb-8 text-lg">CURE SYNGAP1 is a global group of families
 			committed
 			to accelerating the science to cure SYNGAP1 & to supporting each other.</p>
 		<a href="<?php echo esc_url( home_url( '/what-is-syngap1/' ) ); ?>"
@@ -375,13 +375,13 @@ get_header();
 			<div class="flex flex-col items-center space-y-6">
 				<h3 class="text-gray-600 text-2xl font-bold text-center underline">Get involved</h3>
 				<p class="flex-auto">The best way to help someone with SYNGAP1 is to help spread awareness and stay
-					informed. Start by connecting with SRF, holding a fundraiser, and becoming a volunteer.</p>
+					informed. Start by connecting with CURE SYNGAP1, holding a fundraiser, and becoming a volunteer.</p>
 				<a href="<?php echo esc_url( home_url( '/get-involved/' ) ); ?>"
 					class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-blue-500 border-2 border-srf-blue-500 text-srf-blue-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Connect</a>
 			</div>
 			<div class="flex flex-col items-center space-y-6">
 				<h3 class="text-gray-600 text-2xl font-bold text-center underline">New families</h3>
-				<p class="flex-auto">If you're new to SYNGAP1 or SRF, we have developed a Resource Guide with basic
+				<p class="flex-auto">If you're newly diagnosed or looking for the SYNGAP1 community, we have developed a Resource Guide with basic
 					information as well as important tools for you and your doctor.</p>
 				<a href="<?php echo esc_url( home_url( '/syngap1-resources-for-newly-diagnosed-families/' ) ); ?>"
 					class="font-sans inline-block py-3 px-12 rounded hover:bg-srf-green-500 border-2 border-srf-green-500 text-srf-green-500 hover:text-white font-bold text-lg tracking-wide transition duration-500">Learn
@@ -430,7 +430,7 @@ get_header();
 						class="text-srf-blue-500 hover:text-srf-purple-500 transition duration-500"
 						href="<?php echo esc_url( home_url( '/resources/grants/' ) ); ?>"><?php echo esc_html( get_field( 'companies_institutes' ) ); ?></a>
 				</h2>
-				<h3 class="text-lg text-gray-600 font-normal">SRF Partners and Sponsors</h3>
+				<h3 class="text-lg text-gray-600 font-normal">Partners and Sponsors</h3>
 			</div>
 			<div>
 				<h2 class="text-5xl font-bold"><a

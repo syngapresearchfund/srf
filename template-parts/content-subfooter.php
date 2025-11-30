@@ -25,7 +25,7 @@ namespace SRF;
 						<h4 class="mb-4 font-bold text-2xl 2xl:text-3xl text-center lg:text-left">Sign up for our
 							newsletter!</h4>
 						<p class="mb-3 text-center lg:text-left">Keep up-to-date with helpful resources, inspiring
-							stories, and the latest SRF news.</p>
+							stories, and the latest SYNGAP1 news.</p>
 						<form
 							action="https://syngapresearchfund.us4.list-manage.com/subscribe/post?u=5b5957867c282184c537770df&amp;id=001d463f12&amp;f_id=007fc5e9f0"
 							method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
@@ -81,7 +81,7 @@ namespace SRF;
 			</div>
 		</div>
 		<div class="flex-1 text-center lg:text-right">
-			<p class="text-lg m-3">The Syngap Research Fund is a 501(c)(3) public charity (EIN <a
+			<p class="text-lg m-3">CURE SYNGAP1 is a 501(c)(3) public charity (EIN <a
 					class="hover:underline text-srf-purple-100"
 					href="<?php echo esc_url( get_theme_file_uri( 'assets/files/SRF-501c3-Ruling.pdf' ) ); ?>">83-1200789</a>)
 				headquartered in California.</p>
