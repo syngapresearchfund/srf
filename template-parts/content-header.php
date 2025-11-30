@@ -192,7 +192,7 @@ namespace SRF;
 <div class="absolute z-20 top-0 -inset-x-0 p-2 transition transform origin-top-right xl:hidden" x-show="open"
 	 x-transition x-cloak>
 	<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-		<div class="pt-5 pb-6 px-5">
+		<div class="pt-2 pb-6 px-5">
 			<div class="flex items-center justify-between">
 				<div>
 					<img class="w-auto h-28"
