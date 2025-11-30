@@ -61,11 +61,30 @@ get_header();
 				'orderby'        => 'meta_value',
 				'meta_key'       => 'event_dates',
 				'meta_query'     => array(
+					'relation' => 'AND',
 					array(
-						'key'     => 'event_dates',
-						'value'   => date( 'Ymd' ),
-						'compare' => '>=',
-						'type'    => 'DATETIME',
+						'relation' => 'OR',
+						// For multi-day events: show if end date hasn't passed
+						array(
+							'key'     => 'event_end_date',
+							'value'   => date( 'Ymd' ),
+							'compare' => '>=',
+							'type'    => 'DATETIME',
+						),
+						// For single-day events: show if start date hasn't passed (fallback when no end_date exists)
+						array(
+							'relation' => 'AND',
+							array(
+								'key'     => 'event_end_date',
+								'compare' => 'NOT EXISTS',
+							),
+							array(
+								'key'     => 'event_dates',
+								'value'   => date( 'Ymd' ),
+								'compare' => '>=',
+								'type'    => 'DATETIME',
+							),
+						),
 					),
 					array(
 						'key'   => 'is_featured',
