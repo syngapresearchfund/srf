@@ -40,12 +40,12 @@ namespace SRF;
 						)
 					);
 					srf_nav_item_dropdown(
-						'About SRF',
+						'About CURE SYNGAP1',
 						'openSecond',
 						array(
 							srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 							srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
-							srf_subnav_item( 'SRF Impact Report', home_url( '/syngap-research-fund-impact-on-the-road-to-cure-syngap1/' ) ),
+							srf_subnav_item( 'CURE SYNGAP1 Impact Report', home_url( '/syngap-research-fund-impact-on-the-road-to-cure-syngap1/' ) ),
 							srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
 							srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
 							srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
@@ -81,11 +81,11 @@ namespace SRF;
 						'openFourth',
 						array(
 							srf_subnav_heading( 'Connections' ),
-							srf_subnav_item( 'Connect With SRF', '/curesyngap1connect/' ),
+							srf_subnav_item( 'Connect With CURE SYNGAP1', '/curesyngap1connect/' ),
 							srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-citizen-registry/' ) ),
 							srf_subnav_item( 'Studies', home_url( '/resources/studies/' ) ),
 							srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
-							srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
+							srf_subnav_item( 'Volunteer with CURE SYNGAP1', home_url( '/volunteer-with-srf/' ) ),
 							srf_subnav_item( 'Fundraising', home_url( '/srf-fundraising-resources/' ) ),
 							srf_subnav_heading( 'Medical' ),
 							srf_subnav_item( 'Resources for Undiagnosed', home_url( '/resources-for-undiagnosed/' ) ),
@@ -105,7 +105,7 @@ namespace SRF;
 						'openLast',
 						array(
 							srf_subnav_item( 'Events Calendar', home_url( '/calendar/' ) ),
-							srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
+							srf_subnav_item( 'CURE SYNGAP1 In The Press', home_url( '/srf-in-the-press/' ) ),
 							srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
 							srf_subnav_heading( 'Stories' ),
 							srf_subnav_item( 'Our Warriors', home_url( '/syngap-warriors/' ) ),
@@ -231,12 +231,12 @@ namespace SRF;
 							)
 						);
 						srf_mobile_nav_item(
-							'About SRF',
+							'About CURE SYNGAP1',
 							'2',
 							array(
 								srf_subnav_item( 'Our Team', home_url( '/team/' ) ),
 								srf_subnav_item( 'Mission & Values', home_url( '/mission-and-values/' ) ),
-								srf_subnav_item( 'SRF Impact Report', home_url( '/syngap-research-fund-impact-on-the-road-to-cure-syngap1/' ) ),
+								srf_subnav_item( 'CURE SYNGAP1 Impact Report', home_url( '/syngap-research-fund-impact-on-the-road-to-cure-syngap1/' ) ),
 								srf_subnav_item( 'Finances', home_url( '/finances/' ) ),
 								srf_subnav_item( 'Documents', home_url( '/documents/' ) ),
 								srf_subnav_item( 'Partners', home_url( '/partners/rare-disease/' ) ),
@@ -272,11 +272,11 @@ namespace SRF;
 							'4',
 							array(
 								srf_subnav_heading( 'Connections' ),
-								srf_subnav_item( 'Connect With SRF', '/curesyngap1connect/' ),
+								srf_subnav_item( 'Connect With CURE SYNGAP1', '/curesyngap1connect/' ),
 								srf_subnav_item( 'Join SYNGAP1 Registries', home_url( '/join-the-citizen-registry/' ) ),
 								srf_subnav_item( 'Studies', home_url( '/resources/studies/' ) ),
 								srf_subnav_item( 'Clinical Trials', home_url( '/clinical-trials/' ) ),
-								srf_subnav_item( 'Volunteer with SRF', home_url( '/volunteer-with-srf/' ) ),
+								srf_subnav_item( 'Volunteer with CURE SYNGAP1', home_url( '/volunteer-with-srf/' ) ),
 								srf_subnav_item( 'Fundraising', home_url( '/srf-fundraising-resources/' ) ),
 								srf_subnav_heading( 'Medical' ),
 								srf_subnav_item( 'Resources for Undiagnosed', home_url( '/resources-for-undiagnosed/' ) ),
@@ -296,7 +296,7 @@ namespace SRF;
 							'5',
 							array(
 								srf_subnav_item( 'Events Calendar', home_url( '/calendar/' ) ),
-								srf_subnav_item( 'SRF In The Press', home_url( '/srf-in-the-press/' ) ),
+								srf_subnav_item( 'CURE SYNGAP1 In The Press', home_url( '/srf-in-the-press/' ) ),
 								srf_subnav_item( 'Newsletter', home_url( '/newsletter/' ) ),
 								srf_subnav_heading( 'Stories' ),
 								srf_subnav_item( 'Our Warriors', home_url( '/syngap-warriors/' ) ),
