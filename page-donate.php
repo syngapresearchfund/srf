@@ -27,6 +27,7 @@ get_header();
 
 		<!-- Begin Givesmart Fundraising Widget -->
 		<div class="flex flex-wrap flex-shrink-0 justify-center">
+			<p class="text-center lg:w-4/6 mx-auto mb-4"><span class="font-bold">International Donors (Non-US)</span> please use this link: <a href="https://curesyngap1.org/IntlDonate" class="underline">https://curesyngap1.org/IntlDonate</a></p>
 			<iframe id="mc-donation" src="https://fundraise.givesmart.com/form/oWo8zw?utm_source=embed&utm_medium=page&utm_campaign=d&vid=1mefjq" width="100%" height="1950" overflow="scroll" onLoad="window.scrollTo(0,0);"></iframe>
 		</div>
 		<!-- End Givesmart Fundraising Widget -->
