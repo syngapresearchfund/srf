@@ -80,16 +80,26 @@ $past_events_query = new WP_Query( $past_args );
 $events_query                      = new WP_Query();
 $upcoming_and_current_events_query = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
 
+// Remove duplicate events by ID
+$unique_events = array();
+$seen_ids      = array();
+foreach ( $upcoming_and_current_events_query as $event ) {
+	if ( ! in_array( $event->ID, $seen_ids, true ) ) {
+		$unique_events[] = $event;
+		$seen_ids[]      = $event->ID;
+	}
+}
+
 // Sort the merged posts array by event date in ascending order
-usort( $upcoming_and_current_events_query, function ( $a, $b ) {
+usort( $unique_events, function ( $a, $b ) {
 	$date_a = get_post_meta( $a->ID, 'event_dates', true );
 	$date_b = get_post_meta( $b->ID, 'event_dates', true );
 
 	return strtotime( $date_a ) - strtotime( $date_b );
 } );
 
-$events_query->posts      = $upcoming_and_current_events_query;
-$events_query->post_count = count( $upcoming_and_current_events_query );
+$events_query->posts      = $unique_events;
+$events_query->post_count = count( $unique_events );
 ?>
 
 	<div class="container mx-auto px-6 lg:px-0 py-16">

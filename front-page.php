@@ -203,9 +203,29 @@ get_header();
 			);
 			$ongoing_events_query = new WP_Query( $ongoing_args );
 
-			$events_query             = new WP_Query();
-			$events_query->posts      = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
-			$events_query->post_count = count( $events_query->posts );
+			$events_query                      = new WP_Query();
+			$upcoming_and_current_events_query = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
+
+			// Remove duplicate events by ID
+			$unique_events = array();
+			$seen_ids      = array();
+			foreach ( $upcoming_and_current_events_query as $event ) {
+				if ( ! in_array( $event->ID, $seen_ids, true ) ) {
+					$unique_events[] = $event;
+					$seen_ids[]      = $event->ID;
+				}
+			}
+
+			// Sort the merged posts array by event date in ascending order
+			usort( $unique_events, function ( $a, $b ) {
+				$date_a = get_post_meta( $a->ID, 'event_dates', true );
+				$date_b = get_post_meta( $b->ID, 'event_dates', true );
+
+				return strtotime( $date_a ) - strtotime( $date_b );
+			} );
+
+			$events_query->posts      = $unique_events;
+			$events_query->post_count = count( $unique_events );
 
 			if ( $events_query->have_posts() ) :
 				/* Start the Loop */
