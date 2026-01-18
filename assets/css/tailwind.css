@@ -279,6 +279,11 @@ select.blog-filter {
 	@apply justify-center;
 }
 
+.single-tribe_events .tribe-blocks-editor .tribe-events-schedule .tribe-events-schedule__datetime {
+	@apply flex flex-col items-center;
+}
+
+
 /* Classy Donation Widget Adjustments */
 #classy-donation-image {
 	/* width: 100%; */
