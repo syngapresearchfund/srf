@@ -2750,10 +2750,8 @@ select.blog-filter {
   justify-content: center;
 }
 
-.single-tribe_events .tribe-blocks-editor .tribe-events-schedule .tribe-events-schedule__datetime {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.single-tribe_events .tribe-blocks-editor .tribe-events-schedule {
+  text-align: center;
 }
 
 /* Classy Donation Widget Adjustments */
