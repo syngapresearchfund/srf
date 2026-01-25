@@ -283,6 +283,13 @@ select.blog-filter {
 	@apply text-center;
 }
 
+.prose ul.tribe-events-sub-nav > li {
+	padding: 0;
+}
+.prose ul.tribe-events-sub-nav > li::before {
+	content: none;
+}
+
 /* Classy Donation Widget Adjustments */
 #classy-donation-image {
 	/* width: 100%; */
