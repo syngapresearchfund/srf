@@ -58,7 +58,7 @@ get_header();
 				'posts_per_page' => 1,
 				'order'          => 'ASC',
 				'orderby'        => 'event_date',
-				'start_date'     => 'now', // Events starting now or later
+				'ends_after'     => 'now', // Include multi-day events that haven't ended yet
 				'featured'       => true, // Featured events only
 			);
 			$featured_events_query = tribe_get_events( $featured_args );
@@ -86,7 +86,7 @@ get_header();
 				'posts_per_page' => 6,
 				'order'          => 'ASC',
 				'orderby'        => 'event_date',
-				'start_date'     => 'now', // This handles both upcoming and ongoing events efficiently
+				'ends_after'     => 'now', // Include multi-day events that haven't ended yet
 				'featured'       => false, // Non-featured events only
 			);
 			$events_query = tribe_get_events( $events_args );
