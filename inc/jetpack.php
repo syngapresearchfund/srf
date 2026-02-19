@@ -57,8 +57,8 @@ function srf_infinite_scroll_render() : void {
  */
 function srf_custom_og_tags( array $tags ) : array {
 	$tags['og:image'] = get_template_directory_uri() . '/assets/images/CURESYNGAP1-site-icon.png';
-	$tags['og:site_name'] = 'Syngap Research Fund';
-	$tags['og:description'] = 'SynGAP Research Fund (SRF) is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other.';
+	$tags['og:site_name'] = 'CURE SYNGAP1';
+	$tags['og:description'] = 'CURE SYNGAP1 is a global group of families committed to accelerating the science to cure SYNGAP1 & to supporting each other.';
 
 	return $tags;
 }
