@@ -2762,6 +2762,10 @@ select.blog-filter {
   content: none;
 }
 
+tribe-events-series-relationship-single-marker {
+  text-align: center;
+}
+
 /* Classy Donation Widget Adjustments */
 
 #classy-donation-image {
