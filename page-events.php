@@ -15,91 +15,23 @@
 
 namespace SRF;
 
-use WP_Query;
-
 get_header();
 
 $upcoming_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
-	'post_type'      => 'srf-events',
-	'order'          => 'DESC',
-	'orderby'        => 'meta_value',
-	'meta_key'       => 'event_dates',
-	'meta_query'     => array(
-		array(
-			'key'     => 'event_dates',
-			'value'   => date( 'Ymd' ),
-			'compare' => '>=',
-			'type'    => 'DATETIME',
-		)
-	)
+	'order'          => 'ASC',
+	'orderby'        => 'event_date',
+	'start_date'     => 'now', // Handles both upcoming and ongoing events
 );
-$upcoming_events_query = new WP_Query( $upcoming_args );
-
-$ongoing_args         = array(
-	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
-	'post_type'      => 'srf-events',
-	'order'          => 'DESC',
-	'orderby'        => 'meta_value',
-	'meta_key'       => 'event_dates',
-	'meta_query'     => array(
-		'relation' => 'AND',
-		array(
-			'key'     => 'event_dates',
-			'value'   => date( 'Ymd' ),
-			'compare' => '<=',
-			'type'    => 'DATETIME',
-		),
-		array(
-			'key'     => 'event_end_date',
-			'value'   => date( 'Ymd' ),
-			'compare' => '>=',
-			'type'    => 'DATETIME',
-		)
-	)
-);
-$ongoing_events_query = new WP_Query( $ongoing_args );
+$upcoming_events_query = tribe_get_events( $upcoming_args );
 
 $past_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
-	'post_type'      => 'srf-events',
 	'order'          => 'DESC',
-	'orderby'        => 'meta_value',
-	'meta_key'       => 'event_dates',
-	'meta_query'     => array(
-		array(
-			'key'     => 'event_dates',
-			'value'   => date( 'Ymd' ),
-			'compare' => '<',
-			'type'    => 'DATETIME',
-		)
-	)
+	'orderby'        => 'event_date',
+	'eventDisplay'   => 'past',
 );
-$past_events_query = new WP_Query( $past_args );
-
-$events_query                      = new WP_Query();
-$upcoming_and_current_events_query = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
-
-// Remove duplicate events by ID
-$unique_events = array();
-$seen_ids      = array();
-foreach ( $upcoming_and_current_events_query as $event ) {
-	if ( ! in_array( $event->ID, $seen_ids, true ) ) {
-		$unique_events[] = $event;
-		$seen_ids[]      = $event->ID;
-	}
-}
-
-// Sort the merged posts array by event date in ascending order
-usort( $unique_events, function ( $a, $b ) {
-	$date_a = get_post_meta( $a->ID, 'event_dates', true );
-	$date_b = get_post_meta( $b->ID, 'event_dates', true );
-
-	return strtotime( $date_a ) - strtotime( $date_b );
-} );
-
-$events_query->posts      = $unique_events;
-$events_query->post_count = count( $unique_events );
+$past_events_query = tribe_get_events( $past_args );
 ?>
 
 	<div class="container mx-auto px-6 lg:px-0 py-16">
@@ -113,22 +45,17 @@ $events_query->post_count = count( $unique_events );
 			<h2 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Upcoming Events</h2>
 
 			<?php
-			if ( $events_query->have_posts() ) :
+			if ( ! empty( $upcoming_events_query ) ) :
 				?>
 				<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left space-y-6">
 					<?php
-					/* Start the Loop */
-					while ( $events_query->have_posts() ) :
-						$events_query->the_post();
-
-						/*
-						* Include the Post-Type-specific template for the content.
-						* If you want to override this in a child theme, then include a file
-						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-						*/
+					foreach ( $upcoming_events_query as $event ) :
+						$GLOBALS['post'] = $event;
+						setup_postdata( $event );
 						get_template_part( 'template-parts/content', 'events' );
-
-					endwhile;
+					endforeach;
+					/* Restore original Post Data */
+					wp_reset_postdata();
 					?>
 				</div>
 
@@ -141,8 +68,6 @@ $events_query->post_count = count( $unique_events );
 
 			<?php
 			endif;
-			/* Restore original Post Data */
-			wp_reset_postdata();
 			?>
 		</section>
 
@@ -150,22 +75,17 @@ $events_query->post_count = count( $unique_events );
 			<h6 class="text-2xl lg:text-3xl text-gray-700 font-bold mb-10">Past Events</h6>
 
 			<?php
-			if ( $past_events_query->have_posts() ) :
+			if ( ! empty( $past_events_query ) ) :
 				?>
 				<div class="max-w-5xl mx-auto mb-10 text-gray-600 text-left space-y-6">
 					<?php
-					/* Start the Loop */
-					while ( $past_events_query->have_posts() ) :
-						$past_events_query->the_post();
-
-						/*
-						* Include the Post-Type-specific template for the content.
-						* If you want to override this in a child theme, then include a file
-						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-						*/
+					foreach ( $past_events_query as $event ) :
+						$GLOBALS['post'] = $event;
+						setup_postdata( $event );
 						get_template_part( 'template-parts/content', 'events' );
-
-					endwhile;
+					endforeach;
+					/* Restore original Post Data */
+					wp_reset_postdata();
 					?>
 				</div>
 
@@ -175,9 +95,6 @@ $events_query->post_count = count( $unique_events );
 				get_template_part( 'template-parts/content', 'none' );
 
 			endif;
-
-			/* Restore original Post Data */
-			wp_reset_postdata();
 			?>
 		</section>
 	</div>
