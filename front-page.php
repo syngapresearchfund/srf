@@ -53,51 +53,90 @@ get_header();
 		?>
 		<div class="max-w-6xl xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 			<?php
-			// Featured event.
-			$args                  = array(
+			// Featured upcoming events.
+			$featured_upcoming_args = array(
 				'posts_per_page' => 1,
-				'post_type'      => 'srf-events',
 				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
-				'meta_query'     => array(
+				'orderby'        => 'event_date',
+				'start_date'     => 'now',
+				'featured'       => true,
+				'tax_query'      => array(
 					'relation' => 'AND',
 					array(
-						'relation' => 'OR',
-						// For multi-day events: show if end date hasn't passed
-						array(
-							'key'     => 'event_end_date',
-							'value'   => date( 'Ymd' ),
-							'compare' => '>=',
-							'type'    => 'DATETIME',
-						),
-						// For single-day events: show if start date hasn't passed (fallback when no end_date exists)
-						array(
-							'relation' => 'AND',
-							array(
-								'key'     => 'event_end_date',
-								'compare' => 'NOT EXISTS',
-							),
-							array(
-								'key'     => 'event_dates',
-								'value'   => date( 'Ymd' ),
-								'compare' => '>=',
-								'type'    => 'DATETIME',
-							),
-						),
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
 					),
 					array(
-						'key'   => 'is_featured',
-						'value' => 1,
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
 					),
 				),
 			);
-			$featured_events_query = new WP_Query( $args );
+			$featured_upcoming      = tribe_get_events( $featured_upcoming_args );
 
-			if ( $featured_events_query->have_posts() ) :
+			// Featured ongoing events (started before now, end after now).
+			$featured_ongoing_args = array(
+				'posts_per_page' => 1,
+				'featured'       => true,
+				'tax_query'      => array(
+					'relation' => 'AND',
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
+					),
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
+					),
+				),
+				'meta_query'     => array(
+					'relation' => 'AND',
+					array(
+						'key'     => '_EventStartDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '<=',
+						'type'    => 'DATETIME',
+					),
+					array(
+						'key'     => '_EventEndDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '>',
+						'type'    => 'DATETIME',
+					),
+				),
+			);
+			$featured_ongoing      = tribe_get_events( $featured_ongoing_args );
+
+			// Merge, deduplicate by ID, sort by start date, and take the first featured event.
+			$merged_featured   = array_merge( $featured_ongoing, $featured_upcoming );
+			$unique_featured   = array();
+			$seen_featured_ids = array();
+			foreach ( $merged_featured as $event ) {
+				if ( ! in_array( $event->ID, $seen_featured_ids, true ) ) {
+					$unique_featured[]   = $event;
+					$seen_featured_ids[] = $event->ID;
+				}
+			}
+			usort( $unique_featured, function ( $a, $b ) {
+				$date_a = get_post_meta( $a->ID, '_EventStartDate', true );
+				$date_b = get_post_meta( $b->ID, '_EventStartDate', true );
+				return strtotime( $date_a ) - strtotime( $date_b );
+			} );
+			$featured_events_query = array_slice( $unique_featured, 0, 1 );
+
+			if ( ! empty( $featured_events_query ) ) :
 				/* Start the Loop */
-				while ( $featured_events_query->have_posts() ) :
-					$featured_events_query->the_post();
+				foreach ( $featured_events_query as $event ) :
+					$GLOBALS['post'] = $event;
+					setup_postdata( $event );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -105,132 +144,98 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-featured' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-			// Upcoming events (non-featured).
-			$upcoming_args         = array(
+			// Exclude the featured event from the grid to avoid duplication.
+			$excluded_ids = ! empty( $featured_events_query ) ? array( $featured_events_query[0]->ID ) : array();
+
+			// Upcoming events (all categories, excluding the featured slot).
+			$events_upcoming_args = array(
 				'posts_per_page' => 6,
-				'post_type'      => array( 'srf-events', 'srf-resources' ),
 				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
-				'meta_query'     => array(
+				'orderby'        => 'event_date',
+				'start_date'     => 'now',
+				'post__not_in'   => $excluded_ids,
+				'tax_query'      => array(
+					'relation' => 'AND',
 					array(
-						'key'     => 'event_dates',
-						'value'   => date( 'Ymd' ),
-						'compare' => '>=',
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
+					),
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
+					),
+				),
+			);
+			$events_upcoming      = tribe_get_events( $events_upcoming_args );
+
+			// Ongoing events (started before now, end after now, excluding the featured slot).
+			$events_ongoing_args = array(
+				'posts_per_page' => 6,
+				'post__not_in'   => $excluded_ids,
+				'tax_query'      => array(
+					'relation' => 'AND',
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
+					),
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
+					),
+				),
+				'meta_query'     => array(
+					'relation' => 'AND',
+					array(
+						'key'     => '_EventStartDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '<=',
 						'type'    => 'DATETIME',
 					),
 					array(
-						'relation' => 'OR',
-						array(
-							'key'   => 'is_featured',
-							'value' => 0,
-						),
-						array(
-							'key'     => 'is_featured',
-							'compare' => 'NOT EXISTS',
-						),
-					),
-				),
-				'tax_query'      => array(
-					'relation' => 'OR',
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => array( 'conferences', 'fundraisers' ),
-					),
-					array(
-						'taxonomy' => 'srf-resources-category',
-						'field'    => 'slug',
-						'terms'    => array( 'webinars' ),
+						'key'     => '_EventEndDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '>',
+						'type'    => 'DATETIME',
 					),
 				),
 			);
-			$upcoming_events_query = new WP_Query( $upcoming_args );
+			$events_ongoing      = tribe_get_events( $events_ongoing_args );
 
-			// Ongoing events (non-featured).
-			$ongoing_args         = array(
-				'posts_per_page' => 6,
-				'post_type'      => array( 'srf-events', 'srf-resources' ),
-				'order'          => 'ASC',
-				'orderby'        => 'meta_value',
-				'meta_key'       => 'event_dates',
-				'meta_query'     => array(
-					array(
-						'relation' => 'AND',
-						array(
-							'key'     => 'event_dates',
-							'value'   => date( 'Ymd' ),
-							'compare' => '<=',
-							'type'    => 'DATETIME',
-						),
-						array(
-							'key'     => 'event_end_date',
-							'value'   => date( 'Ymd' ),
-							'compare' => '>=',
-							'type'    => 'DATETIME',
-						),
-					),
-					array(
-						'relation' => 'OR',
-						array(
-							'key'   => 'is_featured',
-							'value' => 0,
-						),
-						array(
-							'key'     => 'is_featured',
-							'compare' => 'NOT EXISTS',
-						),
-					),
-				),
-				'tax_query'      => array(
-					'relation' => 'OR',
-					array(
-						'taxonomy' => 'srf-events-category',
-						'field'    => 'slug',
-						'terms'    => array( 'conferences', 'fundraisers' ),
-					),
-					array(
-						'taxonomy' => 'srf-resources-category',
-						'field'    => 'slug',
-						'terms'    => array( 'webinars' ),
-					),
-				),
-			);
-			$ongoing_events_query = new WP_Query( $ongoing_args );
-
-			$events_query                      = new WP_Query();
-			$upcoming_and_current_events_query = array_merge( $upcoming_events_query->posts, $ongoing_events_query->posts );
-
-			// Remove duplicate events by ID
-			$unique_events = array();
-			$seen_ids      = array();
-			foreach ( $upcoming_and_current_events_query as $event ) {
-				if ( ! in_array( $event->ID, $seen_ids, true ) ) {
-					$unique_events[] = $event;
-					$seen_ids[]      = $event->ID;
+			// Merge, deduplicate by ID, sort by start date, and take the first 6 events.
+			$merged_events  = array_merge( $events_ongoing, $events_upcoming );
+			$unique_events  = array();
+			$seen_event_ids = array();
+			foreach ( $merged_events as $event ) {
+				if ( ! in_array( $event->ID, $seen_event_ids, true ) ) {
+					$unique_events[]  = $event;
+					$seen_event_ids[] = $event->ID;
 				}
 			}
-
-			// Sort the merged posts array by event date in ascending order
 			usort( $unique_events, function ( $a, $b ) {
-				$date_a = get_post_meta( $a->ID, 'event_dates', true );
-				$date_b = get_post_meta( $b->ID, 'event_dates', true );
-
+				$date_a = get_post_meta( $a->ID, '_EventStartDate', true );
+				$date_b = get_post_meta( $b->ID, '_EventStartDate', true );
 				return strtotime( $date_a ) - strtotime( $date_b );
 			} );
+			$events_query = array_slice( $unique_events, 0, 6 );
 
-			$events_query->posts      = $unique_events;
-			$events_query->post_count = count( $unique_events );
-
-			if ( $events_query->have_posts() ) :
+			if ( ! empty( $events_query ) ) :
 				/* Start the Loop */
-				while ( $events_query->have_posts() ) :
-					$events_query->the_post();
+				foreach ( $events_query as $event ) :
+					$GLOBALS['post'] = $event;
+					setup_postdata( $event );
 
 					/**
 					 * Include the Post-Type-specific template for the content.
@@ -238,7 +243,7 @@ get_header();
 					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', 'events-grid' );
-				endwhile;
+				endforeach;
 			endif;
 			/* Restore original Post Data */
 			wp_reset_postdata();
