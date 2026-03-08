@@ -255,7 +255,7 @@ get_header();
 			</svg>
 		</a>
 		<!-- big button / cta -->
-		<a href="<?php echo esc_url( home_url( '/resources/webinars/' ) ); ?>"
+		<a href="<?php echo esc_url( home_url( '/calendar/list/?tribe_eventcategory%5B0%5D=114' ) ); ?>"
 			class="mt-8 sm:mt-0 sm:ml-8 font-sans inline-flex bg-srf-blue-500 hover:bg-srf-blue-800 rounded py-3 px-8 text-white transition duration-500 font-bold">View
 			all webinars
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24"
