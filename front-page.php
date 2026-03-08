@@ -61,6 +61,13 @@ get_header();
 				'start_date'     => 'now',
 				'featured'       => true,
 				'tax_query'      => array(
+					'relation' => 'AND',
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
+					),
 					array(
 						'taxonomy' => 'tribe_events_cat',
 						'field'    => 'slug',
@@ -76,6 +83,13 @@ get_header();
 				'posts_per_page' => 1,
 				'featured'       => true,
 				'tax_query'      => array(
+					'relation' => 'AND',
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
+					),
 					array(
 						'taxonomy' => 'tribe_events_cat',
 						'field'    => 'slug',
@@ -146,6 +160,13 @@ get_header();
 				'start_date'     => 'now',
 				'post__not_in'   => $excluded_ids,
 				'tax_query'      => array(
+					'relation' => 'AND',
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
+					),
 					array(
 						'taxonomy' => 'tribe_events_cat',
 						'field'    => 'slug',
@@ -161,6 +182,13 @@ get_header();
 				'posts_per_page' => 6,
 				'post__not_in'   => $excluded_ids,
 				'tax_query'      => array(
+					'relation' => 'AND',
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'slug',
+						'terms'    => array( 'cure-syngap1' ),
+						'operator' => 'IN',
+					),
 					array(
 						'taxonomy' => 'tribe_events_cat',
 						'field'    => 'slug',
