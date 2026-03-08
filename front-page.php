@@ -53,20 +53,58 @@ get_header();
 		?>
 		<div class="max-w-6xl xl:grid grid-cols-6 gap-5 space-y-8 xl:space-y-0 mx-auto mb-10 text-gray-600 text-left">
 			<?php
-			// Featured event using Tribe Events optimized query.
-			$featured_args = array(
-				'posts_per_page' => 1,
+			// Featured upcoming events.
+			$featured_upcoming_args = array(
+				'posts_per_page' => 5,
 				'order'          => 'ASC',
 				'orderby'        => 'event_date',
-				'start_date'     => 'now', // Events starting now or later
-				'featured'       => true, // Featured events only
+				'start_date'     => 'now',
+				'featured'       => true,
 			);
-			$featured_events_query = tribe_get_events( $featured_args );
+			$featured_upcoming      = tribe_get_events( $featured_upcoming_args );
+
+			// Featured ongoing events (started before now, end after now).
+			$featured_ongoing_args = array(
+				'posts_per_page' => 5,
+				'featured'       => true,
+				'meta_query'     => array(
+					'relation' => 'AND',
+					array(
+						'key'     => '_EventStartDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '<=',
+						'type'    => 'DATETIME',
+					),
+					array(
+						'key'     => '_EventEndDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '>',
+						'type'    => 'DATETIME',
+					),
+				),
+			);
+			$featured_ongoing      = tribe_get_events( $featured_ongoing_args );
+
+			// Merge, deduplicate by ID, sort by start date, and take the first featured event.
+			$merged_featured   = array_merge( $featured_ongoing, $featured_upcoming );
+			$unique_featured   = array();
+			$seen_featured_ids = array();
+			foreach ( $merged_featured as $event ) {
+				if ( ! in_array( $event->ID, $seen_featured_ids, true ) ) {
+					$unique_featured[]   = $event;
+					$seen_featured_ids[] = $event->ID;
+				}
+			}
+			usort( $unique_featured, function ( $a, $b ) {
+				$date_a = get_post_meta( $a->ID, '_EventStartDate', true );
+				$date_b = get_post_meta( $b->ID, '_EventStartDate', true );
+				return strtotime( $date_a ) - strtotime( $date_b );
+			} );
+			$featured_events_query = array_slice( $unique_featured, 0, 1 );
 
 			if ( ! empty( $featured_events_query ) ) :
 				/* Start the Loop */
 				foreach ( $featured_events_query as $event ) :
-					// Set up post data for the current event
 					$GLOBALS['post'] = $event;
 					setup_postdata( $event );
 
@@ -81,20 +119,58 @@ get_header();
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-			// Combined upcoming and ongoing events (non-featured) using Tribe Events optimized query.
-			$events_args = array(
-				'posts_per_page' => 6,
+			// Non-featured upcoming events.
+			$events_upcoming_args = array(
+				'posts_per_page' => 10,
 				'order'          => 'ASC',
 				'orderby'        => 'event_date',
-				'start_date'     => 'now', // This handles both upcoming and ongoing events efficiently
-				'featured'       => false, // Non-featured events only
+				'start_date'     => 'now',
+				'featured'       => false,
 			);
-			$events_query = tribe_get_events( $events_args );
+			$events_upcoming      = tribe_get_events( $events_upcoming_args );
+
+			// Non-featured ongoing events (started before now, end after now).
+			$events_ongoing_args = array(
+				'posts_per_page' => 10,
+				'featured'       => false,
+				'meta_query'     => array(
+					'relation' => 'AND',
+					array(
+						'key'     => '_EventStartDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '<=',
+						'type'    => 'DATETIME',
+					),
+					array(
+						'key'     => '_EventEndDate',
+						'value'   => current_time( 'mysql' ),
+						'compare' => '>',
+						'type'    => 'DATETIME',
+					),
+				),
+			);
+			$events_ongoing      = tribe_get_events( $events_ongoing_args );
+
+			// Merge, deduplicate by ID, sort by start date, and take the first 6 events.
+			$merged_events  = array_merge( $events_ongoing, $events_upcoming );
+			$unique_events  = array();
+			$seen_event_ids = array();
+			foreach ( $merged_events as $event ) {
+				if ( ! in_array( $event->ID, $seen_event_ids, true ) ) {
+					$unique_events[]  = $event;
+					$seen_event_ids[] = $event->ID;
+				}
+			}
+			usort( $unique_events, function ( $a, $b ) {
+				$date_a = get_post_meta( $a->ID, '_EventStartDate', true );
+				$date_b = get_post_meta( $b->ID, '_EventStartDate', true );
+				return strtotime( $date_a ) - strtotime( $date_b );
+			} );
+			$events_query = array_slice( $unique_events, 0, 6 );
 
 			if ( ! empty( $events_query ) ) :
 				/* Start the Loop */
 				foreach ( $events_query as $event ) :
-					// Set up post data for the current event
 					$GLOBALS['post'] = $event;
 					setup_postdata( $event );
 

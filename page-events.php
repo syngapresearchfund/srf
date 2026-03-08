@@ -21,9 +21,46 @@ $upcoming_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
 	'order'          => 'ASC',
 	'orderby'        => 'event_date',
-	'start_date'     => 'now', // Handles both upcoming and ongoing events
+	'start_date'     => 'now',
 );
 $upcoming_events_query = tribe_get_events( $upcoming_args );
+
+$ongoing_args         = array(
+	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
+	'meta_query'     => array(
+		'relation' => 'AND',
+		array(
+			'key'     => '_EventStartDate',
+			'value'   => current_time( 'mysql' ),
+			'compare' => '<=',
+			'type'    => 'DATETIME',
+		),
+		array(
+			'key'     => '_EventEndDate',
+			'value'   => current_time( 'mysql' ),
+			'compare' => '>',
+			'type'    => 'DATETIME',
+		),
+	),
+);
+$ongoing_events_query = tribe_get_events( $ongoing_args );
+
+// Merge, deduplicate by ID, and sort by start date.
+$merged_upcoming_and_current = array_merge( $ongoing_events_query, $upcoming_events_query );
+$unique_events               = array();
+$seen_ids                    = array();
+foreach ( $merged_upcoming_and_current as $event ) {
+	if ( ! in_array( $event->ID, $seen_ids, true ) ) {
+		$unique_events[] = $event;
+		$seen_ids[]      = $event->ID;
+	}
+}
+usort( $unique_events, function ( $a, $b ) {
+	$date_a = get_post_meta( $a->ID, '_EventStartDate', true );
+	$date_b = get_post_meta( $b->ID, '_EventStartDate', true );
+	return strtotime( $date_a ) - strtotime( $date_b );
+} );
+$upcoming_events_query = $unique_events;
 
 $past_args         = array(
 	'posts_per_page' => 500, // phpcs:ignore -- pagination limit ok.
