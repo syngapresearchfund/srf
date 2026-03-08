@@ -36,7 +36,7 @@ get_header();
 			<h2 id="other-ways-to-donate" class="text-2xl font-semibold text-gray-600 text-center">Other Ways to
 				Donate</h2>
 			<p class="text-center lg:w-4/6 mx-auto">Your contribution is tax-deductible as described on your receipt and
-				to the extent allowed by law. SRF is a US 501(c)(3) public charity, FEIN <a
+				to the extent allowed by law. CURE SYNGAP1 is a US 501(c)(3) public charity, FEIN <a
 					class="text-srf-blue-500 hover:underline"
 					href="https://static1.squarespace.com/static/5b4b651b3917eeb14f9188d6/t/5cf83409cf94710001e28cfb/1559770123219/SRF+501c3+Ruling.pdf">83-1200789</a>.
 			</p>
@@ -84,9 +84,9 @@ get_header();
 							<div class="p-4 border rounded-md">
 								<h4 class="font-semibold">Check Donations</h4>
 								<p class="mt-2">Make payable to:</p>
-								<p class="font-bold">Syngap Research Fund Incorporated</p>
+								<p class="font-bold">CURE SYNGAP1</p>
 								<p class="mt-2">Send to:</p>
-								<p class="font-bold">SRF Donations</p>
+								<p class="font-bold">CURE SYNGAP1 Donations</p>
 								<p class="font-bold">PO BOX 515734</p>
 								<p class="font-bold">LOS ANGELES CA 90051-5150</p>
 							</div>
@@ -256,7 +256,7 @@ get_header();
 			<h3 class="text-m lg:text-l font-semibold text-gray-600">Use this QR code or cureSYNGAP1.org/Give<br>to
 				link to this page.</h3>
 			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/CS1-Donate-QR.png' ) ); ?>"
-				 alt="Donate to SRF" class="mx-auto">
+				 alt="Donate to CURE SYNGAP1" class="mx-auto">
 		</div>
 	</div>
 
