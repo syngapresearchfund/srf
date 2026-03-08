@@ -60,6 +60,14 @@ get_header();
 				'orderby'        => 'event_date',
 				'start_date'     => 'now',
 				'featured'       => true,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
+					),
+				),
 			);
 			$featured_upcoming      = tribe_get_events( $featured_upcoming_args );
 
@@ -67,6 +75,14 @@ get_header();
 			$featured_ongoing_args = array(
 				'posts_per_page' => 1,
 				'featured'       => true,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
+					),
+				),
 				'meta_query'     => array(
 					'relation' => 'AND',
 					array(
@@ -119,20 +135,39 @@ get_header();
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-			// Non-featured upcoming events.
+			// Exclude the featured event from the grid to avoid duplication.
+			$excluded_ids = ! empty( $featured_events_query ) ? array( $featured_events_query[0]->ID ) : array();
+
+			// Upcoming events (all categories, excluding the featured slot).
 			$events_upcoming_args = array(
 				'posts_per_page' => 6,
 				'order'          => 'ASC',
 				'orderby'        => 'event_date',
 				'start_date'     => 'now',
-				'featured'       => false,
+				'post__not_in'   => $excluded_ids,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
+					),
+				),
 			);
 			$events_upcoming      = tribe_get_events( $events_upcoming_args );
 
-			// Non-featured ongoing events (started before now, end after now).
+			// Ongoing events (started before now, end after now, excluding the featured slot).
 			$events_ongoing_args = array(
 				'posts_per_page' => 6,
-				'featured'       => false,
+				'post__not_in'   => $excluded_ids,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'tribe_events_cat',
+						'field'    => 'slug',
+						'terms'    => array( 'meeting' ),
+						'operator' => 'NOT IN',
+					),
+				),
 				'meta_query'     => array(
 					'relation' => 'AND',
 					array(
