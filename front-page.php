@@ -55,7 +55,7 @@ get_header();
 			<?php
 			// Featured upcoming events.
 			$featured_upcoming_args = array(
-				'posts_per_page' => 5,
+				'posts_per_page' => 1,
 				'order'          => 'ASC',
 				'orderby'        => 'event_date',
 				'start_date'     => 'now',
@@ -65,7 +65,7 @@ get_header();
 
 			// Featured ongoing events (started before now, end after now).
 			$featured_ongoing_args = array(
-				'posts_per_page' => 5,
+				'posts_per_page' => 1,
 				'featured'       => true,
 				'meta_query'     => array(
 					'relation' => 'AND',
@@ -121,7 +121,7 @@ get_header();
 
 			// Non-featured upcoming events.
 			$events_upcoming_args = array(
-				'posts_per_page' => 10,
+				'posts_per_page' => 6,
 				'order'          => 'ASC',
 				'orderby'        => 'event_date',
 				'start_date'     => 'now',
@@ -131,7 +131,7 @@ get_header();
 
 			// Non-featured ongoing events (started before now, end after now).
 			$events_ongoing_args = array(
-				'posts_per_page' => 10,
+				'posts_per_page' => 6,
 				'featured'       => false,
 				'meta_query'     => array(
 					'relation' => 'AND',
